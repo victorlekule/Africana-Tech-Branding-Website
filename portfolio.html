@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Africana Tech Company</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-poppins bg-brandWhite text-brandBlack m-0 p-0 overflow-x-hidden">
+
+    <div id="header-container"></div>
+
+<main class="pt-16 sm:pt-20 lg:pt-24 pb-0">
+        
+    <section class="relative w-full py-16 sm:py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-brandBlack">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] lg:w-[800px] h-[300px] sm:h-[600px] lg:h-[800px] bg-brandBlue opacity-20 rounded-full blur-[80px] sm:blur-[120px] z-0 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 text-center relative z-10 reveal">
+            <span class="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-brandWhite/20 bg-white/5 backdrop-blur-md mb-4 sm:mb-6 text-[10px] sm:text-sm font-bold tracking-widest text-brandWhite uppercase">Featured Work</span>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight tracking-tighter text-brandWhite">
+                Digital Excellence, <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-400">Delivered.</span>
+            </h1>
+            
+            <p class="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto font-light px-4 sm:px-0 mb-8 sm:mb-10">
+                Explore a curated selection of our highest-impact technology platforms, software deployments, and premium brand identities.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-brandBlue hover:bg-brandWhite hover:text-brandBlue text-brandWhite text-sm sm:text-base font-bold rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    Explore Projects <ion-icon name="grid-outline" class="ml-2 text-lg"></ion-icon>
+                </a>
+                <a href="#awards" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-gray-700 hover:border-yellow-400 text-gray-300 hover:text-yellow-400 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 flex items-center justify-center group">
+                    View Our Awards <ion-icon name="trophy-outline" class="ml-2 text-lg group-hover:scale-110 transition-transform"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 sm:py-24 bg-gray-50 min-h-screen">
+        <div class="container mx-auto px-4 sm:px-6">
+            
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 sm:mb-16 reveal">
+                <button class="filter-btn active px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-brandBlack text-white shadow-lg shadow-black/20" data-filter="all">All Projects</button>
+                <button class="filter-btn px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-brandBlue hover:text-brandBlue" data-filter="tech">Tech Solutions</button>
+                <button class="filter-btn px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-cyan-500 hover:text-cyan-600" data-filter="branding">Branding</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolio-grid">
+                
+                <div class="portfolio-item branding group cursor-pointer reveal" onclick="openProjectModal('morix')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Morix Beyond Zanzibar</h3>
+                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Brand Identity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item tech group cursor-pointer reveal delay-100" onclick="openProjectModal('child-comforters')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="African Child Comforters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">African Child Comforters</h3>
+                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Web Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item tech group cursor-pointer reveal delay-200" onclick="openProjectModal('fpssa')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" alt="FPSSA Portal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">FPSSA Portal</h3>
+                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">System Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item branding group cursor-pointer reveal" onclick="openProjectModal('coffee-packaging')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1628148906325-bb308b46e107?q=80&w=800&auto=format&fit=crop" alt="Kilimanjaro Coffee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Kilimanjaro Roasters</h3>
+                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">3D & Packaging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item tech group cursor-pointer reveal delay-100" onclick="openProjectModal('fintech-app')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop" alt="Fintech App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">PayFlow Africa</h3>
+                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Mobile App Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item branding group cursor-pointer reveal delay-200" onclick="openProjectModal('digital-campaign')">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800&auto=format&fit=crop" alt="Digital Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
+                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">EcoTours Tanzania</h3>
+                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Digital Marketing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="awards" class="py-16 sm:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden border-t border-gray-800 mb-16 sm:mb-24">
+        <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-brandBlue opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            
+            <div class="text-center mb-10 sm:mb-16 reveal">
+                <span class="text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Proven Excellence</span>
+                <h2 class="text-3xl  text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
+                <div class="h-1 w-16 sm:w-20 bg-brandBlack mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal">
+                    
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="East African Tech Award Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                            <ion-icon name="trophy" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2026 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Best Enterprise Platform</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Awarded by the East African Tech Awards for engineering highly scalable, secure, and innovative digital platforms tailored for major regional enterprises and NGOs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100">
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=800&auto=format&fit=crop" alt="Agency of the Year Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                            <ion-icon name="star" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2025 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Agency of the Year</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Recognized by the Tanzania Digital Awards for delivering exceptional hybrid solutions that seamlessly blend heavy-duty software architecture with captivating creative branding.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-200">
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop" alt="Excellence in UI/UX Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                            <ion-icon name="ribbon" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2024 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Excellence in UI/UX</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Honored by the African Design Council for crafting intuitive, user-centered digital interfaces that significantly increase customer conversion rates and user retention.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div id="project-modal-overlay" class="fixed inset-0 z-[200] hidden items-end justify-center sm:items-center">
+    <div class="absolute inset-0 bg-brandBlack/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
+    
+    <div id="project-modal-box" class="relative bg-brandWhite w-full h-[95vh] sm:w-11/12 sm:h-[90vh] max-w-6xl sm:rounded-3xl shadow-2xl flex flex-col transform translate-y-full sm:translate-y-0 sm:scale-95 opacity-0 transition-all duration-500 ease-out z-10 overflow-hidden">
+        
+        <button onclick="closeProjectModal()" class="absolute top-3 right-3 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 hover:bg-red-500 text-white backdrop-blur-md rounded-full flex items-center justify-center transition-colors z-50 shadow-lg">
+            <ion-icon name="close" class="text-xl sm:text-2xl"></ion-icon>
+        </button>
+        
+        <div class="overflow-y-auto flex-grow w-full pb-16">
+            
+            <div class="w-full h-48 sm:h-64 md:h-96 relative bg-brandBlack">
+                <img id="pm-hero" src="" alt="Project Hero" class="w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack to-transparent"></div>
+                
+                <div class="absolute bottom-0 left-0 p-5 sm:p-8 md:p-12 w-full">
+                    <span id="pm-category" class="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-brandBlue/20 border border-brandBlue/50 text-brandWhite text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 sm:mb-4 backdrop-blur-md">Category</span>
+                    <h2 id="pm-title" class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mb-1 sm:mb-2">Project Title</h2>
+                    <p id="pm-client" class="text-sm sm:text-base text-gray-300 font-medium flex items-center"><ion-icon name="business" class="mr-2"></ion-icon> Client Name</p>
+                </div>
+            </div>
+
+            <div class="p-5 sm:p-8 md:p-12 max-w-5xl mx-auto">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 mb-10 sm:mb-16">
+                    <div class="lg:col-span-2 space-y-8 sm:space-y-10">
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-2 sm:mb-3 flex items-center"><ion-icon name="alert-circle" class="text-brandBlue mr-2 text-xl sm:text-2xl"></ion-icon> The Challenge</h3>
+                            <p id="pm-challenge" class="text-sm sm:text-base text-justify sm:text-left text-gray-600 leading-relaxed">...</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-2 sm:mb-3 flex items-center"><ion-icon name="bulb" class="text-brandBlue mr-2 text-xl sm:text-2xl"></ion-icon> The Solution</h3>
+                            <p id="pm-solution" class="text-sm sm:text-base text-justify sm:text-left text-gray-600 leading-relaxed">...</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-200 h-max">
+                        <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-4 border-b border-gray-200 pb-3 sm:pb-4">The Impact</h3>
+                        <div id="pm-results" class="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-sm sm:text-base text-gray-700">
+                            </div>
+                        
+                        <a href="#" id="pm-link" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-brandBlack hover:bg-brandBlue text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg">
+                            <ion-icon name="open-outline" class="mr-2 text-lg sm:text-xl"></ion-icon> View Live Project
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlack mb-4 sm:mb-6 text-center">Project Gallery</h3>
+                    <div id="pm-gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer-container"></div>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

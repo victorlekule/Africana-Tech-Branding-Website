@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Africana Tech Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-poppins bg-[#0A0A0A] text-[#F9FAFB] m-0 p-0 overflow-x-hidden">
+
+    <div id="header-container"></div>
+
+<main>
+    <section id="hero-services" class="relative w-full min-h-auto sm:min-h-screen flex items-center justify-center overflow-hidden bg-white pt-24 sm:pt-24 md:pt-32 pb-10 sm:pb-16">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="IMG/1.jpg" alt="Digital background" class="w-full h-full object-cover object-center opacity-100">
+        </div>
+        
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+        <div class="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 flex flex-col lg:flex-row items-center gap-6 sm:gap-10 lg:gap-16">
+            
+            <div class="w-full lg:w-1/2 text-center sm:text-left mt-2 sm:mt-4 lg:mt-0 reveal">
+                <div class="inline-block px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border border-brandBlue bg-brandBlue backdrop-blur-md mb-2 sm:mb-3">
+                    <span class="text-[9px] sm:text-xs md:text-sm font-semibold tracking-widest text-white uppercase">Pioneering Digital Excellence</span>
+                </div>
+                
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-2 sm:mb-3 leading-tight uppercase tracking-tighter text-yellow-400 drop-shadow-sm">
+                    AFRICANA TECH
+                    <span class="text-white"> COMPANY</span>
+                </h1>
+                
+                <p class="text-xs sm:text-sm md:text-lg lg:text-xl text-center sm:text-left font-medium text-white mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto sm:mx-0">
+                    We deliver cutting-edge technology and bold branding solutions that drive growth, enhance security, and establish a powerful digital presence for businesses across Africa and beyond.
+                </p>
+                
+                <a href="service.html" class="inline-block px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4 bg-brandBlue hover:bg-brandBlack text-brandWhite text-xs sm:text-base md:text-lg font-bold rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1">
+                    Explore Our Solutions
+                </a>
+            </div>
+
+            <div class="w-full lg:w-1/2 relative pb-4 sm:pb-8 lg:pb-0 reveal delay-200">
+                <div class="relative w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[650px] mx-auto px-8 sm:px-12 md:px-16">
+                    
+                    <button id="prevBtn" class="nav-arrow group" aria-label="Previous Service">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-brandWhite group-hover:text-brandBlue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="nextBtn" class="nav-arrow group" aria-label="Next Service">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-brandWhite group-hover:text-brandBlue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+
+                    <div class="solutions-mask rounded-3xl shadow-2xl border border-gray-200 bg-brandBlack">
+                        <div id="track">
+                            
+                            <div class="solution-card">
+                                <img src="IMG/african-american-woman-checking-social-media-phone (1).jpg" class="card-img" alt="Web Development">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-white uppercase tracking-widest block mb-1 sm:mb-2">Tech Solution</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">Web Development</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Custom, high-performance web applications built for scale and uncompromised speed.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <img src="IMG/05d7209ac2c044c0880dc31ebbdc3205.jpg" class="card-img" alt="Branding & Design">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-white uppercase tracking-widest block mb-1 sm:mb-2">Branding & Creative</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">Branding & Design</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Powerful visual identities that dominate your market and build absolute trust.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <img src="IMG/african-american-woman-checking-social-media-phone (1).jpg" class="card-img" alt="Cybersecurity">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-white uppercase tracking-widest block mb-1 sm:mb-2">Tech Solution</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">Cybersecurity</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Enterprise-grade security audits and advanced threat protection for your data.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <img src="IMG/african-american-woman-checking-social-media-phone (1).jpg" class="card-img" alt="App Development">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-white uppercase tracking-widest block mb-1 sm:mb-2">Tech Solution</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">App Development</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Native and cross-platform mobile solutions for seamless user experiences.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <img src="IMG/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Networks">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-white uppercase tracking-widest block mb-1 sm:mb-2">Tech Solution</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">Networks</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Robust infrastructure design for seamless global communication and data flow.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <img src="picha/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Digital Marketing">
+                                <div class="glass-box">
+                                    <span class="text-[10px] sm:text-sm font-bold text-brandWhite uppercase tracking-widest block mb-1 sm:mb-2">Branding & Creative</span>
+                                    <h3 class="font-bold text-yellow-400 text-xl sm:text-3xl mb-1 sm:mb-3">Digital Marketing</h3>
+                                    <p class="text-xs sm:text-base text-brandWhite/90">Data-driven strategies to grow your presence across all digital channels.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="numberNav" class="flex flex-wrap justify-center gap-3 mt-6 sm:mt-8 relative z-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section id="about" class="py-24 bg-brandWhite relative overflow-hidden">
+            
+            <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl z-0"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-yellow-400 shadow-sm mb-4">
+                        <span class="text-xs sm:text-sm font-bold tracking-widest text-brandBlack uppercase">Who We Are</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlue mb-6 tracking-tight">
+                        Our Dual Expertise
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-sm text-justify md:text-lg md:text-left">
+                        We don't just write code, and we don't just draw logos. We bridge the gap between heavy-duty software engineering and captivating brand storytelling to build unstoppable digital ecosystems.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+                                
+                <div class="group relative bg-yellow-400 rounded-3xl p-6 sm:p-12 shadow-2xl overflow-hidden reveal">
+                    <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-black flex items-center justify-center border border-yellow-400 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-xl sm:text-3xl font-bold text-brandBlack mb-3 sm:mb-4">Tech Solutions</h3>                        
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-black leading-relaxed mb-6 sm:mb-8"> From robust custom software development and enterprise web applications to secure IT infrastructure consulting, we architect resilient systems that scale flawlessly with your business ambitions.
+                        </p>                        
+                        <a href="tech solution.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-brandBlack text-white font-bold rounded-xl hover:bg-brandBlue transition-colors duration-300 group w-max"> Learn More <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path> </svg></a>
+                    </div>
+                </div>
+
+                <div class="group relative bg-brandBlue rounded-3xl p-6 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden reveal delay-200">
+                    <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Branding & Creative</h3>
+                        
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-white leading-relaxed mb-6 sm:mb-8">
+                            We craft powerful visual identities, intuitive UI/UX designs, and targeted digital marketing campaigns that capture attention, communicate absolute trust, and turn your audience into loyal customers.
+                        </p>
+                        
+                        <a href="branding.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-white text-black font-bold rounded-xl hover:bg-yellow-400 transition-colors duration-300 group w-max">
+                            Learn More 
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="py-24 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 lg:mb-16 reveal">
+                    <div class="max-w-2xl">
+                        <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Portfolio</span>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight">Recent Success Stories</h2>
+                    </div>
+                    <div class="mt-6 md:mt-0 hidden md:block">
+                        <a href="#" class="group inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
+                            See All Portfolio 
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Branding & Tech</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-brandBlue mb-3">Morix Beyond Zanzibar</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-2">Complete brand identity, strategic content rollout, and high-performance website for a premium tourism operator.</p>
+                            <a href="portfolio.html" class="text-brandBlack font-bold border-b-2 border-brandBlack pb-1 hover:text-brandBlue hover:border-brandBlue transition-colors">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-100">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop" alt="African Child Comforters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-brandBlue mb-3">African Child Comforters</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-2">An integrated digital platform and immersive storytelling website engineered for a major NGO.</p>
+                            <a href="portfolio.html" class="text-brandBlack font-bold border-b-2 border-brandBlack pb-1 hover:text-brandBlue hover:border-brandBlue transition-colors">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-200">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="FPSSA Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Portal</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-2">A comprehensive web portal and management system built for the Federation of Procurement and Supplies Student Association.</p>
+                            <a href="portfolio.html" class="text-brandBlack font-bold border-b-2 border-brandBlack pb-1 hover:text-brandBlue hover:border-brandBlue transition-colors">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center block md:hidden reveal">
+                    <a href="portfolio.html" class="inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
+                        See All Portfolio <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+                <div class="text-center mb-12 md:mb-16 reveal">
+                    <span class="text-brandBlack font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">Why Us</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">The Africana Advantage</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+                    
+                    <div class="text-center sm:text-left reveal">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
+                    </div>
+                    
+                    <div class="text-center sm:text-left reveal delay-100">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Globally Capable</h3>
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">Executing complex projects to the absolute highest international standards and tech practices.</p>
+                    </div>
+                    
+                    <div class="text-center sm:text-left reveal delay-200">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Full-Service</h3>
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">From heavy-duty backend code to striking visual creative, we handle your entire ecosystem.</p>
+                    </div>
+                    
+                    <div class="text-center sm:text-left reveal delay-300">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
+                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Client-Centric</h3>
+                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">We view ourselves as partners, not vendors. Your business growth is our only metric of success.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 bg-brandWhite">
+            <div class="container mx-auto px-4 sm:px-3">
+                <div class="text-center mb-8 reveal">
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">What Our Clients Say</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto relative reveal">
+                    <div id="testimonial-container" class="relative min-h-[250px] overflow-hidden">
+                        
+                        <div class="test-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-100 translate-x-0">
+                            <div class="text-center px-2">
+                               <p class="text-sm text-justify md:text-xl md:text-left text-gray-800 font-medium italic mb-10 leading-relaxed">
+                                    "Africana Tech didn't just build us a website; they architected a digital engine that completely transformed how we interact with our customers globally."
+                                </p>
+                                <div class="flex items-center justify-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=David+M&background=2563EB&color=fff" alt="Client 1" class="w-10 h-10 rounded-full shadow-md">
+                                    <div class="text-left">
+                                        <h4 class="font-bold text-sm text-brandBlack">David M.</h4>
+                                        <p class="text-sm text-gray-500">Director, Tech Forward</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 translate-x-full">
+                            <div class="text-center px-2">
+                                <p class="text-sm text-justify md:text-xl md:text-left lg:text-xl text-gray-800 font-medium italic mb-10 leading-relaxed">
+                                    "Their branding team is phenomenal. They captured the exact essence of our vision and delivered a visual identity that is lightyears ahead of our competitors."
+                                </p>
+                                <div class="flex items-center justify-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+K&background=0A0A0A&color=fff" alt="Client 2" class="w-10 h-10 rounded-full shadow-md">
+                                    <div class="text-left">
+                                        <h4 class="font-bold text-sm text-brandBlack">Sarah K.</h4>
+                                        <p class="text-sm text-gray-500">Founder, Elevated Brands</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-3 mt-12">
+                        <button class="test-dot w-3 h-3 rounded-full bg-brandBlue transition-all duration-300 transform scale-125" data-slide="0"></button>
+                        <button class="test-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-24 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Updates & News</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlack">From Our Blog</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+                    <div class="bg-brandBlue p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal">
+                        <p class="text-sm text-yellow-400 font-bold mb-3 uppercase tracking-wider">March 12, 2026</p>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-200 hover:text-yellow-400 transition-colors">The Future of African Tech Infrastructure</h3>
+                        <p class="text-gray-300 mb-6 line-clamp-3">A deep dive into how emerging cloud solutions are completely reshaping the capabilities of businesses operating within East Africa.</p>
+                        <a href="blog.html" class="font-bold bg-yellow-400 text-brandBlack px-6 py-2 rounded-full hover:bg-white hover:text-brandBlue transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-100">
+                        <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 28, 2026</p>
+                        <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Why UX Design Dictates Your Revenue</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">If your users are frustrated, they leave. We explore the direct correlation between intuitive interfaces and massive increases in conversion rates.</p>
+                        <a href="blog.html" class="font-bold bg-brandBlue text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-brandBlack transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+                    </div>
+                    <div class="bg-yellow-400 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-200">
+                        <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 15, 2026</p>
+                        <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Securing Your Digital Footprint</h3>
+                        <p class="text-brandBlack mb-6 line-clamp-3">With cyber threats evolving daily, here are 5 critical steps every modern enterprise must take to protect their user data.</p>
+                        <a href="blog.html" class="font-bold bg-white text-brandBlack px-6 py-2 rounded-full hover:bg-brandBlue hover:text-yellow-400 transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<div class="bg-white pb-8">
+    
+    <section class="py-14 bg-brandBlue relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl z-0 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center reveal">
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight">
+                Ready to transform your business?
+            </h2>
+            
+            <p class="text-base sm:text-xl text-teal-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
+                Let's discuss how we can build the exact technology and branding solutions you need to grow aggressively.
+            </p>
+            
+            <a href="contact" class="inline-block px-8 py-4 sm:px-12 sm:py-5 bg-[#eab308] hover:bg-yellow-400 text-brandBlack text-base sm:text-xl font-bold rounded-lg shadow-2xl transition-all duration-300 hover:scale-105">
+                Get in Touch
+            </a>
+            
+        </div>
+    </section>
+
+</div>
+
+<div id="footer-container"></div>
+    <script src="animation.js"></script> 
+    <script src="script.js"></script> 
+</body>
+</html>
