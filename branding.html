@@ -15,7 +15,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="font-poppins bg-[#0A0A0A] text-[#F9FAFB] m-0 p-0 overflow-x-hidden">
+<body class="font-poppins bg-brandWhite text-[#F9FAFB] m-0 p-0 overflow-x-hidden">
 
     <div id="header-container"></div>
 
@@ -33,14 +33,14 @@
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight tracking-tighter text-brandWhite">
                     Identities That <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-brandBlue to-blue-500">Command Attention</span>
+                   <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-yellow-500">Command Attention</span>
                 </h1>
                 
                 <p class="text-sm sm:text-lg lg:text-xl font-light text-gray-400 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-center sm:text-left">
                     We craft powerful visual identities, intuitive UI/UX designs, and targeted digital marketing campaigns that communicate absolute trust and turn your audience into loyal customers.
                 </p>
                 
-                <a href="#services-grid" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-4 bg-brandWhite hover:bg-brandBlue text-brandBlack hover:text-brandWhite text-base sm:text-lg font-bold rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <a href="#services-grid" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-4 bg-yellow-400 hover:bg-brandBlue text-brandBlack hover:text-brandWhite text-base sm:text-lg font-bold rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     Explore Creative Services <ion-icon name="arrow-down-outline" class="ml-2"></ion-icon>
                 </a>
             </div>
@@ -58,70 +58,145 @@
         </div>
     </section>
 
-    <section id="services-grid" class="py-16 sm:py-24 bg-gray-50 border-y border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6">
+<section id="services-grid" class="py-16 sm:py-24 bg-gray-50 border-y border-gray-200">
+        <div class="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 relative z-10">
+            
             <div class="text-center mb-12 sm:mb-16 reveal">
                 <span class="text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Our Capabilities</span>
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight">Creative Solutions</h2>
                 <div class="h-1 w-16 sm:w-20 bg-brandBlue mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="color-palette-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Brand Identity</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Logos, typography, and comprehensive visual style guides.</p>
-                    <button onclick="openBrandModal('identity')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/b ndani.jpg" alt="Brand Identity" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="color-palette-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Brand Identity</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Logos, typography, and comprehensive visual style guides.</p>
+                        <a href="identity.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-100 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">UI/UX Design</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Intuitive, user-centered app and website interfaces.</p>
-                    <button onclick="openBrandModal('ui-ux')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-100 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/ux.png" alt="UI/UX Design" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="phone-portrait-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">UI/UX Design</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Intuitive, user-centered app and website interfaces.</p>
+                        <a href="ux design.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-200 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="megaphone-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Digital Marketing</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Data-driven ad campaigns that maximize conversion and ROI.</p>
-                    <button onclick="openBrandModal('marketing')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-200 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/marketing 2.png" alt="Digital Marketing" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="megaphone-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Digital Marketing</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Data-driven ad campaigns that maximize conversion and ROI.</p>
+                        <a href="digital marketing.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-300 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="share-social-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Social Media</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Strategic content management across all major social platforms.</p>
-                    <button onclick="openBrandModal('social')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-300 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/socila media.jpg" alt="Social Media" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="share-social-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Social Media</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Strategic content management across all major social platforms.</p>
+                        <a href="social media.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="analytics-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Brand Strategy</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Deep market positioning and core messaging development.</p>
-                    <button onclick="openBrandModal('strategy')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/Strategy.png" alt="Brand Strategy" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="analytics-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Brand Strategy</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Deep market positioning and core messaging development.</p>
+                        <a href="strategy.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-100 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="document-text-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Copywriting</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Persuasive, SEO-optimized content for websites and ad copy.</p>
-                    <button onclick="openBrandModal('copy')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-100 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/copywriting.jpg" alt="Copywriting" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="document-text-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Copywriting</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">Persuasive, SEO-optimized content for websites and ad copy.</p>
+                        <a href="copywriting.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-200 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="videocam-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">Video & Motion</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">High-end promotional videos and animated graphic assets.</p>
-                    <button onclick="openBrandModal('video')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-200 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/video.png" alt="Video & Motion" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="videocam-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">Video & Motion</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">High-end promotional videos and animated graphic assets.</p>
+                        <a href="video.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 reveal delay-300 flex flex-col h-full">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6 text-cyan-500 text-xl sm:text-2xl"><ion-icon name="cube-outline"></ion-icon></div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack">3D & Packaging</h3>
-                    <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">High-fidelity 3D modeling and premium retail product packaging.</p>
-                    <button onclick="openBrandModal('packaging')" class="text-brandBlue font-bold text-xs sm:text-sm hover:text-brandBlack transition-colors flex items-center mt-auto w-max">Read More <ion-icon name="arrow-forward-outline" class="ml-1"></ion-icon></button>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 reveal delay-300 flex flex-col h-full min-h-[420px] relative group overflow-hidden">
+                    <div class="w-full h-48 sm:h-56 relative overflow-hidden shrink-0">
+                        <img src="IMG/3d.png" alt="3D & Packaging" class="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 sm:top-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 bg-brandBlue rounded-xl flex items-center justify-center shadow-lg">
+                            <ion-icon name="cube-outline" class="text-xl sm:text-2xl text-yellow-400"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandBlack group-hover:text-brandBlue transition-colors">3D & Packaging</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 flex-grow">High-fidelity 3D modeling and premium retail product packaging.</p>
+                        <a href="3d.html" class="inline-flex items-center text-brandBlue font-bold text-xs sm:text-sm hover:text-yellow-500 transition-colors mt-auto w-max">
+                            Read More <ion-icon name="arrow-forward-outline" class="ml-1 transition-transform group-hover:translate-x-1"></ion-icon>
+                        </a>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -138,27 +213,27 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
                     <div class="text-center relative group reveal">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-gray-100 text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-cyan-500 group-hover:text-cyan-500 transition-colors shadow-sm">1</div>
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-brandBlue text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors shadow-sm">1</div>
                         <h4 class="font-bold text-base sm:text-lg text-brandBlack mb-2">Discovery</h4>
                         <p class="text-xs sm:text-sm text-gray-500 px-2">Deep market research and competitor analysis.</p>
                     </div>
                     <div class="text-center relative group reveal delay-100">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-gray-100 text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-brandBlue group-hover:text-brandBlue transition-colors shadow-sm">2</div>
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-brandBlue text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors shadow-sm">2</div>
                         <h4 class="font-bold text-base sm:text-lg text-brandBlack mb-2">Strategy</h4>
                         <p class="text-xs sm:text-sm text-gray-500 px-2">Defining your core message and positioning.</p>
                     </div>
                     <div class="text-center relative group reveal delay-200">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-gray-100 text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-blue-500 group-hover:text-blue-500 transition-colors shadow-sm">3</div>
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-brandBlue text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors shadow-sm">3</div>
                         <h4 class="font-bold text-base sm:text-lg text-brandBlack mb-2">Creation</h4>
                         <p class="text-xs sm:text-sm text-gray-500 px-2">Designing visual identities, packaging, and UI.</p>
                     </div>
                     <div class="text-center relative group reveal delay-300">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-gray-100 text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-brandBlue group-hover:text-brandBlue transition-colors shadow-sm">4</div>
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-brandBlue text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors shadow-sm">4</div>
                         <h4 class="font-bold text-base sm:text-lg text-brandBlack mb-2">Delivery</h4>
                         <p class="text-xs sm:text-sm text-gray-500 px-2">Final handoff of guidelines and brand assets.</p>
                     </div>
                     <div class="text-center relative group reveal delay-400">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-gray-100 text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-cyan-500 group-hover:text-cyan-500 transition-colors shadow-sm">5</div>
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-white border-4 border-brandBlue text-brandBlack rounded-full flex items-center justify-center text-xl sm:text-2xl font-black mb-3 sm:mb-4 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors shadow-sm">5</div>
                         <h4 class="font-bold text-base sm:text-lg text-brandBlack mb-2">Growth</h4>
                         <p class="text-xs sm:text-sm text-gray-500 px-2">Launching marketing campaigns to drive revenue.</p>
                     </div>
@@ -167,7 +242,8 @@
         </div>
     </section>
 
-<section class="py-10 sm:py-16 bg-brandBlack overflow-hidden relative border-y border-gray-800">
+
+    <section class="pt-10 pb-20 sm:pt-16 sm:pb-28 bg-brandBlack mb-24 overflow-hidden relative border-y border-gray-800">
     <div class="container mx-auto px-4 sm:px-6 mb-6 sm:mb-8 text-center reveal">
         <h3 class="text-sm sm:text-xl font-bold text-gray-400 uppercase tracking-widest">Tools & Platforms We Use</h3>
     </div>
@@ -217,83 +293,31 @@
     </div>
 </section>
 
-    <section class="py-16 sm:py-24 bg-brandWhite">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-12 sm:mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight">Recent Work</h2>
-                <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4">A glimpse into our recent branding, 3D packaging, and visual identity projects.</p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div class="group relative rounded-2xl overflow-hidden h-64 sm:h-80 shadow-lg reveal">
-                    <img src="https://images.unsplash.com/photo-1628148906325-bb308b46e107?q=80&w=600&auto=format&fit=crop" alt="Retail Packaging Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
-                        <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-1">3D Packaging</span>
-                        <h4 class="text-white font-bold text-lg sm:text-xl">Premium Coffee Blend</h4>
-                    </div>
-                </div>
 
-                <div class="group relative rounded-2xl overflow-hidden h-64 sm:h-80 shadow-lg reveal delay-100">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop" alt="Logo Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
-                        <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-1">Brand Identity</span>
-                        <h4 class="text-white font-bold text-lg sm:text-xl">Corporate Rebrand</h4>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-2xl overflow-hidden h-64 sm:h-80 shadow-lg reveal delay-200">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop" alt="Marketing Assets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
-                        <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-1">Marketing Collateral</span>
-                        <h4 class="text-white font-bold text-lg sm:text-xl">Morix Beyond Zanzibar</h4>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-2xl overflow-hidden h-64 sm:h-80 shadow-lg reveal delay-300">
-                    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=600&auto=format&fit=crop" alt="3D Product Modeling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
-                        <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-1">3D Product Render</span>
-                        <h4 class="text-white font-bold text-lg sm:text-xl">Tech Hardware Launch</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 sm:py-32 bg-brandBlack text-center relative overflow-hidden">
+    <section class="py-20 sm:py-32 bg-brandBlue mb-24 text-center relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-cyan-500 opacity-20 rounded-full blur-[80px] sm:blur-[120px] z-0 pointer-events-none"></div>
 
         <div class="container mx-auto px-4 relative z-10 reveal">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-brandWhite mb-4 sm:mb-6 tracking-tight">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-400 mb-4 sm:mb-6 tracking-tight">
                 Let's build your brand.
             </h2>
-            <p class="text-base sm:text-xl lg:text-2xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto font-light px-4 sm:px-0">
+            <p class="text-base sm:text-xl lg:text-2xl text-brandWhite mb-8 sm:mb-12 max-w-2xl mx-auto font-light px-4 sm:px-0">
                 Whether you need a complete rebrand, high-end 3D packaging, or a marketing campaign that actually converts.
             </p>
             
             <div class="relative inline-block group w-full sm:w-auto">
                 <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-brandBlue rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse hidden sm:block"></div>
-                <a href="#contact" class="relative flex justify-center items-center w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-5 bg-brandWhite text-brandBlack text-lg sm:text-xl font-extrabold rounded-xl transition-all duration-300 hover:scale-105">
+                <a href="contact.html" class="relative flex justify-center items-center w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-5 bg-yellow-400 text-brandBlack text-lg sm:text-xl font-extrabold rounded-xl transition-all duration-300 hover:scale-105">
                     Contact Us
                 </a>
             </div>
         </div>
     </section>
 
-    <div id="brand-modal-overlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
-        <div id="brand-modal-box" class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-auto my-8 scale-95 opacity-0 transition-all duration-300">
-            <button onclick="closeBrandModal()" class="absolute top-4 sm:top-6 right-4 sm:right-6 text-white sm:text-gray-400 hover:text-black transition-colors z-20">
-                <ion-icon name="close-outline" class="text-2xl sm:text-3xl drop-shadow-md sm:drop-shadow-none"></ion-icon>
-            </button>
-            
-            <div class="bg-gradient-to-r from-cyan-500 to-brandBlue p-6 sm:p-8 text-brandWhite flex items-center gap-3 sm:gap-4 rounded-t-2xl relative">
-                <div class="text-3xl sm:text-5xl" id="brand-modal-icon"></div>
-                <h2 id="brand-modal-title" class="text-xl sm:text-3xl font-bold pr-6"></h2>
-            </div>
-            
-            <div id="brand-modal-body" class="p-5 sm:p-8 max-h-[60vh] sm:max-h-96 overflow-y-auto text-sm sm:text-base text-gray-600"></div>
-        </div>
-    </div>
+
+
+
 
 </main>
 

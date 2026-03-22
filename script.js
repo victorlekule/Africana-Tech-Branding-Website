@@ -13,28 +13,31 @@
             }
         }
 
+ //header//
+
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Select the container
     const headerContainer = document.getElementById("header-container");
 
-    // 2. Define links
+    // 2. Define links with sub-page mappings
     const navLinks = [
-        { name: "Home", url: "index.html" },
-        { name: "About Us", url: "about us.html" },
-        { name: "Tech Solutions", url: "tech solution.html" },
-        { name: "Branding & Creative", url: "branding.html" },
-        { name: "Portfolio", url: "portfolio.html" },
-        { name: "Blog", url: "blog.html" },
-        { name: "Contact Us", url: "contact.html" }
+        { name: "Home", url: "index.html", subPages: [] },
+        { name: "About Us", url: "about us.html", subPages: [] },
+        { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html"] },
+        { name: "Branding & Creative", url: "branding.html", subPages: ["copywriting.html", "digital marketing.html", "identity.html", "strategy.html", "ux design.html", "video.html", "social media.html"] },
+        { name: "Portfolio", url: "portfolio.html", subPages: [] },
+        { name: "Blog", url: "blog.html", subPages: [] },
+        { name: "Contact Us", url: "contact.html", subPages: [] }
     ];
 
     // 3. Detect Current Page
-    const rawPath = window.location.pathname.split("/").pop() || "index.html";
-    const currentPath = decodeURIComponent(rawPath); 
+    const pathParts = window.location.pathname.split(/[\/\\]/);
+    const rawPath = pathParts[pathParts.length - 1] || "index.html";
+    const currentPath = decodeURIComponent(rawPath).toLowerCase().trim(); 
 
     // 3A. Desktop Links
     const desktopNavItemsHtml = navLinks.map(link => {
-        const isActive = currentPath === link.url;
+        const isActive = currentPath === link.url.toLowerCase().trim() || link.subPages.some(page => currentPath === page.toLowerCase().trim());
         
         const activeClasses = isActive 
             ? "text-yellow-400 border-yellow-400" 
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3B. Mobile Links
     const mobileNavItemsHtml = navLinks.map(link => {
-        const isActive = currentPath === link.url;
+        const isActive = currentPath === link.url.toLowerCase().trim() || link.subPages.some(page => currentPath === page.toLowerCase().trim());
         
         // Active: Yellow text, yellow line on the backside (border-r-4), no background.
         const activeClasses = isActive 
@@ -136,7 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //HOME PAGE//
 
-// --- SERVICES SLIDER LOGIC ---
+// --- SERVICES SLIDER LOGIC ---//
+
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.getElementById('track');
     const numberNav = document.getElementById('numberNav');
@@ -231,9 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ==========================================
-    // 3. TESTIMONIAL SLIDER LOGIC
-    // ==========================================
+    // 3. TESTIMONIAL SLIDER LOGIC//
+
     const testSlides = document.querySelectorAll('.test-slide');
     const testDots = document.querySelectorAll('.test-dot');
     
@@ -288,461 +291,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //tech servies//
-    // ==========================================
-// TECH SOLUTIONS "MINI-PAGE" MODAL LOGIC
-// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modal = document.getElementById('projectInquiryModal');
+            const checkboxes = document.querySelectorAll('.service-checkbox');
 
-const deepTechData = {
-    'web-dev': {
-        title: 'Web Development',
-        icon: 'globe-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Full-Stack Web Engineering</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">We engineer end-to-end web applications. From complex enterprise portals to high-converting corporate websites, we utilize modern frameworks (React, Node.js, Python) to ensure your platform is secure, responsive, and SEO-optimized.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="laptop-outline" class="mr-2"></ion-icon>Custom Web Apps (SaaS)</h5>
-                    <p class="text-sm text-gray-600">Building complex, feature-rich platforms from scratch to solve specific business challenges.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="cart-outline" class="mr-2"></ion-icon>E-Commerce Solutions</h5>
-                    <p class="text-sm text-gray-600">Secure, high-availability online stores built for maximum conversion and massive scale.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="git-merge-outline" class="mr-2"></ion-icon>System Integrations & APIs</h5>
-                    <p class="text-sm text-gray-600">Connecting your web app with third-party tools (CRMs, payment gateways) seamlessly.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="business-outline" class="mr-2"></ion-icon>Corporate Websites</h5>
-                    <p class="text-sm text-gray-600">High-converting marketing sites that serve as the digital cornerstone of your brand.</p>
-                </div>
-            </div>
-        `
-    },
-    'sys-dev': {
-        title: 'System Development',
-        icon: 'hardware-chip-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Engineering for Operations</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Off-the-shelf software rarely fits. We architect bespoke management systems, ERPs, and CRMs that map perfectly to your operational workflows, eliminating bottlenecks and automating redundant tasks.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="analytics-outline" class="mr-2"></ion-icon>Enterprise Resource Planning (ERP)</h5>
-                    <p class="text-sm text-gray-600">Unified systems to manage financials, supply chains, operations, and advanced reporting.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="people-outline" class="mr-2"></ion-icon>Custom CRMs</h5>
-                    <p class="text-sm text-gray-600">Tailored customer relationship managers that track leads and boost your sales efficiency.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="cog-outline" class="mr-2"></ion-icon>Workflow Automation</h5>
-                    <p class="text-sm text-gray-600">Replacing manual, repetitive tasks with automated triggers and deep data integrations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="sync-outline" class="mr-2"></ion-icon>Legacy Modernization</h5>
-                    <p class="text-sm text-gray-600">Upgrading outdated, slow systems into modern, cloud-based architectures securely.</p>
-                </div>
-            </div>
-        `
-    },
-    'app-dev': {
-        title: 'App Development',
-        icon: 'phone-portrait-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">The Mobile-First Strategy</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Your mobile app is your primary storefront. We build intuitive, fast, and highly secure mobile applications for iOS and Android that put your business directly into the hands of your customers.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="logo-apple" class="mr-2"></ion-icon>iOS Native Apps</h5>
-                    <p class="text-sm text-gray-600">High-fidelity applications built specifically for the Apple ecosystem maximizing hardware capability.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="logo-android" class="mr-2"></ion-icon>Android Native Apps</h5>
-                    <p class="text-sm text-gray-600">Robust applications built to dominate the massive Android market with flawless performance.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="layers-outline" class="mr-2"></ion-icon>Cross-Platform (Flutter/React Native)</h5>
-                    <p class="text-sm text-gray-600">One powerful codebase deployed to both iOS and Android for rapid, cost-effective market entry.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="color-palette-outline" class="mr-2"></ion-icon>Mobile UI/UX Prototyping</h5>
-                    <p class="text-sm text-gray-600">Designing interfaces based on how humans actually hold and interact with their mobile screens.</p>
-                </div>
-            </div>
-        `
-    },
-    'cyber-sec': {
-        title: 'Cyber Security',
-        icon: 'shield-checkmark-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Proactive Defense Systems</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Absolute security is non-negotiable. We conduct rigorous vulnerability assessments, implement military-grade encryption, and deploy active threat monitoring to safeguard your corporate data.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="search-outline" class="mr-2"></ion-icon>Security Audits & Penetration Testing</h5>
-                    <p class="text-sm text-gray-600">We ethically hack your own systems to expose and patch weak points before attackers do.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="warning-outline" class="mr-2"></ion-icon>Active Threat Monitoring</h5>
-                    <p class="text-sm text-gray-600">24/7 network monitoring to detect, isolate, and neutralize DDoS attacks and malware.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="lock-closed-outline" class="mr-2"></ion-icon>Data Encryption & Compliance</h5>
-                    <p class="text-sm text-gray-600">Securing data at rest and in transit to ensure total privacy and regulatory compliance.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="medical-outline" class="mr-2"></ion-icon>Incident Response Planning</h5>
-                    <p class="text-sm text-gray-600">Developing rapid recovery protocols to restore data and operations in the event of a breach.</p>
-                </div>
-            </div>
-        `
-    },
-    'networking': {
-        title: 'Networking',
-        icon: 'git-network-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">The Digital Backbone</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Your software is only as fast as the network it runs on. We design, deploy, and manage robust enterprise network infrastructures that guarantee speed and zero-packet-loss communication.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="wifi-outline" class="mr-2"></ion-icon>LAN/WAN Design</h5>
-                    <p class="text-sm text-gray-600">Structuring incredibly fast local networks and secure wide-area connections for branch offices.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="cloud-outline" class="mr-2"></ion-icon>Cloud & Hybrid Integration</h5>
-                    <p class="text-sm text-gray-600">Bridging your on-premise servers securely with AWS, Azure, or Google Cloud environments.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="key-outline" class="mr-2"></ion-icon>Secure VPN Configurations</h5>
-                    <p class="text-sm text-gray-600">Setting up encrypted, high-speed tunnels for remote teams to access corporate assets safely.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="speedometer-outline" class="mr-2"></ion-icon>Bandwidth Optimization</h5>
-                    <p class="text-sm text-gray-600">Deploying top-tier hardware to prioritize critical traffic and maximize network throughput.</p>
-                </div>
-            </div>
-        `
-    },
-    'maintenance': {
-        title: 'IT Maintenance',
-        icon: 'construct-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Zero Operational Downtime</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Technology should empower your team, not frustrate them. Our comprehensive IT maintenance SLAs provide your business with a dedicated helpdesk, routine diagnostics, and rapid troubleshooting.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="headset-outline" class="mr-2"></ion-icon>24/7 Helpdesk Support</h5>
-                    <p class="text-sm text-gray-600">Immediate remote and on-site technical assistance for your entire corporate staff.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="build-outline" class="mr-2"></ion-icon>Hardware Diagnostics & Repair</h5>
-                    <p class="text-sm text-gray-600">Routine physical maintenance, upgrades, and rapid repair of crucial company workstations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="server-outline" class="mr-2"></ion-icon>Data Backup & Storage</h5>
-                    <p class="text-sm text-gray-600">Automated, secure off-site data backups to prevent catastrophic information loss.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="refresh-circle-outline" class="mr-2"></ion-icon>Software Patching</h5>
-                    <p class="text-sm text-gray-600">Ensuring all corporate software and operating systems remain updated against latest exploits.</p>
-                </div>
-            </div>
-        `
-    },
-    'ai-training': {
-        title: 'AI Training',
-        icon: 'bulb-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Future-Proofing Your Workforce</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Generative AI and Machine Learning are revolutionizing modern business. We provide hands-on training workshops designed to teach your staff how to leverage AI tools to multiply productivity.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="chatbubbles-outline" class="mr-2"></ion-icon>Prompt Engineering</h5>
-                    <p class="text-sm text-gray-600">Teaching staff how to construct complex prompts to get high-value outputs from LLMs.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="rocket-outline" class="mr-2"></ion-icon>AI for Business Automation</h5>
-                    <p class="text-sm text-gray-600">Implementing tools like ChatGPT and Gemini into daily corporate administrative workflows.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="pie-chart-outline" class="mr-2"></ion-icon>AI Data Analytics</h5>
-                    <p class="text-sm text-gray-600">Training teams to utilize machine learning models for deep predictive business analysis.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="document-lock-outline" class="mr-2"></ion-icon>Ethical AI Implementation</h5>
-                    <p class="text-sm text-gray-600">Establishing secure, ethical guidelines for how corporate data is passed to external AI models.</p>
-                </div>
-            </div>
-        `
-    },
-    'corp-training': {
-        title: 'Corporate Training',
-        icon: 'people-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-brandBlue pl-4">Upskilling the Organization</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">A company is only as strong as its team's technical literacy. We offer bespoke corporate training programs tailored to your specific software stacks and operational tools.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Offerings</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="finger-print-outline" class="mr-2"></ion-icon>Cybersecurity Awareness</h5>
-                    <p class="text-sm text-gray-600">Training staff to identify phishing attempts, social engineering, and secure password habits.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="desktop-outline" class="mr-2"></ion-icon>Enterprise Software Onboarding</h5>
-                    <p class="text-sm text-gray-600">Rapidly training your workforce on newly deployed ERPs, CRMs, and management portals.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="git-branch-outline" class="mr-2"></ion-icon>Agile Methodology</h5>
-                    <p class="text-sm text-gray-600">Workshops on sprint planning, scrum, and highly efficient modern project management.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-brandBlue mb-2"><ion-icon name="megaphone-outline" class="mr-2"></ion-icon>Digital Strategy Workshops</h5>
-                    <p class="text-sm text-gray-600">Empowering your marketing teams with modern digital ad tracking and SEO best practices.</p>
-                </div>
-            </div>
-        `
-    }
-};
+            // Open Modal
+            if(openModalBtn) {
+                openModalBtn.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Stop background scrolling
+                });
+            }
 
-const techModalOverlay = document.getElementById('tech-modal-overlay');
-const techModalBox = document.getElementById('tech-modal-box');
-const techModalTitle = document.getElementById('modal-title');
-const techModalIcon = document.getElementById('modal-icon');
-const techModalBody = document.getElementById('modal-body');
+            // Close Modal
+            if(closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                });
+            }
 
-function openTechModal(serviceId) {
-    const data = deepTechData[serviceId];
-    if (!data) return;
+            // Toggle dynamic fields when checkboxes are clicked
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const targetId = this.getAttribute('data-detail');
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        if (this.checked) {
+                            targetElement.classList.remove('hidden');
+                        } else {
+                            targetElement.classList.add('hidden');
+                            // Optional: Reset the select value when hidden
+                            targetElement.querySelector('select').value = "";
+                        }
+                    }
+                });
+            });
+        });
 
-    techModalTitle.innerText = data.title;
-    techModalIcon.innerHTML = `<ion-icon name="${data.icon}"></ion-icon>`;
-    techModalBody.innerHTML = data.content;
 
-    techModalOverlay.classList.remove('hidden');
-    techModalOverlay.classList.add('flex');
-    
-    setTimeout(() => {
-        techModalBox.classList.remove('scale-95', 'opacity-0');
-        techModalBox.classList.add('scale-100', 'opacity-100');
-    }, 10);
-    
-    document.body.style.overflow = 'hidden';
-}
 
-function closeTechModal() {
-    techModalBox.classList.remove('scale-100', 'opacity-100');
-    techModalBox.classList.add('scale-95', 'opacity-0');
-    
-    setTimeout(() => {
-        techModalOverlay.classList.add('hidden');
-        techModalOverlay.classList.remove('flex');
-    }, 300);
-    
-    document.body.style.overflow = 'auto';
-}
+//creative and branding services////
+document.addEventListener("DOMContentLoaded", () => {
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modal = document.getElementById('projectInquiryModal');
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            if(openModalBtn) { openModalBtn.addEventListener('click', () => { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }); }
+            if(closeModalBtn) { closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); document.body.style.overflow = 'auto'; }); }
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const targetId = this.getAttribute('data-detail');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) { if (this.checked) { targetElement.classList.remove('hidden'); } else { targetElement.classList.add('hidden'); targetElement.querySelector('select').value = ""; } }
+                });
+            });
+        });
 
-// branding and creative//
-// ==========================================
-// BRANDING & CREATIVE MODAL LOGIC
-// ==========================================
 
-const deepBrandData = {
-    'identity': {
-        title: 'Brand Identity',
-        icon: 'color-palette-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Crafting Visual Legacies</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Your brand is more than just a logo; it is the entire visual and emotional experience of your business. We craft comprehensive visual identities that command authority, build instant trust, and set you apart in crowded markets.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Deliverables</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Logo Design & Variations</h5>
-                    <p class="text-sm text-gray-600">Primary, secondary, and icon marks designed for absolute scalability across all mediums.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Color & Typography Systems</h5>
-                    <p class="text-sm text-gray-600">Psychologically mapped color palettes and typographic hierarchies that enforce your brand's tone.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Brand Guidelines (Brand Book)</h5>
-                    <p class="text-sm text-gray-600">A comprehensive rulebook ensuring your team and partners maintain visual consistency.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Marketing Collateral</h5>
-                    <p class="text-sm text-gray-600">Business cards, letterheads, and presentation decks styled to your new identity.</p>
-                </div>
-            </div>
-        `
-    },
-    'ui-ux': {
-        title: 'UI/UX Design',
-        icon: 'phone-portrait-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Designing for the Human Experience</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">If your users are frustrated, they leave. We design intuitive, user-centered app and website interfaces that eliminate friction, guide user behavior, and drastically increase your conversion rates.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Our Process</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Wireframing & Prototyping</h5>
-                    <p class="text-sm text-gray-600">Low and high-fidelity clickable prototypes in Figma to map the user journey before development.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">User Interface (UI) Design</h5>
-                    <p class="text-sm text-gray-600">Applying your brand identity to create stunning, pixel-perfect screens and components.</p>
-                </div>
-            </div>
-        `
-    },
-    'marketing': {
-        title: 'Digital Marketing',
-        icon: 'megaphone-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Data-Driven Growth</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">We don't guess; we test and scale. Our digital marketing campaigns are built on rigorous data analysis, designed to maximize your Return on Ad Spend (ROAS) and generate high-quality leads.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Services</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Search Engine Optimization (SEO)</h5>
-                    <p class="text-sm text-gray-600">Technical and on-page SEO to ensure you dominate Google search rankings.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">PPC & Paid Social</h5>
-                    <p class="text-sm text-gray-600">Highly targeted ad campaigns across Google Ads, Facebook, Instagram, and LinkedIn.</p>
-                </div>
-            </div>
-        `
-    },
-    'social': {
-        title: 'Social Media',
-        icon: 'share-social-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Building Digital Communities</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">We transform your social media platforms from broadcasting channels into active communities. We handle content creation, community management, and strategic growth.</p>
-            <p class="text-gray-600"><strong>Deliverables:</strong> Monthly content calendars, custom graphic design, community engagement, and detailed analytics reporting.</p>
-        `
-    },
-    'strategy': {
-        title: 'Brand Strategy',
-        icon: 'analytics-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Positioning for Dominance</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Before we design a single logo, we define who you are. We conduct deep market research to define your brand's voice, mission, target audience, and unique value proposition.</p>
-        `
-    },
-    'copy': {
-        title: 'Copywriting',
-        icon: 'document-text-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Words That Sell</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Beautiful design fails if the messaging is weak. We write persuasive, SEO-optimized copy for your website, landing pages, email campaigns, and advertisements.</p>
-        `
-    },
-    'video': {
-        title: 'Video & Motion',
-        icon: 'videocam-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Dynamic Storytelling</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Video is the highest converting medium on the internet. We produce high-end promotional videos, corporate documentaries, and motion graphic animations to explain your products.</p>
-        `
-    },
-    'print': {
-        title: 'Print & Packaging',
-        icon: 'layers-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Tangible Brand Experiences</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Digital is crucial, but physical touchpoints leave a lasting impression. We design premium business cards, brochures, event banners, and retail product packaging.</p>
-        `
-    },
-    'packaging': {
-        title: '3D & Packaging',
-        icon: 'cube-outline',
-        content: `
-            <h3 class="text-2xl font-bold text-brandBlack mb-4 border-l-4 border-cyan-500 pl-4">Physical Brand Experiences</h3>
-            <p class="text-gray-600 mb-8 text-lg leading-relaxed">In a crowded retail environment, your product packaging is your final, most crucial marketing pitch. We combine structural design, premium typography, and ultra-realistic 3D rendering to ensure your product stands out on the shelf.</p>
-            
-            <h4 class="text-xl font-bold text-brandBlack mb-4">Core Deliverables</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Retail Packaging Design</h5>
-                    <p class="text-sm text-gray-600">Custom box, label, and wrapper designs optimized for visual hierarchy and compliance.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">High-Fidelity 3D Renders</h5>
-                    <p class="text-sm text-gray-600">Photorealistic 3D modeling of your products for use in digital ads and pitch decks.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Prototyping & Dielines</h5>
-                    <p class="text-sm text-gray-600">Print-ready structural dielines and material sourcing consultations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h5 class="font-bold text-cyan-600 mb-2">Merchandise Design</h5>
-                    <p class="text-sm text-gray-600">Custom branded apparel, corporate gifts, and promotional items.</p>
-                </div>
-            </div>
-        `
-    }
-};
 
-const brandModalOverlay = document.getElementById('brand-modal-overlay');
-const brandModalBox = document.getElementById('brand-modal-box');
-const brandModalTitle = document.getElementById('brand-modal-title');
-const brandModalIcon = document.getElementById('brand-modal-icon');
-const brandModalBody = document.getElementById('brand-modal-body');
-
-function openBrandModal(serviceId) {
-    const data = deepBrandData[serviceId];
-    if (!data) return;
-
-    brandModalTitle.innerText = data.title;
-    brandModalIcon.innerHTML = `<ion-icon name="${data.icon}"></ion-icon>`;
-    brandModalBody.innerHTML = data.content;
-
-    brandModalOverlay.classList.remove('hidden');
-    brandModalOverlay.classList.add('flex');
-    
-    setTimeout(() => {
-        brandModalBox.classList.remove('scale-95', 'opacity-0');
-        brandModalBox.classList.add('scale-100', 'opacity-100');
-    }, 10);
-    
-    document.body.style.overflow = 'hidden';
-}
-
-function closeBrandModal() {
-    brandModalBox.classList.remove('scale-100', 'opacity-100');
-    brandModalBox.classList.add('scale-95', 'opacity-0');
-    
-    setTimeout(() => {
-        brandModalOverlay.classList.add('hidden');
-        brandModalOverlay.classList.remove('flex');
-    }, 300);
-    
-    document.body.style.overflow = 'auto';
-}
 
 //portfolio//
-// ==========================================
-// PORTFOLIO FILTERING & MODAL LOGIC
-// ==========================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. FILTER LOGIC ---
@@ -911,13 +523,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-
-
-
-// blog//
-// ==========================================
-// 1. SCROLL REVEAL ANIMATIONS
-// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     const reveals = document.querySelectorAll('.reveal');
 
@@ -941,9 +546,9 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll(); 
 });
 
-// ==========================================
-// 2. PORTFOLIO GRID FILTERING
-// ==========================================
+
+// 2. PORTFOLIO GRID FILTERING//
+
 document.addEventListener("DOMContentLoaded", () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -979,12 +584,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// ==========================================
-// 3. THE BLOG DATA (Declared exactly ONCE)
-// ==========================================
-const blogData = {
-    // TECH SOLUTIONS
+// blog//
+ // TECH SOLUTIONS
+const blogData = {   
     'tech-1': {
         category: 'Web Dev',
         title: 'Why do you need a website?',
@@ -1089,7 +691,8 @@ const blogData = {
         `
     },
 
-    // BRANDING & CREATIVE
+
+// BRANDING & CREATIVE
     'brand-1': {
         category: 'Social Media',
         title: 'What are the best times to post stories on social media?',
@@ -1205,105 +808,8 @@ const blogData = {
     }
 };
 
-// ==========================================
-// 4. BLOG MODAL CONTROLS
-// ==========================================
-function openBlogModal(articleId) {
-    const data = blogData[articleId];
-    
-    if (!data) {
-        console.error("Article data not found for:", articleId);
-        return; 
-    }
+// 4. BLOG MODAL CONTROLS//
 
-    document.getElementById('blog-modal-category').innerText = data.category;
-    document.getElementById('blog-modal-title').innerText = data.title;
-    document.getElementById('blog-modal-body').innerHTML = data.content;
-
-    const overlay = document.getElementById('blog-modal-overlay');
-    const box = document.getElementById('blog-modal-box');
-    
-    overlay.classList.remove('hidden');
-    overlay.classList.add('flex');
-    
-    setTimeout(() => {
-        box.classList.remove('translate-y-full', 'sm:translate-y-0', 'sm:scale-95', 'opacity-0');
-        box.classList.add('translate-y-0', 'sm:scale-100', 'opacity-100');
-    }, 10);
-    
-    document.body.style.overflow = 'hidden';
-}
-
-function closeBlogModal() {
-    const overlay = document.getElementById('blog-modal-overlay');
-    const box = document.getElementById('blog-modal-box');
-    
-    box.classList.remove('translate-y-0', 'sm:scale-100', 'opacity-100');
-    box.classList.add('translate-y-full', 'sm:translate-y-0', 'sm:scale-95', 'opacity-0');
-    
-    setTimeout(() => {
-        overlay.classList.add('hidden');
-        overlay.classList.remove('flex');
-        document.body.style.overflow = 'auto'; 
-    }, 400); 
-}
-
-// ==========================================
-// 5. OTHER MODAL STUBS (Prevents console errors)
-// ==========================================
-function openTechModal(service) { console.log("Tech Modal triggered for:", service); }
-function closeTechModal() { /* Add close logic based on HTML IDs when built */ }
-
-function openBrandModal(service) { console.log("Brand Modal triggered for:", service); }
-function closeBrandModal() { /* Add close logic based on HTML IDs when built */ }
-
-function openProjectModal(project) { console.log("Project Modal triggered for:", project); }
-function closeProjectModal() { /* Add close logic based on HTML IDs when built */ }
-
-// ==========================================
-// 2. PORTFOLIO GRID FILTERING
-// ==========================================
-document.addEventListener("DOMContentLoaded", () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    if(filterBtns.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 1. Reset all buttons to default styling
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-brandBlack', 'text-white', 'shadow-lg', 'shadow-black/20');
-                    b.classList.add('bg-white', 'text-gray-600');
-                });
-                
-                // 2. Highlight the clicked button
-                btn.classList.remove('bg-white', 'text-gray-600');
-                btn.classList.add('bg-brandBlack', 'text-white', 'shadow-lg', 'shadow-black/20');
-
-                // 3. Filter the grid items
-                const filterValue = btn.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.9)';
-                        setTimeout(() => { item.style.display = 'none'; }, 300);
-                    }
-                });
-            });
-        });
-    }
-});
-
-
-
-
-// ==========================================
-// 4. BLOG MODAL CONTROLS
-// ==========================================
 function openBlogModal(articleId) {
     const data = blogData[articleId];
     
@@ -1360,9 +866,7 @@ function closeProjectModal() { /* Add close logic based on HTML IDs when built *
 
 
 //footer//
-// ==========================================
-// DYNAMIC FOOTER INJECTION LOGIC (Official X Logo Fix)
-// ==========================================
+
 document.addEventListener("DOMContentLoaded", () => {
     const footerContainer = document.getElementById("footer-container");
 
