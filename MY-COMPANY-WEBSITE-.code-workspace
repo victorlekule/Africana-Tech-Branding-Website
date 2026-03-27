@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Africana-Tech-main/Africana-Tech-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MY-COMPANY-WEBSITE-"
+	}
+}

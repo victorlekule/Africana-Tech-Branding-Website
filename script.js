@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = [
         { name: "Home", url: "index.html", subPages: [] },
         { name: "About Us", url: "about us.html", subPages: [] },
-        { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html"] },
-        { name: "Branding & Creative", url: "branding.html", subPages: ["copywriting.html", "digital marketing.html", "identity.html", "strategy.html", "ux design.html", "video.html", "social media.html"] },
+        { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html", "system.html", "corparate info.html"] },
+        { name: "Branding & Creative", url: "branding.html", subPages: ["copywriting.html", "digital marketing.html", "identity.html", "strategy.html", "ux design.html", "video.html", "social media.html", "3d.html"] },
         { name: "Portfolio", url: "portfolio.html", subPages: [] },
         { name: "Blog", url: "blog.html", subPages: [] },
         { name: "Contact Us", url: "contact.html", subPages: [] }
@@ -389,103 +389,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. PROJECT MODAL DATA ---
-    const projectData = {
-        'morix': {
-            title: 'Morix Beyond Zanzibar',
-            category: 'Brand Identity',
-            client: 'Morix Tours Ltd.',
-            heroImg: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop',
-            challenge: 'Morix was expanding from a local tour operator into a premium, international travel agency. Their outdated visual identity did not reflect the luxury and exclusivity of their new high-end safari and coastal packages.',
-            solution: 'We executed a complete ground-up rebrand. This included designing a luxurious new logo mark, defining a warm, earth-toned color palette reflective of the Tanzanian landscape, and producing a comprehensive brand guidelines book. We then rolled this identity out across all marketing collateral and social media templates.',
-            results: `
-                <div class="flex items-center mb-2"><ion-icon name="trending-up" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>45% increase in high-tier package inquiries</span></div>
-                <div class="flex items-center mb-2"><ion-icon name="people" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>2x Social Media Engagement</span></div>
-                <div class="flex items-center"><ion-icon name="star" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>Awarded 'Best Local Rebrand' locally</span></div>
-            `,
-            gallery: [
-                'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1628148906325-bb308b46e107?w=800&auto=format&fit=crop'
-            ],
-            link: '#'
-        },
-        'child-comforters': {
-            title: 'African Child Comforters',
-            category: 'Web Platform',
-            client: 'ACC NGO',
-            heroImg: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop',
-            challenge: 'The NGO struggled with an outdated website that could not handle international payment gateways securely. Furthermore, their bounce rate was high due to poor mobile responsiveness and lack of clear storytelling.',
-            solution: 'We engineered a highly secure, integrated digital platform built on React and Node.js. We implemented Stripe and PayPal APIs for global donation processing, ensuring absolute data security with SSL/TLS encryption. The UI was completely redesigned mobile-first to focus on immersive storytelling and transparent fund tracking.',
-            results: `
-                <div class="flex items-center mb-2"><ion-icon name="shield-checkmark" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>100% Secure Transactions achieved</span></div>
-                <div class="flex items-center mb-2"><ion-icon name="speedometer" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>Page load speed increased by 3x</span></div>
-                <div class="flex items-center"><ion-icon name="cash" class="text-brandBlue mr-2 text-xl"></ion-icon> <span>Online donations rose by 120% in Q1</span></div>
-            `,
-            gallery: [
-                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop'
-            ],
-            link: '#'
-        },
-        // You can add 'fpssa', 'coffee-packaging', 'fintech-app', etc. using this exact same structure!
-    };
+    // --- 2. PROJECT MODAL DATA (REMOVED - see line 588 for correct version) ---
+    // Consolidated into single projectsDB object below
 
-    // --- 3. MODAL OPEN/CLOSE LOGIC ---
-    const modalOverlay = document.getElementById('project-modal-overlay');
-    const modalBox = document.getElementById('project-modal-box');
+    // --- 3. MODAL OPEN/CLOSE LOGIC (REMOVED - using consolidated version below) ---
 
-    window.openProjectModal = function(projectId) {
-        const data = projectData[projectId];
-        if (!data) return; // If data isn't filled out yet, don't open
-
-        // Inject Data
-        document.getElementById('pm-hero').src = data.heroImg;
-        document.getElementById('pm-category').innerText = data.category;
-        document.getElementById('pm-title').innerText = data.title;
-        document.getElementById('pm-client').innerHTML = `<ion-icon name="business" class="mr-2"></ion-icon> ${data.client}`;
-        document.getElementById('pm-challenge').innerText = data.challenge;
-        document.getElementById('pm-solution').innerText = data.solution;
-        document.getElementById('pm-results').innerHTML = data.results;
-        document.getElementById('pm-link').href = data.link;
-
-        // Inject Gallery
-        const galleryContainer = document.getElementById('pm-gallery');
-        galleryContainer.innerHTML = ''; // Clear old images
-        data.gallery.forEach(imgSrc => {
-            const imgHtml = `
-                <div class="rounded-xl overflow-hidden shadow-md aspect-video">
-                    <img src="${imgSrc}" class="w-full h-full object-cover">
-                </div>
-            `;
-            galleryContainer.innerHTML += imgHtml;
-        });
-
-        // Show Modal
-        modalOverlay.classList.remove('hidden');
-        modalOverlay.classList.add('flex');
-        
-        setTimeout(() => {
-            // Remove mobile slide-down and desktop scale-down classes
-            modalBox.classList.remove('translate-y-full', 'sm:scale-95', 'opacity-0');
-            modalBox.classList.add('translate-y-0', 'sm:scale-100', 'opacity-100');
-        }, 10);
-        
-        document.body.style.overflow = 'hidden'; // Lock background
-    };
-
-    window.closeProjectModal = function() {
-        modalBox.classList.remove('translate-y-0', 'sm:scale-100', 'opacity-100');
-        modalBox.classList.add('translate-y-full', 'sm:scale-95', 'opacity-0');
-        
-        setTimeout(() => {
-            modalOverlay.classList.add('hidden');
-            modalOverlay.classList.remove('flex');
-        }, 500); // Matches the duration-500
-        
-        document.body.style.overflow = 'auto'; // Unlock background
-    };
 });
-
 
 // contact form validation//
 
@@ -584,285 +493,393 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// blog//
- // TECH SOLUTIONS
-const blogData = {   
-    'tech-1': {
-        category: 'Web Dev',
-        title: 'Why do you need a website?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">A website is your digital storefront – it works 24/7 to build credibility, attract customers, and showcase your products or services.</p>
-            <p class="mb-6 leading-relaxed text-lg">It gives you full control over your brand narrative, unlike social media platforms that constantly change algorithms. With a website, you can capture leads, sell online, and provide valuable information to your audience. In today’s digital age, not having a website means you’re invisible to a huge part of your market.</p>
-        `
+const projectsDB = {
+    'morix': {
+        title: 'Morix Beyond Zanzibar', category: 'Brand Identity', client: 'Morix Tours & Safaris',
+        challenge: 'Morix Tours needed a high-end, luxury brand identity that stood out from standard safari operators, capturing the unique essence of Zanzibar.',
+        solution: 'We engineered a complete visual overhaul including a bespoke logo, premium typography, and a cohesive color palette.',
+        impact: 'The new identity increased premium package inquiries by 45% within the first three months of launch.',
+        images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&auto=format&fit=crop']
     },
-    'tech-2': {
-        category: 'Planning',
-        title: 'What information should you have before creating a website?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Before building a website, gather the following essentials:</p>
-            <ul class="space-y-4 text-lg">
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Purpose & Goals:</strong> What do you want the site to achieve? (e.g., sell products, generate leads, share information).</div></li>
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Target Audience:</strong> Who will visit? (age, location, interests).</div></li>
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Content:</strong> Texts, images, videos, logos, brand colours.</div></li>
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Competitor Analysis:</strong> What do competitors’ sites look like?</div></li>
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Budget & Timeline:</strong> How much can you spend and when do you need it live?</div></li>
-                <li class="flex items-start"><ion-icon name="checkmark-circle" class="text-brandBlue text-2xl mr-3 mt-1"></ion-icon> <div><strong>Technical Requirements:</strong> Domain name, hosting, special features (e.g., membership, e‑commerce).</div></li>
-            </ul>
-        `
+    'child-comforters': {
+        title: 'African Child Comforters', category: 'Web Platform', client: 'ACC NGO',
+        challenge: 'The NGO needed a secure, easy-to-use platform to accept international donations and showcase their fieldwork.',
+        solution: 'We developed a responsive, high-performance web platform integrated with secure payment gateways.',
+        impact: 'Online donations increased by 300% in the first year.',
+        images: ['https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&auto=format&fit=crop']
     },
-    'tech-3': {
-        category: 'Strategy',
-        title: 'Before creating a website, what should be the goals, mission, and target customers?',
-        content: `
-            <ul class="space-y-6 text-lg">
-                <li class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h4 class="text-xl font-bold text-brandBlack mb-2">Goals</h4>
-                    <p>Define measurable objectives – e.g., increase online sales by 30% in 6 months, grow email list by 500 subscribers, or boost brand awareness.</p>
-                </li>
-                <li class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h4 class="text-xl font-bold text-brandBlack mb-2">Mission</h4>
-                    <p>A clear statement of what your business stands for and why you exist. This guides the tone and content of your site.</p>
-                </li>
-                <li class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h4 class="text-xl font-bold text-brandBlack mb-2">Target Customers</h4>
-                    <p>Create detailed buyer personas – their demographics, pain points, and online behaviour. Your website design and messaging must speak directly to them.</p>
-                </li>
-            </ul>
-        `
-    },
-    'tech-4': {
-        category: 'Requirements',
-        title: 'What requirements does a customer need to have before building a website?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">To start a website project smoothly, you’ll need:</p>
-            <ul class="space-y-4 text-lg">
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Domain name</strong> (e.g., www.yourbusiness.com)</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Web hosting</strong> (a service that stores your site files)</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Brand assets</strong> (logo, colour palette, fonts)</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Content</strong> (text for each page, high‑quality images, videos)</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Functionality list</strong> (contact form, online shop, booking system, etc.)</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brandBlue mr-3"></div> <strong>Third‑party accounts</strong> (payment gateways, email marketing tools)</li>
-            </ul>
-        `
-    },
-    'tech-5': {
-        category: 'FinTech',
-        title: 'Why do you need payment integration on your NGO e‑commerce?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Even for an NGO, payment integration is vital:</p>
-            <ul class="space-y-4 text-lg">
-                <li><strong class="text-brandBlue">Accept Donations:</strong> Make it easy for supporters to contribute online securely.</li>
-                <li><strong class="text-brandBlue">Sell Merchandise:</strong> If you sell branded items or event tickets, you need a smooth checkout.</li>
-                <li><strong class="text-brandBlue">Recurring Giving:</strong> Offer monthly donation options to build sustainable funding.</li>
-                <li><strong class="text-brandBlue">Transparency:</strong> Integrated payments provide automated receipts and records, building trust with donors.</li>
-                <li><strong class="text-brandBlue">Global Reach:</strong> Accept payments from anywhere in the world, 24/7.</li>
-            </ul>
-        `
-    },
-    'tech-6': {
-        category: 'Security',
-        title: 'How to protect your website/system from hackers and viruses?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Implement these essential security measures:</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="lock-closed" class="text-yellow-500 mr-3 text-2xl"></ion-icon> Use HTTPS/SSL to encrypt data.</li>
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="refresh-circle" class="text-brandBlue mr-3 text-2xl"></ion-icon> Keep software updated (CMS, plugins).</li>
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="key" class="text-brandBlack mr-3 text-2xl"></ion-icon> Strong passwords & 2FA.</li>
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="cloud-download" class="text-cyan-500 mr-3 text-2xl"></ion-icon> Regular backups (off‑site).</li>
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="shield" class="text-red-500 mr-3 text-2xl"></ion-icon> Web application firewall (WAF).</li>
-                <li class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex items-center"><ion-icon name="bug" class="text-green-500 mr-3 text-2xl"></ion-icon> Security plugins & malware scans.</li>
-            </ul>
-        `
-    },
-    'tech-7': {
-        category: 'Prevention',
-        title: 'What measures can be taken to avoid being hacked?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Prevention is always better than cure:</p>
-            <ul class="space-y-4 text-lg">
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Educate your team about phishing and safe online practices.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Limit login attempts and change default admin usernames.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Disable file editing from the dashboard.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Use a CDN (Content Delivery Network) that offers DDoS protection.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Regularly scan for malware with tools like Sucuri.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Remove unused themes/plugins to reduce attack surface.</li>
-                <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Implement a content security policy (CSP) to prevent cross‑site scripting.</li>
-            </ul>
-        `
-    },
-
-
-// BRANDING & CREATIVE
-    'brand-1': {
-        category: 'Social Media',
-        title: 'What are the best times to post stories on social media?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Best times vary by platform and audience, but general guidelines are:</p>
-            <div class="space-y-4 text-lg">
-                <div class="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100">
-                    <ion-icon name="logo-instagram" class="text-3xl text-[#E1306C] mr-4"></ion-icon>
-                    <div><strong>Instagram/Facebook:</strong> Weekdays 9 am–11 am and 7 pm–9 pm (when people commute or relax).</div>
-                </div>
-                <div class="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100">
-                    <ion-icon name="logo-tiktok" class="text-3xl text-black mr-4"></ion-icon>
-                    <div><strong>TikTok:</strong> Mornings (7 am–9 am) and evenings (6 pm–10 pm).</div>
-                </div>
-                <div class="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100">
-                    <ion-icon name="logo-linkedin" class="text-3xl text-[#0077b5] mr-4"></ion-icon>
-                    <div><strong>LinkedIn:</strong> Tuesday–Thursday, 8 am–10 am and 4 pm–6 pm.</div>
-                </div>
-            </div>
-            <p class="mt-6 text-gray-500 italic">Pro Tip: Always check your own analytics (Insights) to see when your followers are most active.</p>
-        `
-    },
-    'brand-2': {
-        category: 'Management',
-        title: 'What are the best tools for social media management and analytics?',
-        content: `
-            <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm mt-4">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-brandBlack text-white text-sm uppercase tracking-widest">
-                            <th class="p-4 border-b border-gray-700">Tool</th>
-                            <th class="p-4 border-b border-gray-700">Advantages</th>
-                            <th class="p-4 border-b border-gray-700">Disadvantages</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm sm:text-base text-gray-700">
-                        <tr class="border-b border-gray-100 bg-white hover:bg-gray-50 transition-colors">
-                            <td class="p-4 font-bold text-brandBlack">Hootsuite</td>
-                            <td class="p-4">Supports many platforms; bulk scheduling; team collaboration.</td>
-                            <td class="p-4">Can be expensive; limited analytics in lower plans.</td>
-                        </tr>
-                        <tr class="border-b border-gray-100 bg-gray-50 hover:bg-gray-100 transition-colors">
-                            <td class="p-4 font-bold text-brandBlack">Buffer</td>
-                            <td class="p-4">Simple, intuitive interface; excellent analytics; affordable.</td>
-                            <td class="p-4">Limited social accounts on free plan; no social listening.</td>
-                        </tr>
-                        <tr class="border-b border-gray-100 bg-white hover:bg-gray-50 transition-colors">
-                            <td class="p-4 font-bold text-brandBlack">Sprout Social</td>
-                            <td class="p-4">Deep analytics; unified inbox; CRM features.</td>
-                            <td class="p-4">Pricey for small businesses; steep learning curve.</td>
-                        </tr>
-                        <tr class="border-b border-gray-100 bg-gray-50 hover:bg-gray-100 transition-colors">
-                            <td class="p-4 font-bold text-brandBlack">Later</td>
-                            <td class="p-4">Visual Instagram scheduler (drag & drop); user‑friendly.</td>
-                            <td class="p-4">Best for visual platforms; fewer features for Twitter/LinkedIn.</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50 transition-colors">
-                            <td class="p-4 font-bold text-brandBlack">Canva</td>
-                            <td class="p-4">Not strictly a scheduler, but has content planner; great for visuals.</td>
-                            <td class="p-4">Limited scheduling capabilities; analytics basic.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        `
-    },
-    'brand-3': {
-        category: 'Paid Media',
-        title: 'Before posting/sponsoring ads, explain different campaign objectives',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">On platforms like Facebook/Instagram, choose an objective based on your precise goal:</p>
-            <ul class="space-y-4 text-lg">
-                <li><strong class="text-yellow-600">Sales:</strong> Drive purchases on your website. Best for e‑commerce.</li>
-                <li><strong class="text-yellow-600">Traffic:</strong> Send people to a specific URL (blog, landing page).</li>
-                <li><strong class="text-yellow-600">Engagement:</strong> Get more likes, comments, shares, or event responses.</li>
-                <li><strong class="text-yellow-600">Lead Generation:</strong> Collect user info via sign‑up forms directly in the app.</li>
-                <li><strong class="text-yellow-600">Brand Awareness:</strong> Reach as many people as possible to build recognition.</li>
-                <li><strong class="text-yellow-600">Video Views:</strong> Promote video content to maximise watch time.</li>
-                <li><strong class="text-yellow-600">App Installs:</strong> Encourage users to download your mobile app.</li>
-            </ul>
-        `
-    },
-    'brand-4': {
-        category: 'Design Specs',
-        title: 'What are the best image and video sizes for social media?',
-        content: `
-            <p class="mb-6 leading-relaxed text-lg">Always keep text within safe zones to avoid cropping. Here are the optimal sizes:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Instagram Post:</strong> 1080 × 1080 px (square)</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Story/Reels:</strong> 1080 × 1920 px (9:16)</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Facebook Feed:</strong> 1200 × 630 px (landscape)</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Facebook Story:</strong> 1080 × 1920 px</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Twitter Post:</strong> 1600 × 900 px (16:9)</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>LinkedIn Post:</strong> 1200 × 627 px</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>Pinterest Pin:</strong> 1000 × 1500 px (2:3)</div>
-                <div class="p-4 bg-gray-50 rounded-lg border border-gray-100"><strong>YouTube Thumbnail:</strong> 1280 × 720 px</div>
-            </div>
-        `
-    },
-    'brand-5': {
-        category: 'Risk Management',
-        title: 'How to protect your social media account from being banned?',
-        content: `
-            <ul class="space-y-4 text-lg">
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Read and follow platform guidelines:</strong> Avoid hate speech, fake news, or prohibited content.</div></li>
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Don’t use bots or automation:</strong> Rapid following/unfollowing violates terms of service.</div></li>
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Post original content:</strong> Avoid copyright infringement, especially with background music in ads.</div></li>
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Engage naturally:</strong> Don’t spam identical comments across dozens of posts.</div></li>
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Secure your account:</strong> Use strong passwords and two‑factor authentication (2FA).</div></li>
-                <li class="flex items-start"><div class="w-2 h-2 rounded-full bg-red-500 mr-3 mt-2"></div> <div><strong>Respond to warnings:</strong> If you get a violation notice, delete the content and correct the issue immediately.</div></li>
-            </ul>
-        `
+    'fpssa': {
+        title: 'FPSSA Portal', category: 'System Development', client: 'Federation of Procurement and Supplies',
+        challenge: 'FPSSA required a massive digital system to manage student records securely.',
+        solution: 'We built a bespoke enterprise software architecture featuring automated data management and user portals.',
+        impact: 'Administrative processing time was reduced by 70%.',
+        images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&auto=format&fit=crop']
     }
 };
 
-// 4. BLOG MODAL CONTROLS//
+let sliderImages = [];
+let sliderIndex = 0;
 
-function openBlogModal(articleId) {
-    const data = blogData[articleId];
-    
-    if (!data) {
-        console.error("Article data not found for:", articleId);
-        return; 
+window.openProjectModal = function(id) {
+    try {
+        console.log('Opening modal for project:', id);
+        
+        const data = projectsDB[id];
+        if(!data) {
+            console.error('Project not found in projectsDB:', id);
+            console.log('Available projects:', Object.keys(projectsDB));
+            return;
+        }
+
+        // Update modal content
+        const titleEl = document.getElementById('modal-title');
+        const categoryEl = document.getElementById('modal-category');
+        const clientEl = document.getElementById('modal-client');
+        const challengeEl = document.getElementById('modal-challenge');
+        const solutionEl = document.getElementById('modal-solution');
+        const impactEl = document.getElementById('modal-impact');
+
+        if(!titleEl || !categoryEl || !clientEl || !challengeEl || !solutionEl || !impactEl) {
+            console.error('Modal elements not found');
+            console.log('titleEl:', titleEl);
+            console.log('categoryEl:', categoryEl);
+            console.log('clientEl:', clientEl);
+            console.log('challengeEl:', challengeEl);
+            console.log('solutionEl:', solutionEl);
+            console.log('impactEl:', impactEl);
+            return;
+        }
+
+        titleEl.textContent = data.title;
+        categoryEl.textContent = data.category;
+        clientEl.innerHTML = `<ion-icon name="business" class="mr-2 text-brandBlue"></ion-icon> ${data.client}`;
+        challengeEl.textContent = data.challenge;
+        solutionEl.textContent = data.solution;
+        impactEl.textContent = data.impact;
+
+        // Setup images
+        sliderImages = data.images && data.images.length > 0 ? data.images : [];
+        sliderIndex = 0;
+        
+        if(sliderImages.length > 0) {
+            window.updateSliderImage();
+        } else {
+            console.warn('No images found for project:', id);
+        }
+
+        // Show modal
+        const overlay = document.getElementById('project-modal-overlay');
+        const box = document.getElementById('project-modal-box');
+        
+        if(!overlay || !box) {
+            console.error('Modal overlay/box not found');
+            console.log('overlay:', overlay);
+            console.log('box:', box);
+            return;
+        }
+
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        setTimeout(() => { 
+            box.classList.remove('scale-95', 'opacity-0'); 
+            box.classList.add('scale-100', 'opacity-100'); 
+        }, 10);
+        document.body.style.overflow = 'hidden';
+        
+        console.log('Modal opened successfully');
+    } catch (error) {
+        console.error('Error opening project modal:', error);
     }
+};
 
-    document.getElementById('blog-modal-category').innerText = data.category;
-    document.getElementById('blog-modal-title').innerText = data.title;
-    document.getElementById('blog-modal-body').innerHTML = data.content;
+window.updateSliderImage = function() {
+    try {
+        const img = document.getElementById('modal-main-image');
+        const counter = document.getElementById('image-counter');
 
-    const overlay = document.getElementById('blog-modal-overlay');
-    const box = document.getElementById('blog-modal-box');
+        if(!img || !counter) {
+            console.error('Image or counter element not found');
+            return;
+        }
+
+        if(sliderImages.length === 0) {
+            console.warn('No images to display');
+            return;
+        }
+
+        img.style.opacity = '0.5';
+        setTimeout(() => {
+            img.src = sliderImages[sliderIndex];
+            img.style.opacity = '1';
+        }, 150);
+        
+        counter.textContent = `${sliderIndex + 1} / ${sliderImages.length}`;
+    } catch (error) {
+        console.error('Error updating slider image:', error);
+    }
+};
+
+window.nextImage = function() {
+    if(sliderImages.length === 0) return;
+    sliderIndex = (sliderIndex + 1) % sliderImages.length;
+    window.updateSliderImage();
+};
+
+window.prevImage = function() {
+    if(sliderImages.length === 0) return;
+    sliderIndex = (sliderIndex - 1 + sliderImages.length) % sliderImages.length;
+    window.updateSliderImage();
+};
+
+window.closeProjectModal = function() {
+    try {
+        const overlay = document.getElementById('project-modal-overlay');
+        const box = document.getElementById('project-modal-box');
+        
+        if(!overlay || !box) {
+            console.error('Modal elements not found for closing');
+            return;
+        }
+
+        box.classList.remove('scale-100', 'opacity-100');
+        box.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => { 
+            overlay.classList.add('hidden'); 
+            overlay.classList.remove('flex'); 
+            document.body.style.overflow = 'auto'; 
+        }, 300);
+    } catch (error) {
+        console.error('Error closing project modal:', error);
+    }
+};
+
+// AWARD LIGHTBOX FUNCTIONS
+window.openAwardLightbox = function(imageSrc, captionText) {
+    const modal = document.getElementById('awardLightbox');
+    const img = document.getElementById('lightboxImage');
+    const caption = document.getElementById('lightboxCaption');
     
-    overlay.classList.remove('hidden');
-    overlay.classList.add('flex');
+    img.src = imageSrc;
+    caption.textContent = captionText;
+    
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
     
     setTimeout(() => {
-        box.classList.remove('translate-y-full', 'sm:translate-y-0', 'sm:scale-95', 'opacity-0');
-        box.classList.add('translate-y-0', 'sm:scale-100', 'opacity-100');
+        modal.classList.remove('opacity-0');
+        img.classList.remove('scale-95');
+        img.classList.add('scale-100');
     }, 10);
     
     document.body.style.overflow = 'hidden';
-}
+};
 
-function closeBlogModal() {
-    const overlay = document.getElementById('blog-modal-overlay');
-    const box = document.getElementById('blog-modal-box');
+window.closeAwardLightbox = function() {
+    const modal = document.getElementById('awardLightbox');
+    const img = document.getElementById('lightboxImage');
     
-    box.classList.remove('translate-y-0', 'sm:scale-100', 'opacity-100');
-    box.classList.add('translate-y-full', 'sm:translate-y-0', 'sm:scale-95', 'opacity-0');
+    modal.classList.add('opacity-0');
+    img.classList.remove('scale-100');
+    img.classList.add('scale-95');
     
     setTimeout(() => {
-        overlay.classList.add('hidden');
-        overlay.classList.remove('flex');
-        document.body.style.overflow = 'auto'; 
-    }, 400); 
-}
-
-// ==========================================
-// 5. OTHER MODAL STUBS (Prevents console errors)
-// ==========================================
-function openTechModal(service) { console.log("Tech Modal triggered for:", service); }
-function closeTechModal() { /* Add close logic based on HTML IDs when built */ }
-
-function openBrandModal(service) { console.log("Brand Modal triggered for:", service); }
-function closeBrandModal() { /* Add close logic based on HTML IDs when built */ }
-
-function openProjectModal(project) { console.log("Project Modal triggered for:", project); }
-function closeProjectModal() { /* Add close logic based on HTML IDs when built */ }
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }, 300);
+};
 
 
+
+
+// blog
+ (function() {
+            // Blog Content Database
+            const blogDB = {
+                'tech-1': {
+                    title: 'Why Do You Need a Website? The Ultimate Guide.',
+                    category: 'Web Development',
+                    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p class="drop-cap">A website is your digital storefront. While social media is excellent for engagement, a website is the only piece of digital real estate you truly own on the internet.</p>
+                        <h3>1. Total Control over Your Brand</h3>
+                        <p>When you rely solely on Facebook or Instagram, you are at the mercy of their algorithms. A website allows you to control the narrative, the design, and the user journey from start to finish without unexpected algorithm changes ruining your reach.</p>
+                        <h3>2. Credibility and Trust</h3>
+                        <p>Consumers expect legitimate businesses to have a professional website. A well-designed site with an SSL certificate, proper contact information, and professional email addresses builds instant trust with prospective clients.</p>
+                        <blockquote class="border-l-4 border-brandBlue pl-5 py-3 my-10 text-xl sm:text-2xl italic font-semibold text-gray-800 bg-gray-50 rounded-r-xl">
+                            "If your business is not on the internet, then your business will be out of business." <br>
+                            <span class="text-sm text-brandBlue not-italic mt-2 block">— Bill Gates</span>
+                        </blockquote>
+                        <h3>3. 24/7 Lead Generation</h3>
+                        <p>Your website never sleeps. With proper SEO (Search Engine Optimization) and clear calls-to-action, your website acts as a dedicated sales representative, collecting leads and making sales even when you are offline.</p>
+                    `
+                },
+                'tech-2': {
+                    title: 'What Info Should You Have Before Creating a Website?',
+                    category: 'Planning',
+                    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>Jumping straight into design without a plan is a recipe for disaster. Here is the vital information you need to gather before contacting a developer.</p>
+                        <ul>
+                            <li><strong>Target Audience:</strong> Who are you building this for? Understanding your demographic dictates the design language.</li>
+                            <li><strong>Core Features:</strong> Do you need a booking system, a payment gateway, or just a portfolio?</li>
+                            <li><strong>Brand Guidelines:</strong> Have your high-resolution logos, hex color codes, and preferred fonts ready.</li>
+                            <li><strong>Sitemap:</strong> A clear list of pages you need (e.g., Home, About, Services, Contact).</li>
+                            <li><strong>Content:</strong> High-quality text and images are often the biggest bottleneck in web design. Prepare them early!</li>
+                        </ul>
+                    `
+                },
+                'tech-3': {
+                    title: 'Payment Integration for NGOs & E-Commerce',
+                    category: 'FinTech',
+                    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>The ability to securely process transactions online is no longer optional—it is the lifeblood of modern digital platforms.</p>
+                        <h3>For E-Commerce</h3>
+                        <p>Frictionless checkout is key to reducing cart abandonment. Integrating local solutions (like Mobile Money in Africa) alongside global processors (Stripe, PayPal) ensures you capture every possible sale.</p>
+                        <h3>For NGOs</h3>
+                        <p>Donors want to give securely and easily. Setting up recurring donation systems through integrated payment gateways provides a steady, reliable stream of income for charitable initiatives.</p>
+                    `
+                },
+                'tech-4': {
+                    title: 'How to Prevent Being Hacked Before It Happens',
+                    category: 'Security',
+                    image: 'https://images.unsplash.com/photo-1614064641913-6b059828ebbc?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>Cybersecurity is not just an IT problem; it is a fundamental business requirement.</p>
+                        <div class="bg-red-50 p-6 rounded-xl border border-red-100 my-8">
+                            <h4 class="font-bold text-red-800 mb-4 text-lg">The 3 Pillars of Defense:</h4>
+                            <ol class="list-decimal pl-5 space-y-3 text-red-900">
+                                <li><strong>Access Control:</strong> Enforce strong, rotating passwords and mandatory Two-Factor Authentication (2FA) for all administrative accounts.</li>
+                                <li><strong>Software Updates:</strong> Outdated plugins and core files are the #1 vulnerability. Automate your patching schedule.</li>
+                                <li><strong>Off-site Backups:</strong> If a breach occurs, a daily off-site backup allows you to restore your system in minutes rather than losing years of data.</li>
+                            </ol>
+                        </div>
+                    `
+                },
+                'brand-1': {
+                    title: 'What Are the Best Times to Post on Social Media?',
+                    category: 'Strategy',
+                    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p class="drop-cap">The algorithm favors early engagement. Posting when your audience is asleep means your content will be buried by the time they wake up.</p>
+                        <h3>General Guidelines for 2025:</h3>
+                        <ul>
+                            <li><strong>Instagram:</strong> Weekdays between 11 AM and 1 PM (lunch breaks) or early evenings around 7 PM.</li>
+                            <li><strong>LinkedIn:</strong> Tuesday through Thursday, 8 AM - 10 AM. Professional audiences engage during their morning commute or first hours at the desk.</li>
+                            <li><strong>TikTok:</strong> Highly varied, but generally evenings (6 PM - 9 PM) see the highest continuous scroll rates.</li>
+                        </ul>
+                        <p class="font-bold text-yellow-600 bg-yellow-50 p-4 rounded-lg mt-6 border border-yellow-200">Pro Tip: Always check your own platform insights. Your specific demographic may behave differently than the global average.</p>
+                    `
+                },
+                'brand-2': {
+                    title: 'The Best Tools for Social Media Management',
+                    category: 'Management',
+                    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>Managing multiple accounts natively is inefficient. Here are the tools professionals use to scale their operations.</p>
+                        <h3>For Scheduling & Analytics</h3>
+                        <p><strong>Buffer & Hootsuite:</strong> Excellent for planning a month of content in advance across multiple platforms. They provide unified inboxes so you never miss a customer comment.</p>
+                        <h3>For Rapid Design</h3>
+                        <p><strong>Canva Pro:</strong> The undisputed king of rapid social media asset creation. With brand kits and built-in resizing, it saves hours of production time compared to traditional software.</p>
+                    `
+                },
+                'brand-3': {
+                    title: 'Campaign Objectives: Sales, Traffic, or Awareness?',
+                    category: 'Paid Media',
+                    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>Selecting the wrong objective in Meta or Google Ads is the fastest way to burn your marketing budget.</p>
+                        <h3>Brand Awareness</h3>
+                        <p>Tells the algorithm to show your ad to as many people as possible. Good for new product launches, but terrible for generating immediate sales.</p>
+                        <h3>Traffic</h3>
+                        <p>Optimizes for link clicks. The algorithm finds people who like to click, but not necessarily people who buy.</p>
+                        <h3>Conversions / Sales</h3>
+                        <p>The most expensive, but most valuable. The algorithm actively seeks users with a history of purchasing similar products online.</p>
+                    `
+                },
+                'brand-4': {
+                    title: 'The Best Image & Video Sizes for Social Media',
+                    category: 'Design Specs',
+                    image: 'https://images.unsplash.com/photo-1626785775573-4b799315345d?w=1200&auto=format&fit=crop',
+                    content: `
+                        <p>A pixelated logo ruins brand credibility. Here are the current standard dimensions you need to memorize.</p>
+                        <div class="overflow-x-auto mt-8 border border-gray-200 rounded-xl">
+                            <table class="min-w-full bg-white">
+                                <thead>
+                                    <tr class="bg-gray-50 border-b border-gray-200">
+                                        <th class="py-4 px-6 text-left font-bold text-brandBlack">Format</th>
+                                        <th class="py-4 px-6 text-left font-bold text-brandBlack">Dimensions</th>
+                                        <th class="py-4 px-6 text-left font-bold text-brandBlack">Ratio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4 px-6 text-gray-700">Instagram Square</td>
+                                        <td class="py-4 px-6 font-mono text-sm">1080 x 1080 px</td>
+                                        <td class="py-4 px-6 text-gray-500">1:1</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4 px-6 text-gray-700">Insta/TikTok Reels</td>
+                                        <td class="py-4 px-6 font-mono text-sm">1080 x 1920 px</td>
+                                        <td class="py-4 px-6 text-gray-500">9:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 px-6 text-gray-700">LinkedIn Post</td>
+                                        <td class="py-4 px-6 font-mono text-sm">1200 x 627 px</td>
+                                        <td class="py-4 px-6 text-gray-500">1.91:1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    `
+                }
+            };
+
+            // Modal Functions
+            window.openBlogModal = function(id) {
+                const data = blogDB[id];
+                if(!data) return;
+
+                // Populate Modal Data
+                document.getElementById('modal-title').textContent = data.title;
+                document.getElementById('modal-category').textContent = data.category;
+                document.getElementById('modal-hero-image').src = data.image;
+                document.getElementById('modal-content').innerHTML = data.content;
+
+                // Animate In
+                const overlay = document.getElementById('blog-modal-overlay');
+                const box = document.getElementById('blog-modal-box');
+                
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                
+                // Small delay to allow CSS to register the display change before animating
+                setTimeout(() => {
+                    box.classList.remove('translate-y-full', 'sm:scale-95', 'opacity-0');
+                    box.classList.add('translate-y-0', 'scale-100', 'opacity-100');
+                }, 10);
+                
+                document.body.style.overflow = 'hidden'; // Stop background scrolling
+            };
+
+            window.closeBlogModal = function() {
+                const overlay = document.getElementById('blog-modal-overlay');
+                const box = document.getElementById('blog-modal-box');
+                
+                // Animate Out
+                box.classList.remove('translate-y-0', 'scale-100', 'opacity-100');
+                box.classList.add('translate-y-full', 'sm:scale-95', 'opacity-0');
+                
+                // Hide after animation
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                    document.body.style.overflow = 'auto'; // Restore background scrolling
+                }, 400); 
+            };
+        })();
+  
 
 
 //footer//
@@ -972,5 +989,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (footerContainer) {
         footerContainer.innerHTML = footerHtml;
+    }
+});
+
+// ==========================================
+// INITIALIZATION & VERIFICATION
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+    // Verify modal system is ready
+    console.log('=== Portfolio Modal System Verification ===');
+    console.log('projectsDB available:', typeof projectsDB !== 'undefined');
+    console.log('Available projects:', projectsDB ? Object.keys(projectsDB) : 'N/A');
+    console.log('window.openProjectModal available:', typeof window.openProjectModal === 'function');
+    console.log('window.closeProjectModal available:', typeof window.closeProjectModal === 'function');
+    console.log('window.updateSliderImage available:', typeof window.updateSliderImage === 'function');
+    
+    // Verify modal HTML elements exist on portfolio page
+    const isPortfolioPage = window.location.pathname.toLowerCase().includes('portfolio');
+    if(isPortfolioPage) {
+        console.log('--- Portfolio Page Elements ---');
+        console.log('project-modal-overlay:', document.getElementById('project-modal-overlay') ? '✓ Found' : '✗ Missing');
+        console.log('project-modal-box:', document.getElementById('project-modal-box') ? '✓ Found' : '✗ Missing');
+        console.log('modal-title:', document.getElementById('modal-title') ? '✓ Found' : '✗ Missing');
+        console.log('modal-category:', document.getElementById('modal-category') ? '✓ Found' : '✗ Missing');
+        console.log('modal-client:', document.getElementById('modal-client') ? '✓ Found' : '✗ Missing');
+        console.log('modal-challenge:', document.getElementById('modal-challenge') ? '✓ Found' : '✗ Missing');
+        console.log('modal-solution:', document.getElementById('modal-solution') ? '✓ Found' : '✗ Missing');
+        console.log('modal-impact:', document.getElementById('modal-impact') ? '✓ Found' : '✗ Missing');
+        console.log('modal-main-image:', document.getElementById('modal-main-image') ? '✓ Found' : '✗ Missing');
+        console.log('image-counter:', document.getElementById('image-counter') ? '✓ Found' : '✗ Missing');
     }
 });

@@ -55,10 +55,13 @@
         </div>
     </section>
 
-    <section id="portfolio" class="py-16 sm:py-24 bg-gray-50 min-h-screen">
+
+
+
+<section id="portfolio" class="py-16 sm:py-24 bg-gray-50 min-h-screen relative z-10">
         <div class="container mx-auto px-4 sm:px-6">
             
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 sm:mb-16 reveal">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 sm:mb-16">
                 <button class="filter-btn active px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-brandBlack text-white shadow-lg shadow-black/20" data-filter="all">All Projects</button>
                 <button class="filter-btn px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-brandBlue hover:text-brandBlue" data-filter="tech">Tech Solutions</button>
                 <button class="filter-btn px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-cyan-500 hover:text-cyan-600" data-filter="branding">Branding</button>
@@ -66,75 +69,113 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolio-grid">
                 
-                <div class="portfolio-item branding group cursor-pointer reveal" onclick="openProjectModal('morix')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                <div class="portfolio-item branding relative flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden shrink-0 bg-gray-100">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Morix Beyond Zanzibar</h3>
-                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Brand Identity</span>
+                        <div class="absolute top-4 left-4 bg-brandBlack/80 backdrop-blur-md text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg">
+                            Brand Identity
                         </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brandBlack mb-4 group-hover:text-brandBlue transition-colors duration-300">Morix Beyond Zanzibar</h3>
+                        <button onclick="window.openProjectModal('morix')" class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 w-full bg-transparent border-none cursor-pointer hover:text-brandBlue transition-colors">
+                            <span class="text-sm font-bold text-brandBlue transition-colors">View Details</span>
+                            <div class="w-10 h-10 rounded-full bg-brandBlue flex items-center justify-center text-white transition-all duration-300 transform group-hover:translate-x-1 shadow-sm">
+                                <ion-icon name="arrow-forward-outline" class="text-xl"></ion-icon>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
-                <div class="portfolio-item tech group cursor-pointer reveal delay-100" onclick="openProjectModal('child-comforters')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                <div class="portfolio-item tech relative flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden shrink-0 bg-gray-100">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="African Child Comforters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">African Child Comforters</h3>
-                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Web Platform</span>
+                        <div class="absolute top-4 left-4 bg-brandBlack/80 backdrop-blur-md text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg">
+                            Web Platform
                         </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brandBlack mb-4 group-hover:text-brandBlue transition-colors duration-300">African Child Comforters</h3>
+                        <button onclick="window.openProjectModal('child-comforters')" class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 w-full bg-transparent border-none cursor-pointer hover:text-brandBlue transition-colors">
+                            <span class="text-sm font-bold text-brandBlue transition-colors">View Details</span>
+                            <div class="w-10 h-10 rounded-full bg-brandBlue flex items-center justify-center text-white transition-all duration-300 transform group-hover:translate-x-1 shadow-sm">
+                                <ion-icon name="arrow-forward-outline" class="text-xl"></ion-icon>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
-                <div class="portfolio-item tech group cursor-pointer reveal delay-200" onclick="openProjectModal('fpssa')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
+                <div class="portfolio-item tech relative flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden shrink-0 bg-gray-100">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop" alt="FPSSA Portal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">FPSSA Portal</h3>
-                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">System Development</span>
+                        <div class="absolute top-4 left-4 bg-brandBlack/80 backdrop-blur-md text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg">
+                            System Development
                         </div>
                     </div>
-                </div>
-
-                <div class="portfolio-item branding group cursor-pointer reveal" onclick="openProjectModal('coffee-packaging')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
-                        <img src="https://images.unsplash.com/photo-1628148906325-bb308b46e107?q=80&w=800&auto=format&fit=crop" alt="Kilimanjaro Coffee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Kilimanjaro Roasters</h3>
-                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">3D & Packaging</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item tech group cursor-pointer reveal delay-100" onclick="openProjectModal('fintech-app')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
-                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop" alt="Fintech App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brandBlue flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">PayFlow Africa</h3>
-                            <span class="text-blue-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Mobile App Development</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item branding group cursor-pointer reveal delay-200" onclick="openProjectModal('digital-campaign')">
-                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white aspect-video">
-                        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800&auto=format&fit=crop" alt="Digital Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-brandBlack/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 sm:p-6 text-center">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><ion-icon name="search-outline" class="text-xl sm:text-2xl"></ion-icon></div>
-                            <h3 class="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">EcoTours Tanzania</h3>
-                            <span class="text-cyan-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">Digital Marketing</span>
-                        </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brandBlack mb-4 group-hover:text-brandBlue transition-colors duration-300">FPSSA Portal</h3>
+                        <button onclick="window.openProjectModal('fpssa')" class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 w-full bg-transparent border-none cursor-pointer hover:text-brandBlue transition-colors">
+                            <span class="text-sm font-bold text-brandBlue transition-colors">View Details</span>
+                            <div class="w-10 h-10 rounded-full bg-brandBlue flex items-center justify-center text-white transition-all duration-300 transform group-hover:translate-x-1 shadow-sm">
+                                <ion-icon name="arrow-forward-outline" class="text-xl"></ion-icon>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <div id="project-modal-overlay" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-brandBlack/90 backdrop-blur-md">
+        <div id="project-modal-box" class="relative bg-white w-full sm:w-11/12 h-[95vh] max-w-6xl sm:rounded-3xl shadow-2xl flex flex-col transform scale-95 opacity-0 transition-all duration-300 ease-out overflow-hidden">
+            
+            <button onclick="window.closeProjectModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 hover:bg-red-500 text-white backdrop-blur-md rounded-full flex items-center justify-center transition-colors z-50 shadow-lg">
+                <ion-icon name="close" class="text-2xl"></ion-icon>
+            </button>
+            
+            <div class="relative w-full h-64 sm:h-96 md:h-[450px] bg-gray-900 group">
+                <img id="modal-main-image" src="" alt="Project Image" class="w-full h-full object-cover transition-opacity duration-300">
+                <button onclick="window.prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-brandBlue text-white backdrop-blur-md rounded-full flex items-center justify-center transition-colors shadow-lg z-20">
+                    <ion-icon name="chevron-back-outline" class="text-2xl"></ion-icon>
+                </button>
+                <button onclick="window.nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-brandBlue text-white backdrop-blur-md rounded-full flex items-center justify-center transition-colors shadow-lg z-20">
+                    <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                </button>
+                <div class="absolute bottom-4 right-4 bg-black/50 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md z-20">
+                    <span id="image-counter">1 / 3</span>
+                </div>
+            </div>
+
+            <div class="overflow-y-auto flex-grow p-6 sm:p-10 md:p-12">
+                <div class="max-w-4xl mx-auto">
+                    <span id="modal-category" class="inline-block px-3 py-1 rounded-full bg-brandBlue/10 text-brandBlue text-xs font-bold uppercase tracking-widest mb-3">Category</span>
+                    <h2 id="modal-title" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brandBlack mb-4">Project Title</h2>
+                    <p id="modal-client" class="text-gray-500 font-medium flex items-center mb-8"><ion-icon name="business" class="mr-2 text-brandBlue"></ion-icon> Client Name</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+                        <div>
+                            <h3 class="text-xl font-bold text-brandBlack mb-3 flex items-center"><ion-icon name="alert-circle" class="text-brandBlue mr-2 text-2xl"></ion-icon> The Challenge</h3>
+                            <p id="modal-challenge" class="text-gray-600 leading-relaxed text-justify">Description goes here.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-brandBlack mb-3 flex items-center"><ion-icon name="bulb" class="text-brandBlue mr-2 text-2xl"></ion-icon> The Solution</h3>
+                            <p id="modal-solution" class="text-gray-600 leading-relaxed text-justify">Solution goes here.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-brandBlack mb-4 border-b border-gray-200 pb-3">The Impact</h3>
+                        <p id="modal-impact" class="text-gray-700 leading-relaxed">Impact results go here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <section id="awards" class="py-16 sm:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden border-t border-gray-800 mb-16 sm:mb-24">
         <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -144,18 +185,21 @@
             
             <div class="text-center mb-10 sm:mb-16 reveal">
                 <span class="text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Proven Excellence</span>
-                <h2 class="text-3xl  text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
+                <h2 class="text-3xl text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
                 <div class="h-1 w-16 sm:w-20 bg-brandBlack mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 
-                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal">
-                    
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop', 'Best Enterprise Platform')">
                     <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
                         <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="East African Tech Award Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
                         
-                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+                        
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
                             <ion-icon name="trophy" class="text-base sm:text-lg"></ion-icon>
                         </div>
                     </div>
@@ -169,10 +213,15 @@
                     </div>
                 </div>
 
-                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100">
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=1200&auto=format&fit=crop', 'Agency of the Year')">
                     <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
                         <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=800&auto=format&fit=crop" alt="Agency of the Year Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                        
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
                             <ion-icon name="star" class="text-base sm:text-lg"></ion-icon>
                         </div>
                     </div>
@@ -185,10 +234,15 @@
                     </div>
                 </div>
 
-                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-200">
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-200 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1200&auto=format&fit=crop', 'Excellence in UI/UX')">
                     <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
                         <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop" alt="Excellence in UI/UX Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg">
+                        
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
                             <ion-icon name="ribbon" class="text-base sm:text-lg"></ion-icon>
                         </div>
                     </div>
@@ -205,66 +259,15 @@
         </div>
     </section>
 
-</main>
-
-<div id="project-modal-overlay" class="fixed inset-0 z-[200] hidden items-end justify-center sm:items-center">
-    <div class="absolute inset-0 bg-brandBlack/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
-    
-    <div id="project-modal-box" class="relative bg-brandWhite w-full h-[95vh] sm:w-11/12 sm:h-[90vh] max-w-6xl sm:rounded-3xl shadow-2xl flex flex-col transform translate-y-full sm:translate-y-0 sm:scale-95 opacity-0 transition-all duration-500 ease-out z-10 overflow-hidden">
-        
-        <button onclick="closeProjectModal()" class="absolute top-3 right-3 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 hover:bg-red-500 text-white backdrop-blur-md rounded-full flex items-center justify-center transition-colors z-50 shadow-lg">
-            <ion-icon name="close" class="text-xl sm:text-2xl"></ion-icon>
+    <div id="awardLightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-brandBlack/95 backdrop-blur-md p-4 sm:p-8 opacity-0 transition-opacity duration-300">
+        <button onclick="closeAwardLightbox()" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-brandBlue text-3xl sm:text-5xl transition-colors z-50">
+            <ion-icon name="close-circle-outline"></ion-icon>
         </button>
-        
-        <div class="overflow-y-auto flex-grow w-full pb-16">
-            
-            <div class="w-full h-48 sm:h-64 md:h-96 relative bg-brandBlack">
-                <img id="pm-hero" src="" alt="Project Hero" class="w-full h-full object-cover opacity-80">
-                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack to-transparent"></div>
-                
-                <div class="absolute bottom-0 left-0 p-5 sm:p-8 md:p-12 w-full">
-                    <span id="pm-category" class="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-brandBlue/20 border border-brandBlue/50 text-brandWhite text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 sm:mb-4 backdrop-blur-md">Category</span>
-                    <h2 id="pm-title" class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mb-1 sm:mb-2">Project Title</h2>
-                    <p id="pm-client" class="text-sm sm:text-base text-gray-300 font-medium flex items-center"><ion-icon name="business" class="mr-2"></ion-icon> Client Name</p>
-                </div>
-            </div>
-
-            <div class="p-5 sm:p-8 md:p-12 max-w-5xl mx-auto">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 mb-10 sm:mb-16">
-                    <div class="lg:col-span-2 space-y-8 sm:space-y-10">
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-2 sm:mb-3 flex items-center"><ion-icon name="alert-circle" class="text-brandBlue mr-2 text-xl sm:text-2xl"></ion-icon> The Challenge</h3>
-                            <p id="pm-challenge" class="text-sm sm:text-base text-justify sm:text-left text-gray-600 leading-relaxed">...</p>
-                        </div>
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-2 sm:mb-3 flex items-center"><ion-icon name="bulb" class="text-brandBlue mr-2 text-xl sm:text-2xl"></ion-icon> The Solution</h3>
-                            <p id="pm-solution" class="text-sm sm:text-base text-justify sm:text-left text-gray-600 leading-relaxed">...</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-200 h-max">
-                        <h3 class="text-lg sm:text-xl font-bold text-brandBlack mb-4 border-b border-gray-200 pb-3 sm:pb-4">The Impact</h3>
-                        <div id="pm-results" class="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-sm sm:text-base text-gray-700">
-                            </div>
-                        
-                        <a href="#" id="pm-link" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-brandBlack hover:bg-brandBlue text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg">
-                            <ion-icon name="open-outline" class="mr-2 text-lg sm:text-xl"></ion-icon> View Live Project
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlack mb-4 sm:mb-6 text-center">Project Gallery</h3>
-                    <div id="pm-gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                        </div>
-                </div>
-
-            </div>
+        <div class="flex flex-col items-center max-w-5xl mx-auto w-full">
+            <img id="lightboxImage" src="" alt="Certificate" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300 border-4 border-white">
+            <h3 id="lightboxCaption" class="text-white text-center mt-6 text-xl sm:text-3xl font-extrabold tracking-wide"></h3>
         </div>
     </div>
-</div>
-
 
 <div id="footer-container"></div>
     <script src="animation.js"></script>
