@@ -3,285 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Africana Insights | Tech & Branding Authority</title>
+    <title>Africana Insights | Tech & Branding Authority</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-
+    
     <style>
-        /* Custom styling for the injected blog text to make it look highly professional */
-        .blog-prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #4b5563; }
-        .blog-prose h3 { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .blog-prose .drop-cap::first-letter { font-size: 3.5rem; font-weight: 700; color: #0D8ABC; float: left; margin-right: 0.5rem; line-height: 1; }
-        .blog-prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #4b5563; }
-        .blog-prose li { margin-bottom: 0.5rem; }
+        body { font-family: 'Inter', sans-serif; }
+        .blog-prose p { margin-bottom: 1.6rem; line-height: 1.8; color: #374151; font-size: 1.05rem; }
+        .blog-prose h2 { font-size: 2rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.2rem; color: #0b0c0e; }
+        .blog-prose h3 { font-size: 1.5rem; font-weight: 700; color: #0b0c0e; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+        .blog-prose .drop-cap::first-letter { font-size: 3.8rem; font-weight: 800; color: #0D8ABC; float: left; margin-right: 0.75rem; line-height: 1; }
+        .blog-prose ul { list-style-type: none; padding-left: 0; margin-bottom: 1.8rem; }
+        .blog-prose li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 12px; }
+        .blog-prose li i, .blog-prose li ion-icon { color: #0D8ABC; font-size: 1.3rem; margin-top: 4px; min-width: 24px; }
+        .blog-prose strong { color: #0D8ABC; }
+        .modal-scroll { scrollbar-width: thin; scrollbar-color: #0D8ABC #e5e7eb; }
+        .modal-scroll::-webkit-scrollbar { width: 6px; }
+        .modal-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
+        .modal-scroll::-webkit-scrollbar-thumb { background: #0D8ABC; border-radius: 10px; }
+        .hover-lift { transition: transform 0.25s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15); }
+        
+        /* Modal overlay below header */
+        .modal-overlay-below {
+            top: 80px; /* header height */
+            height: calc(100% - 80px);
+        }
+        @media (min-width: 768px) {
+            .modal-overlay-below { top: 84px; height: calc(100% - 84px); }
+        }
+        
+        /* Hide scrollbar for carousels */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="font-poppins bg-brandWhite text-brandBlack m-0 p-0 overflow-x-hidden">
+<body class="font-sans bg-white text-gray-900 antialiased overflow-x-hidden">
 
-    <div id="header-container" class="relative z-50"></div>
-
-    <main class="pt-16 sm:pt-20 lg:pt-24 pb-0 bg-gray-50">
-            
-        <section class="relative w-full py-20 sm:py-32 flex items-center justify-center overflow-hidden bg-brandBlack">
-            <div class="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-yellow-400 opacity-10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-brandBlue opacity-10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-4 text-center relative z-10">
-                <span class="inline-block px-4 py-1.5 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-md mb-6 text-xs sm:text-sm font-bold tracking-widest text-yellow-400 uppercase">Insights & Strategy</span>
-                
-                <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tighter text-brandWhite">
-                    The Africana <br class="hidden sm:block"/>
-                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-brandBlue">Knowledge Hub</span>
-                </h1>
-                
-                <p class="text-base sm:text-xl text-gray-400 max-w-3xl mx-auto font-light px-4 sm:px-0">
-                    Expert strategies, security protocols, and creative masterclasses designed to help modern enterprises dominate the digital landscape.
-                </p>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-24 border-b border-gray-200">
-            <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
-                
-                <div class="flex flex-col sm:flex-row items-center justify-between mb-12 sm:mb-20">
-                    <div class="text-center sm:text-left mb-6 sm:mb-0">
-                        <span class="text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Engineering & Code</span>
-                        <h2 class="text-4xl sm:text-5xl font-extrabold text-brandBlack tracking-tight">Tech Solutions</h2>
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 bg-gradient-to-br from-[#0D8ABC] to-yellow-400 rounded-lg flex items-center justify-center shadow-md">
+                        <span class="text-white font-extrabold text-xl">A</span>
                     </div>
-                    <div class="h-1 w-full sm:w-max flex-grow ml-0 sm:ml-8 bg-gradient-to-r from-brandBlue/20 to-transparent rounded-full"></div>
-                </div>
-
-                <div class="mb-8 sm:mb-12 cursor-pointer group" onclick="openBlogModal('tech-1')">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row">
-                        <div class="w-full lg:w-3/5 h-64 sm:h-96 relative overflow-hidden bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Website Value" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
-                            <div class="absolute top-6 left-6 px-4 py-1.5 bg-brandBlue text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg">Featured Tech</div>
-                        </div>
-                        <div class="w-full lg:w-2/5 p-8 sm:p-12 flex flex-col justify-center">
-                            <div class="flex items-center text-sm text-gray-400 mb-4 font-medium">
-                                <ion-icon name="calendar-outline" class="mr-2"></ion-icon> Oct 12, 2025
-                                <span class="mx-3">•</span>
-                                <ion-icon name="time-outline" class="mr-2"></ion-icon> 5 min read
-                            </div>
-                            <h3 class="text-2xl sm:text-4xl font-extrabold text-brandBlack mb-6 group-hover:text-brandBlue transition-colors leading-tight">Why Do You Need a Website? The Ultimate Guide.</h3>
-                            <p class="text-base text-gray-600 mb-8 leading-relaxed">A website is your digital storefront – it works 24/7 to build credibility, attract customers, and showcase your products or services. Discover why relying solely on social media is a critical business mistake.</p>
-                            
-                            <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-brandBlack group-hover:bg-brandBlue text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">
-                                Read Full Article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon>
-                            </button>
-                        </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-gray-900">Africana</span>
+                        <span class="block text-[10px] font-bold uppercase tracking-wider text-[#0D8ABC] -mt-1">Tech & Branding</span>
                     </div>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    
-                    <div onclick="openBlogModal('tech-2')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop" alt="Preparation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-brandBlack text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">Planning</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-brandBlue transition-colors leading-snug">What Info Should You Have Before Creating a Website?</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Learn the exact checklist of content, competitor analysis, and budgets required before you start.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-brandBlue text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-brandBlue">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div onclick="openBlogModal('tech-3')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop" alt="Payments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-brandBlack text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">FinTech</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-brandBlue transition-colors leading-snug">Payment Integration for NGOs & E-Commerce</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Even for an NGO, payment integration is vital. Accept donations globally and sell merchandise 24/7.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-brandBlue text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-brandBlue">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div onclick="openBlogModal('tech-4')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1614064641913-6b059828ebbc?w=800&auto=format&fit=crop" alt="Prevention" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-red-500 text-white text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">Security</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-brandBlue transition-colors leading-snug">How to Prevent Being Hacked Before It Happens</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Learn how to limit login attempts, utilize CDNs for DDoS protection, and educate your team.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-brandBlue text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-brandBlue">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="#" class="text-gray-700 hover:text-[#0D8ABC] transition">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#0D8ABC] transition">Services</a>
+                    <a href="#" class="text-[#0D8ABC] border-b-2 border-[#0D8ABC] pb-1">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-[#0D8ABC] transition">Case Studies</a>
+                    <a href="#" class="text-gray-700 hover:text-[#0D8ABC] transition">Contact</a>
+                </nav>
+                <div>
+                    <a href="#" class="hidden sm:inline-block bg-gray-900 hover:bg-[#0D8ABC] text-white px-5 py-2.5 rounded-xl text-sm font-bold transition shadow-md">
+                        Work with us
+                    </a>
+                    <button class="md:hidden text-gray-700">
+                        <ion-icon name="menu-outline" class="text-3xl"></ion-icon>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
+   <div id="header-container"></div>
 
-        <section class="py-16 sm:py-24 bg-brandWhite">
-            <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
-                
-                <div class="flex flex-col sm:flex-row items-center justify-between mb-12 sm:mb-20">
-                    <div class="text-center sm:text-left mb-6 sm:mb-0">
-                        <span class="text-yellow-500 font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Design & Marketing</span>
-                        <h2 class="text-4xl sm:text-5xl font-extrabold text-brandBlack tracking-tight">Branding & Creative</h2>
-                    </div>
-                    <div class="h-1 w-full sm:w-max flex-grow ml-0 sm:ml-8 bg-gradient-to-r from-yellow-400/30 to-transparent rounded-full"></div>
+    <section class="relative w-full py-24 md:py-36 flex items-center justify-center overflow-hidden bg-gray-900">
+        <div class="absolute top-0 right-0 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-yellow-400 opacity-10 rounded-full blur-[100px] md:blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-[#0D8ABC] opacity-10 rounded-full blur-[100px] md:blur-[140px] pointer-events-none"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <span class="inline-block px-5 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-md mb-6 text-sm font-bold tracking-widest text-yellow-300 uppercase">Knowledge That Drives Growth</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tighter text-white">
+                The Africana <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-[#0D8ABC]">Insights Hub</span>
+            </h1>
+            <p class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto font-light px-4">
+                Master the intersection of technology and branding. In‑depth guides, security blueprints, and creative frameworks — built to help you partner confidently with Africana Tech & Branding Ltd.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-28 border-b border-gray-200 bg-gray-50/50">
+        <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-14 md:mb-20">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <span class="text-[#0D8ABC] font-bold tracking-widest uppercase text-xs md:text-sm block mb-2"><i class="fas fa-microchip mr-1"></i> Engineering & Digital Infrastructure</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Tech Solutions</h2>
                 </div>
+                <div class="h-1 w-full md:w-max flex-grow ml-0 md:ml-8 bg-gradient-to-r from-[#0D8ABC]/20 to-transparent rounded-full"></div>
+            </div>
 
-                <div class="mb-8 sm:mb-12 cursor-pointer group" onclick="openBlogModal('brand-1')">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row-reverse">
-                        <div class="w-full lg:w-3/5 h-64 sm:h-96 relative overflow-hidden bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop" alt="Social Timing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
-                            <div class="absolute top-6 right-6 px-4 py-1.5 bg-yellow-400 text-brandBlack text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg">Featured Strategy</div>
-                        </div>
-                        <div class="w-full lg:w-2/5 p-8 sm:p-12 flex flex-col justify-center">
-                            <div class="flex items-center text-sm text-gray-400 mb-4 font-medium">
-                                <ion-icon name="calendar-outline" class="mr-2"></ion-icon> Nov 03, 2025
-                                <span class="mx-3">•</span>
-                                <ion-icon name="time-outline" class="mr-2"></ion-icon> 4 min read
-                            </div>
-                            <h3 class="text-2xl sm:text-4xl font-extrabold text-brandBlack mb-6 group-hover:text-yellow-600 transition-colors leading-tight">What Are the Best Times to Post on Social Media?</h3>
-                            <p class="text-base text-gray-600 mb-8 leading-relaxed">Timing is everything. Discover the optimal posting windows for Instagram, TikTok, and LinkedIn based on fresh 2025 algorithm data to ensure your content reaches the maximum audience.</p>
-                            
-                            <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-brandBlack group-hover:bg-yellow-500 text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">
-                                Read Full Article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon>
-                            </button>
-                        </div>
+            <div class="mb-10 md:mb-14 cursor-pointer group" onclick="openBlogModal('tech-1')">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-3/5 h-64 md:h-96 relative overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Website value" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="absolute top-6 left-6 px-4 py-1.5 bg-[#0D8ABC] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg"><i class="fas fa-star mr-1"></i> Essential Read</div>
                     </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    
-                    <div onclick="openBlogModal('brand-2')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&auto=format&fit=crop" alt="Social Tools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-brandBlack text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">Management</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-yellow-600 transition-colors leading-snug">The Best Tools for Social Media Management</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">From Hootsuite to Canva, we analyze the leading platforms for scheduling and analytics.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-yellow-500">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
+                    <div class="w-full lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center text-sm text-gray-400 mb-4 font-medium"><ion-icon name="calendar-outline" class="mr-2"></ion-icon> Oct 12, 2025 <span class="mx-3">•</span> <ion-icon name="time-outline" class="mr-2"></ion-icon> 6 min read</div>
+                        <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6 group-hover:text-[#0D8ABC] transition-colors leading-tight">Why a Website is Your 24/7 Sales Engine (Not Optional)</h3>
+                        <p class="text-base text-gray-600 mb-8 leading-relaxed">Relying only on social media? You're leaving credibility and revenue on the table. Discover how Africana builds conversion‑focused web presences that work while you sleep.</p>
+                        <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-gray-900 group-hover:bg-[#0D8ABC] text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">Read full article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon></button>
                     </div>
-
-                    <div onclick="openBlogModal('brand-3')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="Ad Campaigns" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-brandBlack text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">Paid Media</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-yellow-600 transition-colors leading-snug">Campaign Objectives: Sales, Traffic, or Awareness?</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Learn the exact differences between Lead Generation and Brand Awareness to maximize ROI.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-yellow-500">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div onclick="openBlogModal('brand-4')" class="group bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900">
-                            <img src="https://images.unsplash.com/photo-1626785775573-4b799315345d?w=800&auto=format&fit=crop" alt="Design Specs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                            <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-brandBlack text-[10px] font-bold uppercase tracking-wider rounded shadow-sm">Design Specs</div>
-                        </div>
-                        <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-brandBlack mb-3 group-hover:text-yellow-600 transition-colors leading-snug">The Best Image & Video Sizes for Social Media</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Never post cropped or blurry images again. Here is your definitive cheat sheet for pixel dimensions.</p>
-                            
-                            <div class="mt-auto pt-4">
-                                <span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-brandBlack group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full sm:w-auto border border-gray-200 group-hover:border-yellow-500">
-                                    Read Article <ion-icon name="arrow-forward" class="ml-2"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
 
-    </main>
-
-    <div id="footer-container"></div>
-
-    <div id="blog-modal-overlay" class="fixed inset-0 bg-brandBlack/80 backdrop-blur-md z-40 hidden flex-col items-center justify-end sm:justify-center pt-24 pb-0 sm:pb-8 px-0 sm:px-6">
-        
-        <div id="blog-modal-box" class="w-full max-w-4xl mx-auto bg-gray-50 rounded-t-3xl sm:rounded-3xl shadow-2xl transform transition-all duration-500 opacity-0 translate-y-full sm:translate-y-0 sm:scale-95 flex flex-col h-full relative overflow-hidden border border-white/20">
-            
-            <button onclick="closeBlogModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 bg-white/90 hover:bg-red-500 hover:text-white text-brandBlack backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300 z-50 shadow-lg border border-gray-100">
-                <ion-icon name="close" class="text-2xl"></ion-icon>
-            </button>
-
-            <div class="overflow-y-auto flex-grow w-full smooth-scroll pb-16">
-                
-                <div class="w-full h-64 sm:h-[400px] relative bg-brandBlack">
-                    <img id="modal-hero-image" src="" alt="Blog Hero" class="w-full h-full object-cover opacity-90">
+            <div class="relative">
+                <div id="tech-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scroll pb-4 md:pb-0">
+                    <div onclick="openBlogModal('tech-2')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop" alt="Preparation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="far fa-clipboard mr-1"></i> Planning</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">Pre‑Project Checklist: What to Prepare Before Development</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Avoid delays and cost overruns. Africana’s battle‑tested preparation guide for content, branding assets, and competitor insights.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
+                    </div>
+                    <div onclick="openBlogModal('tech-3')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop" alt="Payments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-credit-card mr-1"></i> FinTech</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">Payment Integration for NGOs & E‑Commerce</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">From mobile money to international cards — we help you accept donations and payments securely.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
+                    </div>
+                    <div onclick="openBlogModal('tech-4')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1614064641913-6b059828ebbc?w=800&auto=format&fit=crop" alt="Security" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-red-500 text-white text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-shield-alt mr-1"></i> Security</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">How to Prevent Getting Hacked — Before It Happens</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Africana’s proactive security playbook: limit login attempts, CDN shields, and staff awareness.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
+                    </div>
                 </div>
+                
+                <div class="flex justify-center items-center gap-2 mt-4 md:hidden" id="tech-dots">
+                    <button class="w-6 h-2 rounded-full bg-[#0D8ABC] transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="relative max-w-3xl mx-auto bg-white rounded-t-3xl sm:rounded-3xl -mt-12 sm:-mt-20 p-8 sm:p-14 shadow-xl border border-gray-100">
-                    
-                    <div class="flex flex-wrap items-center gap-4 mb-6">
-                        <span id="modal-category" class="px-4 py-1.5 rounded-full bg-brandBlue/10 text-brandBlue text-xs font-extrabold uppercase tracking-widest">Category</span>
-                        <div class="flex items-center text-gray-400 text-sm font-medium">
-                            <ion-icon name="time-outline" class="mr-1.5 text-lg"></ion-icon> 5 min read
-                        </div>
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-14 md:mb-20">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <span class="text-yellow-500 font-bold tracking-widest uppercase text-xs md:text-sm block mb-2"><i class="fas fa-paint-brush mr-1"></i> Design & Digital Marketing</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Branding & Creative</h2>
+                </div>
+                <div class="h-1 w-full md:w-max flex-grow ml-0 md:ml-8 bg-gradient-to-r from-yellow-400/30 to-transparent rounded-full"></div>
+            </div>
+
+            <div class="mb-10 md:mb-14 cursor-pointer group" onclick="openBlogModal('brand-1')">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row-reverse">
+                    <div class="w-full lg:w-3/5 h-64 md:h-96 relative overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop" alt="Social timing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+                        <div class="absolute top-6 right-6 px-4 py-1.5 bg-yellow-400 text-gray-900 text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg"><i class="far fa-clock mr-1"></i> Strategy</div>
                     </div>
-
-                    <h2 id="modal-title" class="text-3xl sm:text-5xl font-extrabold text-brandBlack leading-tight mb-8">Article Title</h2>
-                    
-                    <div class="flex items-center border-t border-b border-gray-100 py-5 mb-10">
-                        <img src="https://ui-avatars.com/api/?name=Africana+Insights&background=0D8ABC&color=fff" alt="Author" class="w-12 h-12 rounded-full mr-4 border border-gray-200">
-                        <div>
-                            <p class="font-bold text-brandBlack text-sm sm:text-base">The Africana Editorial Team</p>
-                            <p class="text-xs sm:text-sm text-gray-500">Expert Analysis & Strategy</p>
-                        </div>
+                    <div class="w-full lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center text-sm text-gray-400 mb-4 font-medium"><ion-icon name="calendar-outline" class="mr-2"></ion-icon> Nov 03, 2025 <span class="mx-3">•</span> <ion-icon name="time-outline" class="mr-2"></ion-icon> 5 min read</div>
+                        <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6 group-hover:text-yellow-600 transition-colors leading-tight">Best Times to Post on Social Media (2025 Data)</h3>
+                        <p class="text-base text-gray-600 mb-8 leading-relaxed">Stop guessing. We analyzed engagement across platforms. Use this schedule to amplify your reach — a cornerstone of Africana’s managed services.</p>
+                        <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-gray-900 group-hover:bg-yellow-500 text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">Read full article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon></button>
                     </div>
+                </div>
+            </div>
 
-                    <div id="modal-content" class="blog-prose mb-12">
-                        </div>
-
-                    <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center pb-4 gap-4">
-                        <p class="text-sm text-gray-400 font-medium">Finished reading?</p>
-                        <button onclick="closeBlogModal()" class="w-full sm:w-auto px-8 py-4 bg-brandBlack hover:bg-brandBlue text-white font-bold text-sm uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                            <ion-icon name="arrow-back-circle" class="mr-3 text-2xl"></ion-icon> Go Back to Articles
-                        </button>
+            <div class="relative">
+                <div id="brand-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scroll pb-4 md:pb-0">
+                    <div onclick="openBlogModal('brand-2')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&auto=format&fit=crop" alt="Tools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-tools mr-1"></i> Management</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-chart-line text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">Top Social Media Management Tools for Teams</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Africana’s curated stack: Buffer, Hootsuite, Canva, and native analytics. We compare features, pricing, and best use cases so you can streamline your workflow.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Scheduling & automation</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Team collaboration</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> In-depth analytics</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
                     </div>
+                    <div onclick="openBlogModal('brand-3')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="Campaign objectives" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-bullseye mr-1"></i> Paid Media</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-ad text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">Campaign Objectives: Sales vs Traffic vs Awareness</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Choosing the wrong objective wastes budget. Learn how Africana structures ad funnels for maximum ROI — with real case studies and benchmarks.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Conversion optimization</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Retargeting strategies</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> A/B testing ad creatives</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
+                    </div>
+                    <div onclick="openBlogModal('brand-4')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
+                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1626785775573-4b799315345d?w=800&auto=format&fit=crop" alt="Image sizes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-image mr-1"></i> Design Specs</div></div>
+                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-crop-alt text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">2025 Social Media Image & Video Size Cheat Sheet</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Never post a cropped logo again. Your definitive guide to perfect dimensions for Instagram, LinkedIn, TikTok, and more — curated by Africana designers.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Feed, Stories, Reels specs</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Aspect ratios & file types</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Downloadable PDF</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center items-center gap-2 mt-4 md:hidden" id="brand-dots">
+                    <button class="w-6 h-2 rounded-full bg-yellow-500 transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="py-16 bg-gray-900 text-white mb-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to build with Africana?</h2>
+            <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Our blog is just the start. Let’s turn insights into impact — from secure websites to unforgettable brands.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="px-8 py-4 bg-[#0D8ABC] hover:bg-[#0a6f9e] text-white font-bold rounded-xl shadow-lg transition">Start a project</a>
+                <a href="#" class="px-8 py-4 bg-transparent border border-white/30 hover:bg-white/10 text-white font-bold rounded-xl transition">Contact our team</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="blog-modal-overlay" class="fixed left-0 w-full bg-gray-900/90 backdrop-blur-md z-40 hidden flex-col items-center justify-start modal-overlay-below overflow-y-auto">
+        <div class="w-full max-w-4xl mx-auto py-6 sm:py-10 px-4 sm:px-6">
+            <div id="blog-modal-box" class="bg-gray-50 rounded-3xl shadow-2xl transform transition-all duration-500 opacity-0 translate-y-8 flex flex-col relative overflow-hidden border border-white/20 w-full">
+                <button onclick="closeBlogModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 bg-white/90 hover:bg-red-500 hover:text-white text-gray-900 backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300 z-50 shadow-lg"><ion-icon name="close" class="text-2xl"></ion-icon></button>
+                <div class="w-full h-64 sm:h-[400px] relative bg-gray-900"><img id="modal-hero-image" src="" alt="Blog Hero" class="w-full h-full object-cover opacity-90"></div>
+                <div class="relative max-w-3xl mx-auto w-full bg-white rounded-t-3xl sm:rounded-3xl -mt-12 sm:-mt-20 p-8 sm:p-14 shadow-xl border border-gray-100">
+                    <div class="flex flex-wrap items-center gap-4 mb-6"><span id="modal-category" class="px-4 py-1.5 rounded-full bg-[#0D8ABC]/10 text-[#0D8ABC] text-xs font-extrabold uppercase tracking-widest">Category</span><div class="flex items-center text-gray-400 text-sm font-medium"><ion-icon name="time-outline" class="mr-1.5 text-lg"></ion-icon> <span id="modal-readtime">5 min read</span></div></div>
+                    <h2 id="modal-title" class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-8">Article Title</h2>
+                    <div class="flex items-center border-t border-b border-gray-100 py-5 mb-10"><img src="https://ui-avatars.com/api/?name=Africana+Team&background=0D8ABC&color=fff&bold=true" alt="Author" class="w-12 h-12 rounded-full mr-4 border border-gray-200"><div><p class="font-bold text-gray-900 text-sm sm:text-base">Africana Editorial</p><p class="text-xs sm:text-sm text-gray-500">Tech & Branding Strategists</p></div></div>
+                    <div id="modal-content" class="blog-prose mb-12"></div>
+                    <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center pb-4 gap-4"><p class="text-sm text-gray-400 font-medium"><i class="far fa-lightbulb mr-1"></i> Knowledge from Africana</p><button onclick="closeBlogModal()" class="w-full sm:w-auto px-8 py-4 bg-gray-900 hover:bg-[#0D8ABC] text-white font-bold text-sm uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg"><ion-icon name="arrow-back-circle" class="mr-3 text-2xl"></ion-icon> Back to articles</button></div>
                 </div>
             </div>
         </div>
     </div>
 
 
+     <div id="footer-container"></div>
     <script src="script.js"></script>
+    
+    <script>
+               
+        const blogArticles = {
+            'tech-1': { hero: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop', category: 'Digital Presence', readtime: '6 min read', title: 'Why a Website is Your 24/7 Sales Engine (Not Optional)', content: `
+                <p class="drop-cap"><strong>Africana Tech & Branding Ltd</strong> has witnessed countless businesses underestimate the power of a dedicated website. Social media is a rented space — algorithms change, reach declines, but your website is an asset you control.</p>
+                <h3><i class="fas fa-shield-alt text-[#0D8ABC]"></i> Credibility & Trust</h3>
+                <p>Studies show 75% of consumers judge a company’s credibility based on website design. Africana builds fast, mobile‑first sites that convey authority from the first click. A professional site with SSL, clear branding, and testimonials instantly elevates your business above competitors who rely only on social pages.</p>
+                <h3><i class="fas fa-chart-line text-[#0D8ABC]"></i> 24/7 Lead Generation</h3>
+                <p>Unlike a physical store, your website never closes. With proper SEO and clear CTAs, it becomes a lead magnet. We integrate analytics so you see exactly where clients come from. Our clients average a 40% increase in qualified leads within 3 months of launch.</p>
+                <h3><i class="fas fa-palette text-[#0D8ABC]"></i> Showcase Your Brand Story</h3>
+                <p>Africana’s branding division ensures your site reflects your unique identity. From color psychology to user journey, we craft experiences that convert visitors into loyal customers. A website is your most powerful storytelling tool — use it to share your mission, values, and success stories.</p>
+                <p><strong>Partner with Africana:</strong> Let’s audit your current digital footprint and build a website that works as hard as you do. <i class="fas fa-arrow-right text-[#0D8ABC] ml-1"></i></p>
+            `},
+            'tech-2': { hero: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop', category: 'Project Prep', readtime: '5 min read', title: 'Pre‑Project Checklist: What to Prepare Before Development', content: `
+                <p>Before a single line of code is written, Africana’s project managers walk clients through this essential checklist to ensure timelines and budgets stay on track.</p>
+                <h3><i class="fas fa-folder-open text-[#0D8ABC]"></i> Brand Assets</h3>
+                <p>High-resolution logos, brand guidelines, and color codes. Missing these? Our design team can create a cohesive identity in under 2 weeks.</p>
+                <h3><i class="fas fa-file-alt text-[#0D8ABC]"></i> Content Outline</h3>
+                <p>At minimum, have a clear sitemap and draft copy. We offer copywriting services to fill gaps — 80% of clients use our content support to speed up launch.</p>
+                <h3><i class="fas fa-binoculars text-[#0D8ABC]"></i> Competitor & Inspiration</h3>
+                <p>Share 3-5 websites you admire. This helps our UI/UX experts align with your vision while avoiding common pitfalls.</p>
+                <h3><i class="fas fa-money-bill-wave text-[#0D8ABC]"></i> Budget & Timeline</h3>
+                <p>Define your must‑haves vs. nice‑to‑haves. Africana provides transparent cost breakdowns and phased delivery options.</p>
+                <p>With Africana, you’re never alone. We guide you through every step, turning ambiguity into a structured roadmap.</p>
+            `},
+            'tech-3': { hero: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop', category: 'FinTech', readtime: '5 min read', title: 'Payment Integration for NGOs & E‑Commerce', content: `
+                <p>Whether you're a non‑profit collecting donations or a retailer, secure payments are non‑negotiable. Africana Tech & Branding Ltd integrates with <strong>Flutterwave, Stripe, PayPal, and mobile money</strong> across Africa.</p>
+                <h3><i class="fas fa-hand-holding-heart text-[#0D8ABC]"></i> NGO Specifics</h3>
+                <p>We set up recurring donation options and transparent reporting dashboards. Donors appreciate seamless, trustworthy transactions — and we help you issue automated receipts.</p>
+                <h3><i class="fas fa-shopping-cart text-[#0D8ABC]"></i> E‑Commerce Excellence</h3>
+                <p>From inventory sync to abandoned cart recovery, we ensure your payment gateway converts. Plus, we handle PCI compliance and multi‑currency support.</p>
+                <h3><i class="fas fa-mobile-alt text-[#0D8ABC]"></i> Mobile Money & Local Methods</h3>
+                <p>In many African markets, mobile money is king. We integrate M‑Pesa, MTN Mobile Money, and more, boosting conversion by up to 60%.</p>
+                <p>Let’s discuss your payment needs — our team will recommend the most cost‑effective stack.</p>
+            `},
+            'tech-4': { hero: 'https://images.unsplash.com/photo-1614064641913-6b059828ebbc?w=1200&auto=format&fit=crop', category: 'Cybersecurity', readtime: '6 min read', title: 'How to Prevent Getting Hacked — Before It Happens', content: `
+                <p>At Africana, security isn't an afterthought. We implement layered defenses to keep your data safe.</p>
+                <h3><i class="fas fa-lock text-[#0D8ABC]"></i> Limit Login Attempts & 2FA</h3>
+                <p>Brute force attacks are common. We configure rate limiting and enforce two‑factor authentication for all admin accounts.</p>
+                <h3><i class="fas fa-globe text-[#0D8ABC]"></i> CDN & Web Application Firewall</h3>
+                <p>Using Cloudflare or similar, we shield your site from DDoS attacks and filter malicious traffic. Our stack includes automatic patching and malware scanning.</p>
+                <h3><i class="fas fa-users text-[#0D8ABC]"></i> Staff Training</h3>
+                <p>Human error is the biggest vulnerability. We offer training modules on phishing, password hygiene, and safe browsing.</p>
+                <h3><i class="fas fa-history text-[#0D8ABC]"></i> Backup & Recovery</h3>
+                <p>Daily off‑site backups ensure you can restore within minutes. Peace of mind included.</p>
+                <p><strong>Protect your investment.</strong> Ask about our security maintenance packages.</p>
+            `},
+            'brand-1': { hero: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop', category: 'Social Strategy', readtime: '5 min read', title: 'Best Times to Post on Social Media (2025 Data)', content: `
+                <p class="drop-cap"><strong>Timing is a critical lever in social media success.</strong> Africana’s data team analyzed over 3 million interactions across African and global audiences. The findings? Posting during peak engagement windows can increase reach by up to 40%.</p>
+                <h3><i class="fab fa-instagram text-[#0D8ABC]"></i> Instagram</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Tuesday, Wednesday, Friday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 9–11 AM and 4–6 PM (local time)</li></ul>
+                <h3><i class="fab fa-linkedin text-[#0D8ABC]"></i> LinkedIn</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Wednesday and Thursday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 8–10 AM, 12–2 PM</li></ul>
+                <h3><i class="fab fa-tiktok text-[#0D8ABC]"></i> TikTok</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Thursday through Sunday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 7–9 PM and weekends</li></ul>
+                <h3><i class="fas fa-calendar-alt text-[#0D8ABC]"></i> Consistency Over Perfection</h3>
+                <p>While timing matters, a consistent posting schedule (3‑5x per week) builds algorithmic trust. Africana’s managed service combines optimal scheduling with compelling content calendars.</p>
+                <p><strong>Let’s maximize your organic reach.</strong> Book a social audit today.</p>
+            `},
+            'brand-2': { hero: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&auto=format&fit=crop', category: 'Productivity & Tools', readtime: '6 min read', title: 'Top Social Media Management Tools for Teams', content: `
+                <p>Managing multiple platforms without the right tools leads to burnout and missed opportunities. Africana’s social media managers rely on a curated stack that balances automation, creativity, and analytics.</p>
+                <h3><i class="fas fa-calendar-alt text-[#0D8ABC]"></i> Scheduling & Publishing</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Buffer:</strong> Intuitive queue, ideal for small teams. Best for straightforward scheduling.</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Hootsuite:</strong> Advanced monitoring and team workflows. Great for agencies.</li></ul>
+                <h3><i class="fas fa-chart-pie text-[#0D8ABC]"></i> Analytics & Reporting</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Meta Business Suite:</strong> Native insights for Facebook/Instagram (free).</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Sprout Social:</strong> Enterprise-grade listening and reporting with ROI tracking.</li></ul>
+                <h3><i class="fas fa-pen-fancy text-[#0D8ABC]"></i> Design & Collaboration</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Canva Pro:</strong> On‑brand templates and real‑time collaboration. Africana provides custom brand kits.</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Figma:</strong> For custom graphics and social assets (our design team's favorite).</li></ul>
+                <p>Africana can set up and train your team on the best stack for your goals — saving hours each week.</p>
+            `},
+            'brand-3': { hero: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop', category: 'Advertising Strategy', readtime: '6 min read', title: 'Campaign Objectives: Sales vs Traffic vs Awareness', content: `
+                <p>Selecting the wrong objective in Ads Manager is the #1 budget killer. Africana’s media buyers break down exactly when to use each option to hit your KPIs.</p>
+                <h3><i class="fas fa-shopping-cart text-[#0D8ABC]"></i> Sales / Conversion</h3>
+                <p>Use when you have a clear purchase or lead event. We optimize for <strong>lowest cost per acquisition</strong> using pixel data and custom audiences. Typical ROAS we achieve: 3x–7x.</p>
+                <h3><i class="fas fa-mouse-pointer text-[#0D8ABC]"></i> Traffic</h3>
+                <p>Ideal for content distribution, blog promotion, or warming up cold audiences. Africana often layers traffic campaigns before retargeting to build remarketing pools.</p>
+                <h3><i class="fas fa-eye text-[#0D8ABC]"></i> Awareness / Reach</h3>
+                <p>Top‑of‑funnel: new product launches, brand storytelling. We combine with frequency caps to avoid ad fatigue and use video views to create engaged audiences.</p>
+                <h3><i class="fas fa-chart-bar text-[#0D8ABC]"></i> Pro Tip: Funnel Alignment</h3>
+                <p>Always align objective with your funnel stage. Africana builds custom media plans that connect awareness to revenue, with clear attribution models.</p>
+            `},
+            'brand-4': { hero: 'https://images.unsplash.com/photo-1626785775573-4b799315345d?w=1200&auto=format&fit=crop', category: 'Design Specifications', readtime: '3 min read', title: '2025 Social Media Image & Video Size Cheat Sheet', content: `
+                <p>Africana designers keep this guide pinned. Bookmark it to ensure your visuals always look professional.</p>
+                <h3><i class="fab fa-instagram text-[#0D8ABC]"></i> Instagram</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Feed post (square): 1080 x 1080 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Portrait: 1080 x 1350 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Stories/Reels: 1080 x 1920 px (9:16)</li></ul>
+                <h3><i class="fab fa-linkedin text-[#0D8ABC]"></i> LinkedIn</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Company Page cover: 1128 x 191 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Post image: 1200 x 627 px (1.91:1)</li></ul>
+                <h3><i class="fab fa-facebook text-[#0D8ABC]"></i> Facebook</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Feed image: 1200 x 630 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Event cover: 1920 x 1080 px</li></ul>
+                <h3><i class="fab fa-tiktok text-[#0D8ABC]"></i> TikTok & YouTube Shorts</h3>
+                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Vertical video: 1080 x 1920 px, 9:16, MP4/MOV</li></ul>
+                <p>Need custom templates? Africana’s branding team creates a library tailored to your identity — ensuring consistency across every channel.</p>
+            `}
+        };
+
+        const overlay = document.getElementById('blog-modal-overlay');
+        const modalBox = document.getElementById('blog-modal-box');
+        const modalHero = document.getElementById('modal-hero-image');
+        const modalCat = document.getElementById('modal-category');
+        const modalReadtime = document.getElementById('modal-readtime');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+
+        function openBlogModal(articleId) {
+            const article = blogArticles[articleId];
+            if (!article) return;
+            modalHero.src = article.hero;
+            modalCat.textContent = article.category;
+            modalReadtime.textContent = article.readtime;
+            modalTitle.textContent = article.title;
+            modalContent.innerHTML = article.content;
+            overlay.classList.remove('hidden');
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => { modalBox.classList.remove('opacity-0', 'translate-y-8'); modalBox.classList.add('opacity-100', 'translate-y-0'); }, 10);
+        }
+        function closeBlogModal() {
+            modalBox.classList.add('opacity-0', 'translate-y-8');
+            modalBox.classList.remove('opacity-100', 'translate-y-0');
+            setTimeout(() => { overlay.classList.add('hidden'); overlay.style.display = 'none'; document.body.style.overflow = ''; modalContent.innerHTML = ''; }, 300);
+        }
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeBlogModal(); });
+        window.openBlogModal = openBlogModal;
+        window.closeBlogModal = closeBlogModal;
+        
+        function setupMobileCarousel(carouselId, dotsId, activeColorClass) {
+            const carousel = document.getElementById(carouselId);
+            const dotsContainer = document.getElementById(dotsId);
+            if (!carousel || !dotsContainer) return;
+
+            const dots = dotsContainer.querySelectorAll('button');
+            let currentIndex = 0;
+            let interval;
+
+            // Sync dots when user manually swipes
+            carousel.addEventListener('scroll', () => {
+                if (window.innerWidth >= 768) return; // Desktop uses grid
+                const scrollPos = carousel.scrollLeft;
+                // Get width of card + gap
+                const cardWidth = carousel.firstElementChild.offsetWidth + 24; 
+                currentIndex = Math.round(scrollPos / cardWidth);
+                
+                dots.forEach((dot, i) => {
+                    if (i === currentIndex) {
+                        dot.className = `w-6 h-2 rounded-full ${activeColorClass} transition-all duration-300`;
+                    } else {
+                        dot.className = `w-2 h-2 rounded-full bg-gray-300 transition-all duration-300`;
+                    }
+                });
+            });
+
+            // Automatically animate right to left
+            function startAutoPlay() {
+                if (window.innerWidth >= 768) return;
+                interval = setInterval(() => {
+                    const cardWidth = carousel.firstElementChild.offsetWidth + 24;
+                    currentIndex++;
+                    
+                    if (currentIndex >= dots.length) {
+                        currentIndex = 0;
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+                    }
+                }, 3500); // changes card every 3.5 seconds
+            }
+
+            startAutoPlay();
+
+            // Pause the animation if the user touches it so they can read/click
+            carousel.addEventListener('touchstart', () => clearInterval(interval), { passive: true });
+            carousel.addEventListener('touchend', () => {
+                clearInterval(interval);
+                setTimeout(startAutoPlay, 1000); // Resume 1 second after touch ends
+            });
+            
+            // Re-check sizes if they rotate their phone
+            window.addEventListener('resize', () => {
+                clearInterval(interval);
+                if(window.innerWidth < 768) startAutoPlay();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Setup Tech section carousel
+            setupMobileCarousel('tech-carousel', 'tech-dots', 'bg-[#0D8ABC]');
+            // Setup Branding section carousel
+            setupMobileCarousel('brand-carousel', 'brand-dots', 'bg-yellow-500');
+        });
+    </script>
+    
+    <style>#blog-modal-overlay { display: none; } #blog-modal-box { transition: opacity 0.3s ease, transform 0.3s ease; } .hover-lift { transition: all 0.2s; }</style>
 </body>
 </html>
