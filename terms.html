@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering | Africana Tech Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f6fb; }
+
+        /* Sticky sidebar – sticks until content ends */
+        @media (min-width: 1024px) {
+            .toc-sticky {
+                position: sticky;
+                top: 6rem;
+                align-self: start;
+                /* The sticky element will be constrained by its parent's height,
+                   so it stops when the content column ends – no extra effort needed */
+            }
+        }
+
+        /* Section card base – hidden by a clip mask, then revealed */
+        .section-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            padding: 2rem;
+            border-left: 6px solid #1645aa;
+            position: relative;
+            overflow: hidden;
+            /* Clip mask: initially hidden from the bottom */
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .section-card.visible {
+            clip-path: inset(0 0 0 0);
+        }
+        /* Inner decorative circle stays static */
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+            width: 8rem;
+            height: 8rem;
+            background: #1645aa;
+            opacity: 0.03;
+            border-radius: 50%;
+        }
+
+        /* Sidebar styling */
+        .toc-sidebar {
+            background: #1645aa;
+            border: 2px solid #facc15;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 30px rgba(22, 69, 170, 0.15);
+            color: white;
+        }
+        .toc-link {
+            display: block;
+            color: rgba(255,255,255,0.85);
+            transition: 0.15s;
+            border-left: 3px solid transparent;
+        }
+        .toc-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: #facc15;
+            border-left-color: #facc15;
+        }
+        .toc-link.active {
+            background: rgba(250, 204, 21, 0.2);
+            color: #facc15 !important;
+            border-left-color: #facc15;
+            font-weight: 600;
+        }
+    </style>
+<body class="font-sans bg-gray-50 text-gray-800 m-0 p-0 overflow-x-hidden">
+
+    <div id="header-container"></div>
+
+
+>
+
+
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 sm:pt-28 md:pt-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <!-- Hero section with background image -->
+<div class="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 shadow-2xl reveal">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop" 
+         alt="Abstract tech background" 
+         class="absolute inset-0 w-full h-full object-cover">
+         
+    <div class="absolute inset-0 bg-gradient-to-r from-brandBlue/95 to-brandBlack/80 backdrop-blur-sm"></div>
+    
+    <div class="relative p-8 md:p-12 lg:p-16 text-white flex flex-col justify-center items-start min-h-[320px] sm:min-h-[380px]">
+        
+        <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-yellow-400/20 border border-yellow-400/40 text-yellow-400 font-bold text-xs uppercase tracking-widest mb-5 backdrop-blur-md">
+            <ion-icon name="shield-checkmark-outline" class="mr-2 text-lg"></ion-icon> Legal Framework
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-3xl leading-tight">
+            Terms & Conditions
+        </h1>
+        
+        <p class="text-white/80 mt-4 text-base sm:text-lg max-w-xl">
+            Effective date: <strong class="text-white">April 2026</strong>
+        </p>
+        
+        <div class="mt-8 w-24 h-1.5 bg-gradient-to-r from-yellow-400 to-white rounded-full"></div>
+        
+    </div>
+</div>
+
+        <div class="lg:grid lg:grid-cols-12 lg:gap-10">
+            <!-- Table of Contents (sticky sidebar) -->
+            <aside class="lg:col-span-3 mb-10 lg:mb-0 toc-sticky">
+                <div class="toc-sidebar p-6">
+                    <h2 class="text-lg font-bold text-white mb-4  mt-7 flex items-center gap-2">
+                        <ion-icon name="list-outline" class="text-neonYellow text-xl"></ion-icon>Contents
+                    </h2>
+                    <nav class="space-y-2 text-sm font-medium" id="toc-nav">
+                        <a href="#intro" class="toc-link py-2 px-3 rounded-lg">1. Introduction</a>
+                        <a href="#services" class="toc-link py-2 px-3 rounded-lg">2. Services</a>
+                        <a href="#payment" class="toc-link py-2 px-3 rounded-lg">3. Payment Terms</a>
+                        <a href="#ip" class="toc-link py-2 px-3 rounded-lg">4. Intellectual Property</a>
+                        <a href="#confidential" class="toc-link py-2 px-3 rounded-lg">5. Confidentiality</a>
+                        <a href="#obligations" class="toc-link py-2 px-3 rounded-lg">6. Client Obligations</a>
+                        <a href="#liability" class="toc-link py-2 px-3 rounded-lg">7. Limitation of Liability</a>
+                        <a href="#termination" class="toc-link py-2 px-3 rounded-lg">8. Termination</a>
+                        <a href="#disputes" class="toc-link py-2 px-3 rounded-lg">9. Dispute Resolution</a>
+                        <a href="#misc" class="toc-link py-2 px-3 rounded-lg">10. Miscellaneous</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content Section -->
+            <div class="lg:col-span-9 space-y-8" id="content-container">
+                
+                <!-- Section 1 -->
+                <section id="intro" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">01</span> Introduction
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Welcome to <strong>Africana Tech Company</strong> (“the Company”, “we”, “our”, “us”). These Terms and Conditions (“Terms”) govern your use of our website, services, and any related products or deliverables. By engaging our services, you (“the Client”, “you”) agree to be bound by these Terms in full.</p>
+                    <p class="text-gray-600 leading-relaxed">Please read these Terms carefully before entering into any agreement with us. If you do not agree with any part of these Terms, you must not use our services.</p>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="services" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">02</span> Services
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Africana Tech provides technology solutions and branding services, including but not limited to:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4 mb-4">
+                        <li>Web & Mobile Application Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Brand Identity & Strategy</li>
+                        <li>Digital Marketing</li>
+                        <li>Cybersecurity Audits</li>
+                        <li>Network Infrastructure</li>
+                        <li>IT Consulting & Support</li>
+                    </ul>
+                    <p class="text-gray-600 leading-relaxed">The specific scope, timeline, and deliverables for each project will be defined in a separate <strong>Service Agreement</strong> or <strong>Statement of Work (SOW)</strong>, which, once signed, becomes part of these Terms.</p>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="payment" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">03</span> Payment Terms
+                    </h2>
+                    <div class="space-y-3 text-gray-600 leading-relaxed">
+                        <p><strong>3.1 Invoicing:</strong> Invoices are issued according to the milestones defined in the SOW. Unless otherwise stated, a non‑refundable deposit of 40%–50% is required to commence work.</p>
+                        <p><strong>3.2 Due Date:</strong> All invoices are payable within <strong>14 calendar days</strong> from the date of issue, unless otherwise agreed in writing.</p>
+                        <p><strong>3.3 Late Payments:</strong> Overdue balances accrue interest at a rate of 1.5% per month (or the maximum allowed by law). We reserve the right to suspend all work and remove deliverables until outstanding payments are settled.</p>
+                        <p><strong>3.4 Additional Costs:</strong> Expenses incurred during the project (e.g., stock photography, premium plugins, third‑party licenses) will be communicated and billed separately.</p>
+                        <p><strong>3.5 Currency:</strong> All fees are quoted and payable in <strong>US Dollars (USD)</strong> unless another currency is explicitly stated in the SOW.</p>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="ip" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">04</span> Intellectual Property
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Ownership of intellectual property is a cornerstone of our partnership:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                        <li><strong>Work Product:</strong> Upon full payment, the Client receives exclusive, perpetual rights to the final deliverables produced specifically for the project.</li>
+                        <li><strong>Pre‑Existing Materials:</strong> Africana Tech retains ownership of all proprietary tools, frameworks, code libraries, and methodologies used in the project (“Background IP”). We grant the Client a non‑exclusive, royalty‑free license to use Background IP solely in connection with the final deliverable.</li>
+                        <li><strong>Portfolio Rights:</strong> We reserve the right to display the completed work in our portfolio, on our website, and in promotional materials unless otherwise agreed in writing (NDA).</li>
+                        <li><strong>Third‑Party Assets:</strong> Assets licensed from third parties (e.g., stock images, open‑source components) are subject to their respective licenses, and ownership is not transferred to the Client.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="confidential" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">05</span> Confidentiality
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">Both parties agree to protect each other’s confidential information. “Confidential Information” includes, but is not limited to, business strategies, trade secrets, technical data, customer lists, and financial information disclosed in connection with the project. This obligation survives termination for a period of <strong>3 years</strong>.</p>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="obligations" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">06</span> Client Obligations
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">To ensure timely delivery, the Client agrees to:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                        <li>Provide necessary content, assets, and feedback within the agreed‑upon timelines.</li>
+                        <li>Appoint a single point of contact for communication.</li>
+                        <li>Ensure that all materials provided do not infringe third‑party rights.</li>
+                        <li>Comply with reasonable requests for access, testing, or integration during development.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="liability" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">07</span> Limitation of Liability
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">To the fullest extent permitted by law, Africana Tech Company shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                        <li>Your use or inability to use our services.</li>
+                        <li>Unauthorized access to or use of our servers and/or any personal information stored therein.</li>
+                        <li>Errors or omissions in content or deliverables (we will correct any demonstrable errors during a 30‑day warranty period after delivery).</li>
+                    </ul>
+                    <p class="text-gray-600 leading-relaxed mt-4">Our total liability, whether in contract, warranty, tort (including negligence), or otherwise, shall not exceed the total fees paid by the Client for the specific project giving rise to the liability.</p>
+                </section>
+
+                <!-- Section 8 -->
+                <section id="termination" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">08</span> Termination
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">Either party may terminate the agreement with <strong>30 days’ written notice</strong>. In the event of termination, the Client shall pay for all work completed up to the termination date, including any irrevocable third‑party costs incurred. Upon payment, the Client receives all completed work in its current state.</p>
+                </section>
+
+                <!-- Section 9 -->
+                <section id="disputes" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">09</span> Dispute Resolution
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">Any dispute arising out of or in connection with these Terms shall first be attempted to be resolved through good‑faith negotiation. If the dispute cannot be settled within 30 days, it shall be submitted to binding arbitration in <strong>Dar es Salaam, Tanzania</strong>, in accordance with the laws of Tanzania, before a single arbitrator mutually agreed upon.</p>
+                </section>
+
+                <!-- Section 10 -->
+                <section id="misc" class="section-card">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-start">
+                        <span class="text-brandBlue font-extrabold mr-3 text-3xl">10</span> Miscellaneous
+                    </h2>
+                    <div class="space-y-3 text-gray-600 leading-relaxed">
+                        <p><strong>10.1 Entire Agreement:</strong> These Terms, together with the SOW and any attached schedules, constitute the entire agreement between the parties and supersede all previous agreements, representations, and understandings.</p>
+                        <p><strong>10.2 Amendments:</strong> We may update these Terms from time to time. Clients will be notified of material changes via email, and the updated version will be posted on this page.</p>
+                        <p><strong>10.3 Force Majeure:</strong> Neither party shall be liable for failure to perform due to circumstances beyond reasonable control (e.g., acts of God, war, pandemic, government restrictions, or internet infrastructure failures).</p>
+                        <p><strong>10.4 Severability:</strong> If any provision of these Terms is held invalid or unenforceable, the remaining provisions shall continue in full force.</p>
+                        <p><strong>10.5 Governing Law:</strong> These Terms are governed by and construed in accordance with the laws of the United Republic of Tanzania.</p>
+                    </div>
+                </section>
+
+                <!-- Acceptance note (no clip mask, always visible) -->
+                <div class="bg-brandBlue/5 border border-brandBlue/30 rounded-2xl p-8 text-center backdrop-blur-sm">
+                    <p class="text-gray-800 font-semibold mb-2">By engaging our services, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.</p>
+                    <p class="text-gray-600 text-sm">If you have any questions, contact us at <a href="mailto:legal@africanatech.co.tz" class="text-brandBlue font-bold hover:underline">legal@africanatech.co.tz</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+<script>
+    (function() {
+        const sectionCards = document.querySelectorAll('.section-card');
+
+        // This function updates the clip-path of each card based on scroll position.
+        function updateClipPaths() {
+            const windowHeight = window.innerHeight;
+
+            sectionCards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+
+                // Calculate how far the card has entered the viewport from the bottom.
+                // When the card's bottom edge enters the screen, progress = 0.
+                // When the card's top edge hits the top of the screen, progress = 1.
+                const cardHeight = rect.height;
+                const visibleFromBottom = windowHeight - rect.top; // how many px of the card are visible from above the bottom of the screen
+                let progress = visibleFromBottom / cardHeight;
+
+                // Clamp progress between 0 and 1
+                progress = Math.max(0, Math.min(1, progress));
+
+                // Convert progress to the bottom inset value:
+                // bottom inset = 100% when progress = 0, and 0% when progress = 1.
+                const bottomInset = (1 - progress) * 100;
+                card.style.clipPath = `inset(0% 0% ${bottomInset}% 0%)`;
+            });
+        }
+
+        // Run on scroll and on page load/resize
+        window.addEventListener('scroll', updateClipPaths, { passive: true });
+        window.addEventListener('resize', updateClipPaths);
+        updateClipPaths(); // initial call
+
+        // Sidebar active link tracking (unchanged)
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id]');
+        let current = '';
+        window.addEventListener('scroll', () => {
+            let newCurrent = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (pageYOffset >= sectionTop) {
+                    newCurrent = section.getAttribute('id');
+                }
+            });
+            if (newCurrent !== current) {
+                current = newCurrent;
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // Smooth scroll from TOC
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    })();
+</script>
+
+    <div id="footer-container"></div>
+    <script src="animation.js"></script> 
+    <script src="script.js"></script> 
+</body>
+</html>

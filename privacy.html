@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Africana Tech Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --brand-blue: #1645aa;
+            --neon-yellow: #facc15;
+            --dark-bg: #0f172a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* ========== SECTION CARDS ========== */
+        .section-card {
+            background-color: #1645aa;
+            border: 2px solid #facc15;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            color: white;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .section-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* ========== POLICY SECTIONS (desktop toggle) ========== */
+        .policy-section {
+            display: none;
+        }
+        .policy-section.visible {
+            display: block;
+        }
+        .view-all .policy-section {
+            display: block !important;
+        }
+
+        /* ========== DESKTOP SIDEBAR (STICKY – no more collision with hero) ========== */
+        .toc-sidebar {
+            background-color: #1645aa;
+            border: 2px solid #facc15;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(22, 69, 170, 0.15);
+            color: white;
+        }
+        .toc-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: 0.2s;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+        }
+        .toc-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #facc15;
+        }
+        .toc-link.active {
+            background: rgba(250, 204, 21, 0.15);
+            color: #facc15 !important;
+            border-left: 3px solid #facc15;
+            font-weight: 600;
+        }
+
+        /* ✅ FIXED: Sticky instead of fixed – no more collision with hero */
+        @media (min-width: 1024px) {
+            .toc-sticky {
+                position: sticky;
+                top: 6rem;
+                align-self: start;
+                z-index: 20;
+                max-width: 300px;
+            }
+        }
+
+        /* ========== TOGGLE BUTTON ========== */
+        .view-toggle-btn {
+            background: #facc15;
+            color: #1645aa;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            padding: 0.5rem 1rem;
+            transition: 0.2s;
+            border: 2px solid #1645aa;
+            cursor: pointer;
+        }
+        .view-toggle-btn:hover {
+            background: white;
+            color: #1645aa;
+            border-color: #facc15;
+        }
+
+        /* ========== MOBILE TOC OVERLAY ========== */
+        .toc-overlay {
+            background: rgba(22, 69, 170, 0.97);
+            backdrop-filter: blur(20px);
+            transform: translateY(100%);
+            transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .toc-overlay.open {
+            transform: translateY(0);
+        }
+        .toc-link-mobile {
+            color: rgba(255, 255, 255, 0.85);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .toc-link-mobile:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #facc15;
+        }
+        .toc-link-mobile.active {
+            background: #facc15;
+            color: #1645aa !important;
+            font-weight: 700;
+        }
+
+        /* ========== FLOATING MOBILE BUTTON ========== */
+        .floating-btn {
+            background: #1645aa;
+            border: 2px solid #facc15;
+            box-shadow: 0 0 15px rgba(22, 69, 170, 0.4);
+            transition: 0.3s;
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+        }
+
+        /* ========== MOBILE CAROUSEL ========== */
+        .carousel-slide .policy-section {
+            display: block !important;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 0 4px;
+            box-sizing: border-box;
+        }
+        #mobile-carousel-track {
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            will-change: transform;
+        }
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        .carousel-dot.active {
+            background: #1645aa;
+            box-shadow: 0 0 8px #facc15;
+            transform: scale(1.3);
+        }
+
+        /* ✅ Right-to-left slide-in animation for carousel content */
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .carousel-slide.animate-in .section-card {
+            animation: slideInFromRight 0.5s ease-out forwards;
+        }
+
+        /* Progress bar on carousel */
+        .carousel-progress {
+            height: 3px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+        .carousel-progress-bar {
+            height: 100%;
+            background: #1645aa;
+            border-radius: 2px;
+            transition: width 0.1s linear;
+        }
+
+        /* ✅ HERO – Simplified & smaller */
+        .hero-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(250, 204, 21, 0.15);
+            border: 1px solid rgba(250, 204, 21, 0.4);
+            color: #facc15;
+            font-weight: 600;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 m-0 p-0 overflow-x-hidden">
+
+    <div id="header-container"></div>
+
+<section class="bg-[#0f172a] text-white py-16 px-6 sm:px-8 lg:px-12 border-b-4 border-[#1645aa] mt-24 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <div class="absolute -top-40 -right-20 w-96 h-96 bg-[#1645aa] rounded-full mix-blend-multiply filter blur-[100px] opacity-60"></div>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 xl:gap-16 relative z-10">
+            
+            <div class="w-full lg:w-[55%]">
+                <div class="text-[#facc15] font-bold uppercase tracking-widest text-sm mb-4 flex items-center gap-2">
+                    <ion-icon name="shield-half-outline" class="text-xl"></ion-icon>
+                    Africana Tech Privacy Center
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black mb-5 tracking-tight text-white leading-tight uppercase">
+                    Ironclad Privacy. <br>
+                    <span class="text-[#facc15]">Zero Compromise.</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 font-medium max-w-2xl">
+                    Your personal information is your most valuable asset. We treat it with the same rigorous security and absolute transparency that we apply to our engineering. No hidden clauses, just plain English.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6 text-sm text-slate-400 font-bold border-t border-slate-800 pt-6">
+                    <div class="flex items-center gap-2 text-white">
+                        <span class="block w-2.5 h-2.5 rounded-full bg-[#facc15] animate-pulse"></span>
+                        Status: Fully Secured
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="calendar-outline" class="text-lg"></ion-icon>
+                        Effective Date: April 24, 2026
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="time-outline" class="text-lg"></ion-icon>
+                        Reading Time: ~5 mins
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-[45%] grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
+                
+                <a href="#info-collect" class="group block bg-slate-800/80 hover:bg-[#1645aa] border border-slate-700 hover:border-[#facc15] rounded-2xl p-6 transition-all duration-300 shadow-lg">
+                    <div class="text-4xl mb-3 text-white group-hover:text-[#facc15] transition-colors">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">What We Collect</h3>
+                    <p class="text-xs text-slate-400 group-hover:text-slate-200 line-clamp-2">Complete visibility into the data you share.</p>
+                </a>
+
+                <a href="#info-use" class="group block bg-slate-800/80 hover:bg-[#1645aa] border border-slate-700 hover:border-[#facc15] rounded-2xl p-6 transition-all duration-300 shadow-lg">
+                    <div class="text-4xl mb-3 text-white group-hover:text-[#facc15] transition-colors">
+                        <ion-icon name="cog-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">How We Use It</h3>
+                    <p class="text-xs text-slate-400 group-hover:text-slate-200 line-clamp-2">Understanding exactly how your data powers our services.</p>
+                </a>
+
+                <a href="#info-share" class="group block bg-slate-800/80 hover:bg-[#1645aa] border border-slate-700 hover:border-[#facc15] rounded-2xl p-6 transition-all duration-300 shadow-lg">
+                    <div class="text-4xl mb-3 text-white group-hover:text-[#facc15] transition-colors">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Data Sharing</h3>
+                    <p class="text-xs text-slate-400 group-hover:text-slate-200 line-clamp-2">Spoiler: We never sell your data to third parties.</p>
+                </a>
+
+                <a href="#rights" class="group block bg-slate-800/80 hover:bg-[#1645aa] border border-slate-700 hover:border-[#facc15] rounded-2xl p-6 transition-all duration-300 shadow-lg">
+                    <div class="text-4xl mb-3 text-white group-hover:text-[#facc15] transition-colors">
+                        <ion-icon name="scale-outline"></ion-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Your Rights</h3>
+                    <p class="text-xs text-slate-400 group-hover:text-slate-200 line-clamp-2">How to access, download, or delete your info today.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== MOBILE TOC OVERLAY ==================== -->
+    <div id="toc-overlay" class="toc-overlay fixed inset-0 z-40 flex flex-col items-center justify-center p-6 space-y-6 transform translate-y-full">
+        <button id="close-toc" class="absolute top-6 right-6 text-3xl text-white hover:text-neonYellow transition" aria-label="Close menu">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <ion-icon name="document-text-outline" class="text-neonYellow text-3xl"></ion-icon>Privacy Topics
+        </h2>
+        <nav class="flex flex-col items-center space-y-4 text-lg font-medium w-full max-w-xs overflow-y-auto max-h-[70vh] pb-6">
+            <a href="javascript:void(0)" data-target="info-collect" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">1. Information We Collect</a>
+            <a href="javascript:void(0)" data-target="info-use" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">2. How We Use Information</a>
+            <a href="javascript:void(0)" data-target="info-share" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">3. Sharing & Disclosure</a>
+            <a href="javascript:void(0)" data-target="cookies" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">4. Cookies & Tracking</a>
+            <a href="javascript:void(0)" data-target="retention" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">5. Data Retention</a>
+            <a href="javascript:void(0)" data-target="rights" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">6. Your Rights</a>
+            <a href="javascript:void(0)" data-target="security" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">7. Security</a>
+            <a href="javascript:void(0)" data-target="children" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">8. Children's Privacy</a>
+            <a href="javascript:void(0)" data-target="changes" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">9. Policy Changes</a>
+            <a href="javascript:void(0)" data-target="contact" class="toc-link-mobile block w-full text-center py-2.5 rounded-xl">10. Contact Us</a>
+        </nav>
+        <button id="viewAllBtnMobile" class="view-toggle-btn w-full max-w-xs mt-2">View All Sections</button>
+    </div>
+
+    <!-- ==================== FLOATING MOBILE BUTTON ==================== -->
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="pt-20 sm:pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
+        <!-- ✅ HERO – Simplified, smaller, no collision with sidebar -->
+
+
+        <!-- ==================== DESKTOP VIEW (sticky sidebar + content) ==================== -->
+        <div class="hidden lg:grid lg:grid-cols-12 lg:gap-10 relative">
+            <!-- ✅ Sticky Sidebar – no more fixed positioning collision -->
+            <aside class="lg:col-span-3 toc-sticky">
+                <div class="toc-sidebar p-5 lg:p-6">
+                    <h2 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
+                        <ion-icon name="list-outline" class="text-neonYellow text-xl"></ion-icon>Contents
+                    </h2>
+                    <nav class="space-y-1.5 text-sm font-medium">
+                        <a href="javascript:void(0)" data-target="info-collect" class="toc-link block py-2.5 px-4 rounded-lg">1. Information We Collect</a>
+                        <a href="javascript:void(0)" data-target="info-use" class="toc-link block py-2.5 px-4 rounded-lg">2. How We Use Information</a>
+                        <a href="javascript:void(0)" data-target="info-share" class="toc-link block py-2.5 px-4 rounded-lg">3. Sharing & Disclosure</a>
+                        <a href="javascript:void(0)" data-target="cookies" class="toc-link block py-2.5 px-4 rounded-lg">4. Cookies & Tracking</a>
+                        <a href="javascript:void(0)" data-target="retention" class="toc-link block py-2.5 px-4 rounded-lg">5. Data Retention</a>
+                        <a href="javascript:void(0)" data-target="rights" class="toc-link block py-2.5 px-4 rounded-lg">6. Your Rights</a>
+                        <a href="javascript:void(0)" data-target="security" class="toc-link block py-2.5 px-4 rounded-lg">7. Security</a>
+                        <a href="javascript:void(0)" data-target="children" class="toc-link block py-2.5 px-4 rounded-lg">8. Children's Privacy</a>
+                        <a href="javascript:void(0)" data-target="changes" class="toc-link block py-2.5 px-4 rounded-lg">9. Policy Changes</a>
+                        <a href="javascript:void(0)" data-target="contact" class="toc-link block py-2.5 px-4 rounded-lg">10. Contact Us</a>
+                    </nav>
+                    <button id="viewAllBtnDesktop" class="view-toggle-btn w-full mt-5">View All Sections</button>
+                </div>
+            </aside>
+
+            <!-- Desktop Content Area -->
+            <div id="content-container" class="lg:col-span-9 lg:col-start-4">
+                <div id="intro-message" class="section-card p-8 sm:p-10 text-center mb-8">
+                    <div class="text-5xl sm:text-6xl mb-4 opacity-30">🔒</div>
+                    <p class="text-white/80 text-base sm:text-lg">Select a topic from the sidebar to view its details.</p>
+                </div>
+
+                <!-- Policy Sections -->
+                <div id="info-collect" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">01</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Information We Collect</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed mb-4">We may collect the following categories of data:</p>
+                    <ul class="space-y-2 text-white/80 list-inside list-disc ml-4">
+                        <li><strong class="text-white">Personal Information:</strong> Name, email, phone, company name, and other details you provide.</li>
+                        <li><strong class="text-white">Technical Data:</strong> IP address, browser type, device, pages visited, timestamps.</li>
+                        <li><strong class="text-white">Client Project Data:</strong> Data processed on your behalf, kept strictly confidential.</li>
+                    </ul>
+                </div>
+
+                <div id="info-use" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">02</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">How We Use Information</h2>
+                    </div>
+                    <ul class="space-y-2 text-white/80 list-inside list-disc ml-4">
+                        <li>Respond to inquiries and deliver services.</li>
+                        <li>Manage projects, updates, and invoices.</li>
+                        <li>Improve our website and services through analytics.</li>
+                        <li>Send marketing communications only with consent.</li>
+                        <li>Comply with legal obligations.</li>
+                    </ul>
+                </div>
+
+                <div id="info-share" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">03</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Sharing & Disclosure</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed mb-4">We do not sell your personal data. We share only:</p>
+                    <ul class="space-y-2 text-white/80 list-inside list-disc ml-4">
+                        <li><strong class="text-white">Service Providers:</strong> Hosting, payments, analytics – under confidentiality.</li>
+                        <li><strong class="text-white">Legal Requirements:</strong> When required by law.</li>
+                        <li><strong class="text-white">Business Transfers:</strong> In case of merger or acquisition.</li>
+                        <li><strong class="text-white">With Your Consent:</strong> For any other purpose.</li>
+                    </ul>
+                </div>
+
+                <div id="cookies" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">04</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Cookies & Tracking</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed mb-4">Our site uses cookies for analytics, functionality, and essential operations. You can control cookies via browser settings.</p>
+                </div>
+
+                <div id="retention" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">05</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Data Retention</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed">We retain personal data only as long as needed for the purposes collected. Client project data is typically kept for 3 years after completion, then securely purged.</p>
+                </div>
+
+                <div id="rights" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">06</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Your Rights</h2>
+                    </div>
+                    <ul class="space-y-2 text-white/80 list-inside list-disc ml-4">
+                        <li><strong class="text-white">Access</strong> – request a copy of your data</li>
+                        <li><strong class="text-white">Rectification</strong> – correct inaccuracies</li>
+                        <li><strong class="text-white">Erasure</strong> – ask for deletion under certain conditions</li>
+                        <li><strong class="text-white">Restriction</strong> – limit processing temporarily</li>
+                        <li><strong class="text-white">Data Portability</strong> – receive your data in a portable format</li>
+                        <li><strong class="text-white">Objection</strong> – object to direct marketing or other processing</li>
+                    </ul>
+                    <p class="text-white/80 mt-4">Contact <a href="mailto:privacy@africanatech.co.tz" class="text-neonYellow hover:underline font-semibold">privacy@africanatech.co.tz</a> to exercise these rights. Response within 30 days.</p>
+                </div>
+
+                <div id="security" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">07</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Security</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed">We use encryption, firewalls, secure servers, and regular audits to protect your data. No online transmission is 100% secure, but we continually strive to keep your information safe.</p>
+                </div>
+
+                <div id="children" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">08</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Children's Privacy</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed">Our services are not intended for children under 18. We do not knowingly collect their data; if discovered, we will delete it promptly.</p>
+                </div>
+
+                <div id="changes" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">09</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Policy Changes</h2>
+                    </div>
+                    <p class="text-white/90 leading-relaxed">We may update this policy and will notify you of material changes via email or website notice. Continued use after changes means acceptance.</p>
+                </div>
+
+                <div id="contact" class="policy-section section-card p-6 sm:p-8 mb-8">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl sm:text-5xl font-black text-white/20">10</span>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neonYellow">Contact Us</h2>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-5 text-white/90 space-y-2 backdrop-blur">
+                        <p>📍 Dar es Salaam, Tanzania</p>
+                        <p>📧 <a href="mailto:privacy@africanatech.co.tz" class="text-neonYellow hover:underline font-semibold">privacy@africanatech.co.tz</a></p>
+                        <p>📞 +255 7XX XXX XXX</p>
+                    </div>
+                </div>
+
+                <div class="section-card p-6 sm:p-8 text-center">
+                    <p class="text-white/90 font-semibold">Your trust is essential to us. We are committed to protecting your data and being transparent about our practices.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== MOBILE VIEW – Horizontal Carousel (right-to-left animation) ==================== -->
+        <div class="lg:hidden mt-6">
+            <div class="relative overflow-hidden rounded-2xl">
+                <!-- ✅ Carousel track – slides animate right-to-left -->
+                <div id="mobile-carousel-track" class="flex">
+                    <!-- Cloned policy sections injected by JS -->
+                </div>
+            </div>
+            <!-- Progress bar -->
+            <div class="carousel-progress mt-4">
+                <div id="carousel-progress-bar" class="carousel-progress-bar" style="width: 0%;"></div>
+            </div>
+            <!-- Dot indicators -->
+            <div id="carousel-dots" class="flex justify-center gap-3 mt-4"></div>
+            <!-- Swipe hint -->
+            <p class="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1">
+                <ion-icon name="arrow-back-outline" class="text-sm"></ion-icon>
+                Swipe to navigate
+                <ion-icon name="arrow-forward-outline" class="text-sm"></ion-icon>
+            </p>
+        </div>
+    </main>
+
+   
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        (function() {
+            // ========== DOM REFS ==========
+            const tocLinks = document.querySelectorAll('.toc-link, .toc-link-mobile');
+            const sections = document.querySelectorAll('.policy-section');
+            const introMessage = document.getElementById('intro-message');
+            const contentContainer = document.getElementById('content-container');
+            const overlay = document.getElementById('toc-overlay');
+            const mobileBtn = document.getElementById('mobile-toc-btn');
+            const closeBtn = document.getElementById('close-toc');
+            const viewAllBtnDesktop = document.getElementById('viewAllBtnDesktop');
+            const viewAllBtnMobile = document.getElementById('viewAllBtnMobile');
+
+            let viewAll = false;
+
+            // ========== UPDATE TOGGLE BUTTON TEXT ==========
+            function updateToggleButtons() {
+                const text = viewAll ? 'Single Section View' : 'View All Sections';
+                if (viewAllBtnDesktop) viewAllBtnDesktop.textContent = text;
+                if (viewAllBtnMobile) viewAllBtnMobile.textContent = text;
+            }
+
+            // ========== VIEW ALL / SINGLE TOGGLE ==========
+            function setViewAll(enable) {
+                viewAll = enable;
+                updateToggleButtons();
+                if (viewAll) {
+                    if (contentContainer) contentContainer.classList.add('view-all');
+                    if (introMessage) introMessage.style.display = 'none';
+                    sections.forEach(s => s.classList.remove('visible'));
+                    if (contentContainer) {
+                        window.scrollTo({ top: contentContainer.offsetTop - 100, behavior: 'smooth' });
+                    }
+                } else {
+                    if (contentContainer) contentContainer.classList.remove('view-all');
+                    if (introMessage) introMessage.style.display = '';
+                    sections.forEach(s => s.classList.remove('visible'));
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    if (introMessage) {
+                        introMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+                // Close mobile overlay if open
+                overlay.classList.remove('open');
+            }
+
+            viewAllBtnDesktop?.addEventListener('click', () => setViewAll(!viewAll));
+            viewAllBtnMobile?.addEventListener('click', () => setViewAll(!viewAll));
+
+            // ========== SHOW SINGLE SECTION ==========
+            function showSection(targetId) {
+                if (viewAll) {
+                    // In view-all mode, just scroll to the target
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        tocLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.dataset.target === targetId) link.classList.add('active');
+                        });
+                    }
+                    overlay.classList.remove('open');
+                } else {
+                    // Single-section mode
+                    if (introMessage) introMessage.style.display = 'none';
+                    sections.forEach(s => s.classList.remove('visible'));
+                    const active = document.getElementById(targetId);
+                    if (active) {
+                        active.classList.add('visible');
+                        setTimeout(() => {
+                            active.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }, 10);
+                    }
+                    tocLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.dataset.target === targetId) link.classList.add('active');
+                    });
+                    overlay.classList.remove('open');
+                }
+            }
+
+            // ========== TOC LINK CLICKS ==========
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSection(this.dataset.target);
+                });
+            });
+
+            // ========== MOBILE OVERLAY ==========
+            mobileBtn?.addEventListener('click', () => overlay.classList.add('open'));
+            closeBtn?.addEventListener('click', () => overlay.classList.remove('open'));
+            overlay?.addEventListener('click', (e) => {
+                if (e.target === overlay) overlay.classList.remove('open');
+            });
+
+            // ========== HANDLE HASH IN URL ==========
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                if (document.getElementById(hash)) {
+                    setViewAll(false);
+                    showSection(hash);
+                }
+            }
+
+            updateToggleButtons();
+
+            // ==================== MOBILE CAROUSEL ====================
+            const track = document.getElementById('mobile-carousel-track');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const progressBar = document.getElementById('carousel-progress-bar');
+
+            if (track && dotsContainer) {
+                const allSections = document.querySelectorAll('.policy-section');
+                const totalSlides = allSections.length;
+
+                if (totalSlides === 0) return;
+
+                // Clone sections into carousel slides
+                allSections.forEach((sec) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    // Clone the inner content, strip the ID from the clone
+                    const clonedContent = sec.cloneNode(true);
+                    clonedContent.removeAttribute('id');
+                    clonedContent.classList.add('visible'); // ensure visible
+                    slide.appendChild(clonedContent);
+                    track.appendChild(slide);
+                });
+
+                let currentIndex = 0;
+                let autoAdvanceInterval = null;
+                let progressInterval = null;
+                const autoAdvanceDelay = 5000; // 5 seconds per slide
+                const transitionDuration = 500; // matches CSS transition (0.5s)
+
+                // Create dot buttons
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    dot.addEventListener('click', () => {
+                        goToSlide(i);
+                        resetAutoAdvance();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+                const dots = document.querySelectorAll('#carousel-dots .carousel-dot');
+                const allSlides = track.querySelectorAll('.carousel-slide');
+
+                // ========== GO TO SLIDE ==========
+                function goToSlide(index, animate = true) {
+                    // Wrap around
+                    if (index >= totalSlides) index = 0;
+                    if (index < 0) index = totalSlides - 1;
+
+                    const prevIndex = currentIndex;
+                    currentIndex = index;
+
+                    // Disable transition for instant jump (wrap-around)
+                    if (!animate) {
+                        track.style.transition = 'none';
+                    } else {
+                        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    }
+
+                    track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+
+                    // If instant jump, force reflow & restore transition
+                    if (!animate) {
+                        track.offsetHeight; // force reflow
+                        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    }
+
+                    // Update dots
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentIndex);
+                    });
+
+                    // ✅ Add right-to-left entrance animation to the new slide
+                    allSlides.forEach((slide, i) => {
+                        slide.classList.remove('animate-in');
+                        if (i === currentIndex) {
+                            // Trigger reflow then add animation class
+                            void slide.offsetWidth;
+                            slide.classList.add('animate-in');
+                        }
+                    });
+
+                    // Reset progress bar
+                    resetProgressBar();
+                }
+
+                // ========== PROGRESS BAR ==========
+                function resetProgressBar() {
+                    if (!progressBar) return;
+                    // Clear any existing progress animation
+                    if (progressInterval) clearInterval(progressInterval);
+                    progressBar.style.transition = 'none';
+                    progressBar.style.width = '0%';
+                    void progressBar.offsetWidth;
+                    progressBar.style.transition = 'width ' + (autoAdvanceDelay / 1000) + 's linear';
+                    progressBar.style.width = '100%';
+                }
+
+                // ========== AUTO ADVANCE (right-to-left) ==========
+                function startAutoAdvance() {
+                    stopAutoAdvance();
+                    resetProgressBar();
+                    autoAdvanceInterval = setInterval(() => {
+                        const nextIndex = currentIndex + 1;
+                        if (nextIndex >= totalSlides) {
+                            // Jump to first without animation for seamless loop
+                            goToSlide(0, false);
+                        } else {
+                            goToSlide(nextIndex, true);
+                        }
+                        resetProgressBar();
+                    }, autoAdvanceDelay);
+                }
+
+                function stopAutoAdvance() {
+                    if (autoAdvanceInterval) {
+                        clearInterval(autoAdvanceInterval);
+                        autoAdvanceInterval = null;
+                    }
+                    if (progressInterval) {
+                        clearInterval(progressInterval);
+                        progressInterval = null;
+                    }
+                }
+
+                function resetAutoAdvance() {
+                    stopAutoAdvance();
+                    startAutoAdvance();
+                }
+
+                // ========== SWIPE SUPPORT ==========
+                let startX = 0;
+                let startY = 0;
+                let isSwiping = false;
+
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                    isSwiping = true;
+                    stopAutoAdvance(); // pause on touch
+                }, { passive: true });
+
+                track.addEventListener('touchmove', (e) => {
+                    if (!isSwiping) return;
+                    const diffX = startX - e.touches[0].clientX;
+                    const diffY = startY - e.touches[0].clientY;
+                    // If horizontal swipe is dominant, prevent vertical scroll
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+                        e.preventDefault();
+                    }
+                }, { passive: false });
+
+                track.addEventListener('touchend', (e) => {
+                    if (!isSwiping) return;
+                    isSwiping = false;
+                    const diffX = startX - e.changedTouches[0].clientX;
+                    const diffY = Math.abs(startY - e.changedTouches[0].clientY);
+
+                    // Only trigger swipe if horizontal movement is significant and dominant
+                    if (Math.abs(diffX) > 40 && Math.abs(diffX) > diffY) {
+                        if (diffX > 0) {
+                            // Swiped left → go to next slide
+                            const nextIndex = currentIndex + 1;
+                            if (nextIndex >= totalSlides) {
+                                goToSlide(0, false);
+                            } else {
+                                goToSlide(nextIndex, true);
+                            }
+                        } else {
+                            // Swiped right → go to previous slide
+                            const prevIndex = currentIndex - 1;
+                            if (prevIndex < 0) {
+                                goToSlide(totalSlides - 1, false);
+                            } else {
+                                goToSlide(prevIndex, true);
+                            }
+                        }
+                    }
+                    // Resume auto-advance after 3 seconds
+                    setTimeout(() => {
+                        if (!isSwiping && !autoAdvanceInterval) {
+                            startAutoAdvance();
+                        }
+                    }, 3000);
+                });
+
+                // Also handle mouse drag for desktop testing
+                track.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    isSwiping = true;
+                    stopAutoAdvance();
+                });
+                track.addEventListener('mouseup', (e) => {
+                    if (!isSwiping) return;
+                    isSwiping = false;
+                    const diffX = startX - e.clientX;
+                    if (Math.abs(diffX) > 40) {
+                        if (diffX > 0) {
+                            const nextIndex = currentIndex + 1;
+                            if (nextIndex >= totalSlides) goToSlide(0, false);
+                            else goToSlide(nextIndex, true);
+                        } else {
+                            const prevIndex = currentIndex - 1;
+                            if (prevIndex < 0) goToSlide(totalSlides - 1, false);
+                            else goToSlide(prevIndex, true);
+                        }
+                    }
+                    setTimeout(() => {
+                        if (!isSwiping && !autoAdvanceInterval) startAutoAdvance();
+                    }, 3000);
+                });
+                track.addEventListener('mouseleave', () => {
+                    if (isSwiping) {
+                        isSwiping = false;
+                        setTimeout(() => {
+                            if (!autoAdvanceInterval) startAutoAdvance();
+                        }, 3000);
+                    }
+                });
+
+                // ========== INITIALIZE ==========
+                goToSlide(0, false);
+                startAutoAdvance();
+            }
+        })();
+    </script>
+
+    <div id="footer-container"></div>
+    <script src="animation.js">
+    </script>
+    <script src="script.js">
+    </script>
+</body>
+</html>

@@ -141,74 +141,130 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --- SERVICES SLIDER LOGIC ---//
 
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.getElementById('track');
-    const numberNav = document.getElementById('numberNav');
-    
-    if(track && numberNav) {
-        const originalCards = document.querySelectorAll('.solution-card');
-        const mask = document.querySelector('.solutions-mask');
-        
-        originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
-        originalCards.forEach(card => track.insertBefore(card.cloneNode(true), track.firstChild));
 
-        const allCards = document.querySelectorAll('.solution-card');
-        let currentIndex = originalCards.length;
-        const slideTime = 3500; 
-        let start = Date.now();
 
-        originalCards.forEach((_, i) => {
-            const btn = document.createElement('button');
-            btn.className = `num-btn ${i === 0 ? 'active' : ''}`;
-            btn.textContent = i + 1;
-            btn.onclick = () => { currentIndex = i + originalCards.length; resetAuto(); };
-            numberNav.appendChild(btn);
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('track');
+        const cards = track.querySelectorAll('.solution-card');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const numberNav = document.getElementById('numberNav');
+
+        if (!track || cards.length === 0) return;
+
+        // Clone the first card and append it to the end for a seamless infinite loop
+        const firstCardClone = cards[0].cloneNode(true);
+        track.appendChild(firstCardClone);
+
+        let currentIndex = 0;
+        const originalCardCount = cards.length;
+        let autoPlayTimer;
+        let isTransitioning = false; // Prevents clicking during the invisible snap
+
+        // Generate the numbered dots (only for the original cards)
+        cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = `w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${index === 0 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700 hover:bg-blue-300'}`;
+            dot.innerText = index + 1; 
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            
+            dot.addEventListener('click', () => {
+                if (isTransitioning) return;
+                currentIndex = index;
+                updateSlider();
+                resetAutoPlay();
+            });
+            
+            numberNav.appendChild(dot);
         });
 
-        function updateSlider(animate = true) {
-            track.style.transition = animate ? 'transform 0.7s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+        const dots = numberNav.querySelectorAll('button');
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Map the active dot so the clone highlights dot #1
+            const activeDotIndex = currentIndex === originalCardCount ? 0 : currentIndex;
+
+            dots.forEach((dot, index) => {
+                if (index === activeDotIndex) {
+                    dot.className = 'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 bg-blue-500 text-white';
+                } else {
+                    dot.className = 'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 bg-gray-300 text-gray-700 hover:bg-blue-300';
+                }
+            });
+
+            // Prev button disabled only at the absolute beginning
+            prevBtn.disabled = currentIndex === 0;
+        }
+
+        function nextSlide() {
+            if (isTransitioning) return;
             
-            const currentCardWidth = mask.getBoundingClientRect().width;
-            track.style.transform = `translateX(${-currentIndex * currentCardWidth}px)`;
-            
-            const dots = document.querySelectorAll('.num-btn');
-            const realIndex = currentIndex % originalCards.length;
-            dots.forEach((b, i) => b.classList.toggle('active', i === realIndex));
+            currentIndex++;
+            track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
+            updateSlider();
+
+            // When we hit the cloned slide, wait 300ms for it to slide in, then instantly snap back to 0
+            if (currentIndex === originalCardCount) {
+                isTransitioning = true;
+                setTimeout(() => {
+                    // Remove animation classes
+                    track.classList.remove('transition-transform', 'duration-300', 'ease-in-out');
+                    
+                    // Snap back to the true beginning instantly
+                    currentIndex = 0;
+                    track.style.transform = `translateX(0%)`;
+                    
+                    // Force the browser to render the jump immediately
+                    void track.offsetWidth;
+                    
+                    // Put animation classes back for the next normal slide
+                    track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
+                    isTransitioning = false;
+                }, 300); // 300ms matches your CSS duration
+            }
         }
 
-        function checkInfinite() {
-            if (currentIndex >= originalCards.length * 2) {
-                currentIndex = originalCards.length;
-                updateSlider(false);
-            }
-            if (currentIndex < originalCards.length) {
-                currentIndex = originalCards.length * 2 - 1;
-                updateSlider(false);
-            }
+        function prevSlide() {
+            if (isTransitioning || currentIndex === 0) return;
+            currentIndex--;
+            track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
+            updateSlider();
         }
 
-        function step() {
-            const now = Date.now();
-            if (now - start >= slideTime) {
-                currentIndex++;
-                start = now;
-                updateSlider();
-                setTimeout(checkInfinite, 750);
-            }
-            requestAnimationFrame(step);
-        }
-
-        function resetAuto() { start = Date.now(); updateSlider(); }
-
-        document.getElementById('nextBtn').onclick = () => { currentIndex++; resetAuto(); setTimeout(checkInfinite, 750); };
-        document.getElementById('prevBtn').onclick = () => { currentIndex--; resetAuto(); setTimeout(checkInfinite, 750); };
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
         
-        window.addEventListener('resize', () => { updateSlider(false); });
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(nextSlide, 3000); 
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            startAutoPlay();
+        }
+
+        // Pause/play listeners
+        track.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+        track.addEventListener('mouseleave', startAutoPlay);
         
-        updateSlider(false);
-        requestAnimationFrame(step);
-    }
-});
+        track.addEventListener('touchstart', () => clearInterval(autoPlayTimer), {passive: true});
+        track.addEventListener('touchend', startAutoPlay);
+
+        updateSlider();
+        startAutoPlay();
+    });
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // --- SCROLL REVEAL / CASCADING FADE-UP ANIMATION ---
@@ -458,200 +514,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 2. PORTFOLIO GRID FILTERING//
 
-document.addEventListener("DOMContentLoaded", () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    if(filterBtns.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 1. Reset all buttons to default styling
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-brandBlack', 'text-white', 'shadow-lg', 'shadow-black/20');
-                    b.classList.add('bg-white', 'text-gray-600');
-                });
-                
-                // 2. Highlight the clicked button
-                btn.classList.remove('bg-white', 'text-gray-600');
-                btn.classList.add('bg-brandBlack', 'text-white', 'shadow-lg', 'shadow-black/20');
-
-                // 3. Filter the grid items
-                const filterValue = btn.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.9)';
-                        setTimeout(() => { item.style.display = 'none'; }, 300);
-                    }
-                });
-            });
-        });
-    }
-});
-
-const projectsDB = {
-    'morix': {
-        title: 'Morix Beyond Zanzibar', category: 'Brand Identity', client: 'Morix Tours & Safaris',
-        challenge: 'Morix Tours needed a high-end, luxury brand identity that stood out from standard safari operators, capturing the unique essence of Zanzibar.',
-        solution: 'We engineered a complete visual overhaul including a bespoke logo, premium typography, and a cohesive color palette.',
-        impact: 'The new identity increased premium package inquiries by 45% within the first three months of launch.',
-        images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&auto=format&fit=crop']
-    },
-    'child-comforters': {
-        title: 'African Child Comforters', category: 'Web Platform', client: 'ACC NGO',
-        challenge: 'The NGO needed a secure, easy-to-use platform to accept international donations and showcase their fieldwork.',
-        solution: 'We developed a responsive, high-performance web platform integrated with secure payment gateways.',
-        impact: 'Online donations increased by 300% in the first year.',
-        images: ['https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&auto=format&fit=crop']
-    },
-    'fpssa': {
-        title: 'FPSSA Portal', category: 'System Development', client: 'Federation of Procurement and Supplies',
-        challenge: 'FPSSA required a massive digital system to manage student records securely.',
-        solution: 'We built a bespoke enterprise software architecture featuring automated data management and user portals.',
-        impact: 'Administrative processing time was reduced by 70%.',
-        images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop', 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&auto=format&fit=crop']
-    }
-};
-
-let sliderImages = [];
-let sliderIndex = 0;
-
-window.openProjectModal = function(id) {
-    try {
-        console.log('Opening modal for project:', id);
-        
-        const data = projectsDB[id];
-        if(!data) {
-            console.error('Project not found in projectsDB:', id);
-            console.log('Available projects:', Object.keys(projectsDB));
-            return;
-        }
-
-        // Update modal content
-        const titleEl = document.getElementById('modal-title');
-        const categoryEl = document.getElementById('modal-category');
-        const clientEl = document.getElementById('modal-client');
-        const challengeEl = document.getElementById('modal-challenge');
-        const solutionEl = document.getElementById('modal-solution');
-        const impactEl = document.getElementById('modal-impact');
-
-        if(!titleEl || !categoryEl || !clientEl || !challengeEl || !solutionEl || !impactEl) {
-            console.error('Modal elements not found');
-            console.log('titleEl:', titleEl);
-            console.log('categoryEl:', categoryEl);
-            console.log('clientEl:', clientEl);
-            console.log('challengeEl:', challengeEl);
-            console.log('solutionEl:', solutionEl);
-            console.log('impactEl:', impactEl);
-            return;
-        }
-
-        titleEl.textContent = data.title;
-        categoryEl.textContent = data.category;
-        clientEl.innerHTML = `<ion-icon name="business" class="mr-2 text-brandBlue"></ion-icon> ${data.client}`;
-        challengeEl.textContent = data.challenge;
-        solutionEl.textContent = data.solution;
-        impactEl.textContent = data.impact;
-
-        // Setup images
-        sliderImages = data.images && data.images.length > 0 ? data.images : [];
-        sliderIndex = 0;
-        
-        if(sliderImages.length > 0) {
-            window.updateSliderImage();
-        } else {
-            console.warn('No images found for project:', id);
-        }
-
-        // Show modal
-        const overlay = document.getElementById('project-modal-overlay');
-        const box = document.getElementById('project-modal-box');
-        
-        if(!overlay || !box) {
-            console.error('Modal overlay/box not found');
-            console.log('overlay:', overlay);
-            console.log('box:', box);
-            return;
-        }
-
-        overlay.classList.remove('hidden');
-        overlay.classList.add('flex');
-        setTimeout(() => { 
-            box.classList.remove('scale-95', 'opacity-0'); 
-            box.classList.add('scale-100', 'opacity-100'); 
-        }, 10);
-        document.body.style.overflow = 'hidden';
-        
-        console.log('Modal opened successfully');
-    } catch (error) {
-        console.error('Error opening project modal:', error);
-    }
-};
-
-window.updateSliderImage = function() {
-    try {
-        const img = document.getElementById('modal-main-image');
-        const counter = document.getElementById('image-counter');
-
-        if(!img || !counter) {
-            console.error('Image or counter element not found');
-            return;
-        }
-
-        if(sliderImages.length === 0) {
-            console.warn('No images to display');
-            return;
-        }
-
-        img.style.opacity = '0.5';
-        setTimeout(() => {
-            img.src = sliderImages[sliderIndex];
-            img.style.opacity = '1';
-        }, 150);
-        
-        counter.textContent = `${sliderIndex + 1} / ${sliderImages.length}`;
-    } catch (error) {
-        console.error('Error updating slider image:', error);
-    }
-};
-
-window.nextImage = function() {
-    if(sliderImages.length === 0) return;
-    sliderIndex = (sliderIndex + 1) % sliderImages.length;
-    window.updateSliderImage();
-};
-
-window.prevImage = function() {
-    if(sliderImages.length === 0) return;
-    sliderIndex = (sliderIndex - 1 + sliderImages.length) % sliderImages.length;
-    window.updateSliderImage();
-};
-
-window.closeProjectModal = function() {
-    try {
-        const overlay = document.getElementById('project-modal-overlay');
-        const box = document.getElementById('project-modal-box');
-        
-        if(!overlay || !box) {
-            console.error('Modal elements not found for closing');
-            return;
-        }
-
-        box.classList.remove('scale-100', 'opacity-100');
-        box.classList.add('scale-95', 'opacity-0');
-        setTimeout(() => { 
-            overlay.classList.add('hidden'); 
-            overlay.classList.remove('flex'); 
-            document.body.style.overflow = 'auto'; 
-        }, 300);
-    } catch (error) {
-        console.error('Error closing project modal:', error);
-    }
-};
 
 // AWARD LIGHTBOX FUNCTIONS
 window.openAwardLightbox = function(imageSrc, captionText) {
@@ -690,9 +553,6 @@ window.closeAwardLightbox = function() {
 };
 
 
-
-
-// blog
    
   
   
@@ -796,9 +656,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div> 
         
-        <div class="pt-8 text-center text-sm text-gray-400 font-medium">
-            <p>© 2026 Africana Tech Company. All rights reserved.</p>
-        </div>
+     <div class="pt-8 text-center text-sm text-gray-400 font-medium">
+    <p>© 2026 Africana Tech Company. All rights reserved.</p>
+    <div class="mt-3 flex justify-center items-center space-x-4">
+        <a href="privacy.html" class="hover:text-brandBlue hover:underline transition-all duration-300">Privacy Policy</a>
+        <span class="text-gray-600">|</span>
+        <a href="terms.html" class="hover:text-brandBlue hover:underline transition-all duration-300">Terms & Conditions</a>
+    </div>
+</div>
     </div>
 </footer>
     `;
