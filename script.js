@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-span-2 md:col-span-1 lg:col-span-2 space-y-4">
                 <h3 class="text-xl font-semibold text-white">Africana Tech</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
-                    We deliver cutting-edge technology solutions that drive growth, enhance security, and establish a powerful digital presence for businesses across Africa and beyond.
+                    Born from a passion for African innovation, Africana Tech is a unified digital powerhouse. We deliver cutting-edge technology solutions that drive operational growth, ensure uncompromising data security, and establish an unforgettable digital presence. Whether we are architecting complex enterprise systems or crafting resonant brand identities, our mission is to equip ambitious businesses across Africa and beyond with the ultimate competitive edge.
                 </p>
             </div>    
 
