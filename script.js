@@ -559,36 +559,76 @@ window.closeAwardLightbox = function() {
 
 
 //footer//
-
 document.addEventListener("DOMContentLoaded", () => {
     const footerContainer = document.getElementById("footer-container");
 
     const footerHtml = `
-<footer class="bg-brandBlack text-white py-12">
-    <div class="w-full max-w-screen-2xl mx-auto px-6 lg:px-12">
+<footer class="bg-brandBlack text-white py-12 overflow-hidden w-full">
+    <!-- Removed px-6, lg:px-12, and max-w-screen-2xl to make it fit the screen perfectly edge-to-edge -->
+    <div class="w-full mx-auto pr-6 pl-12">
         
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 lg:gap-x-12 gap-y-10 border-b border-gray-700 pb-10">
+        <!-- Upgraded to a 7-column grid on large screens to fit the 2 new columns -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-x-6 lg:gap-x-8 gap-y-10 border-b border-gray-700 pb-10">
             
-            <div class="col-span-2 md:col-span-1 lg:col-span-2 space-y-4">
+            <!-- About Section (Spans 2 columns on desktop, full width on tablet/mobile) -->
+            <div class="col-span-2 md:col-span-4 lg:col-span-2 space-y-4 pr-0 lg:pr-6">
                 <h3 class="text-xl font-semibold text-white">Africana Tech</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-gray-400 leading-relaxed text-justify sm:text-left">
                     Born from a passion for African innovation, Africana Tech is a unified digital powerhouse. We deliver cutting-edge technology solutions that drive operational growth, ensure uncompromising data security, and establish an unforgettable digital presence. Whether we are architecting complex enterprise systems or crafting resonant brand identities, our mission is to equip ambitious businesses across Africa and beyond with the ultimate competitive edge.
                 </p>
             </div>    
 
-            <div class="col-span-1 md:col-span-1">
+             <!-- Links Column -->
+            <div class="col-span-1 md:col-span-1 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Links</h3>
                 <ul class="space-y-2 text-sm flex flex-col">
                     <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
                     <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                    <li><a href="tech solutions.html" class="text-gray-400 hover:text-white transition">Tech Solutions</a></li>
-                    <li><a href="branding.html" class="text-gray-400 hover:text-white transition">Branding & Creative</a></li>
                     <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
-                    <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Tech Solutions</a></li>
+                     <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Branding & Creative</a></li>
+                      <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                       <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                       <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="col-span-1 md:col-span-1">
+            <!-- NEW: Tech Solutions Column -->
+            <div class="col-span-1 md:col-span-1 lg:col-span-1">
+                <h3 class="text-lg font-semibold mb-4 text-white">Tech Solutions</h3>
+                <ul class="space-y-2 text-sm flex flex-col">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">System Development</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">App Development</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Cyber Security</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Networking</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">IT Maintenance</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">AI Training</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Corporate Training</a></li>
+                   
+                </ul>
+            </div>
+
+            <!-- NEW: Branding Solutions Column -->
+            <div class="col-span-1 md:col-span-1 lg:col-span-1">
+                <h3 class="text-lg font-semibold mb-4 text-white">Branding</h3>
+                <ul class="space-y-2 text-sm flex flex-col">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Identity</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Social Media</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Strategy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Copywriting</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Video & Motion</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">3D & Packaging</a></li>
+                    
+                </ul>
+            </div>
+
+           
+
+            <!-- Social Media Column -->
+            <div class="col-span-1 md:col-span-1 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Social Media</h3>
                 <div class="flex flex-col space-y-4 text-sm">                            
                     <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
@@ -612,14 +652,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="YOUR_TIKTOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
                         <i class="fab fa-tiktok text-xl w-6"></i> 
                         <span>TikTok</span>
-                    </a>                            
+                    </a>
+                     <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-linkedin-in text-xl w-6"></i> 
+                        <span>LinkedIn</span>
+                    </a>
+            
+                           
                 </div>
             </div>          
 
-            <div class="col-span-2 md:col-span-1">
+            <!-- Contact Column -->
+            <div class="col-span-2 md:col-span-4 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>                
                 
-                <div class="flex flex-row gap-4 md:flex-col md:gap-5"> 
+                <div class="flex flex-row gap-4 md:flex-col md:gap-5 justify-start"> 
                     
                     <a href="https://wa.me/255672743065" target="_blank" rel="noopener noreferrer" class="flex items-center group transition-all duration-300">
                         <div class="w-12 h-12 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center bg-green-100 text-green-600 rounded-lg group-hover:bg-green-600 group-hover:text-white transition-all shadow-sm">
@@ -656,14 +703,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div> 
         
-     <div class="pt-8 text-center text-sm text-gray-400 font-medium">
-    <p>© 2026 Africana Tech Company. All rights reserved.</p>
-    <div class="mt-3 flex justify-center items-center space-x-4">
-        <a href="privacy.html" class="hover:text-brandBlue hover:underline transition-all duration-300">Privacy Policy</a>
-        <span class="text-gray-600">|</span>
-        <a href="terms.html" class="hover:text-brandBlue hover:underline transition-all duration-300">Terms & Conditions</a>
-    </div>
-</div>
+        <div class="pt-8 text-center text-sm text-gray-400 font-medium">
+            <p>© 2026 Africana Tech Company. All rights reserved.</p>
+            <div class="mt-3 flex justify-center items-center space-x-4">
+                <a href="privacy.html" class="hover:text-blue-500 hover:underline transition-all duration-300">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="terms.html" class="hover:text-blue-500 hover:underline transition-all duration-300">Terms & Conditions</a>
+            </div>
+        </div>
     </div>
 </footer>
     `;
@@ -673,31 +720,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// ==========================================
-// INITIALIZATION & VERIFICATION
-// ==========================================
-document.addEventListener("DOMContentLoaded", function() {
-    // Verify modal system is ready
-    console.log('=== Portfolio Modal System Verification ===');
-    console.log('projectsDB available:', typeof projectsDB !== 'undefined');
-    console.log('Available projects:', projectsDB ? Object.keys(projectsDB) : 'N/A');
-    console.log('window.openProjectModal available:', typeof window.openProjectModal === 'function');
-    console.log('window.closeProjectModal available:', typeof window.closeProjectModal === 'function');
-    console.log('window.updateSliderImage available:', typeof window.updateSliderImage === 'function');
-    
-    // Verify modal HTML elements exist on portfolio page
-    const isPortfolioPage = window.location.pathname.toLowerCase().includes('portfolio');
-    if(isPortfolioPage) {
-        console.log('--- Portfolio Page Elements ---');
-        console.log('project-modal-overlay:', document.getElementById('project-modal-overlay') ? '✓ Found' : '✗ Missing');
-        console.log('project-modal-box:', document.getElementById('project-modal-box') ? '✓ Found' : '✗ Missing');
-        console.log('modal-title:', document.getElementById('modal-title') ? '✓ Found' : '✗ Missing');
-        console.log('modal-category:', document.getElementById('modal-category') ? '✓ Found' : '✗ Missing');
-        console.log('modal-client:', document.getElementById('modal-client') ? '✓ Found' : '✗ Missing');
-        console.log('modal-challenge:', document.getElementById('modal-challenge') ? '✓ Found' : '✗ Missing');
-        console.log('modal-solution:', document.getElementById('modal-solution') ? '✓ Found' : '✗ Missing');
-        console.log('modal-impact:', document.getElementById('modal-impact') ? '✓ Found' : '✗ Missing');
-        console.log('modal-main-image:', document.getElementById('modal-main-image') ? '✓ Found' : '✗ Missing');
-        console.log('image-counter:', document.getElementById('image-counter') ? '✓ Found' : '✗ Missing');
-    }
-});
+

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Africana Tech Company</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration for Custom Variables and Keyframes -->
+
+</head>
+<body class="font-poppins bg-[#f8f9fb] m-0 p-0 overflow-x-hidden text-brand-black leading-relaxed scroll-smooth">
+
+<div id="header-container"></div>
+
+    <main class="pt-16 sm:pt-[72px] lg:pt-20 pb-0">
+
+        <!-- HERO -->
+    <section class="relative w-full py-16 sm:py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-brandBlack">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] lg:w-[800px] h-[300px] sm:h-[600px] lg:h-[800px] bg-brandBlue opacity-20 rounded-full blur-[80px] sm:blur-[120px] z-0 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 text-center relative z-10 reveal">
+            <span class="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-brandWhite/20 bg-white/5 backdrop-blur-md mb-4 sm:mb-6 text-[10px] sm:text-sm font-bold tracking-widest text-brandWhite uppercase">Featured Work</span>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight tracking-tighter text-brandWhite">
+                Digital Excellence, <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-400">Delivered.</span>
+            </h1>
+            
+            <p class="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto font-light px-4 sm:px-0 mb-8 sm:mb-10">
+                Explore a curated selection of our highest-impact technology platforms, software deployments, and premium brand identities.
+            </p>
+
+            <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-brandBlue hover:bg-brandWhite hover:text-brandBlue text-brandWhite text-sm sm:text-base font-bold rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    Explore Projects <ion-icon name="grid-outline" class="ml-2 text-lg"></ion-icon>
+                </a>
+                <a href="#awards" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-gray-700 hover:border-yellow-400 text-gray-300 hover:text-yellow-400 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 flex items-center justify-center group">
+                    View Our Awards <ion-icon name="trophy-outline" class="ml-2 text-lg group-hover:scale-110 transition-transform"></ion-icon>
+                </a>
+                
+                <a href="Africana-Tech-Profile.pdf" download="Africana_Tech_Company_Profile.pdf" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-brandWhite text-brandBlue hover:bg-yellow-400 hover:text-brandBlack text-sm sm:text-base font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group">
+                    Download Profile <ion-icon name="cloud-download-outline" class="ml-2 text-lg group-hover:animate-bounce"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- PORTFOLIO GRID -->
+        <section id="portfolio" class="py-16 sm:py-24 bg-gray-50 min-h-screen relative z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <div class="flex flex-wrap gap-2 sm:gap-3 mb-12 justify-center">
+                    <button class="filter-pill active-filter" data-filter="all"><span class="pill-dot bg-amber-400"></span> All Projects</button>
+                    <button class="filter-pill" data-filter="tech"><span class="pill-dot bg-blue-500"></span> Tech Solutions</button>
+                    <button class="filter-pill" data-filter="branding"><span class="pill-dot bg-cyan-500"></span> Branding</button>
+                </div>
+
+                <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tech 1: Morix -->
+                    <div class="portfolio-item group tech" data-project="morix">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Morix" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Tech Platform</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">Morix Beyond Zanzibar</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Premium travel platform for Zanzibar, safaris & trekking with integrated booking & payments.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="business-outline" class="mr-1.5 text-lg"></ion-icon> Morix Ltd</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech 2: Kimondo -->
+                    <div class="portfolio-item group tech" data-project="kimondo">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Kimondo" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Tech Platform</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">Kimondo Adventures</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Safari & trekking booking plus cultural gift shop with e-commerce and payment gateway.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="business-outline" class="mr-1.5 text-lg"></ion-icon> Kimondo Co.</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech 3: Mr Tree -->
+                    <div class="portfolio-item group tech" data-project="mrtree">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mr Tree" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Web System</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">Mr Tree Foundation</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Environmental impact showcase with energy, climate & cleaning programs – powerful UI.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="business-outline" class="mr-1.5 text-lg"></ion-icon> NGO</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech 4: FPSSA -->
+                    <div class="portfolio-item group tech" data-project="fpssa">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FPSSA" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Web System</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">FPSSA Student System</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Membership, payments, seminars & training portal for procurement students across Tanzania.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="school-outline" class="mr-1.5 text-lg"></ion-icon> Education</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech 5: Reach -->
+                    <div class="portfolio-item group tech" data-project="reach">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Reach" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Tech Platform</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">Reach Global Consultant</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Consulting platform linking businesses & government on investment, tax, marketing.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="analytics-outline" class="mr-1.5 text-lg"></ion-icon> Consulting</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branding 1: FPSSA Conf -->
+                    <div class="portfolio-item group branding" data-project="fpssa-branding">
+                        <div class="flex flex-col h-full w-full">
+                            <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
+                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FPSSA Conf" loading="lazy">
+                                <span class="absolute top-4 left-4 bg-[#0a0a0b]/85 backdrop-blur-md text-white text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brand-blue">Brand Identity</span>
+                            </div>
+                            <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 font-playfair transition-colors duration-200 group-hover:text-brand-blue">FPSSA Conferences</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mt-1">Full event branding: video, posters, banners, t‑shirts, hall decoration & photography.</p>
+                                <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100 text-xs font-semibold text-gray-400">
+                                    <span class="flex items-center"><ion-icon name="videocam-outline" class="mr-1.5 text-lg"></ion-icon> Event</span>
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-brand-blue ml-auto shrink-0 transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)]"><ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden flex-col items-center justify-center p-16 text-black w-full bg-white rounded-3xl border border-gray-100 mt-8" id="empty-state">
+                    <ion-icon name="folder-open-outline" class="text-6xl text-gray-300 mb-4"></ion-icon>
+                    <p class="text-lg font-medium text-gray-500">No projects match this category.</p>
+                    <button onclick="resetFilters()" class="mt-4 px-6 py-2.5 rounded-full border border-gray-300 bg-black shadow-sm cursor-pointer font-semibold text-gray-700 hover:bg-black hover:text-brand-blue transition-all">Show All Projects</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FIXED: DETAIL PANEL -->
+        <!-- Removed 'pt-24 sm:pt-32' from the parent wrapper to stop inner scroll issues -->
+        <div id="project-detail-panel" class="fixed inset-0 z-[90] bg-[#08080a]/95 backdrop-blur-xl hidden items-start justify-center overflow-y-auto px-4 sm:px-6 lg:px-8 pb-12 transition-opacity duration-300">
+            
+            <!-- Clickable Background to Close -->
+            <div class="fixed inset-0 z-0 cursor-pointer" onclick="closeDetailPanel()"></div>
+
+            <!-- 
+                FIXED: Added 'mt-24 sm:mt-28 shrink-0' directly to the inner card.
+                This guarantees it starts safely below the header, leaving the close button completely visible!
+            -->
+            <div class="w-full max-w-5xl bg-white rounded-3xl shadow-2xl flex flex-col animate-slide-up relative z-10 mt-24 sm:mt-28 mb-12 sm:mb-16 shrink-0">
+                
+                <div class="relative bg-gray-100 h-64 sm:h-80 lg:h-[30rem] shrink-0 overflow-hidden group rounded-t-3xl">
+                    <img id="detail-main-image" src="" class="w-full h-full object-cover transition-opacity duration-300" alt="Project image">
+                    
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-black backdrop-blur-md border border-gray-200 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandblue hover:text-white hover:border-brand-blue opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 z-20" onclick="prevImage()">
+                        <ion-icon name="chevron-back-outline" class="text-xl"></ion-icon>
+                    </button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-black backdrop-blur-md border border-gray-200 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandblue hover:text-white hover:border-brand-blue opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 z-20" onclick="nextImage()">
+                        <ion-icon name="chevron-forward-outline" class="text-xl"></ion-icon>
+                    </button>
+                    
+                    <!-- Close button stays inside the image safely -->
+                    <button class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-30 transition-all duration-300 hover:bg-red-600 hover:rotate-90 border-none" onclick="closeDetailPanel()">
+                        <ion-icon name="close" class="text-xl"></ion-icon>
+                    </button>
+                    
+                    <span class="absolute bottom-5 right-5 bg-black/70 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest shadow-lg z-[25]" id="image-counter-badge">1/4</span>
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-[25]" id="gallery-dots"></div>
+                </div>
+
+                <div class="p-8 sm:p-12">
+                    <span id="detail-category" class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-brand-blue text-xs font-bold uppercase tracking-wider mb-4 border border-blue-100"></span>
+                    <h2 id="detail-title" class="text-3xl md:text-5xl font-black text-gray-900 mb-3 font-playfair tracking-tight leading-tight"></h2>
+                    <p id="detail-client" class="text-gray-500 font-medium flex items-center text-sm md:text-base mb-8"></p>
+
+                    <!-- Project Overview -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold text-gray-900 flex items-center mb-4"><ion-icon name="book-outline" class="mr-2.5 text-brand-blue"></ion-icon> Project Overview</h4>
+                        <p id="detail-overview" class="text-gray-800 text-[15px] sm:text-base leading-[1.8] font-medium text-justify"></p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-10 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8">
+                        <h4 class="text-xl font-bold text-gray-900 flex items-center mb-5"><ion-icon name="star-outline" class="mr-2.5 text-amber-400"></ion-icon> Key Features</h4>
+                        <ul id="detail-features" class="feature-list"></ul>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div id="tech-section" class="mb-10 hidden">
+                        <h4 class="text-xl font-bold text-gray-900 flex items-center mb-4"><ion-icon name="code-slash-outline" class="mr-2.5 text-brand-blue"></ion-icon> Technologies Used</h4>
+                        <div id="detail-technologies" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Challenge & Solution -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="border border-slate-200 rounded-2xl p-6 shadow-sm bg-white">
+                            <h4 class="font-bold text-gray-900 flex items-center mb-3 text-lg"><ion-icon name="alert-circle" class="text-red-500 mr-2 text-xl"></ion-icon> The Challenge</h4>
+                            <p id="detail-challenge" class="text-gray-800 font-medium text-[15px] leading-relaxed"></p>
+                        </div>
+                        <div class="border border-slate-200 rounded-2xl p-6 shadow-sm bg-blue-50/40">
+                            <h4 class="font-bold text-gray-900 flex items-center mb-3 text-lg"><ion-icon name="bulb" class="text-brand-blue mr-2 text-xl"></ion-icon> Our Solution</h4>
+                            <p id="detail-solution" class="text-gray-800 font-medium text-[15px] leading-relaxed"></p>
+                        </div>
+                    </div>
+
+                    <!-- Impact / Results -->
+                    <div class="bg-brandblue p-8 rounded-2xl mb-10 text-white shadow-[0_15px_30px_rgba(37,99,235,0.2)]">
+                        <h4 class="font-bold flex items-center mb-3 text-lg"><ion-icon name="trending-up" class="mr-2 text-xl text-yellow-300"></ion-icon> Impact & Results</h4>
+                        <p id="detail-impact" class="text-white/95 text-[15px] sm:text-base leading-relaxed font-semibold tracking-wide"></p>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="bg-brandblue rounded-[2rem] p-8 md:p-12 text-center text-white relative overflow-hidden shadow-xl mt-12">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600 opacity-20 rounded-full blur-[60px]"></div>
+                        <p class="text-yellow-400 text-xs font-bold uppercase mb-2 relative z-10 tracking-widest">✦ Your Brand, Amplified ✦</p>
+                        <p class="text-2xl font-extrabold relative z-10">With us to make your company look</p>
+                        <p class="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-8 relative z-10">Stronger & Bolder</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                            <a href="#contact" class="px-8 py-4 bg-blue-600 hover:bg-white hover:text-blue-700 text-white font-bold rounded-xl transition shadow-lg">Contact Us</a>
+                            <button onclick="closeDetailPanel()" class="px-8 py-4 border border-white/30 hover:bg-white hover:text-black text-white font-bold rounded-xl transition">Go Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- AWARDS SECTION -->
+             <section id="awards" class="py-16 sm:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden border-t border-gray-800 mb-16 sm:mb-24">
+        <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-brandBlue opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            
+            <div class="text-center mb-10 sm:mb-16 reveal">
+                <span class="text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Proven Excellence</span>
+                <h2 class="text-3xl text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
+                <div class="h-1 w-16 sm:w-20 bg-brandBlack mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop', 'Best Enterprise Platform')">
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="East African Tech Award Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+                        
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
+                            <ion-icon name="trophy" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2026 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Best Enterprise Platform</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Awarded by the East African Tech Awards for engineering highly scalable, secure, and innovative digital platforms tailored for major regional enterprises and NGOs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=1200&auto=format&fit=crop', 'Agency of the Year')">
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=800&auto=format&fit=crop" alt="Agency of the Year Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
+                            <ion-icon name="star" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2025 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Agency of the Year</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Recognized by the Tanzania Digital Awards for delivering exceptional hybrid solutions that seamlessly blend heavy-duty software architecture with captivating creative branding.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-brandBlack border border-white rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-200 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1200&auto=format&fit=crop', 'Excellence in UI/UX')">
+                    <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-white/10">
+                        <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop" alt="Excellence in UI/UX Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        
+                        <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <ion-icon name="scan-outline" class="text-white text-4xl"></ion-icon>
+                        </div>
+
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white shadow-lg z-20">
+                            <ion-icon name="ribbon" class="text-base sm:text-lg"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6">
+                        <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2024 Winner</div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Excellence in UI/UX</h3>
+                        <p class="text-xs sm:text-sm text-justify sm:text-left text-white leading-relaxed">
+                            Honored by the African Design Council for crafting intuitive, user-centered digital interfaces that significantly increase customer conversion rates and user retention.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="awardLightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-brandBlack/95 backdrop-blur-md p-4 sm:p-8 opacity-0 transition-opacity duration-300">
+        <button onclick="closeAwardLightbox()" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-brandBlue text-3xl sm:text-5xl transition-colors z-50">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+        <div class="flex flex-col items-center max-w-5xl mx-auto w-full">
+            <img id="lightboxImage" src="" alt="Certificate" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300 border-4 border-white">
+            <h3 id="lightboxCaption" class="text-white text-center mt-6 text-xl sm:text-3xl font-extrabold tracking-wide"></h3>
+        </div>
+    </div>
+
+    </main>
+
+    <script>
+        (function() {
+            const projectData = {
+                morix: {
+                    title: 'Morix Beyond Zanzibar',
+                    client: 'Morix Ltd',
+                    category: 'Tech Platform',
+                    images: [
+                        'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'Morix Beyond Zanzibar is a luxury travel platform designed to showcase the best of Zanzibar, Tanzania safaris, and Mount Kilimanjaro trekking. The website combines stunning visuals with a seamless booking experience, allowing users to explore packages, check availability, and pay securely online.',
+                    challenge: 'The client needed a digital presence that could compete with international travel agencies. The website had to handle complex itineraries, real-time availability, and multiple payment methods while maintaining a premium, trustworthy look.',
+                    solution: 'We built a high‑performance, mobile‑first website with a custom booking engine, integrated payment gateways (Visa, M‑Pesa, PayPal), and an admin dashboard for managing tours, bookings, and customer data. Smooth animations and intuitive navigation enhance user engagement.',
+                    features: ['Online booking with real‑time availability', 'Multi‑currency payment integration', 'Custom tour package builder', 'Blog & travel guides', 'Multi‑language support (English/Swahili)'],
+                    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe & M‑Pesa API', 'Tailwind CSS'],
+                    impact: '📈 200% increase in online bookings within 3 months. ⭐ 4.9/5 average user satisfaction. 💳 98% payment success rate. The platform now serves as the benchmark for premium travel websites in East Africa.'
+                },
+                kimondo: {
+                    title: 'Kimondo Adventures',
+                    client: 'Kimondo Co.',
+                    category: 'Tech Platform',
+                    images: [
+                        'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1504280317859-9c6cce36bca8?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1590073242678-70ee3fc28f8e?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'Kimondo Adventures offers curated safari experiences and Zanzibar trekking tours, plus a unique online gift shop selling authentic cultural items (vinyago). The platform merges tourism and e‑commerce in one cohesive brand.',
+                    challenge: 'Combining a tour booking engine with a full e‑commerce store for cultural products was complex. The user journey needed to be seamless whether a customer was booking a safari or purchasing a souvenir.',
+                    solution: 'We developed a unified platform with a shared cart system, inventory management, and a dual‑purpose user dashboard. The booking module supports instant confirmation and the shop supports local artisans.',
+                    features: ['Tour booking with calendar integration', 'E‑commerce with cultural product listings', 'Vendor dashboard for artisans', 'Secure checkout (M‑Pesa, card)', 'Customer reviews & ratings'],
+                    technologies: ['Vue.js', 'Laravel', 'MySQL', 'PayPal & M‑Pesa', 'Bootstrap'],
+                    impact: '🛒 150+ cultural products listed online. 🎯 65% increase in tour inquiries. 💰 3x revenue growth within 6 months.'
+                },
+                mrtree: {
+                    title: 'Mr Tree Foundation',
+                    client: 'Mr Tree NGO',
+                    category: 'Web System',
+                    images: [
+                        'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'Mr Tree Foundation is an environmental NGO focused on clean energy, climate action, and community cleaning programs. The website is designed to educate, inspire donations, and showcase real‑world impact through data‑driven storytelling.',
+                    challenge: 'The foundation needed to visually communicate complex environmental data in a way that was easy to understand and emotionally compelling, driving both volunteer sign‑ups and donations.',
+                    solution: 'We created an immersive impact‑showcase website with interactive charts, animated timelines, before/after image sliders, and heartfelt beneficiary stories. A donation portal and volunteer registration system were integrated.',
+                    features: ['Interactive impact dashboards', 'Before/after sliders for projects', 'Donation portal with recurring options', 'Volunteer registration & event calendar', 'Blog & success stories'],
+                    technologies: ['Next.js', 'D3.js', 'Firebase', 'Stripe', 'Tailwind CSS'],
+                    impact: '🌍 80% donor engagement increase. 📊 10,000+ visitors in the first month. 🤝 5 new corporate partnerships established.'
+                },
+                fpssa: {
+                    title: 'FPSSA Student System',
+                    client: 'FPSSA',
+                    category: 'Web System',
+                    images: [
+                        'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1571260899304-425eee4c7ef0?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'The FPSSA Student System is a comprehensive digital portal for procurement and supply chain students across Tanzania. It handles membership, payments, online seminars, training modules, and club registrations.',
+                    challenge: 'FPSSA needed a centralised platform to connect thousands of students with the procurement board, automate membership renewals, and deliver virtual training – all while ensuring data security and 99% uptime.',
+                    solution: 'We developed a role‑based web application with student, instructor, and admin dashboards. It includes automated payment reminders, certificate generation for completed courses, and a discussion forum.',
+                    features: ['Student membership management', 'Online seminar & training modules', 'Automated payment & invoicing', 'NEST Club registration', 'Certificate generation'],
+                    technologies: ['Angular', 'Node.js', 'PostgreSQL', 'Zoom API', 'Material UI'],
+                    impact: '👨‍🎓 5,000+ students registered. 💳 99% payment reliability. 🎓 200+ online seminars hosted successfully.'
+                },
+                reach: {
+                    title: 'Reach Global Consultant',
+                    client: 'Reach Ltd',
+                    category: 'Tech Platform',
+                    images: [
+                        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'Reach Global Consultant is a professional platform that bridges businesses, government entities, and expert consultants across East Africa. Services include investment advisory, tax consulting, and marketing strategy.',
+                    challenge: 'The platform needed to facilitate secure document exchange, appointment scheduling, and consultant matching while projecting a trustworthy, high‑end corporate image.',
+                    solution: 'We built a sleek consulting platform with service pages, a consultant marketplace, integrated scheduling, and encrypted document sharing. A client dashboard allows tracking of ongoing projects.',
+                    features: ['Consultant matching algorithm', 'Secure document exchange', 'Online appointment booking', 'Service package customisation', 'Multi‑language support'],
+                    technologies: ['React', 'Django', 'PostgreSQL', 'Calendly API', 'AWS'],
+                    impact: '🏢 200+ corporate clients onboarded. 🌐 Expanded to 4 East African countries. ⏱️ 70% faster client onboarding process.'
+                },
+                'fpssa-branding': {
+                    title: 'FPSSA Conferences',
+                    client: 'FPSSA',
+                    category: 'Brand Identity',
+                    images: [
+                        'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'We provided end‑to‑end branding for multiple FPSSA national conferences, creating a cohesive visual identity across posters, video promos, stage backdrops, attendee kits, and social media.',
+                    challenge: 'The conference branding had to be instantly recognisable, professional, and consistent across dozens of touchpoints – from large‑format prints to digital banners.',
+                    solution: 'Our team designed the complete visual package: event logo, colour palette, typography, stage design, and all printed collateral. We also produced a highlight video and managed live social media coverage.',
+                    features: ['Event logo & style guide', 'Posters, flyers & roll‑up banners', 'Stage & hall decoration', 'T‑shirts, notebooks & lanyards', 'Professional photography & videography'],
+                    technologies: ['Adobe Creative Suite', 'After Effects', 'Illustrator', 'Premiere Pro'],
+                    impact: '🎯 1,200+ attendees per conference. 📸 High‑quality event coverage. 🎨 50+ branded assets produced per event.'
+                },
+                'tia-marathon': {
+                    title: 'TIA Mwanza Marathon',
+                    client: 'TIA Campus',
+                    category: 'Brand Identity',
+                    images: [
+                        'https://images.unsplash.com/photo-1552674605-15c3705e9705?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1461896836934-bd45ba2bf09c?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'We were the sole branding partner for the TIA Mwanza Marathon, handling everything from promotional flyers and drone footage to participant t‑shirts, booth setups, and social content.',
+                    challenge: 'With hundreds of participants and extensive media coverage, the marathon required a vibrant, energetic brand identity that could be applied across both digital and physical materials under a tight deadline.',
+                    solution: 'We rapidly designed and produced all assets: flyers, banners, route markers, participant kits, and a drone‑shot promotional video that went viral. Social media content was scheduled in real time.',
+                    features: ['Drone videography & editing', 'Flyer & banner design', 'T‑shirt & merchandise branding', 'Event booth & checkpoint branding', 'Real‑time social media content'],
+                    technologies: ['Adobe Photoshop', 'After Effects', 'DJI Drone', 'Canon cameras'],
+                    impact: '🏃 800+ participants. 🎬 Viral drone video – 50K+ views. 📰 Featured in 3 local news outlets.'
+                },
+                upendo: {
+                    title: 'Upendo Mrida Foundation',
+                    client: 'Upendo Foundation',
+                    category: 'Content Strategy',
+                    images: [
+                        'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1200&auto=format&fit=crop'
+                    ],
+                    overview: 'Upendo Mrida Foundation focuses on community upliftment through education, health, and economic empowerment. We crafted a storytelling‑driven content strategy to amplify their mission.',
+                    challenge: 'The foundation needed authentic content that could connect emotionally with donors and volunteers, moving beyond statistics to real human stories.',
+                    solution: 'We produced a series of short documentary videos, photo essays, and social media campaigns that highlighted individual impact stories. The content was optimised for Facebook, Instagram, and YouTube.',
+                    features: ['Short documentary videos', 'Photo essays & storytelling', 'Social media campaign management', 'Donor appeal content', 'Impact reports'],
+                    technologies: ['Final Cut Pro', 'Adobe Lightroom', 'Canva', 'Meta Business Suite'],
+                    impact: '❤️ 300% increase in social media engagement. 📖 25+ community stories documented. 🤲 40% growth in volunteer applications.'
+                }
+            };
+
+            let currentImages = [], currentIndex = 0;
+
+            window.openProject = function(projectId) {
+                const data = projectData[projectId];
+                if(!data) return;
+                currentImages = data.images;
+                currentIndex = 0;
+
+                document.getElementById('detail-main-image').src = currentImages[0];
+                document.getElementById('image-counter-badge').textContent = `1/${currentImages.length}`;
+                document.getElementById('detail-category').textContent = data.category;
+                document.getElementById('detail-title').textContent = data.title;
+                document.getElementById('detail-client').innerHTML = `<ion-icon name="business-outline" class="mr-2 text-black"></ion-icon> ${data.client}`;
+                document.getElementById('detail-overview').textContent = data.overview;
+
+                // Features list
+                const featuresList = document.getElementById('detail-features');
+                featuresList.innerHTML = '';
+                if(data.features) {
+                    data.features.forEach(f => {
+                        const li = document.createElement('li');
+                        li.textContent = f;
+                        featuresList.appendChild(li);
+                    });
+                }
+
+                // Technologies tags
+                const techDiv = document.getElementById('detail-technologies');
+                techDiv.innerHTML = '';
+                const techSection = document.getElementById('tech-section');
+                if(data.technologies && data.technologies.length > 0) {
+                    techSection.style.display = 'block';
+                    data.technologies.forEach(t => {
+                        const span = document.createElement('span');
+                        span.className = 'tech-tag';
+                        span.textContent = t;
+                        techDiv.appendChild(span);
+                    });
+                } else {
+                    techSection.style.display = 'none';
+                }
+
+                document.getElementById('detail-challenge').textContent = data.challenge;
+                document.getElementById('detail-solution').textContent = data.solution;
+                document.getElementById('detail-impact').textContent = data.impact;
+
+                // Gallery dots
+                const dotsContainer = document.getElementById('gallery-dots');
+                dotsContainer.innerHTML = '';
+                currentImages.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'gallery-dot' + (i === 0 ? ' active-dot' : '');
+                    dot.setAttribute('aria-label', `Image ${i+1}`);
+                    dot.addEventListener('click', () => goToImage(i));
+                    dotsContainer.appendChild(dot);
+                });
+
+                const panel = document.getElementById('project-detail-panel');
+                panel.style.display = 'flex';
+                // Trigger reflow for transition
+                void panel.offsetWidth;
+                panel.classList.remove('opacity-0');
+                
+                document.body.style.overflow = 'hidden';
+                
+                // FIXED: Adjust Header Width so scrollbar is fully visible "aside" the header
+                document.getElementById('header-container').style.width = 'calc(100% - 8px)';
+                
+                panel.scrollTop = 0;
+            };
+
+            window.closeDetailPanel = function() {
+                const panel = document.getElementById('project-detail-panel');
+                panel.classList.add('opacity-0');
+                
+                // FIXED: Restore Header Width
+                document.getElementById('header-container').style.width = '100%';
+                
+                setTimeout(() => {
+                    panel.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 300); // Wait for transition
+            };
+
+            function goToImage(i) {
+                if(i === currentIndex) return;
+                currentIndex = i;
+                const img = document.getElementById('detail-main-image');
+                img.style.opacity = '0';
+                setTimeout(() => {
+                    img.src = currentImages[i];
+                    img.style.opacity = '1';
+                }, 200);
+                document.getElementById('image-counter-badge').textContent = `${i+1}/${currentImages.length}`;
+                document.querySelectorAll('#gallery-dots .gallery-dot').forEach((d, idx) => {
+                    d.classList.toggle('active-dot', idx === i);
+                });
+            }
+
+            window.prevImage = () => goToImage((currentIndex - 1 + currentImages.length) % currentImages.length);
+            window.nextImage = () => goToImage((currentIndex + 1) % currentImages.length);
+
+            document.addEventListener('keydown', function(e) {
+                const panel = document.getElementById('project-detail-panel');
+                if(panel.style.display === 'flex') {
+                    if(e.key === 'Escape') closeDetailPanel();
+                    if(e.key === 'ArrowLeft') prevImage();
+                    if(e.key === 'ArrowRight') nextImage();
+                }
+            });
+
+            // Filter functionality
+            let currentFilter = 'all';
+            function applyFilter(filter) {
+                currentFilter = filter;
+                const items = document.querySelectorAll('.portfolio-item');
+                let count = 0;
+                items.forEach(item => {
+                    if(filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = '';
+                        item.classList.add('entrance-animation');
+                        item.style.animationDelay = `${count * 0.06}s`;
+                        count++;
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('entrance-animation');
+                    }
+                });
+                document.getElementById('empty-state').style.display = count === 0 ? 'flex' : 'none';
+            }
+
+            window.resetFilters = function() {
+                document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active-filter'));
+                const allBtn = document.querySelector('.filter-pill[data-filter="all"]');
+                if(allBtn) allBtn.classList.add('active-filter');
+                applyFilter('all');
+            };
+
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active-filter'));
+                    this.classList.add('active-filter');
+                    applyFilter(this.dataset.filter);
+                });
+            });
+
+            // Card click
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if(e.target.closest('a') || e.target.closest('button')) return;
+                    openProject(this.dataset.project);
+                });
+            });
+
+            // Entrance animation on load
+            window.addEventListener('DOMContentLoaded', () => {
+                const items = document.querySelectorAll('.portfolio-item');
+                items.forEach((item, i) => {
+                    item.classList.add('entrance-animation');
+                    item.style.animationDelay = `${i * 0.07}s`;
+                });
+                applyFilter('all');
+            });
+        })();
+    </script>
+
+    <div id="footer-container"></div>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
