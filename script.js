@@ -2,9 +2,10 @@
             theme: {
                 extend: {
                     colors: {
-                        brandBlue: '#1645aa',  /* A vibrant, professional tech blue */
+                        brandBlue: '#136db6',  /* A vibrant, professional tech blue */
                         brandBlack: '#0A0A0A', /* Deep black */
-                        brandWhite: '#F9FAFB', /* Slightly off-white for better contrast */
+                        brandWhite: '#F9FAFB',
+                        brandGreen: '#009444', /* Slightly off-white for better contrast */
                     },
                     fontFamily: {
                         poppins: ['Poppins', 'sans-serif'],
@@ -143,126 +144,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const track = document.getElementById('track');
-        const cards = track.querySelectorAll('.solution-card');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const numberNav = document.getElementById('numberNav');
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('track');
+    const cards = track.querySelectorAll('.solution-card');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const numberNav = document.getElementById('numberNav');
 
-        if (!track || cards.length === 0) return;
+    if (!track || cards.length === 0) return;
 
-        // Clone the first card and append it to the end for a seamless infinite loop
-        const firstCardClone = cards[0].cloneNode(true);
-        track.appendChild(firstCardClone);
-
-        let currentIndex = 0;
-        const originalCardCount = cards.length;
-        let autoPlayTimer;
-        let isTransitioning = false; // Prevents clicking during the invisible snap
-
-        // Generate the numbered dots (only for the original cards)
-        cards.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.className = `w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${index === 0 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700 hover:bg-blue-300'}`;
-            dot.innerText = index + 1; 
-            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-            
-            dot.addEventListener('click', () => {
-                if (isTransitioning) return;
-                currentIndex = index;
-                updateSlider();
-                resetAutoPlay();
-            });
-            
-            numberNav.appendChild(dot);
-        });
-
-        const dots = numberNav.querySelectorAll('button');
-
-        function updateSlider() {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            // Map the active dot so the clone highlights dot #1
-            const activeDotIndex = currentIndex === originalCardCount ? 0 : currentIndex;
-
-            dots.forEach((dot, index) => {
-                if (index === activeDotIndex) {
-                    dot.className = 'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 bg-blue-500 text-white';
-                } else {
-                    dot.className = 'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 bg-gray-300 text-gray-700 hover:bg-blue-300';
-                }
-            });
-
-            // Prev button disabled only at the absolute beginning
-            prevBtn.disabled = currentIndex === 0;
-        }
-
-        function nextSlide() {
-            if (isTransitioning) return;
-            
-            currentIndex++;
-            track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
-            updateSlider();
-
-            // When we hit the cloned slide, wait 300ms for it to slide in, then instantly snap back to 0
-            if (currentIndex === originalCardCount) {
-                isTransitioning = true;
-                setTimeout(() => {
-                    // Remove animation classes
-                    track.classList.remove('transition-transform', 'duration-300', 'ease-in-out');
-                    
-                    // Snap back to the true beginning instantly
-                    currentIndex = 0;
-                    track.style.transform = `translateX(0%)`;
-                    
-                    // Force the browser to render the jump immediately
-                    void track.offsetWidth;
-                    
-                    // Put animation classes back for the next normal slide
-                    track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
-                    isTransitioning = false;
-                }, 300); // 300ms matches your CSS duration
+    // --- Image preloader (removes loading jank) ---
+    const preloadImages = () => {
+        cards.forEach(card => {
+            const img = card.querySelector('img');
+            if (img && img.src) {
+                const preload = new Image();
+                preload.src = img.src;
             }
-        }
+        });
+    };
+    preloadImages();
 
-        function prevSlide() {
-            if (isTransitioning || currentIndex === 0) return;
-            currentIndex--;
-            track.classList.add('transition-transform', 'duration-300', 'ease-in-out');
+    // --- Clone first card for seamless infinite loop ---
+    const firstCardClone = cards[0].cloneNode(true);
+    track.appendChild(firstCardClone);
+
+    let currentIndex = 0;
+    const originalCardCount = cards.length;
+    let autoPlayTimer;
+    let isTransitioning = false; // Prevent clicks during the invisible snap
+
+    // --- Generate numbered dots (only for original cards) ---
+    cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${index === 0 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700 hover:bg-blue-300'}`;
+        dot.innerText = index + 1;
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+
+        dot.addEventListener('click', () => {
+            if (isTransitioning) return;
+            currentIndex = index;
             updateSlider();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoPlay();
-        });
-        
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
             resetAutoPlay();
         });
 
-        function startAutoPlay() {
-            autoPlayTimer = setInterval(nextSlide, 3000); 
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoPlayTimer);
-            startAutoPlay();
-        }
-
-        // Pause/play listeners
-        track.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
-        track.addEventListener('mouseleave', startAutoPlay);
-        
-        track.addEventListener('touchstart', () => clearInterval(autoPlayTimer), {passive: true});
-        track.addEventListener('touchend', startAutoPlay);
-
-        updateSlider();
-        startAutoPlay();
+        numberNav.appendChild(dot);
     });
 
+    const dots = numberNav.querySelectorAll('button');
+
+    // --- Update the slider position and UI ---
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        const activeDotIndex = currentIndex === originalCardCount ? 0 : currentIndex;
+        dots.forEach((dot, index) => {
+            dot.className = `w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${index === activeDotIndex ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700 hover:bg-blue-300'}`;
+        });
+
+        prevBtn.disabled = currentIndex === 0;
+    }
+
+    // --- Move to next slide ---
+    function nextSlide() {
+        if (isTransitioning) return;
+
+        currentIndex++;
+        updateSlider(); // transition class is already present; CSS handles the animation
+
+        if (currentIndex === originalCardCount) {
+            isTransitioning = true;
+            // Listen for the exact end of the transition, then snap back silently
+            const onTransitionEnd = () => {
+                track.removeEventListener('transitionend', onTransitionEnd);
+                // Disable transition momentarily
+                track.style.transition = 'none';
+                currentIndex = 0;
+                track.style.transform = `translateX(0%)`; // instant jump
+                // Force reflow so the jump is painted before re‑enabling transition
+                void track.offsetWidth;
+                track.style.transition = ''; // restore original CSS transition
+                updateSlider(); // fix button states and dot highlights
+                isTransitioning = false;
+            };
+            track.addEventListener('transitionend', onTransitionEnd);
+        }
+    }
+
+    // --- Move to previous slide ---
+    function prevSlide() {
+        if (isTransitioning || currentIndex === 0) return;
+        currentIndex--;
+        updateSlider();
+    }
+
+    // --- Event listeners for navigation buttons ---
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+    });
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+    });
+
+    // --- Auto‑play logic ---
+    function startAutoPlay() {
+        autoPlayTimer = setInterval(nextSlide, 3000);
+    }
+    function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+    }
+
+    // Pause on hover / touch
+    track.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+    track.addEventListener('mouseleave', startAutoPlay);
+    track.addEventListener('touchstart', () => clearInterval(autoPlayTimer), { passive: true });
+    track.addEventListener('touchend', startAutoPlay);
+
+    // --- Initialise ---
+    updateSlider();
+    startAutoPlay();
+});
 
 
 
@@ -597,14 +601,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-span-1 md:col-span-1 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Tech Solutions</h3>
                 <ul class="space-y-2 text-sm flex flex-col">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">System Development</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">App Development</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Cyber Security</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Networking</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">IT Maintenance</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">AI Training</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Corporate Training</a></li>
+                    <li><a href="web info.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                    <li><a href="system.html" class="text-gray-400 hover:text-white transition">System Development</a></li>
+                    <li><a href="app info.html" class="text-gray-400 hover:text-white transition">App Development</a></li>
+                    <li><a href="cyber info.html" class="text-gray-400 hover:text-white transition">Cyber Security</a></li>
+                    <li><a href="network info.html" class="text-gray-400 hover:text-white transition">Networking</a></li>
+                    <li><a href="computer.html" class="text-gray-400 hover:text-white transition">IT Maintenance</a></li>
+                    <li><a href="ai training.html" class="text-gray-400 hover:text-white transition">AI Training</a></li>
+                    <li><a href="corparate info.html" class="text-gray-400 hover:text-white transition">Corporate Training</a></li>
                    
                 </ul>
             </div>
@@ -613,14 +617,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-span-1 md:col-span-1 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Branding</h3>
                 <ul class="space-y-2 text-sm flex flex-col">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Identity</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Social Media</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Strategy</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Copywriting</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Video & Motion</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">3D & Packaging</a></li>
+                    <li><a href="branding.html" class="text-gray-400 hover:text-white transition">Brand Identity</a></li>
+                    <li><a href="ux design.html" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+                    <li><a href="digital marketing.html" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+                    <li><a href="social media.html" class="text-gray-400 hover:text-white transition">Social Media</a></li>
+                    <li><a href="strategy.html" class="text-gray-400 hover:text-white transition">Brand Strategy</a></li>
+                    <li><a href="copywriting.html" class="text-gray-400 hover:text-white transition">Copywriting</a></li>
+                    <li><a href="video.html" class="text-gray-400 hover:text-white transition">Video & Motion</a></li>
+                    <li><a href="3d.html" class="text-gray-400 hover:text-white transition">3D & Packaging</a></li>
                     
                 </ul>
             </div>
@@ -631,31 +635,32 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-span-1 md:col-span-1 lg:col-span-1">
                 <h3 class="text-lg font-semibold mb-4 text-white">Social Media</h3>
                 <div class="flex flex-col space-y-4 text-sm">                            
-                    <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                    <a href="https://www.instagram.com/africana_tech_company?igsh=MXZ4b2JoNHBwaDdqbQ==" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
                         <i class="fab fa-instagram text-xl w-6"></i> 
                         <span>Instagram</span>
                     </a>                            
                     
-                    <a href="YOUR_X_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
-                        <span class="w-6 flex items-center justify-start">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]">
-                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
-                            </svg>
-                        </span>
-                        <span>X (Twitter)</span>
-                    </a>                            
-                    
-                    <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
-                        <i class="fab fa-facebook-f text-xl w-6"></i> 
-                        <span>Facebook</span>
-                    </a>
-                    <a href="YOUR_TIKTOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                    <a href="https://www.tiktok.com/@africana_tech_company?_r=1&_t=ZS-96ct8p8j7Ro" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
                         <i class="fab fa-tiktok text-xl w-6"></i> 
                         <span>TikTok</span>
                     </a>
                      <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
                         <i class="fab fa-linkedin-in text-xl w-6"></i> 
                         <span>LinkedIn</span>
+                    </a>
+                     
+                    
+                    <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-facebook-f text-xl w-6"></i> 
+                        <span>Facebook</span>
+                    </a>
+                      <a href="YOUR_X_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <span class="w-6 flex items-center justify-start">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
+                            </svg>
+                        </span>
+                        <span>X (Twitter)</span>
                     </a>
             
                            

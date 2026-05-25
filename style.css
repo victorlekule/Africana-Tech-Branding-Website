@@ -46,6 +46,8 @@
   width: 100%;
 }
 
+
+
 .solution-card {
   flex: 0 0 100%; /* Fixes the 4px gap entirely */
   width: 100%;
@@ -173,7 +175,13 @@
   }
 }
 
-//techsolution//
+#track {
+  will-change: transform;
+  /* Promote the track to a composite layer for buttery‑smooth animations */
+  transform: translateZ(0);
+}
+
+/*techsolution---*/
 /* --- FLOATING UI ANIMATIONS FOR HERO SECTION --- */
 @keyframes floatSlow {
   0% {

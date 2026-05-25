@@ -55,6 +55,51 @@
             }
         }
     </script>
+    <style>
+    /* Filter pills – minimal style that uses your existing classes */
+    .filter-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        background-color: white;
+        border: 2px solid #e5e7eb;
+        color: #0A0A0A;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    /* Hover state */
+    .filter-pill:hover {
+        border-color: #1645aa;        /* brandBlue */
+        color: #1645aa;
+        background-color: #f0f4ff;
+    }
+    /* Active state – works with your JS adding 'active-filter' */
+    .filter-pill.active-filter {
+        background-color: #1645aa;
+        border-color: #1645aa;
+        color: white;
+        box-shadow: 0 4px 12px rgba(22,69,170,0.3);
+    }
+    /* Colored dot */
+    .pill-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: currentColor;
+        opacity: 0.7;
+    }
+    /* When button is active, dot becomes white */
+    .active-filter .pill-dot {
+        background-color: white;
+        opacity: 1;
+    }
+</style>
 
 </head>
 <body class="font-poppins bg-brandWhite m-0 p-0 overflow-x-hidden text-brandBlack cursor-default leading-relaxed scroll-smooth">
@@ -102,7 +147,7 @@
                 <div class="flex flex-wrap gap-2 sm:gap-3 mb-12 justify-center">
                     <button class="filter-pill active-filter" data-filter="all"><span class="pill-dot bg-amber-400"></span> All Projects</button>
                     <button class="filter-pill" data-filter="tech"><span class="pill-dot bg-brandBlue"></span> Tech Solutions</button>
-                    <button class="filter-pill" data-filter="branding"><span class="pill-dot bg-cyan-500"></span> Branding</button>
+                    <button class="filter-pill" data-filter="branding"><span class="pill-dot bg-black"></span> Branding</button>
                 </div>
 
                 <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
