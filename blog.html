@@ -51,20 +51,60 @@
 
    <div id="header-container"></div>
 
-    <section class="relative w-full py-24 md:py-36 flex items-center justify-center overflow-hidden bg-gray-900">
-        <div class="absolute top-0 right-0 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-yellow-400 opacity-10 rounded-full blur-[100px] md:blur-[140px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-[#0D8ABC] opacity-10 rounded-full blur-[100px] md:blur-[140px] pointer-events-none"></div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <span class="inline-block px-5 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-md mb-6 text-sm font-bold tracking-widest text-yellow-300 uppercase">Knowledge That Drives Growth</span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tighter text-white">
-                The Africana <br class="hidden sm:block"/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-[#0D8ABC]">Insights Hub</span>
-            </h1>
-            <p class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto font-light px-4">
-                Master the intersection of technology and branding. In‑depth guides, security blueprints, and creative frameworks — built to help you partner confidently with Africana Tech & Branding Ltd.
-            </p>
+<section class="relative w-full flex items-center justify-center overflow-hidden bg-[#0A0A0A] py-16 sm:py-24 lg:py-28 mt-16 ">
+    
+    <!-- Circuit Board Knowledge Pattern -->
+    <div class="absolute inset-0 z-0 opacity-[0.05]">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 30%, #136db6 1px, transparent 1px), radial-gradient(circle at 75% 70%, yellow 1px, transparent 1px); background-size: 55px 55px;"></div>
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(19,109,182,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(234,179,8,0.3) 1px, transparent 1px); background-size: 75px 75px;"></div>
+    </div>
+
+    <!-- Ambient Glow Orbs -->
+    <div class="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#136db6]/12 rounded-full blur-[130px] z-0 pointer-events-none animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-yellow-400/8 rounded-full blur-[110px] z-0 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#009444]/5 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+
+    <!-- Floating Knowledge Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-[#136db6]/40 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
+        <div class="absolute top-1/3 right-[12%] w-1.5 h-1.5 bg-yellow-400/50 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/3 left-[18%] w-1 h-1 bg-[#009444]/50 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 right-[15%] w-2 h-2 bg-[#136db6]/30 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
+        <div class="absolute top-1/2 left-[55%] w-1.5 h-1.5 bg-white/25 rounded-full animate-pulse" style="animation-duration: 5s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        
+        <!-- Live Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 mb-6 sm:mb-8 backdrop-blur-sm reveal">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span>
+            </span>
+            <span class="text-yellow-400 font-bold tracking-widest uppercase text-[10px] sm:text-xs">Knowledge That Drives Growth</span>
         </div>
-    </section>
+        
+        <!-- Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-[1.1] tracking-tight text-[#F9FAFB] reveal">
+            The Africana <br class="sm:hidden"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#136db6] via-[#009444] to-yellow-400">Insights Hub</span>
+        </h1>
+        
+        <!-- Description -->
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-0 reveal px-4 sm:px-0">
+            Master the intersection of 
+            <span class="text-yellow-400 font-semibold">technology</span>, 
+            <span class="text-white font-semibold">branding</span>, and 
+            <span class="text-yellow-400 font-semibold">security</span> — 
+            in‑depth guides, blueprints, and creative frameworks built to help you partner confidently with Africana.
+        </p>
+        
+    </div>
+    
+    <!-- Bottom Gradient Line -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+    
+</section>
 
     <section class="py-20 md:py-28 border-b border-gray-200 bg-gray-50/50">
         <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
@@ -166,16 +206,105 @@
         </div>
     </section>
 
-    <section class="py-16 bg-gray-900 text-white mb-16">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to build with Africana?</h2>
-            <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Our blog is just the start. Let’s turn insights into impact — from secure websites to unforgettable brands.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="px-8 py-4 bg-[#0D8ABC] hover:bg-[#0a6f9e] text-white font-bold rounded-xl shadow-lg transition">Start a project</a>
-                <a href="#" class="px-8 py-4 bg-transparent border border-white/30 hover:bg-white/10 text-white font-bold rounded-xl transition">Contact our team</a>
+<section class="relative py-16 sm:py-24 mb-16 text-center overflow-hidden mb-24" style="background: linear-gradient(135deg, #0A0A0A 0%, #136db6 40%, #009444 100%);">
+    
+    <!-- Animated Grid Pattern -->
+    <div class="absolute inset-0 z-0 opacity-[0.05]">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 30% 40%, #ffffff 1px, transparent 1px), radial-gradient(circle at 70% 60%, #ffffff 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+
+    <!-- Glow Orbs -->
+    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[350px] h-[350px] bg-white/5 rounded-full blur-[100px] z-0 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#136db6]/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+
+    <!-- Floating Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-yellow-400/30 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
+        <div class="absolute top-1/3 right-[15%] w-1.5 h-1.5 bg-white/30 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/3 left-[20%] w-1.5 h-1.5 bg-[#009444]/40 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 right-[12%] w-2 h-2 bg-yellow-400/20 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400 border border-yellow-400/30 mb-6 sm:mb-8 backdrop-blur-sm reveal">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span>
+            </span>
+            <span class="text-black font-bold tracking-widest uppercase text-[10px] sm:text-xs">Let's Build Together</span>
+        </div>
+        
+        <!-- Heading -->
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-5 tracking-tight leading-[1.15] reveal">
+            Ready to Build with <span class="text-yellow-400">Africana</span>?
+        </h2>
+        
+        <!-- Description -->
+        <p class="text-base sm:text-lg text-white mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed reveal px-4 sm:px-0">
+            Our blog is just the start. Let's turn <span class="text-yellow-400 font-semibold">insights into impact</span> — 
+            from <span class="text-white font-semibold">secure websites</span> to 
+            <span class="text-yellow-400 font-semibold">unforgettable brands</span>.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 reveal">
+            
+            <!-- Primary CTA -->
+            <a href="contact.html" class="w-full sm:w-auto group relative inline-flex items-center justify-center px-7 py-3.5 sm:px-10 sm:py-4 bg-yellow-400 text-[#0A0A0A] text-sm sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.5)]">
+                <span class="relative z-10 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    Start a Project
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </span>
+            </a>
+            
+            <!-- Secondary CTA -->
+            <a href="contact.html" class="w-full sm:w-auto group inline-flex items-center justify-center px-7 py-3.5 sm:px-10 sm:py-4 bg-transparent border-2 border-white/25 text-white text-sm sm:text-lg font-bold rounded-xl hover:border-yellow-400 hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Contact Our Team
+            </a>
+            
+        </div>
+        
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/8 reveal">
+            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Free Consultation
+            </div>
+            <div class="w-px h-4 bg-yellow-400 hidden sm:block"></div>
+            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                No Obligation
+            </div>
+            <div class="w-px h-4 bg-yellow-400 hidden sm:block"></div>
+            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                24hr Response Time
             </div>
         </div>
-    </section>
+        
+    </div>
+    
+    <!-- Bottom Gradient Line -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+    
+</section>
 
 
 

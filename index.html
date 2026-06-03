@@ -136,71 +136,231 @@
 
 
 <section id="about" class="py-24 bg-brandWhite relative overflow-hidden">
-            
-            <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl z-0"></div>
+    
+    <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl z-0"></div>
 
-            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-yellow-400 shadow-sm mb-4">
+                <span class="text-xs sm:text-sm font-bold tracking-widest text-brandBlack uppercase">Who We Are</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlue mb-6 tracking-tight">
+                Our Dual Expertise
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-sm text-justify md:text-lg md:text-left">
+                We don't just write code, and we don't just draw logos. We bridge the gap between heavy-duty software engineering and captivating brand storytelling to build unstoppable digital ecosystems.
+            </p>
+        </div>
+
+        <!-- Desktop Grid + Mobile Carousel -->
+        <div id="about-container" class="flex overflow-x-auto snap-x snap-mandatory pb-6 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-2 gap-6 lg:gap-12 lg:overflow-visible" style="-ms-overflow-style:none;scrollbar-width:none">
+                        
+            <!-- Card 1: Tech Solutions -->
+            <div class="about-card flex-shrink-0 w-[85vw] sm:w-[400px] lg:w-auto snap-center group relative bg-yellow-400 rounded-3xl p-6 sm:p-12 shadow-2xl overflow-hidden reveal" data-about-index="0">
+                <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                    <div class="inline-block px-4 py-1.5 rounded-full bg-yellow-400 shadow-sm mb-4">
-                        <span class="text-xs sm:text-sm font-bold tracking-widest text-brandBlack uppercase">Who We Are</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-black flex items-center justify-center border border-yellow-400 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                     </div>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlue mb-6 tracking-tight">
-                        Our Dual Expertise
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed text-sm text-justify md:text-lg md:text-left">
-                        We don't just write code, and we don't just draw logos. We bridge the gap between heavy-duty software engineering and captivating brand storytelling to build unstoppable digital ecosystems.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-                                
-                <div class="group relative bg-yellow-400 rounded-3xl p-6 sm:p-12 shadow-2xl overflow-hidden reveal">
-                    <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-black flex items-center justify-center border border-yellow-400 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
-                            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        
-                        <h3 class="text-xl sm:text-3xl font-bold text-brandBlack mb-3 sm:mb-4">Tech Solutions</h3>                        
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-black leading-relaxed mb-6 sm:mb-8"> From robust custom software development and enterprise web applications to secure IT infrastructure consulting, we architect resilient systems that scale flawlessly with your business ambitions.
-                        </p>                        
-                        <a href="tech solution.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-brandBlack text-white font-bold rounded-xl hover:bg-brandBlue transition-colors duration-300 group w-max"> Learn More <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path> </svg></a>
-                    </div>
+                    <h3 class="text-xl sm:text-3xl font-bold text-brandBlack mb-3 sm:mb-4">Tech Solutions</h3>                        
+                    <p class="text-sm sm:text-base text-justify sm:text-left text-black leading-relaxed mb-6 sm:mb-8">
+                        From robust custom software development and enterprise web applications to secure IT infrastructure consulting, we architect resilient systems that scale flawlessly with your business ambitions.
+                    </p>                        
+                    <a href="tech solution.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-brandBlack text-white font-bold rounded-xl hover:bg-brandBlue transition-colors duration-300 group w-max">
+                        Learn More 
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
-                <div class="group relative bg-brandBlue rounded-3xl p-6 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden reveal delay-200">
-                    <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <!-- Card 2: Branding & Creative -->
+            <div class="about-card flex-shrink-0 w-[85vw] sm:w-[400px] lg:w-auto snap-center group relative bg-brandBlue rounded-3xl p-6 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden reveal delay-200" data-about-index="1">
+                <div class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-transparent to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
-                            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                            </svg>
-                        </div>
-                        
-                        <h3 class="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Branding & Creative</h3>
-                        
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-white leading-relaxed mb-6 sm:mb-8">
-                            We craft powerful visual identities, intuitive UI/UX designs, and targeted digital marketing campaigns that capture attention, communicate absolute trust, and turn your audience into loyal customers.
-                        </p>
-                        
-                        <a href="branding.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-white text-black font-bold rounded-xl hover:bg-yellow-400 transition-colors duration-300 group w-max">
-                            Learn More 
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-blue-50 flex items-center justify-center border border-blue-100 mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
                     </div>
+                    
+                    <h3 class="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Branding & Creative</h3>
+                    
+                    <p class="text-sm sm:text-base text-justify sm:text-left text-white leading-relaxed mb-6 sm:mb-8">
+                        We craft powerful visual identities, intuitive UI/UX designs, and targeted digital marketing campaigns that capture attention, communicate absolute trust, and turn your audience into loyal customers.
+                    </p>
+                    
+                    <a href="branding.html" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-white text-black font-bold rounded-xl hover:bg-yellow-400 transition-colors duration-300 group w-max">
+                        Learn More 
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
-            </div>
-            </div>
-        </section>
+        </div>
+
+        <!-- Mobile Pagination Dots (visible only on mobile) -->
+        <div id="about-pagination" class="hidden lg:hidden justify-center items-center gap-3 mt-6"></div>
+
+    </div>
+</section>
+
+<script>
+    (function() {
+        const container = document.getElementById('about-container');
+        const pagination = document.getElementById('about-pagination');
+        const cards = Array.from(document.querySelectorAll('.about-card'));
+        let observer;
+        let scrollTimer;
+
+        function isMobile() {
+            return window.innerWidth < 1024; // lg breakpoint
+        }
+
+        function buildPagination() {
+            if (!pagination || !isMobile()) {
+                if (pagination) {
+                    pagination.innerHTML = '';
+                    pagination.classList.add('hidden');
+                    pagination.classList.remove('flex');
+                }
+                return;
+            }
+            pagination.classList.add('flex');
+            pagination.classList.remove('hidden');
+            pagination.innerHTML = '';
+            
+            cards.forEach((card, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'w-3 h-3 rounded-full border-none cursor-pointer transition-all duration-300 p-0';
+                dot.style.backgroundColor = index === 0 ? '#1645aa' : 'rgba(10,10,10,0.25)';
+                dot.style.transform = index === 0 ? 'scale(1.3)' : 'scale(1)';
+                dot.style.boxShadow = index === 0 ? '0 0 6px rgba(22,69,170,0.4)' : 'none';
+                dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+                dot.onclick = () => {
+                    container.scrollTo({
+                        left: card.offsetLeft - container.offsetLeft - 16,
+                        behavior: 'smooth'
+                    });
+                    resetAutoScroll();
+                };
+                pagination.appendChild(dot);
+            });
+        }
+
+        function updateDots(activeIndex) {
+            const dots = Array.from(pagination.children);
+            dots.forEach((dot, i) => {
+                if (i === activeIndex) {
+                    dot.style.backgroundColor = '#1645aa';
+                    dot.style.transform = 'scale(1.3)';
+                    dot.style.boxShadow = '0 0 6px rgba(22,69,170,0.4)';
+                } else {
+                    dot.style.backgroundColor = 'rgba(10,10,10,0.25)';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                }
+            });
+        }
+
+        function observeCards() {
+            if (observer) observer.disconnect();
+            if (!isMobile()) return;
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const idx = parseInt(entry.target.getAttribute('data-about-index'));
+                        updateDots(idx);
+                    }
+                });
+            }, { root: container, threshold: 0.6 });
+
+            cards.forEach(c => observer.observe(c));
+        }
+
+        function startAutoScroll() {
+            if (!isMobile()) return;
+            clearInterval(scrollTimer);
+            scrollTimer = setInterval(() => {
+                const dots = Array.from(pagination.children);
+                const activeDot = dots.find(d => d.style.backgroundColor === 'rgb(22, 69, 170)');
+                let currentIdx = dots.indexOf(activeDot);
+                if (currentIdx === -1) currentIdx = 0;
+                
+                let nextIdx = currentIdx + 1;
+                if (nextIdx >= cards.length) {
+                    container.scrollTo({
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetCard = cards[nextIdx];
+                    container.scrollTo({
+                        left: targetCard.offsetLeft - container.offsetLeft - 16,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 4000);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(scrollTimer);
+            startAutoScroll();
+        }
+
+        if (container) {
+            container.addEventListener('touchstart', resetAutoScroll, { passive: true });
+            container.addEventListener('mousedown', resetAutoScroll);
+        }
+
+        function initCarousel() {
+            if (isMobile() && container) {
+                container.scrollTo({ left: 0, behavior: 'instant' });
+            }
+            buildPagination();
+            observeCards();
+            startAutoScroll();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousel);
+        } else {
+            initCarousel();
+        }
+
+        let resizeDebounce;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeDebounce);
+            resizeDebounce = setTimeout(() => {
+                if (observer) observer.disconnect();
+                clearInterval(scrollTimer);
+                
+                if (!isMobile() && pagination) {
+                    pagination.classList.add('hidden');
+                    pagination.classList.remove('flex');
+                    pagination.innerHTML = '';
+                }
+                
+                if (isMobile() && container) {
+                    container.scrollTo({ left: 0, behavior: 'instant' });
+                }
+                
+                initCarousel();
+            }, 250);
+        });
+    })();
+</script>
 
 
 <section id="portfolio" class="py-24 bg-gray-50 border-t border-gray-200">
@@ -235,7 +395,7 @@
         <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
           <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal">
             <div class="h-64 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover">
+              <img src="pic/m 1.png" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover">
               <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Branding & Tech</div>
             </div>
             <div class="p-6 flex-1 flex flex-col">
@@ -253,11 +413,11 @@
         <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
           <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal delay-100">
             <div class="h-64 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop" alt="African Child Comforters" class="w-full h-full object-cover">
+              <img src="pic/tree 1.png" alt="African Child Comforters" class="w-full h-full object-cover">
               <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
             </div>
             <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-2xl font-bold text-brandBlue mb-3">African Child Comforters</h3>
+              <h3 class="text-2xl font-bold text-brandBlue mb-3">Mr Tree Foundation</h3>
               <p class="text-gray-600 mb-6 line-clamp-2">An integrated digital platform and immersive storytelling website engineered for a major NGO.</p>
               <a href="portfolio.html" class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
                 View Project
@@ -271,11 +431,11 @@
         <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
           <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal delay-200">
             <div class="h-64 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="FPSSA Platform" class="w-full h-full object-cover">
+              <img src="pic/tech 1.png" alt="FPSSA Platform" class="w-full h-full object-cover">
               <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
             </div>
             <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Portal</h3>
+              <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Student Portal</h3>
               <p class="text-gray-600 mb-6 line-clamp-2">A comprehensive web portal and management system built for the Federation of Procurement and Supplies Student Association.</p>
               <a href="portfolio.html" class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
                 View Project
@@ -307,7 +467,7 @@
       <!-- Card 1 -->
       <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal">
         <div class="h-64 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img src="pic/m 1.png" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
           <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Branding & Tech</div>
         </div>
         <div class="p-8 flex flex-col flex-1">
@@ -323,11 +483,11 @@
       <!-- Card 2 -->
       <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-100">
         <div class="h-64 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop" alt="African Child Comforters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img src="pic/tree 1.png" alt="African Child Comforters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
           <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
         </div>
         <div class="p-8 flex flex-col flex-1">
-          <h3 class="text-2xl font-bold text-brandBlue mb-3">African Child Comforters</h3>
+          <h3 class="text-2xl font-bold text-brandBlue mb-3">Mr Tree Foundation</h3>
           <p class="text-gray-600 mb-6 line-clamp-2">An integrated digital platform and immersive storytelling website engineered for a major NGO.</p>
           <a href="portfolio.html" class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
             View Project
@@ -339,11 +499,11 @@
       <!-- Card 3 -->
       <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-200">
         <div class="h-64 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="FPSSA Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img src="pic/tech 1.png" alt="FPSSA Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
           <div class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">Tech Solution</div>
         </div>
         <div class="p-8 flex flex-col flex-1">
-          <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Portal</h3>
+          <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Student Portal</h3>
           <p class="text-gray-600 mb-6 line-clamp-2">A comprehensive web portal and management system built for the Federation of Procurement and Supplies Student Association.</p>
           <a href="portfolio.html" class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
             View Project
@@ -536,262 +696,962 @@
   })();
 </script>
 
-        <section class="py-16 md:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden">
-            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+<section class="py-16 md:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
-            <div class="container mx-auto px-4 sm:px-6 relative z-10">
-                <div class="text-center mb-12 md:mb-16 reveal">
-                    <span class="text-brandBlack font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">Why Us</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">The Africana Advantage</h2>
-                </div>
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="text-center mb-12 md:mb-16 reveal">
+            <span class="text-brandBlack font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">Why Us</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">The Africana Advantage</h2>
+        </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
-                    
-                    <div class="text-center sm:text-left reveal">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
-                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
-                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
-                    </div>
-                    
-                    <div class="text-center sm:text-left reveal delay-100">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
-                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                        </div>
-                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Globally Capable</h3>
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">Executing complex projects to the absolute highest international standards and tech practices.</p>
-                    </div>
-                    
-                    <div class="text-center sm:text-left reveal delay-200">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
-                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        </div>
-                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Full-Service</h3>
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">From heavy-duty backend code to striking visual creative, we handle your entire ecosystem.</p>
-                    </div>
-                    
-                    <div class="text-center sm:text-left reveal delay-300">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0 border border-white">
-                            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
-                        </div>
-                        <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Client-Centric</h3>
-                        <p class="text-sm sm:text-base text-justify sm:text-left text-brandBlack leading-relaxed">We view ourselves as partners, not vendors. Your business growth is our only metric of success.</p>
-                    </div>
-                    
+        <!-- Desktop Grid + Mobile Carousel -->
+        <div id="advantage-container" class="flex overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:overflow-visible" style="-ms-overflow-style:none;scrollbar-width:none">
+            
+            <!-- Card 1: Locally Rooted -->
+            <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal" data-advantage-index="0">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 </div>
+                <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
+                <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
             </div>
-        </section>
-
-
-
-        <section id="blog" class="py-24 bg-gray-50 border-t border-gray-200">
-            <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-16 reveal">
-                    <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Updates & News</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlack">From Our Blog</h2>
+            
+            <!-- Card 2: Globally Capable -->
+            <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-100" data-advantage-index="1">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
-                    <div class="bg-brandBlue p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal">
-                        <p class="text-sm text-yellow-400 font-bold mb-3 uppercase tracking-wider">March 12, 2026</p>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-200 hover:text-yellow-400 transition-colors">The Future of African Tech Infrastructure</h3>
-                        <p class="text-gray-300 mb-6 line-clamp-3">A deep dive into how emerging cloud solutions are completely reshaping the capabilities of businesses operating within East Africa.</p>
-                        <a href="blog.html" class="font-bold bg-yellow-400 text-brandBlack px-6 py-2 rounded-full hover:bg-white hover:text-brandBlue transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-100">
-                        <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 28, 2026</p>
-                        <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Why UX Design Dictates Your Revenue</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3">If your users are frustrated, they leave. We explore the direct correlation between intuitive interfaces and massive increases in conversion rates.</p>
-                        <a href="blog.html" class="font-bold bg-brandBlue text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-brandBlack transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
-                    </div>
-                    <div class="bg-yellow-400 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-200">
-                        <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 15, 2026</p>
-                        <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Securing Your Digital Footprint</h3>
-                        <p class="text-brandBlack mb-6 line-clamp-3">With cyber threats evolving daily, here are 5 critical steps every modern enterprise must take to protect their user data.</p>
-                        <a href="blog.html" class="font-bold bg-white text-brandBlack px-6 py-2 rounded-full hover:bg-brandBlue hover:text-yellow-400 transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
-                    </div>
-                </div>
+                <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Globally Capable</h3>
+                <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Executing complex projects to the absolute highest international standards and tech practices.</p>
             </div>
-        </section>
+            
+            <!-- Card 3: Full-Service -->
+            <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-200" data-advantage-index="2">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Full-Service</h3>
+                <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">From heavy-duty backend code to striking visual creative, we handle your entire ecosystem.</p>
+            </div>
+            
+            <!-- Card 4: Client-Centric -->
+            <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-300" data-advantage-index="3">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Client-Centric</h3>
+                <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">We view ourselves as partners, not vendors. Your business growth is our only metric of success.</p>
+            </div>
+
+            <!-- CLONE of Card 1 for seamless infinite loop (hidden on desktop) -->
+            <div class="advantage-card advantage-clone flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left md:hidden reveal" data-advantage-index="4" data-clone="true">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
+                <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
+            </div>
+            
+        </div>
+
+        <!-- Mobile Pagination Dots -->
+        <div id="advantage-pagination" class="hidden md:hidden justify-center items-center gap-3 mt-4"></div>
+    </div>
+</section>
+
+<script>
+    (function() {
+        const container = document.getElementById('advantage-container');
+        const pagination = document.getElementById('advantage-pagination');
+        const originalCards = Array.from(document.querySelectorAll('.advantage-card:not([data-clone])'));
+        const allCards = Array.from(document.querySelectorAll('.advantage-card'));
+        const cloneCard = document.querySelector('.advantage-card[data-clone]');
+        let observer;
+        let scrollTimer;
+        let isTransitioning = false;
+        const totalOriginals = originalCards.length;
+
+        function isMobile() {
+            return window.innerWidth < 768;
+        }
+
+        function buildPagination() {
+            if (!pagination || !isMobile()) {
+                if (pagination) {
+                    pagination.innerHTML = '';
+                    pagination.classList.add('hidden');
+                    pagination.classList.remove('flex');
+                }
+                return;
+            }
+            pagination.classList.add('flex');
+            pagination.classList.remove('hidden');
+            pagination.innerHTML = '';
+            
+            // Only create dots for original cards (not the clone)
+            originalCards.forEach((card, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'w-2.5 h-2.5 rounded-full border-none cursor-pointer transition-all duration-300 p-0';
+                dot.style.backgroundColor = index === 0 ? '#1645aa' : 'rgba(10,10,10,0.3)';
+                dot.style.transform = index === 0 ? 'scale(1.4)' : 'scale(1)';
+                dot.style.boxShadow = index === 0 ? '0 0 6px rgba(22,69,170,0.4)' : 'none';
+                dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+                dot.onclick = () => {
+                    const target = originalCards[index];
+                    container.scrollTo({
+                        left: target.offsetLeft - container.offsetLeft - 16,
+                        behavior: 'smooth'
+                    });
+                    resetAutoScroll();
+                };
+                pagination.appendChild(dot);
+            });
+        }
+
+        function updateDots(activeIndex) {
+            const dots = Array.from(pagination.children);
+            // Map clone index back to original index
+            if (activeIndex >= totalOriginals) activeIndex = 0;
+            dots.forEach((dot, i) => {
+                if (i === activeIndex) {
+                    dot.style.backgroundColor = '#1645aa';
+                    dot.style.transform = 'scale(1.4)';
+                    dot.style.boxShadow = '0 0 6px rgba(22,69,170,0.4)';
+                } else {
+                    dot.style.backgroundColor = 'rgba(10,10,10,0.3)';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                }
+            });
+        }
+
+        function observeCards() {
+            if (observer) observer.disconnect();
+            if (!isMobile()) return;
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let idx = parseInt(entry.target.getAttribute('data-advantage-index'));
+                        updateDots(idx);
+                        
+                        // If we've scrolled to the clone, jump back to the real first card
+                        if (entry.target.hasAttribute('data-clone') && entry.intersectionRatio > 0.7) {
+                            if (!isTransitioning) {
+                                isTransitioning = true;
+                                setTimeout(() => {
+                                    container.scrollTo({
+                                        left: 0,
+                                        behavior: 'instant'
+                                    });
+                                    updateDots(0);
+                                    setTimeout(() => {
+                                        isTransitioning = false;
+                                    }, 100);
+                                }, 300);
+                            }
+                        }
+                    }
+                });
+            }, { root: container, threshold: 0.7 });
+
+            allCards.forEach(c => observer.observe(c));
+        }
+
+        function startAutoScroll() {
+            if (!isMobile()) return;
+            clearInterval(scrollTimer);
+            scrollTimer = setInterval(() => {
+                if (isTransitioning) return;
+                
+                const dots = Array.from(pagination.children);
+                const activeDot = dots.find(d => d.style.backgroundColor === 'rgb(22, 69, 170)');
+                let currentIdx = dots.indexOf(activeDot);
+                if (currentIdx === -1) currentIdx = 0;
+                
+                let nextIdx = currentIdx + 1;
+                if (nextIdx >= totalOriginals) {
+                    // Scroll to the clone (which looks like the first card)
+                    const cloneTarget = allCards.find(c => c.hasAttribute('data-clone'));
+                    if (cloneTarget) {
+                        container.scrollTo({
+                            left: cloneTarget.offsetLeft - container.offsetLeft - 16,
+                            behavior: 'smooth'
+                        });
+                        updateDots(0);
+                    }
+                } else {
+                    const targetCard = originalCards[nextIdx];
+                    container.scrollTo({
+                        left: targetCard.offsetLeft - container.offsetLeft - 16,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 3500);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(scrollTimer);
+            startAutoScroll();
+        }
+
+        if (container) {
+            container.addEventListener('touchstart', resetAutoScroll, { passive: true });
+            container.addEventListener('mousedown', resetAutoScroll);
+            
+            // Handle scroll events to check for clone position
+            container.addEventListener('scroll', () => {
+                if (!isMobile() || isTransitioning) return;
+                
+                const scrollLeft = container.scrollLeft;
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                
+                // If at the very end (on the clone), jump back
+                if (scrollLeft >= maxScroll - 10) {
+                    isTransitioning = true;
+                    container.scrollTo({ left: 0, behavior: 'instant' });
+                    updateDots(0);
+                    setTimeout(() => { isTransitioning = false; }, 150);
+                }
+            }, { passive: true });
+        }
+
+        function initCarousel() {
+            // Scroll to start
+            if (isMobile() && container) {
+                container.scrollTo({ left: 0, behavior: 'instant' });
+            }
+            buildPagination();
+            observeCards();
+            startAutoScroll();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousel);
+        } else {
+            initCarousel();
+        }
+
+        let resizeDebounce;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeDebounce);
+            resizeDebounce = setTimeout(() => {
+                if (observer) observer.disconnect();
+                clearInterval(scrollTimer);
+                isTransitioning = false;
+                
+                if (!isMobile() && pagination) {
+                    pagination.classList.add('hidden');
+                    pagination.classList.remove('flex');
+                    pagination.innerHTML = '';
+                }
+                
+                if (isMobile() && container) {
+                    container.scrollTo({ left: 0, behavior: 'instant' });
+                }
+                
+                initCarousel();
+            }, 250);
+        });
+    })();
+</script>
+
+
+<section id="blog" class="py-24 bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal">
+            <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Updates & News</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlack">From Our Blog</h2>
+        </div>
+
+        <!-- Desktop Grid + Mobile Carousel -->
+        <div id="blog-container" class="flex overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-8 sm:gap-10 md:overflow-visible" style="-ms-overflow-style:none;scrollbar-width:none">
+            
+            <!-- Blog Card 1 -->
+            <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-brandBlue p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal" data-blog-index="0">
+                <p class="text-sm text-yellow-400 font-bold mb-3 uppercase tracking-wider">March 12, 2026</p>
+                <h3 class="text-2xl font-bold mb-4 text-gray-200 hover:text-yellow-400 transition-colors">The Future of African Tech Infrastructure</h3>
+                <p class="text-gray-300 mb-6 line-clamp-3">A deep dive into how emerging cloud solutions are completely reshaping the capabilities of businesses operating within East Africa.</p>
+                <a href="blog.html" class="font-bold bg-yellow-400 text-brandBlack px-6 py-2 rounded-full hover:bg-white hover:text-brandBlue transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+            </div>
+            
+            <!-- Blog Card 2 -->
+            <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-100" data-blog-index="1">
+                <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 28, 2026</p>
+                <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Why UX Design Dictates Your Revenue</h3>
+                <p class="text-gray-600 mb-6 line-clamp-3">If your users are frustrated, they leave. We explore the direct correlation between intuitive interfaces and massive increases in conversion rates.</p>
+                <a href="blog.html" class="font-bold bg-brandBlue text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-brandBlack transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+            </div>
+            
+            <!-- Blog Card 3 -->
+            <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-yellow-400 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-200" data-blog-index="2">
+                <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 15, 2026</p>
+                <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Securing Your Digital Footprint</h3>
+                <p class="text-brandBlack mb-6 line-clamp-3">With cyber threats evolving daily, here are 5 critical steps every modern enterprise must take to protect their user data.</p>
+                <a href="blog.html" class="font-bold bg-white text-brandBlack px-6 py-2 rounded-full hover:bg-brandBlue hover:text-yellow-400 transition-all duration-300 inline-flex items-center shadow-sm">Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a>
+            </div>
+
+        </div>
+
+        <!-- Mobile Arrow Navigation (visible only on mobile) -->
+        <div id="blog-nav" class="hidden md:hidden items-center justify-center gap-4 mt-6">
+            <button id="blog-prev" class="w-10 h-10 rounded-full bg-brandBlue text-white flex items-center justify-center shadow-lg hover:bg-brandBlack transition-colors duration-300" aria-label="Previous slide">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="blog-next" class="w-10 h-10 rounded-full bg-brandBlue text-white flex items-center justify-center shadow-lg hover:bg-brandBlack transition-colors duration-300" aria-label="Next slide">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function() {
+        const container = document.getElementById('blog-container');
+        const navContainer = document.getElementById('blog-nav');
+        const prevBtn = document.getElementById('blog-prev');
+        const nextBtn = document.getElementById('blog-next');
+        const cards = Array.from(document.querySelectorAll('.blog-card'));
+        let observer;
+        let scrollTimer;
+
+        function isMobile() {
+            return window.innerWidth < 768; // md breakpoint
+        }
+
+        function showNav() {
+            if (!navContainer) return;
+            if (isMobile()) {
+                navContainer.classList.add('flex');
+                navContainer.classList.remove('hidden');
+            } else {
+                navContainer.classList.add('hidden');
+                navContainer.classList.remove('flex');
+            }
+        }
+
+        function observeCards() {
+            if (observer) observer.disconnect();
+            if (!isMobile()) return;
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const idx = parseInt(entry.target.getAttribute('data-blog-index'));
+                        updateArrowStates(idx);
+                    }
+                });
+            }, { root: container, threshold: 0.6 });
+
+            cards.forEach(c => observer.observe(c));
+        }
+
+        function updateArrowStates(activeIndex) {
+            if (!prevBtn || !nextBtn) return;
+            
+            // Prev button: dim if on first card
+            if (activeIndex === 0) {
+                prevBtn.style.opacity = '0.4';
+                prevBtn.style.pointerEvents = 'none';
+            } else {
+                prevBtn.style.opacity = '1';
+                prevBtn.style.pointerEvents = 'auto';
+            }
+            
+            // Next button: dim if on last card
+            if (activeIndex === cards.length - 1) {
+                nextBtn.style.opacity = '0.4';
+                nextBtn.style.pointerEvents = 'none';
+            } else {
+                nextBtn.style.opacity = '1';
+                nextBtn.style.pointerEvents = 'auto';
+            }
+        }
+
+        function scrollToCard(index) {
+            if (index < 0 || index >= cards.length) return;
+            container.scrollTo({
+                left: cards[index].offsetLeft - container.offsetLeft - 16,
+                behavior: 'smooth'
+            });
+            resetAutoScroll();
+        }
+
+        function startAutoScroll() {
+            if (!isMobile()) return;
+            clearInterval(scrollTimer);
+            scrollTimer = setInterval(() => {
+                // Find the most visible card
+                const containerCenter = container.scrollLeft + container.clientWidth / 2;
+                let currentIdx = 0;
+                let minDistance = Infinity;
+                
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
+                    const distance = Math.abs(containerCenter - cardCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        currentIdx = i;
+                    }
+                });
+                
+                let nextIdx = currentIdx + 1;
+                if (nextIdx >= cards.length) {
+                    scrollToCard(0);
+                } else {
+                    scrollToCard(nextIdx);
+                }
+            }, 4000);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(scrollTimer);
+            startAutoScroll();
+        }
+
+        // Arrow button events
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                const containerCenter = container.scrollLeft + container.clientWidth / 2;
+                let currentIdx = 0;
+                let minDistance = Infinity;
+                
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
+                    const distance = Math.abs(containerCenter - cardCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        currentIdx = i;
+                    }
+                });
+                
+                scrollToCard(currentIdx - 1);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const containerCenter = container.scrollLeft + container.clientWidth / 2;
+                let currentIdx = 0;
+                let minDistance = Infinity;
+                
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
+                    const distance = Math.abs(containerCenter - cardCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        currentIdx = i;
+                    }
+                });
+                
+                scrollToCard(currentIdx + 1);
+            });
+        }
+
+        if (container) {
+            container.addEventListener('touchstart', resetAutoScroll, { passive: true });
+            container.addEventListener('mousedown', resetAutoScroll);
+        }
+
+        function initCarousel() {
+            if (isMobile() && container) {
+                container.scrollTo({ left: 0, behavior: 'instant' });
+            }
+            showNav();
+            observeCards();
+            startAutoScroll();
+            updateArrowStates(0);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousel);
+        } else {
+            initCarousel();
+        }
+
+        let resizeDebounce;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeDebounce);
+            resizeDebounce = setTimeout(() => {
+                if (observer) observer.disconnect();
+                clearInterval(scrollTimer);
+                
+                if (isMobile() && container) {
+                    container.scrollTo({ left: 0, behavior: 'instant' });
+                }
+                
+                initCarousel();
+            }, 250);
+        });
+    })();
+</script>
 
 
 <!-- ========== PARTNERS SECTION ========== -->
-<section class="py-20 md:py-28 bg-brandGreen overflow-hidden relative">
-    <!-- Subtle background glow -->
-    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-40 pointer-events-none"></div>
+<section class="relative py-20 sm:py-28 bg-brandBlue overflow-hidden">
+    
+    <!-- Dynamic Background Grid -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,black_30%,transparent_70%)]"></div>
+    
+    <!-- Glow Orbs -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         
-        <!-- Header with brand blue & yellow -->
-        <div class="text-center mb-12 md:mb-16 reveal">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-black font-semibold tracking-widest uppercase text-xs sm:text-sm mb-4 border border-[#1645aa]/30">
-                <i class="fas fa-handshake mr-2"></i> Trusted by Industry Leaders
-            </span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Our Partners</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-[#1645aa] to-yellow-400 mx-auto mt-6 rounded-full"></div>
-            <p class="text-white max-w-2xl mx-auto mt-6 text-base md:text-lg">
-                Collaborating with world‑class organizations to deliver exceptional digital solutions.
+        <!-- Header -->
+        <div class="text-center mb-14 sm:mb-20 reveal">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-yellow-400/20 border border-yellow-400/40 mb-6 backdrop-blur-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span>
+                </span>
+                <span class="text-yellow-400 font-bold tracking-widest uppercase text-xs sm:text-sm">Trusted by Industry Leaders</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                Our <span class="text-yellow-400">Partners</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-white to-yellow-400 mx-auto mt-6 rounded-full"></div>
+            <p class="text-white/70 max-w-2xl mx-auto mt-6 text-base md:text-lg leading-relaxed">
+                Collaborating with world‑class organizations to deliver exceptional digital solutions across East Africa and beyond.
             </p>
         </div>
 
-        <!-- Logo Marquee Container -->
-        <div class="relative group">
-            <!-- Fade edges -->
-            <div class="absolute left-0 top-0 h-full w-12 sm:w-24 bg-gradient-to-r from-[#1645aa]/80 to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute right-0 top-0 h-full w-12 sm:w-24 bg-gradient-to-l from-slate-900/80 to-transparent z-10 pointer-events-none"></div>
+        <!-- Logo Marquee -->
+        <div class="relative reveal">
+            
+            <!-- Fade Overlays -->
+            <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-brandBlue to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-brandBlue to-transparent z-10 pointer-events-none"></div>
 
-            <!-- Scrolling track -->
-            <div class="overflow-hidden py-6">
-                <div class="flex gap-6 lg:gap-10 animate-logos-scroll [&>*]:shrink-0" id="logo-track">
-                    <!-- Set 1 -->
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="IMG/CHIBU LOGO.jpeg" alt="CHIBU TV" class="max-h-20 sm:max-h-24 w-auto object-contain">
+            <!-- Row 1 - Left to Right -->
+            <div class="overflow-hidden py-5 mb-5">
+                <div class="partners-track flex gap-5 lg:gap-8" data-direction="left">
+                    <!-- Partners Set -->
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="IMG/CHIBU LOGO.jpeg" alt="CHIBU TV" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/reach global logo.jpeg" alt="Google" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/mrtree.png" alt="AWS" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/mhako.png" alt="Microsoft" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/kimondo.PNG" alt="Shopify" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/fido logo.png" alt="Stripe" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/salesforce.svg" alt="Salesforce" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/MORIX WEB-01.png" alt="Salesforce" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobe.svg" alt="Adobe" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="pic/FPSSA LOGO 2.png" alt="Adobe" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hubspot.svg" alt="HubSpot" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <!--<div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="IMG/CHIBU LOGO.jpeg" alt="CHIBU TV" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <!-- Set 2 (duplicate) -->
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="IMG/CHIBU LOGO.jpeg" alt="CHIBU TV" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-brandBlue/30 hover:shadow-brandBlue/10 transition-all duration-500 group">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS" class="max-h-16 sm:max-h-20 w-auto object-contain">
+                    </div>--->
+                </div>
+            </div>
+
+            <!-- Row 2 - Right to Left -->
+            <div class="overflow-hidden py-5">
+                <div class="partners-track flex gap-5 lg:gap-8" data-direction="right">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/MORIX WEB-01.png" alt="Slack" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/mrtree.png" alt="DigitalOcean" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/FPSSA LOGO 2.png" alt="Figma" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/fido logo.png" alt="GitHub" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/reach global logo.jpeg" alt="Vercel" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/salesforce.svg" alt="Salesforce" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/kimondo.PNG" alt="Cloudflare" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobe.svg" alt="Adobe" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="pic/mhako.png" alt="Docker" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center w-64 sm:w-72 h-32 sm:h-36 bg-white rounded-xl border border-gray-200 shadow-sm p-4 hover:shadow-md transition-all duration-300">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hubspot.svg" alt="HubSpot" class="max-h-20 sm:max-h-24 w-auto object-contain">
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="IMG/CHIBU LOGO.jpeg" alt="MongoDB" class="max-h-16 sm:max-h-20 w-auto object-contain">
                     </div>
+                   
+                    <!-- Duplicate -->
+                    <!--<div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" class="max-h-16 sm:max-h-20 w-auto object-contain">
+                    </div>
+                    <div class="partner-card flex-shrink-0 w-52 sm:w-64 h-28 sm:h-32 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center p-5 hover:shadow-xl hover:border-yellow-400/50 hover:shadow-yellow-400/10 transition-all duration-500 group">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/digitalocean.svg" alt="DigitalOcean" class="max-h-16 sm:max-h-20 w-auto object-contain">
+                    </div>-->
                 </div>
             </div>
         </div>
 
+        <!-- Bottom Text -->
         <div class="text-center mt-10 reveal">
-            <p class="text-blue-300/60 text-sm italic">…and many more innovative collaborators</p>
+            <p class="text-yellow-400 text-sm italic">…and many more innovative collaborators powering Africa's digital future</p>
         </div>
     </div>
 
     <style>
-        @keyframes logosScroll {
+        @keyframes scrollLeft {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-        .animate-logos-scroll {
-            animation: logosScroll 35s linear infinite;
+        @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .partners-track[data-direction="left"] {
+            animation: scrollLeft 40s linear infinite;
             width: max-content;
         }
-        .group:hover .animate-logos-scroll {
+        .partners-track[data-direction="right"] {
+            animation: scrollRight 40s linear infinite;
+            width: max-content;
+        }
+        .partners-track:hover {
             animation-play-state: paused;
         }
     </style>
 </section>
 
-        <section class="py-14 bg-brandWhite">
-            <div class="container mx-auto px-4 sm:px-3">
-                <div class="text-center mb-8 reveal">
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">What Our Clients Say</h2>
-                </div>
 
-                <div class="max-w-4xl mx-auto relative reveal">
-                    <div id="testimonial-container" class="relative min-h-[250px] overflow-hidden">
-                        
-                        <div class="test-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-100 translate-x-0">
-                            <div class="text-center px-2">
-                               <p class="text-sm text-justify md:text-xl md:text-left text-gray-800 font-medium italic mb-10 leading-relaxed">
-                                    "Africana Tech didn't just build us a website; they architected a digital engine that completely transformed how we interact with our customers globally."
-                                </p>
-                                <div class="flex items-center justify-center gap-4">
-                                    <img src="https://ui-avatars.com/api/?name=David+M&background=2563EB&color=fff" alt="Client 1" class="w-10 h-10 rounded-full shadow-md">
-                                    <div class="text-left">
-                                        <h4 class="font-bold text-sm text-brandBlack">David M.</h4>
-                                        <p class="text-sm text-gray-500">Director, Tech Forward</p>
-                                    </div>
+<section class="relative py-20 sm:py-28 bg-brandWhite overflow-hidden">
+    
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(22,69,170,0.03)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(234,179,8,0.03)_0%,transparent_50%)] pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-14 sm:mb-20 reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-brandBlue/5 text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 border border-brandBlue/10">
+                <i class="fas fa-quote-right mr-2 text-yellow-400"></i>Client Voices
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brandBlack tracking-tight">
+                Trusted by <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-500">Industry Leaders</span>
+            </h2>
+        </div>
+
+        <!-- Testimonial Carousel -->
+        <div class="max-w-3xl mx-auto relative reveal">
+            
+            <!-- Quotation Mark Decoration -->
+            <div class="absolute -top-8 -left-4 sm:-top-12 sm:-left-8 text-7xl sm:text-9xl text-brandBlue/8 font-serif select-none pointer-events-none z-0">"</div>
+            
+            <!-- Slides Container -->
+            <div id="testimonial-container" class="relative min-h-[380px] sm:min-h-[280px]">
+                
+                <!-- Slide 1 -->
+                <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-100 z-10" data-index="0">
+                    <div class="text-center px-4 sm:px-8">
+                        <p class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
+                            "Africana Tech didn't just build us a website; they architected a <span class="text-brandBlue font-semibold">digital engine</span> that completely transformed how we interact with our customers globally. Our online revenue tripled within 4 months."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="relative flex-shrink-0">
+                                <img src="https://ui-avatars.com/api/?name=David+M&background=1645aa&color=fff&size=48" alt="David M." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
+                                <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="test-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 translate-x-full">
-                            <div class="text-center px-2">
-                                <p class="text-sm text-justify md:text-xl md:text-left lg:text-xl text-gray-800 font-medium italic mb-10 leading-relaxed">
-                                    "Their branding team is phenomenal. They captured the exact essence of our vision and delivered a visual identity that is lightyears ahead of our competitors."
-                                </p>
-                                <div class="flex items-center justify-center gap-4">
-                                    <img src="https://ui-avatars.com/api/?name=Sarah+K&background=0A0A0A&color=fff" alt="Client 2" class="w-10 h-10 rounded-full shadow-md">
-                                    <div class="text-left">
-                                        <h4 class="font-bold text-sm text-brandBlack">Sarah K.</h4>
-                                        <p class="text-sm text-gray-500">Founder, Elevated Brands</p>
-                                    </div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-sm sm:text-base text-brandBlack">David M.</h4>
+                                <p class="text-xs sm:text-sm text-gray-500">Director, Tech Forward Ltd</p>
+                                <div class="flex gap-0.5 mt-1">
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none" data-index="1">
+                    <div class="text-center px-4 sm:px-8">
+                        <p class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
+                            "Their branding team is <span class="text-brandBlue font-semibold">phenomenal</span>. They captured the exact essence of our vision and delivered a visual identity that is lightyears ahead of our competitors. Our brand recognition soared."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="relative flex-shrink-0">
+                                <img src="https://ui-avatars.com/api/?name=Sarah+K&background=0A0A0A&color=fff&size=48" alt="Sarah K." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
+                                <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-sm sm:text-base text-brandBlack">Sarah K.</h4>
+                                <p class="text-xs sm:text-sm text-gray-500">Founder, Elevated Brands</p>
+                                <div class="flex gap-0.5 mt-1">
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="flex justify-center gap-3 mt-12">
-                        <button class="test-dot w-3 h-3 rounded-full bg-brandBlue transition-all duration-300 transform scale-125" data-slide="0" aria-label="Go to slide 1"></button>
-                        <button class="test-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1" aria-label="Go to slide 2"></button>
+                <!-- Slide 3 -->
+                <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none" data-index="2">
+                    <div class="text-center px-4 sm:px-8">
+                        <p class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
+                            "From <span class="text-brandBlue font-semibold">software architecture to branding</span>, Africana Tech handles it all with excellence. They've become our single partner for all things digital. Truly a game-changer."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="relative flex-shrink-0">
+                                <img src="https://ui-avatars.com/api/?name=James+O&background=2563EB&color=fff&size=48" alt="James O." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
+                                <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-sm sm:text-base text-brandBlack">James O.</h4>
+                                <p class="text-xs sm:text-sm text-gray-500">CEO, Innovate Tanzania</p>
+                                <div class="flex gap-0.5 mt-1">
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-<div class="bg-white pb-8">
-    
-    <section class="py-14 bg-brandBlue relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl z-0 pointer-events-none"></div>
-
-        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center reveal">
             
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight">
-                Ready to transform your business?
-            </h2>
-            
-            <p class="text-base sm:text-xl text-teal-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
-                Let's discuss how we can build the exact technology and branding solutions you need to grow aggressively.
-            </p>
-            
-            <a href="contact" class="inline-block px-8 py-4 sm:px-12 sm:py-5 bg-[#eab308] hover:bg-yellow-400 text-brandBlack text-base sm:text-xl font-bold rounded-lg shadow-2xl transition-all duration-300 hover:scale-105">
-                Get in Touch
-            </a>
+            <!-- Navigation Arrows + Dots -->
+            <div class="flex items-center justify-center gap-6 mt-10">
+                <button id="testimonial-prev" class="w-10 h-10 rounded-full bg-brandBlue/10 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Previous testimonial">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                
+                <div id="testimonial-dots" class="flex gap-2.5">
+                    <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-brandBlue scale-125 transition-all duration-300" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-index="2" aria-label="Go to slide 3"></button>
+                </div>
+                
+                <button id="testimonial-next" class="w-10 h-10 rounded-full bg-brandBlue/10 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Next testimonial">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
             
         </div>
+        
+    </div>
+</section>
+
+<script>
+    (function() {
+        const container = document.getElementById('testimonial-container');
+        const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+        const dots = Array.from(document.querySelectorAll('.testimonial-dot'));
+        const prevBtn = document.getElementById('testimonial-prev');
+        const nextBtn = document.getElementById('testimonial-next');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+        let autoTimer;
+
+        function goToSlide(index) {
+            if (index === currentSlide || index < 0 || index >= totalSlides) return;
+            
+            // Fade out current
+            slides[currentSlide].classList.remove('opacity-100', 'z-10', 'pointer-events-auto');
+            slides[currentSlide].classList.add('opacity-0', 'z-0', 'pointer-events-none');
+            
+            // Fade in next
+            slides[index].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
+            slides[index].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('bg-brandBlue', 'scale-125');
+                    dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+                } else {
+                    dot.classList.remove('bg-brandBlue', 'scale-125');
+                    dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+                }
+            });
+            
+            currentSlide = index;
+        }
+
+        function startAutoPlay() {
+            clearInterval(autoTimer);
+            autoTimer = setInterval(() => {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }, 5000);
+        }
+
+        // Swipe support
+        if (container) {
+            let touchStartX = 0;
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                clearInterval(autoTimer);
+            }, { passive: true });
+            
+            container.addEventListener('touchend', (e) => {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 40) {
+                    goToSlide(diff > 0 ? (currentSlide + 1) % totalSlides : (currentSlide - 1 + totalSlides) % totalSlides);
+                }
+                startAutoPlay();
+            }, { passive: true });
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide((currentSlide - 1 + totalSlides) % totalSlides); startAutoPlay(); });
+        if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide((currentSlide + 1) % totalSlides); startAutoPlay(); });
+        
+        dots.forEach(dot => dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.index)); startAutoPlay(); }));
+
+        // Init
+        slides.forEach((s, i) => {
+            s.classList.add('opacity-0', 'z-0', 'pointer-events-none');
+            s.classList.remove('opacity-100', 'z-10');
+        });
+        slides[0].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+        slides[0].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
+        
+        startAutoPlay();
+    })();
+</script>
+
+<div class="bg-white pb-6">
+    
+    <section class="relative py-16 sm:py-24 lg:py-28 bg-brandBlack overflow-hidden mb-6">
+        
+        <!-- Animated Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(22,69,170,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(22,69,170,0.15)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_30%,transparent_70%)]"></div>
+        
+        <!-- Glow Orbs -->
+        <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-brandBlue/30 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-[350px] h-[350px] bg-yellow-400/20 rounded-full blur-[100px]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brandBlue/10 rounded-full blur-[150px]"></div>
+
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-yellow-400 rounded-full animate-bounce opacity-70" style="animation-duration: 3s; animation-delay: 0s;"></div>
+            <div class="absolute top-1/3 right-[15%] w-1.5 h-1.5 bg-brandBlue rounded-full animate-bounce opacity-60" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-1/3 left-[20%] w-1 h-1 bg-white rounded-full animate-pulse opacity-50" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/4 right-[25%] w-2 h-2 bg-yellow-400 rounded-full animate-bounce opacity-65" style="animation-duration: 4.5s; animation-delay: 0.3s;"></div>
+            <div class="absolute top-1/2 left-[40%] w-1.5 h-1.5 bg-brandBlue rounded-full animate-ping opacity-40" style="animation-duration: 5s; animation-delay: 0.8s;"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            
+            <div class="max-w-4xl mx-auto text-center reveal">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 mb-8 backdrop-blur-sm">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-400"></span>
+                    </span>
+                    <span class="text-yellow-400 text-xs sm:text-sm font-bold tracking-widest uppercase">Let's Build Together</span>
+                </div>
+                
+                <!-- Heading -->
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]">
+                    Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-400">Transform</span> Your Business?
+                </h2>
+                
+                <!-- Description -->
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Let's engineer the exact technology, branding, and digital marketing solutions you need to 
+                    <span class="text-yellow-400 font-semibold">dominate your market</span> and accelerate growth.
+                </p>
+                
+                <!-- CTA Buttons - Always Horizontal Row -->
+                <div class="flex flex-row items-center justify-center gap-3 sm:gap-5 flex-wrap">
+                    
+                    <!-- Explore Tech Solutions -->
+                    <a href="tech solution.html" class="group relative inline-flex items-center px-5 py-3 sm:px-8 sm:py-4 bg-brandBlue text-white text-sm sm:text-base font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(22,69,170,0.5)] whitespace-nowrap">
+                        <span class="relative z-10 flex items-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            Tech Solutions
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                        <span class="absolute inset-0 flex items-center justify-center text-brandBlue font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            Tech Solutions
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    
+                    <!-- Explore Branding & Creative -->
+                    <a href="branding.html" class="group relative inline-flex items-center px-5 py-3 sm:px-8 sm:py-4 bg-yellow-400 text-brandBlack text-sm sm:text-base font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] whitespace-nowrap">
+                        <span class="relative z-10 flex items-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                            Branding & Creative
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </a>
+                    
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-10 pt-8 border-t border-white/10">
+                    <div class="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Free Consultation
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        No Obligation
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                        <svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        24hr Response Time
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Gradient Line -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+        
     </section>
 
 </div>

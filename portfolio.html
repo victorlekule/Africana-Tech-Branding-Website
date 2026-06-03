@@ -33,7 +33,15 @@
                     animation: {
                         'slider-fade': 'sliderFade 25s infinite',
                         'card-entrance': 'cardEntrance 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards',
-                        'slide-up': 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+                        'slide-up': 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'slide-left': 'slideLeft 0.8s ease-out forwards',
+                        'slide-left-delayed': 'slideLeft 1s ease-out forwards'
+                    },
+                    animationDelay: {
+                        '300': '300ms',
+                        '500': '500ms',
+                        '700': '700ms',
+                        '1000': '1000ms'
                     },
                     keyframes: {
                         sliderFade: {
@@ -49,6 +57,10 @@
                         slideUp: {
                             'from': { opacity: '0', transform: 'translateY(40px)' },
                             'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideLeft: {
+                            'from': { opacity: '0', transform: 'translateX(100px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
                         }
                     }
                 }
@@ -110,36 +122,129 @@
     <main class="pt-16 sm:pt-[72px] lg:pt-20 pb-0">
 
         <!-- HERO -->
-        <section id="hero" class="relative w-full py-16 sm:py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-brandBlack">
-            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] lg:w-[800px] h-[300px] sm:h-[600px] lg:h-[800px] bg-brandBlue opacity-20 rounded-full blur-[80px] sm:blur-[120px] z-0 pointer-events-none"></div>
+<section id="hero" class="relative w-full flex items-center justify-center overflow-hidden bg-[#0A0A0A] py-16 sm:py-24 lg:py-28">
+    
+    <!-- Circuit Board Background -->
+    <div class="absolute inset-0 z-0 opacity-[0.05]">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 30%, #136db6 1px, transparent 1px), radial-gradient(circle at 80% 70%, #009444 1px, transparent 1px); background-size: 50px 50px;"></div>
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(19,109,182,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,148,68,0.4) 1px, transparent 1px); background-size: 70px 70px;"></div>
+    </div>
 
-            <div class="container mx-auto px-4 text-center relative z-10 reveal">
-                <span class="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-brandWhite/20 bg-white/5 backdrop-blur-md mb-4 sm:mb-6 text-[10px] sm:text-sm font-bold tracking-widest text-brandWhite uppercase">Featured Work</span>
-                
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight tracking-tighter text-brandWhite">
-                    Digital Excellence, <br class="hidden sm:block"/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-400">Delivered.</span>
-                </h1>
-                
-                <p class="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto font-light px-4 sm:px-0 mb-8 sm:mb-10">
-                    Explore a curated selection of our highest-impact technology platforms, software deployments, and premium brand identities.
-                </p>
+    <!-- Glow Orbs -->
+    <div class="absolute top-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#136db6]/15 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-[#009444]/10 rounded-full blur-[100px] z-0 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-400/5 rounded-full blur-[120px] z-0 pointer-events-none"></div>
 
-                <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
-                    <a href="#portfolio" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-brandBlue hover:bg-brandWhite hover:text-brandBlue text-brandWhite text-sm sm:text-base font-bold rounded-xl shadow-[0_0_20px_rgba(22,69,170,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
-                        Explore Projects <ion-icon name="grid-outline" class="ml-2 text-lg"></ion-icon>
-                    </a>
-                    <a href="#awards" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-gray-700 hover:border-yellow-400 text-gray-300 hover:text-yellow-400 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 flex items-center justify-center group">
-                        View Our Awards <ion-icon name="trophy-outline" class="ml-2 text-lg group-hover:scale-110 transition-transform"></ion-icon>
-                    </a>
-                    
-                    <a href="Africana-Tech-Profile.pdf" download="Africana_Tech_Company_Profile.pdf" class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-brandWhite text-brandBlue hover:bg-yellow-400 hover:text-brandBlack text-sm sm:text-base font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group">
-                        Download Profile <ion-icon name="cloud-download-outline" class="ml-2 text-lg group-hover:animate-bounce"></ion-icon>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- Floating Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-[#136db6]/40 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
+        <div class="absolute top-1/3 right-[12%] w-1.5 h-1.5 bg-[#009444]/50 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/3 left-[18%] w-1.5 h-1.5 bg-yellow-400/40 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 right-[15%] w-2 h-2 bg-[#136db6]/30 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
+        <div class="absolute top-1/2 left-[55%] w-1 h-1 bg-white/30 rounded-full animate-pulse" style="animation-duration: 5s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#136db6]/10 border border-[#136db6]/30 mb-6 sm:mb-8 backdrop-blur-sm reveal">
+            <svg class="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span class="text-[10px] sm:text-xs font-bold tracking-widest text-yellow-400 uppercase">Featured Work</span>
+        </div>
+        
+        <!-- Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-[1.1] tracking-tight text-[#F9FAFB] reveal">
+            Digital Excellence, <br class="sm:hidden"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#136db6] via-[#009444] to-yellow-400">Delivered.</span>
+        </h1>
+        
+        <!-- Description -->
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 reveal px-4 sm:px-0">
+            Explore a curated selection of our highest-impact 
+            <span class="text-[#136db6] font-semibold">technology platforms</span>, 
+            <span class="text-[#009444] font-semibold">software deployments</span>, and 
+            <span class="text-yellow-400 font-semibold">premium brand identities</span>.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 reveal">
+            
+            <!-- Primary: Explore Projects -->
+            <a href="#portfolio" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-[#136db6] hover:bg-[#009444] text-white text-sm sm:text-base font-bold rounded-xl shadow-[0_0_25px_rgba(19,109,182,0.3)] hover:shadow-[0_0_35px_rgba(0,148,68,0.4)] transition-all duration-300 hover:scale-105 group">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+                Explore Projects
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </a>
+            
+            <!-- Secondary: View Awards -->
+            <a href="#awards" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-white/15 text-gray-300 hover:text-yellow-400 hover:border-yellow-400 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 hover:scale-105 group">
+                <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+                View Our Awards
+            </a>
+            
+            <!-- Tertiary: Download Profile -->
+            <a href="Africana-Tech-Profile.pdf" download="Africana_Tech_Company_Profile.pdf" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-yellow-400 hover:text-[#0A0A0A] hover:border-yellow-400 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 hover:scale-105 group">
+                <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Download Profile
+            </a>
+            
+        </div>
+        
+        <!-- Portfolio Stats -->
+    <!-- Portfolio Stats - Always Horizontal -->
+<div class="flex flex-nowrap items-center justify-between sm:justify-center gap-3 sm:gap-8 mt-10 sm:mt-12 pt-8 border-t border-white/8 reveal">
+    
+    <!-- Stat 1 -->
+    <div class="text-center flex-1 sm:flex-none">
+        <p class="text-lg sm:text-2xl font-extrabold text-[#136db6]">50+</p>
+        <p class="text-[9px] sm:text-xs text-gray-400 whitespace-nowrap">Projects Delivered</p>
+    </div>
+    
+    <!-- Divider -->
+    <div class="w-px h-6 sm:h-8 bg-white/10 flex-shrink-0"></div>
+    
+    <!-- Stat 2 -->
+    <div class="text-center flex-1 sm:flex-none">
+        <p class="text-lg sm:text-2xl font-extrabold text-[#009444]">30+</p>
+        <p class="text-[9px] sm:text-xs text-gray-400 whitespace-nowrap">Happy Clients</p>
+    </div>
+    
+    <!-- Divider -->
+    <div class="w-px h-6 sm:h-8 bg-white/10 flex-shrink-0"></div>
+    
+    <!-- Stat 3 -->
+    <div class="text-center flex-1 sm:flex-none">
+        <p class="text-lg sm:text-2xl font-extrabold text-yellow-400">3</p>
+        <p class="text-[9px] sm:text-xs text-gray-400 whitespace-nowrap">Industry Awards</p>
+    </div>
+    
+    <!-- Divider -->
+    <div class="w-px h-6 sm:h-8 bg-white/10 flex-shrink-0"></div>
+    
+    <!-- Stat 4 -->
+    <div class="text-center flex-1 sm:flex-none">
+        <p class="text-lg sm:text-2xl font-extrabold text-[#009444]">5+</p>
+        <p class="text-[9px] sm:text-xs text-gray-400 whitespace-nowrap">Years Experience</p>
+    </div>
+    
+</div>
+        
+    </div>
+    
+    <!-- Bottom Gradient Line -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+    
+</section>
 
         <!-- PORTFOLIO GRID -->
         <section id="portfolio" class="py-16 sm:py-24 bg-brandWhite min-h-screen relative z-10">
@@ -155,7 +260,7 @@
                     <div class="portfolio-item group tech" data-project="morix">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Morix" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="Morix" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Tech Platform</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -173,7 +278,7 @@
                     <div class="portfolio-item group tech" data-project="kimondo">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Kimondo" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="Kimondo" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Tech Platform</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -191,7 +296,7 @@
                     <div class="portfolio-item group tech" data-project="mrtree">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mr Tree" loading="lazy">
+                                <img src="pic/tree 1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="Mr Tree" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Web System</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -209,7 +314,7 @@
                     <div class="portfolio-item group tech" data-project="fpssa">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FPSSA" loading="lazy">
+                                <img src="pic/tech 9.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="FPSSA" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Web System</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -227,7 +332,7 @@
                     <div class="portfolio-item group tech" data-project="reach">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Reach" loading="lazy">
+                                <img src="pic/r 1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="Reach" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Tech Platform</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -245,7 +350,7 @@
                     <div class="portfolio-item group branding" data-project="fpssa-branding">
                         <div class="flex flex-col h-full w-full">
                             <div class="relative overflow-hidden bg-gray-100 h-64 sm:h-72 lg:h-[19rem] shrink-0">
-                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FPSSA Conf" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-slide-left" alt="FPSSA Conf" loading="lazy">
                                 <span class="absolute top-4 left-4 bg-brandBlack/85 backdrop-blur-md text-brandWhite text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full z-10 transition-all duration-300 group-hover:bg-brandBlue">Brand Identity</span>
                             </div>
                             <div class="flex flex-col gap-1.5 p-6 flex-1 bg-white">
@@ -275,12 +380,12 @@
             <div class="w-full max-w-5xl bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col animate-slide-up relative z-10 mt-8 mb-12 sm:mb-16 shrink-0">
                 
                 <div class="relative bg-gray-100 h-64 sm:h-80 lg:h-[30rem] shrink-0 overflow-hidden group rounded-t-3xl">
-                    <img id="detail-main-image" src="" class="w-full h-full object-cover transition-opacity duration-300" alt="Project image">
+                    <img id="detail-main-image" src="" class="w-full h-full object-cover transition-opacity duration-300 animate-slide-left-delayed" style="animation-delay: 500ms;" alt="Project image">
                     
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md border border-gray-200 text-brandBlack w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandBlue hover:text-brandWhite hover:border-brandBlue opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 z-20" onclick="prevImage()">
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-black backdrop-blur-md border border-gray-200 text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandBlue hover:text-brandWhite hover:border-brandBlue opacity-100 transform z-20" onclick="prevImage()">
                         <ion-icon name="chevron-back-outline" class="text-xl"></ion-icon>
                     </button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md border border-gray-200 text-brandBlack w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandBlue hover:text-brandWhite hover:border-brandBlue opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 z-20" onclick="nextImage()">
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-black backdrop-blur-md border border-gray-200 text-yellow-400 w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:bg-brandBlue hover:text-brandWhite hover:border-brandBlue opacity-100 transform z-20" onclick="nextImage()">
                         <ion-icon name="chevron-forward-outline" class="text-xl"></ion-icon>
                     </button>
                     
@@ -340,7 +445,7 @@
                         <p class="text-2xl font-extrabold relative z-10">With us to make your company look</p>
                         <p class="text-3xl md:text-4xl font-black bg-gradient-to-r from-brandBlue to-cyan-400 bg-clip-text text-transparent mb-8 relative z-10">Stronger & Bolder</p>
                         <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                            <a href="#contact" class="px-8 py-4 bg-brandBlue hover:bg-brandWhite hover:text-brandBlue text-brandWhite font-bold rounded-xl transition shadow-lg">Contact Us</a>
+                            <a href="contact.html" class="px-8 py-4 bg-brandBlue hover:bg-brandWhite hover:text-brandBlue text-brandWhite font-bold rounded-xl transition shadow-lg">Contact Us</a>
                             <button onclick="closeDetailPanel()" class="px-8 py-4 border border-brandWhite/30 hover:bg-brandWhite hover:text-brandBlack text-brandWhite font-bold rounded-xl transition">Go Back</button>
                         </div>
                     </div>
@@ -348,99 +453,114 @@
             </div>
         </div>
 
-        <!-- AWARDS SECTION -->
-        <section id="awards" class="py-16 sm:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden border-t border-brandBlack mb-16 sm:mb-24">
-            <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-brandBlue opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- AWARDS SECTION -->
+<section id="awards" class="py-16 sm:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden border-t border-brandBlack mb-16 sm:mb-24">
+    <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-brandBlue opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <div class="container mx-auto px-4 sm:px-6 relative z-10">
-                
-                <div class="text-center mb-10 sm:mb-16 reveal">
-                    <span class="text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Proven Excellence</span>
-                    <h2 class="text-3xl text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
-                    <div class="h-1 w-16 sm:w-20 bg-brandBlack mx-auto mt-4 rounded-full"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    
-                    <div class="bg-brandBlack border border-brandWhite/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop', 'Best Enterprise Platform')">
-                        <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-brandWhite/10">
-                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="East African Tech Award Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                            
-                            <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                                <ion-icon name="scan-outline" class="text-brandWhite text-4xl"></ion-icon>
-                            </div>
-                            
-                            <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-brandWhite shadow-lg z-20">
-                                <ion-icon name="trophy" class="text-base sm:text-lg"></ion-icon>
-                            </div>
-                        </div>
-                        
-                        <div class="p-5 sm:p-6">
-                            <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2026 Winner</div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandWhite">Best Enterprise Platform</h3>
-                            <p class="text-xs sm:text-sm text-justify sm:text-left text-brandWhite leading-relaxed">
-                                Awarded by the East African Tech Awards for engineering highly scalable, secure, and innovative digital platforms tailored for major regional enterprises and NGOs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-brandBlack border border-brandWhite/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=1200&auto=format&fit=crop', 'Agency of the Year')">
-                        <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-brandWhite/10">
-                            <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=800&auto=format&fit=crop" alt="Agency of the Year Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                            
-                            <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                                <ion-icon name="scan-outline" class="text-brandWhite text-4xl"></ion-icon>
-                            </div>
-
-                            <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-brandWhite shadow-lg z-20">
-                                <ion-icon name="star" class="text-base sm:text-lg"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="p-5 sm:p-6">
-                            <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2025 Winner</div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandWhite">Agency of the Year</h3>
-                            <p class="text-xs sm:text-sm text-justify sm:text-left text-brandWhite leading-relaxed">
-                                Recognized by the Tanzania Digital Awards for delivering exceptional hybrid solutions that seamlessly blend heavy-duty software architecture with captivating creative branding.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-brandBlack border border-brandWhite/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-200 cursor-pointer" onclick="openAwardLightbox('https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1200&auto=format&fit=crop', 'Excellence in UI/UX')">
-                        <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-brandWhite/10">
-                            <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop" alt="Excellence in UI/UX Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
-                            
-                            <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                                <ion-icon name="scan-outline" class="text-brandWhite text-4xl"></ion-icon>
-                            </div>
-
-                            <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue/90 backdrop-blur-sm rounded-full flex items-center justify-center text-brandWhite shadow-lg z-20">
-                                <ion-icon name="ribbon" class="text-base sm:text-lg"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="p-5 sm:p-6">
-                            <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2024 Winner</div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandWhite">Excellence in UI/UX</h3>
-                            <p class="text-xs sm:text-sm text-justify sm:text-left text-brandWhite leading-relaxed">
-                                Honored by the African Design Council for crafting intuitive, user-centered digital interfaces that significantly increase customer conversion rates and user retention.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <div id="awardLightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-brandBlack/95 backdrop-blur-md p-4 sm:p-8 opacity-0 transition-opacity duration-300">
-            <button onclick="closeAwardLightbox()" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-brandWhite hover:text-brandBlue text-3xl sm:text-5xl transition-colors z-50">
-                <ion-icon name="close-circle-outline"></ion-icon>
-            </button>
-            <div class="flex flex-col items-center max-w-5xl mx-auto w-full">
-                <img id="lightboxImage" src="" alt="Certificate" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300 border-4 border-brandWhite">
-                <h3 id="lightboxCaption" class="text-brandWhite text-center mt-6 text-xl sm:text-3xl font-extrabold tracking-wide"></h3>
-            </div>
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        
+        <div class="text-center mb-10 sm:mb-16 reveal">
+            <span class="text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Proven Excellence</span>
+            <h2 class="text-3xl text-brandBlack sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Awards & Recognition</h2>
+            <div class="h-1 w-16 sm:w-20 bg-brandBlack mx-auto mt-4 rounded-full"></div>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            
+            <!-- Recognition 1: Best Enterprise Platform -->
+            <div class="bg-brandBlack border border-brandWhite/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-brandBlue/50 hover:bg-brandBlue transition-all duration-300 group reveal cursor-pointer" onclick="openAwardLightbox('pic/Social Media Certificate Africana.png', 'Best Enterprise Platform')">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-brandWhite/10">
+                    <img src="pic/Social Media Certificate Africana.png" alt="Best Enterprise Platform Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                    
+                    <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <ion-icon name="scan-outline" class="text-brandWhite text-4xl"></ion-icon>
+                    </div>
+                    
+                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-brandWhite shadow-lg z-20">
+                        <ion-icon name="trophy" class="text-base sm:text-lg"></ion-icon>
+                    </div>
+                </div>
+                
+                <div class="p-5 sm:p-6">
+                    <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2026 • Recognized</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandWhite">Best Enterprise Platform</h3>
+                    <p class="text-xs sm:text-sm text-justify sm:text-left text-brandWhite leading-relaxed">
+                        Officially recognized by the Swahili Digital for delivering advanced social media and digital marketing solutions that empower leading African brands to dominate their markets through data-driven strategy and cutting-edge automation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Recognition 2: Agency of the Year -->
+            <div class="bg-brandBlack border border-brandWhite/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/50 hover:bg-brandBlue transition-all duration-300 group reveal delay-100 cursor-pointer" onclick="openAwardLightbox('pic/africana agency.png', 'Agency of the Year')">
+                <div class="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-900 border-b border-brandWhite/10">
+                    <img src="pic/africana agency.png" alt="Agency of the Year Certificate" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                    
+                    <div class="absolute inset-0 bg-brandBlack/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <ion-icon name="scan-outline" class="text-brandWhite text-4xl"></ion-icon>
+                    </div>
+
+                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-brandBlue backdrop-blur-sm rounded-full flex items-center justify-center text-brandWhite shadow-lg z-20">
+                        <ion-icon name="star" class="text-base sm:text-lg"></ion-icon>
+                    </div>
+                </div>
+                <div class="p-5 sm:p-6">
+                    <div class="text-[10px] sm:text-xs text-yellow-400 font-bold tracking-widest mb-1 sm:mb-2 uppercase">2025 • Accredited</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brandWhite">Agency of the Year</h3>
+                    <p class="text-xs sm:text-sm text-justify sm:text-left text-brandWhite leading-relaxed">
+                        Accredited by the Pan-African Branding Institute for orchestrating high-impact social media campaigns and transformative digital experiences that elevated regional businesses into continent-wide household names.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX (Certificate Viewer) -->
+<div id="awardLightbox" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-brandblue backdrop-blur-md p-4 sm:p-8 opacity-0 transition-opacity duration-300">
+    <button onclick="closeAwardLightbox()" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-brandWhite hover:text-brandBlue text-3xl sm:text-5xl transition-colors z-50">
+        <ion-icon name="close-circle-outline"></ion-icon>
+    </button>
+    <div class="flex flex-col items-center max-w-5xl mx-auto w-full">
+        <img id="lightboxImage" src="" alt="Certificate" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300 border-4 border-brandWhite">
+        <h3 id="lightboxCaption" class="text-brandBlue text-center mt-6 text-xl sm:text-3xl font-extrabold tracking-wide"></h3>
+    </div>
+</div>
+
+<!-- JAVASCRIPT (place before </body>) -->
+<script>
+  function openAwardLightbox(imageSrc, caption) {
+    const lightbox = document.getElementById('awardLightbox');
+    const img = document.getElementById('lightboxImage');
+    const captionEl = document.getElementById('lightboxCaption');
+    
+    img.src = imageSrc;
+    captionEl.textContent = caption;
+    
+    // Show lightbox
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex', 'opacity-100');
+  }
+
+  function closeAwardLightbox() {
+    const lightbox = document.getElementById('awardLightbox');
+    
+    // Fade out
+    lightbox.classList.add('opacity-0');
+    lightbox.classList.remove('opacity-100');
+    
+    // Hide after transition (300ms)
+    setTimeout(() => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex', 'opacity-0');
+    }, 300);
+  }
+
+  // Optional: Close lightbox when clicking outside the image
+  document.getElementById('awardLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeAwardLightbox();
+  });
+</script>
     </main>
 
     <script>
@@ -485,10 +605,17 @@
                     client: 'Mr Tree NGO',
                     category: 'Web System',
                     images: [
-                        'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&auto=format&fit=crop'
+                        'pic/tree 1.png',
+                        'pic/tree 2.png',
+                        'pic/tree 3.png',
+                        'pic/tree 4.png',
+                        'pic/tree 5.png',
+                        'pic/tree 5.png',
+                        'pic/tree 7.png',
+                        'pic/tree 8.png',
+                        'pic/tree 9.png',
+                        'pic/tree 10.png',
+                        'pic/tree 11.png'
                     ],
                     overview: 'Mr Tree Foundation is an environmental NGO focused on clean energy, climate action, and community cleaning programs. The website is designed to educate, inspire donations, and showcase real‑world impact through data‑driven storytelling.',
                     challenge: 'The foundation needed to visually communicate complex environmental data in a way that was easy to understand and emotionally compelling, driving both volunteer sign‑ups and donations.',
@@ -502,10 +629,16 @@
                     client: 'FPSSA',
                     category: 'Web System',
                     images: [
-                        'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1571260899304-425eee4c7ef0?w=1200&auto=format&fit=crop'
+                         'pic/tech 1.png',
+                        'pic/tech 2.png',
+                        'pic/tech 3.png',
+                        'pic/tech 4.png',
+                        'pic/tech 5.png',
+                        'pic/tech 6.png',
+                        'pic/tech 7.png',
+                        'pic/tech 8.png',
+                        'pic/tech 9.png',
+                        'pic/tech 10.png'
                     ],
                     overview: 'The FPSSA Student System is a comprehensive digital portal for procurement and supply chain students across Tanzania. It handles membership, payments, online seminars, training modules, and club registrations.',
                     challenge: 'FPSSA needed a centralised platform to connect thousands of students with the procurement board, automate membership renewals, and deliver virtual training – all while ensuring data security and 99% uptime.',
@@ -519,10 +652,18 @@
                     client: 'Reach Ltd',
                     category: 'Tech Platform',
                     images: [
-                        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop'
+                        'pic/r 1.png',
+                        'pic/r 2.png',
+                        'pic/r 3.png',
+                        'pic/r 4.png',
+                        'pic/r 5.png',
+                        'pic/r 6.png',
+                        'pic/r 7.png',
+                        'pic/r 8.png',
+                        'pic/r 9.png',
+                        'pic/r 10.png'
+                        
+                        
                     ],
                     overview: 'Reach Global Consultant is a professional platform that bridges businesses, government entities, and expert consultants across East Africa. Services include investment advisory, tax consulting, and marketing strategy.',
                     challenge: 'The platform needed to facilitate secure document exchange, appointment scheduling, and consultant matching while projecting a trustworthy, high‑end corporate image.',

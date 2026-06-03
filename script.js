@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = [
         { name: "Home", url: "index.html", subPages: [] },
         { name: "About Us", url: "about us.html", subPages: [] },
-        { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html", "system.html", "corparate info.html"] },
+        { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html", "system.html", "corparate info.html", "electrical.html"] },
         { name: "Branding & Creative", url: "branding.html", subPages: ["copywriting.html", "digital marketing.html", "identity.html", "strategy.html", "ux design.html", "video.html", "social media.html", "3d.html"] },
         { name: "Portfolio", url: "portfolio.html", subPages: [] },
         { name: "Blog", url: "blog.html", subPages: [] },
@@ -683,13 +683,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </a>
 
-                    <a href="mailto:africanatech@gmail.com" class="flex items-center group transition-all duration-300">
+                    <a href="mailto:hello@africana-tech.com" class="flex items-center group transition-all duration-300">
                         <div class="w-12 h-12 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
                             <i class="fas fa-envelope text-xl md:text-lg"></i>
                         </div>
                         <div class="hidden md:flex flex-col ml-3">
                             <span class="text-[10px] font-bold uppercase text-gray-500">Email Us</span>
-                            <span class="text-xs font-medium text-gray-300 group-hover:text-indigo-400">africanatech@gmail.com</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-indigo-400">hello@africana-tech.com</span>
                         </div>
                     </a>
 

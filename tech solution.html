@@ -21,256 +21,540 @@
 
     <div id="header-container"></div>
 
-<section class="relative w-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-brandBlack pt-20 pb-8 lg:pt-32 lg:pb-24">
+<section class="relative w-full flex items-center justify-center overflow-hidden bg-[#0A0A0A] py-14 sm:py-20 lg:py-24 mt-24">
     
-    <!-- Background effects (unchanged) -->
-    <div class="absolute inset-0 z-0 opacity-20" 
-         style="background-image: linear-gradient(rgba(235, 205, 37, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235, 0.2) 1px, transparent 1px); background-size: 50px 50px;">
+    <!-- Animated Circuit Background -->
+    <div class="absolute inset-0 z-0 opacity-[0.04]">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 30%, #136db6 1px, transparent 1px), radial-gradient(circle at 80% 70%, #009444 1px, transparent 1px); background-size: 60px 60px;"></div>
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(19,109,182,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(19,109,182,0.3) 1px, transparent 1px); background-size: 80px 80px;"></div>
+    </div>
+
+    <!-- Glow Orbs -->
+    <div class="absolute top-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#136db6]/15 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-[#009444]/10 rounded-full blur-[100px] z-0 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-yellow-400/5 rounded-full blur-[100px] z-0 pointer-events-none"></div>
+
+    <!-- Floating Tech Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-1/4 left-[12%] w-1.5 h-1.5 bg-[#136db6] rounded-full animate-pulse" style="animation-duration: 3s;"></div>
+        <div class="absolute top-1/3 right-[15%] w-2 h-2 bg-[#009444] rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/3 left-[20%] w-1 h-1 bg-yellow-400 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 right-[10%] w-1.5 h-1.5 bg-[#136db6] rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
+        <div class="absolute top-1/2 left-[60%] w-1 h-1 bg-white rounded-full animate-pulse" style="animation-duration: 5s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
+            
+            <!-- Left Content -->
+            <div class="w-full lg:w-7/12 text-center lg:text-left reveal">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#136db6]/10 border border-[#136db6]/30 mb-5 sm:mb-6 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#009444] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#009444]"></span>
+                    </span>
+                    <span class="text-[10px] sm:text-xs font-bold tracking-widest text-[#009444] uppercase">Enterprise IT & Engineering</span>
+                </div>
+                
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-3 sm:mb-5 leading-[1.15] tracking-tight text-[#F9FAFB]">
+                    Architecting the <br class="sm:hidden"/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#136db6] via-[#009444] to-yellow-400">Digital Future</span>
+                </h1>
+                
+                <!-- Description -->
+                <p class="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 sm:mb-8 max-w-xl lg:max-w-none leading-relaxed">
+                    We design, deploy, and secure the underlying technology that powers Africa's most ambitious businesses — from <span class="text-[#136db6] font-semibold">custom software</span> to <span class="text-[#009444] font-semibold">ironclad network architecture</span>.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                    <a href="contact.html" class="flex-1 sm:flex-none text-center px-5 py-3 sm:px-8 sm:py-3.5 bg-[#136db6] hover:bg-[#009444] text-white text-sm sm:text-base font-bold rounded-xl shadow-[0_0_25px_rgba(19,109,182,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(0,148,68,0.4)] group">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            Book Consultation
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="portfolio.html" class="flex-1 sm:flex-none text-center px-5 py-3 sm:px-8 sm:py-3.5 bg-transparent border-2 border-white/20 text-white text-sm sm:text-base font-bold rounded-xl hover:border-yellow-400 hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            Our Portfolio
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Trust Row -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mt-7 sm:mt-8 pt-5 sm:pt-6 border-t border-white/8">
+                    <!-- Avatars -->
+                    <div class="flex -space-x-3">
+                        <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#0A0A0A]" src="https://i.pravatar.cc/100?img=11" alt="Client">
+                        <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#0A0A0A]" src="https://i.pravatar.cc/100?img=33" alt="Client">
+                        <img class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#0A0A0A]" src="https://i.pravatar.cc/100?img=12" alt="Client">
+                        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#0A0A0A] bg-gray-700 flex items-center justify-center text-[10px] font-bold text-white">+10</div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 font-medium">Trusted by 10+ African Enterprises</p>
+                    
+                    <div class="hidden sm:block w-px h-6 bg-white/10"></div>
+                    
+                    <!-- Stats -->
+                    <div class="flex items-center gap-4 text-xs text-gray-400">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-[#009444]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            99.9% Uptime
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-[#009444]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            24/7 Support
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Visual (Desktop only) -->
+            <div class="hidden lg:block w-full lg:w-5/12 reveal delay-200">
+                <div class="relative">
+                    
+                    <!-- Main Image Card -->
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                        <!-- Browser Chrome -->
+                        <div class="bg-gray-800 px-4 py-2.5 flex items-center gap-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                            <span class="ml-2 text-[10px] text-gray-400 font-mono">dashboard.africana-tech.com</span>
+                        </div>
+                        <img src="pic/teamworking.webp" alt="Cybersecurity and Server Architecture" class="w-full h-60 xl:h-72 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#136db6]/30 to-transparent mix-blend-overlay"></div>
+                    </div>
+                    
+                    <!-- Floating Badge: Server Status -->
+                    <div class="absolute -right-3 sm:-right-5 top-8 z-20 bg-yellow-400/90 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-xl shadow-2xl">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <div class="w-7 h-7 rounded-lg bg-[#0A0A0A] flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                                </svg>
+                            </div>
+                            <span class="text-[10px] font-bold text-[#0A0A0A] uppercase">Server Status</span>
+                        </div>
+                        <div class="text-xl font-black text-[#0A0A0A]">99.99%</div>
+                        <div class="flex items-center gap-1.5 text-[10px] text-[#0A0A0A] font-semibold mt-0.5">
+                            <span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#009444] opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#009444]"></span></span>
+                            Operational
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge: Security -->
+                    <div class="absolute -left-3 sm:-left-5 bottom-10 z-20 bg-[#136db6]/90 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-xl shadow-2xl flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+                            <svg class="w-4 h-4 text-[#136db6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-xs">Security Level</p>
+                            <p class="text-white font-black text-sm tracking-wide">ENTERPRISE</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
     </div>
     
-    <div class="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-brandBlue opacity-20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-indigo-900 opacity-20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
-
-    <div class="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-        
-        <div class="w-full lg:w-1/2 text-center lg:text-left reveal">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/30 bg-yellow-400 backdrop-blur-sm mb-6 sm:mb-8 w-max mx-auto lg:mx-0 shadow-[0_0_15px_rgba(37,99,235,0.2)]">
-                <span class="relative flex h-2 w-2 sm:h-3 sm:w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandBlue opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-brandBlack"></span>
-                </span>
-                <span class="text-[10px] sm:text-sm font-bold tracking-widest text-brandBlack uppercase">Enterprise IT & Engineering</span>
-            </div>
-            
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight tracking-tighter text-brandWhite">
-                Architecting the <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-yellow-400">Digital Future</span>
-            </h1>
-            
-            <p class="text-sm sm:text-lg lg:text-xl font-light text-gray-400 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                We design, deploy, and secure the underlying technology that powers Africa's most ambitious businesses. From custom software to ironclad network architecture.
-            </p>
-            
-            <!-- ✅ Buttons side-by-side on all screens, no wrapping -->
-            <div class="flex flex-nowrap items-center justify-center lg:justify-start gap-2 sm:gap-4">
-                <a href="contact.html" class="flex-1 text-center px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-brandBlue hover:bg-yellow-400 hover:text-brandBlack text-brandWhite text-xs sm:text-sm lg:text-base font-bold rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300 transform hover:-translate-y-1">
-                    Book Consultation
-                </a>
-                <a href="portfolio.html" class="flex-1 text-center px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-transparent border-2 border-gray-700 hover:border-yellow-400 text-brandWhite text-xs sm:text-sm lg:text-base font-bold rounded-xl transition-all duration-300">
-                    Our Portfolio
-                </a>
-            </div>
-            
-            <!-- Trust indicators (unchanged) -->
-            <div class="mt-10 sm:mt-12 flex items-center justify-center lg:justify-start gap-4 sm:gap-6 border-t border-gray-800 pt-6">
-                <div class="flex -space-x-3 sm:-space-x-4">
-                    <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-brandBlack" src="https://i.pravatar.cc/100?img=11" alt="Client">
-                    <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-brandBlack" src="https://i.pravatar.cc/100?img=33" alt="Client">
-                    <img class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-brandBlack" src="https://i.pravatar.cc/100?img=12" alt="Client">
-                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-brandBlack bg-gray-800 flex items-center justify-center text-[10px] sm:text-xs font-bold text-white">+10</div>
-                </div>
-                <p class="text-xs sm:text-sm text-gray-400 font-medium">Trusted by 10+ African Enterprises</p>
-            </div>
-        </div>
-
-        <!-- ✅ Image panel – hidden on mobile, visible on lg+ -->
-        <div class="w-full lg:w-1/2 relative reveal delay-200 mt-10 lg:mt-0 hidden lg:block">
-            <div class="relative z-10 w-full max-w-lg mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
-                <img src="pic/teamworking.webp" alt="Cybersecurity and Server Architecture" class="w-full h-auto object-cover opacity-80">
-                <div class="absolute inset-0 bg-brandBlue mix-blend-overlay opacity-30"></div>
-            </div>
-
-            <!-- Floating badges (unchanged) -->
-            <div class="absolute -right-4 sm:-right-8 top-10 z-20 bg-yellow-400/80 backdrop-blur-md border border-brandWhite p-4 rounded-2xl shadow-2xl animate-float-slow w-48 hidden sm:block">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-8 h-8 rounded-full bg-brandBlack flex items-center justify-center text-yellow-400">
-                        <ion-icon name="server-outline"></ion-icon>
-                    </div>
-                    <span class="text-xs font-bold text-brandBlack uppercase">Server Status</span>
-                </div>
-                <div class="text-2xl font-black text-brandBlack mb-1">99.99%</div>
-                <div class="flex items-center gap-1 text-xs text-brandBlack font-semibold">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandBlack opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-brandBlack"></span></span>
-                    Systems Operational
-                </div>
-            </div>
-
-            <div class="absolute -left-4 sm:-left-12 bottom-12 z-20 bg-brandBlue backdrop-blur-md border border-yellow-400 p-5 rounded-2xl shadow-2xl animate-float-fast w-56 hidden sm:block">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-brandWhite flex items-center justify-center text-brandBlue text-2xl shadow-[0_0_15px_rgba(37,99,235,0.4)]">
-                        <ion-icon name="shield-checkmark"></ion-icon>
-                    </div>
-                    <div>
-                        <h4 class="text-brandWhite font-bold text-sm">Security Level</h4>
-                        <p class="text-brandWhite font-black text-lg tracking-wide">ENTERPRISE</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Bottom Gradient Line -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#136db6] to-transparent"></div>
+    
 </section>
 
 <section id="tech-solutions" class="py-16 md:py-24 bg-gray-50 relative border-t border-gray-200">
-        <div class="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 relative z-10">
-            
-            <div class="text-center mb-10 md:mb-16 reveal">
-                <span class="text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm block mb-2">Core Capabilities</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight">Tech Solutions</h2>
-                <div class="h-1 w-16 sm:w-20 bg-brandBlue mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col h-full min-h-[400px]">
-                        <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                            <img src="IMG/web.jpg" alt="Web Development Icon" class="w-full h-full object-cover object-top">
-                        </div>
-                        
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-2 sm:mb-3">Web Development</h3>
-                            <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                                We create responsive, high-performance websites and web applications that deliver 
-                                exceptional user experiences across all devices and platforms.
-                            </p>
-
-                            <a href="web info.html" class="inline-flex items-center justify-center w-max text-white bg-blue-500 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                                More Info 
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-100 flex flex-col h-full min-h-[400px]">
-                        <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                            <img src="IMG/system.png" alt="System Development Icon" class="w-full h-full object-cover object-top">
-                        </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">System Development</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            Enterprise-grade software solutions crafted to meet your specific needs—built for performance, scalability, and efficiency.
-                        </p>
-                        <a href="system.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-200 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="IMG/MOBILE 1.png" alt="App Development Icon" class="w-full h-full object-cover object-top">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">App Development</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            We create mobile apps for iOS and Android using native and cross-platform technologies—optimized for speed, reliability, and scalability.
-                        </p>
-                        <a href="app info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-300 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="IMG/cyber.jpg" alt="Cyber Security Icon" class="w-full h-full object-cover object-top">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Cyber Security</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            Enterprise-grade security audits and continuous threat detection—identifying vulnerabilities, monitoring suspicious activity, and protecting your business from evolving threats
-                        </p>
-                        <a href="cyber info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="IMG/network.png" alt="Networking Icon" class="w-full h-full object-cover ">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Networking</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            We design robust network infrastructures built for seamless global communication—delivering reliable connectivity, optimized performance, and secure, scalable systems that support your business wherever it operates.
-                        </p>
-                        <a href="network info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-100 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="IMG/maintanace.png" alt="IT Maintenance Icon" class="w-full h-full object-cover object-top">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">IT Maintenance</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                           We provide proactive IT support and hardware optimization to minimize downtime, maintain peak performance, and keep your systems running reliably.
-                        </p>
-                        <a href="computer.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-200 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="IMG/Ai training.png" alt="AI Training Icon" class="w-full h-full object-cover ">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">AI Training</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            We train your workforce in modern AI and Machine Learning techniques—empowering teams to deploy intelligent solutions confidently and at scale.
-                        </p>
-                        <a href="ai training.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-300 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="img/coparate tarining.png" alt="Corporate Training Icon" class="w-full h-full object-cover object-top">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Corporate Training</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            Turn your team into a competitive advantage—professional IT upskilling tailored to your organization, built to boost performance and drive results.
-                        </p>
-                        <a href="corparate info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                 <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 reveal delay-300 flex flex-col h-full min-h-[400px]">
-                    <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
-                        <img src="pic/cctv.webp" alt="Corporate Training Icon" class="w-full h-full object-cover object-top">
-                    </div>
-                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Electrical & Security Services</h3>
-                        <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
-                            Comprehensive electrical installations and enterprise security solutions—delivering safe, reliable infrastructure and stronger protection for your organization. 
-                        </p>
-                        <a href="electrical.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
-                            More Info 
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 relative z-10">
+        
+<div class="text-center mb-12 sm:mb-16 reveal">
+    
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#136db6]/8 border border-[#136db6]/25 mb-5 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#009444] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#009444]"></span>
+        </span>
+        <span class="text-[10px] sm:text-xs font-bold tracking-widest text-[#009444] uppercase">Core Capabilities</span>
+    </div>
+    
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0A0A0A] mb-5 tracking-tight leading-[1.1]">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#136db6] to-[#009444]">Tech Solutions</span>
+    </h2>
+    
+    <!-- Description -->
+    <p class="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        From <span class="text-[#136db6] font-semibold">custom development</span> to 
+        <span class="text-[#009444] font-semibold">cloud infrastructure</span> — 
+        we build the systems that drive digital transformation across East Africa.
+    </p>
+    
+    <!-- Quick Stats Row -->
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 pt-5 border-t border-gray-100 max-w-lg mx-auto">
+        <div class="text-center">
+            <p class="text-lg sm:text-xl font-extrabold text-[#136db6]">50+</p>
+            <p class="text-[10px] sm:text-xs text-gray-400">Projects Deployed</p>
         </div>
-    </section>
+        <div class="w-px h-8 bg-gray-200 hidden sm:block"></div>
+        <div class="text-center">
+            <p class="text-lg sm:text-xl font-extrabold text-[#009444]">99.9%</p>
+            <p class="text-[10px] sm:text-xs text-gray-400">Uptime Guaranteed</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200 hidden sm:block"></div>
+        <div class="text-center">
+            <p class="text-lg sm:text-xl font-extrabold text-yellow-400">10+</p>
+            <p class="text-[10px] sm:text-xs text-gray-400">Enterprise Clients</p>
+        </div>
+    </div>
+    
+</div>
+        <!-- Desktop Grid + Mobile Carousel -->
+        <div id="tech-solutions-container" class="flex overflow-x-auto snap-x snap-mandatory pb-6 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 lg:overflow-visible" style="-ms-overflow-style:none;scrollbar-width:none">
+            
+            <!-- Card 1: Web Development -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="0">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/web.jpg" alt="Web Development Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-2 sm:mb-3">Web Development</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We create responsive, high-performance websites and web applications that deliver exceptional user experiences across all devices and platforms.
+                    </p>
+                    <a href="web info.html" class="inline-flex items-center justify-center w-max text-white bg-blue-500 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: System Development -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="1">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/system.png" alt="System Development Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">System Development</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        Enterprise-grade software solutions crafted to meet your specific needs—built for performance, scalability, and efficiency.
+                    </p>
+                    <a href="system.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: App Development -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="2">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/MOBILE 1.png" alt="App Development Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">App Development</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We create mobile apps for iOS and Android using native and cross-platform technologies—optimized for speed, reliability, and scalability.
+                    </p>
+                    <a href="app info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Cyber Security -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="3">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/cyber.jpg" alt="Cyber Security Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Cyber Security</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        Enterprise-grade security audits and continuous threat detection—identifying vulnerabilities, monitoring suspicious activity, and protecting your business from evolving threats.
+                    </p>
+                    <a href="cyber info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Networking -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="4">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/network.png" alt="Networking Icon" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Networking</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We design robust network infrastructures built for seamless global communication—delivering reliable connectivity, optimized performance, and secure, scalable systems.
+                    </p>
+                    <a href="network info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6: IT Maintenance -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="5">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/maintanace.png" alt="IT Maintenance Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">IT Maintenance</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We provide proactive IT support and hardware optimization to minimize downtime, maintain peak performance, and keep your systems running reliably.
+                    </p>
+                    <a href="computer.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 7: AI Training -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="6">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/Ai training.png" alt="AI Training Icon" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">AI Training</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We train your workforce in modern AI and Machine Learning techniques—empowering teams to deploy intelligent solutions confidently and at scale.
+                    </p>
+                    <a href="ai training.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 8: Corporate Training -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="7">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="img/coparate tarining.png" alt="Corporate Training Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Corporate Training</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        Turn your team into a competitive advantage—professional IT upskilling tailored to your organization, built to boost performance and drive results.
+                    </p>
+                    <a href="corparate info.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 9: Electrical & Security Services -->
+            <div class="tech-card flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px]" data-tech-index="8">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="pic/cctv.webp" alt="Electrical & Security Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brandBlue mb-2 sm:mb-3">Electrical & Security Services</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        Comprehensive electrical installations and enterprise security solutions—delivering safe, reliable infrastructure and stronger protection for your organization.
+                    </p>
+                    <a href="electrical.html" class="inline-flex items-center justify-center w-max text-white bg-brandBlue hover:bg-brandBlack focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CLONE Card 1 for seamless infinite loop -->
+            <div class="tech-card tech-clone flex-shrink-0 w-[82vw] sm:w-[380px] lg:w-auto snap-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 flex flex-col min-h-[420px] lg:hidden" data-tech-index="9" data-clone="true">
+                <div class="w-full h-48 sm:h-56 overflow-hidden shrink-0">
+                    <img src="IMG/web.jpg" alt="Web Development Icon" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-2 sm:mb-3">Web Development</h3>
+                    <p class="text-sm sm:text-base text-gray-600 text-justify mb-4 sm:mb-6 flex-grow">
+                        We create responsive, high-performance websites and web applications that deliver exceptional user experiences across all devices and platforms.
+                    </p>
+                    <a href="web info.html" class="inline-flex items-center justify-center w-max text-white bg-blue-500 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 transition duration-300 mt-auto">
+                        More Info <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Mobile Pagination (Numbered Dots) -->
+        <div id="tech-solutions-pagination" class="hidden lg:hidden justify-center items-center gap-2 mt-6 flex-wrap"></div>
+    </div>
+</section>
+
+<script>
+    (function() {
+        const container = document.getElementById('tech-solutions-container');
+        const pagination = document.getElementById('tech-solutions-pagination');
+        const originalCards = Array.from(document.querySelectorAll('.tech-card:not([data-clone])'));
+        const allCards = Array.from(document.querySelectorAll('.tech-card'));
+        const cloneCard = document.querySelector('.tech-card[data-clone]');
+        const totalOriginals = originalCards.length;
+        let observer;
+        let scrollTimer;
+        let isTransitioning = false;
+
+        function isMobile() {
+            return window.innerWidth < 1024;
+        }
+
+        function buildPagination() {
+            if (!pagination || !isMobile()) {
+                if (pagination) { pagination.innerHTML = ''; pagination.classList.add('hidden'); pagination.classList.remove('flex'); }
+                return;
+            }
+            pagination.classList.add('flex');
+            pagination.classList.remove('hidden');
+            pagination.innerHTML = '';
+            
+            originalCards.forEach((card, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'w-7 h-7 rounded-full border-none cursor-pointer transition-all duration-300 p-0 flex items-center justify-center text-xs font-bold';
+                dot.textContent = index + 1;
+                dot.style.backgroundColor = index === 0 ? '#1645aa' : '#e5e7eb';
+                dot.style.color = index === 0 ? 'white' : '#6b7280';
+                dot.style.transform = index === 0 ? 'scale(1.1)' : 'scale(1)';
+                dot.style.boxShadow = index === 0 ? '0 2px 8px rgba(22,69,170,0.3)' : 'none';
+                dot.setAttribute('aria-label', 'Go to card ' + (index + 1));
+                dot.onclick = () => {
+                    const target = originalCards[index];
+                    container.scrollTo({ left: target.offsetLeft - container.offsetLeft - 16, behavior: 'smooth' });
+                    resetAutoScroll();
+                };
+                pagination.appendChild(dot);
+            });
+        }
+
+        function updateDots(activeIndex) {
+            const dots = Array.from(pagination.children);
+            if (activeIndex >= totalOriginals) activeIndex = 0;
+            dots.forEach((dot, i) => {
+                if (i === activeIndex) {
+                    dot.style.backgroundColor = '#1645aa';
+                    dot.style.color = 'white';
+                    dot.style.transform = 'scale(1.1)';
+                    dot.style.boxShadow = '0 2px 8px rgba(22,69,170,0.3)';
+                } else {
+                    dot.style.backgroundColor = '#e5e7eb';
+                    dot.style.color = '#6b7280';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                }
+            });
+        }
+
+        function observeCards() {
+            if (observer) observer.disconnect();
+            if (!isMobile()) return;
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let idx = parseInt(entry.target.getAttribute('data-tech-index'));
+                        updateDots(idx);
+                        
+                        // Seamless loop: if clone is visible, jump back to real first card
+                        if (entry.target.hasAttribute('data-clone') && entry.intersectionRatio > 0.7) {
+                            if (!isTransitioning) {
+                                isTransitioning = true;
+                                setTimeout(() => {
+                                    container.scrollTo({ left: 0, behavior: 'instant' });
+                                    updateDots(0);
+                                    setTimeout(() => { isTransitioning = false; }, 100);
+                                }, 300);
+                            }
+                        }
+                    }
+                });
+            }, { root: container, threshold: 0.7 });
+
+            allCards.forEach(c => observer.observe(c));
+        }
+
+        function startAutoScroll() {
+            if (!isMobile()) return;
+            clearInterval(scrollTimer);
+            scrollTimer = setInterval(() => {
+                if (isTransitioning) return;
+                
+                const dots = Array.from(pagination.children);
+                const activeDot = dots.find(d => d.style.backgroundColor === 'rgb(22, 69, 170)');
+                let currentIdx = dots.indexOf(activeDot);
+                if (currentIdx === -1) currentIdx = 0;
+                
+                let nextIdx = currentIdx + 1;
+                if (nextIdx >= totalOriginals) {
+                    const cloneTarget = allCards.find(c => c.hasAttribute('data-clone'));
+                    if (cloneTarget) {
+                        container.scrollTo({ left: cloneTarget.offsetLeft - container.offsetLeft - 16, behavior: 'smooth' });
+                        updateDots(0);
+                    }
+                } else {
+                    const targetCard = originalCards[nextIdx];
+                    container.scrollTo({ left: targetCard.offsetLeft - container.offsetLeft - 16, behavior: 'smooth' });
+                }
+            }, 3500);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(scrollTimer);
+            startAutoScroll();
+        }
+
+        if (container) {
+            container.addEventListener('touchstart', resetAutoScroll, { passive: true });
+            container.addEventListener('mousedown', resetAutoScroll);
+            
+            container.addEventListener('scroll', () => {
+                if (!isMobile() || isTransitioning) return;
+                const scrollLeft = container.scrollLeft;
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                if (scrollLeft >= maxScroll - 10) {
+                    isTransitioning = true;
+                    container.scrollTo({ left: 0, behavior: 'instant' });
+                    updateDots(0);
+                    setTimeout(() => { isTransitioning = false; }, 150);
+                }
+            }, { passive: true });
+        }
+
+        function initCarousel() {
+            if (isMobile() && container) container.scrollTo({ left: 0, behavior: 'instant' });
+            buildPagination();
+            observeCards();
+            startAutoScroll();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCarousel);
+        } else {
+            initCarousel();
+        }
+
+        let resizeDebounce;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeDebounce);
+            resizeDebounce = setTimeout(() => {
+                if (observer) observer.disconnect();
+                clearInterval(scrollTimer);
+                isTransitioning = false;
+                if (!isMobile() && pagination) { pagination.classList.add('hidden'); pagination.classList.remove('flex'); pagination.innerHTML = ''; }
+                if (isMobile() && container) container.scrollTo({ left: 0, behavior: 'instant' });
+                initCarousel();
+            }, 250);
+        });
+    })();
+</script>
 
 
 
@@ -350,7 +634,7 @@
                         <span class="text-[10px] sm:text-xs font-bold text-brandGreen uppercase tracking-widest">Featured Deployment</span>
                     </div>
                     
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brandWhite mb-4 sm:mb-6 tracking-tight">African Child Comforters Platform</h2>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brandWhite mb-4 sm:mb-6 tracking-tight">Mr Tree Foundation </h2>
                     
                     <p class="text-sm sm:text-lg text-justify sm:text-left text-white mb-6 sm:mb-8 leading-relaxed">
                         When this major NGO needed to scale their global outreach, their legacy systems couldn't handle the traffic. We engineered a highly secure, integrated digital platform that combined high-volume donation processing with an immersive storytelling architecture.
@@ -380,7 +664,7 @@
                             <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
                             <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="Dashboard Analytics" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                        <img src="pic/tree 2.png" alt="Dashboard Analytics" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                     </div>
                     <div class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-full h-full bg-gradient-to-br from-brandBlue to-cyan-400 rounded-2xl z-0 opacity-20"></div>
                 </div>
@@ -391,26 +675,106 @@
 </section>
 
 <div class="bg-white">
-    <section class="py-20 sm:py-32 bg-brandBlack text-center relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px); background-size: 40px 40px;"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-brandBlue opacity-20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <section class="relative py-20 sm:py-32 text-center overflow-hidden" style="background: linear-gradient(135deg, #eab308 0%, #009444 100%);">
+        
+        <!-- Animated Grid Pattern -->
+        <div class="absolute inset-0 z-0 opacity-[0.08]">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #0A0A0A 1px, transparent 1px), radial-gradient(circle at 75% 75%, #0A0A0A 1px, transparent 1px); background-size: 60px 60px;"></div>
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(10,10,10,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,10,0.2) 1px, transparent 1px); background-size: 80px 80px;"></div>
+        </div>
 
-        <div class="container mx-auto px-4 relative z-10 reveal">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-brandWhite mb-4 sm:mb-6 tracking-tight">
-                Need a tech solution?
+        <!-- Glow Orbs -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[150px] z-0 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0A0A0A]/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <div class="absolute top-1/4 left-[15%] w-2 h-2 bg-white/40 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
+            <div class="absolute top-1/3 right-[20%] w-1.5 h-1.5 bg-[#0A0A0A]/30 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-1/3 left-[25%] w-1.5 h-1.5 bg-white/50 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/4 right-[15%] w-2 h-2 bg-[#0A0A0A]/20 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
+            <div class="absolute top-1/2 left-[50%] w-1 h-1 bg-white/60 rounded-full animate-pulse" style="animation-duration: 5s;"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-yelllow-400 mb-8 backdrop-blur-sm reveal">
+                <svg class="w-4 h-4 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+                <span class="text-black font-bold tracking-widest uppercase text-xs sm:text-sm">Engineered for Scale</span>
+            </div>
+            
+            <!-- Heading -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0A0A0A] mb-4 sm:mb-6 tracking-tight reveal">
+                Need a <span class="text-[#F9FAFB] drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Tech Solution</span>?
             </h2>
-            <p class="text-base sm:text-xl lg:text-2xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto font-light px-4 sm:px-0">
-                Let's talk about your infrastructure, software, and data needs. We architect what you need to grow aggressively.
+            
+            <!-- Description -->
+            <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed reveal px-4 sm:px-0 font-medium">
+                From <span class="text-white font-bold">software architecture</span> to <span class="text-white font-bold">infrastructure deployment</span> — 
+                let's engineer the exact systems you need to dominate your market.
             </p>
             
-            <div class="relative inline-block group w-full sm:w-auto px-4 sm:px-0">
-                <div class="absolute -inset-1 bg-gradient-to-r from-brandBlue to-cyan-400 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse hidden sm:block"></div>
-                <a href="#contact" class="relative flex justify-center items-center w-full sm:w-auto px-8 py-4 sm:px-12 sm:py-5 bg-brandWhite text-brandBlack text-lg sm:text-xl font-extrabold rounded-xl transition-all duration-300 hover:scale-105">
-                    <ion-icon name="chatbubbles-outline" class="mr-3 text-xl sm:text-2xl text-brandBlue"></ion-icon>
-                    Let's Talk
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 reveal">
+                
+                <!-- WhatsApp CTA -->
+                <a href="https://wa.me/255672743065" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center px-8 py-4 sm:px-10 sm:py-5 bg-yellow-400 text-black text-base sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,211,102,0.5)]">
+                    <span class="relative z-10 flex items-center">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i>
+                        Chat on WhatsApp
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </span>
                 </a>
+                
+                <!-- Contact Us CTA -->
+                <a href="contact.html" class="group relative inline-flex items-center px-8 py-4 sm:px-10 sm:py-5 bg-[#0A0A0A] text-[#F9FAFB] text-base sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(10,10,10,0.4)]">
+                    <span class="relative z-10 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Contact Us
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </span>
+                </a>
+                
             </div>
+            
+            <!-- Tech Capability Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-10 reveal">
+                <span class="px-3 py-1.5 bg-white border border-[#0A0A0A]/20 rounded-full text-xs sm:text-sm text-black font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Web & App Development
+                </span>
+                <span class="px-3 py-1.5 bg-white border border-[#0A0A0A]/20 rounded-full text-xs sm:text-sm text-black font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    System Architecture
+                </span>
+                <span class="px-3 py-1.5 bg-white border border-[#0A0A0A]/20 rounded-full text-xs sm:text-sm text-black font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Cyber Security
+                </span>
+                <span class="px-3 py-1.5 bg-white border border-[#0A0A0A]/20 rounded-full text-xs sm:text-sm text-black font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    AI & Machine Learning
+                </span>
+                <span class="px-3 py-1.5 bg-white border border-[#0A0A0A]/20 rounded-full text-xs sm:text-sm text-black font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Cloud Infrastructure
+                </span>
+            </div>
+            
         </div>
+        
+        <!-- Bottom Gradient Line -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0A0A0A]/40 to-transparent"></div>
+        
     </section>
     
     <div class="h-16 sm:h-24 w-full"></div>
