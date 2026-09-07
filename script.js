@@ -99,6 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 .site-info-location, .site-info-location-separator, .site-info-links { display: none; }
                 .site-info-whatsapp, .site-info-email { white-space: nowrap; font-size: 9px; }
                 .site-info-email { overflow: hidden; text-overflow: ellipsis; }
+                .site-main-nav { padding-left: 8px; padding-right: 8px; }
+                .site-main-brand { min-width: 0; flex: 1 1 auto; overflow: hidden; }
+                .site-main-brand h1 { font-size: 10px; line-height: 1.15; word-spacing: normal !important; white-space: normal; }
+                .site-main-brand p { font-size: 9px; line-height: 1.15; white-space: normal; }
+                .site-main-actions { flex: 0 0 40px; margin-left: 8px; }
             }
         </style>
         <header class="w-full fixed top-0 left-0 z-50 flex flex-col pointer-events-none">
@@ -123,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
             
-            <nav class="relative w-full h-[90px] bg-white shadow-[0_4px_30px_-10px_rgba(0,0,0,0.08)] flex items-center justify-between px-4 lg:px-8 xl:px-12 overflow-hidden pointer-events-auto">
+            <nav class="site-main-nav relative w-full h-[90px] bg-white shadow-[0_4px_30px_-10px_rgba(0,0,0,0.08)] flex items-center justify-between px-4 lg:px-8 xl:px-12 overflow-hidden pointer-events-auto">
                 
                 <div class="absolute left-0 top-0 bottom-0 w-[550px] pointer-events-none z-0">
                     <svg width="100%" height="100%" viewBox="0 0 550 90" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </svg>
                 </div>
 
-             <div class="relative z-10 flex items-center flex-none pl-1 sm:pl-2">
+             <div class="site-main-brand relative z-10 flex items-center flex-none pl-1 sm:pl-2">
                     <div class="flex flex-col justify-center">
                         <h1 class="text-brandBlue font-extrabold text-sm sm:text-base md:text-lg lg:text-sm xl:text-sm leading-tight tracking-wide whitespace-nowrap" style="word-spacing: 0.25em;">
                             AFRICANA TECH & BRANDING LTD
@@ -147,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${desktopNavItemsHtml}
                 </div>
 
-                <div class="relative z-10 flex items-center gap-4 md:gap-5 flex-shrink-0">
+                <div class="site-main-actions relative z-10 flex items-center gap-4 md:gap-5 flex-shrink-0">
                     <a href="${contactLink.url}" class="hidden sm:flex items-center gap-2 bg-brandBlue text-white px-7 py-3.5 rounded-full text-[14px] font-semibold hover:shadow-[0_8px_20px_-6px_rgba(99,102,241,0.5)] hover:bg-brandBlack">
                         ${contactLink.name}
                         <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
