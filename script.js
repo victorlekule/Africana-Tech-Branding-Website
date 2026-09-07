@@ -1,20 +1,20 @@
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brandBlue: '#136db6',  /* A vibrant, professional tech blue */
-                        brandBlack: '#0A0A0A', /* Deep black */
-                        brandWhite: '#F9FAFB',
-                        brandGreen: '#009444', /* Slightly off-white for better contrast */
-                    },
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                    }
-                }
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                brandBlue: '#136db6',  /* A vibrant, professional tech blue */
+                brandBlack: '#0A0A0A', /* Deep black */
+                brandWhite: '#F9FAFB',
+                brandGreen: '#009444', /* Slightly off-white for better contrast */
+            },
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
             }
         }
+    }
+}
 
- //header//
+//header//
 
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Select the container
@@ -27,80 +27,155 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Tech Solutions", url: "tech solution.html", subPages: ["cyber info.html", "computer.html", "network info.html", "web info.html", "ai training.html", "app info.html", "system.html", "corparate info.html", "electrical.html"] },
         { name: "Branding & Creative", url: "branding.html", subPages: ["copywriting.html", "digital marketing.html", "identity.html", "strategy.html", "ux design.html", "video.html", "social media.html", "3d.html"] },
         { name: "Portfolio", url: "portfolio.html", subPages: [] },
-        { name: "Blog", url: "blog.html", subPages: [] },
-        { name: "Contact Us", url: "contact.html", subPages: [] }
+        { name: "Blog", url: "blog.html", subPages: [] }
     ];
+
+    // Extract "Contact Us" to use it as the CTA button on the right
+    const contactLink = { name: "Contact Us", url: "contact.html", subPages: [] };
 
     // 3. Detect Current Page
     const pathParts = window.location.pathname.split(/[\/\\]/);
     const rawPath = pathParts[pathParts.length - 1] || "index.html";
-    const currentPath = decodeURIComponent(rawPath).toLowerCase().trim(); 
+    const currentPath = decodeURIComponent(rawPath).toLowerCase().trim();
 
     // 3A. Desktop Links
     const desktopNavItemsHtml = navLinks.map(link => {
         const isActive = currentPath === link.url.toLowerCase().trim() || link.subPages.some(page => currentPath === page.toLowerCase().trim());
-        
-        const activeClasses = isActive 
-            ? "text-yellow-400 border-yellow-400" 
-            : "text-brandWhite border-transparent hover:text-yellow-400 hover:border-yellow-400";
+        const hasSubPages = link.subPages.length > 0;
 
-        return `<li>
-            <a href="${link.url}" class="nav-link pb-1 border-b-2 transition-all duration-300 font-semibold text-base tracking-wide ${activeClasses}">
-                ${link.name}
-            </a>
-        </li>`;
+        // Active State: Purple text with bottom line
+        if (isActive) {
+            return `
+            <a href="${link.url}" class="relative flex flex-col items-center group cursor-pointer text-brandBlue text-base font-semibold tracking-wide">
+                <span>${link.name}</span>
+                <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-6 h-[2px] bg-brandBlue rounded-full"></span>
+            </a>`;
+        }
+        // Default State
+        else {
+            const chevron = hasSubPages ? `
+                <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>` : '';
+
+            return `
+            <a href="${link.url}" class="flex items-center text-[#4B5563] hover:text-[#111827] text-base font-medium tracking-wide group">
+                <span>${link.name}</span>
+                ${chevron}
+            </a>`;
+        }
     }).join('');
 
     // 3B. Mobile Links
-    const mobileNavItemsHtml = navLinks.map(link => {
-        const isActive = currentPath === link.url.toLowerCase().trim() || link.subPages.some(page => currentPath === page.toLowerCase().trim());
-        
-        // Active: Yellow text, yellow line on the backside (border-r-4), no background.
-        const activeClasses = isActive 
-            ? "text-yellow-400 border-r-4 border-yellow-400 bg-transparent" 
-            : "text-brandBlue border-r-4 border-transparent hover:text-blue-800 hover:bg-gray-50";
+    const allMobileLinks = [...navLinks, contactLink];
 
-        return `<li class="border-b border-gray-200 last:border-b-0 m-0 p-0">
-            <a href="${link.url}" class="mobile-nav-link block w-full transition-colors duration-300 font-semibold text-base tracking-wide py-4 px-6 ${activeClasses}">
+    const mobileNavItemsHtml = allMobileLinks.map(link => {
+        const isActive = currentPath === link.url.toLowerCase().trim() || link.subPages.some(page => currentPath === page.toLowerCase().trim());
+        const isContact = link.url === contactLink.url;
+
+        const activeClasses = isContact
+            ? "text-white bg-brandBlue border border-transparent rounded-full px-6 py-3 shadow-md hover:bg-brandBlack hover:text-white"
+            : isActive
+                ? "mobile-nav-link-active text-brandBlue bg-[#F5F3FF] border-l-4 border-brandBlue"
+                : "text-gray-600 border-l-4 border-transparent hover:text-gray-900 hover:bg-gray-50";
+
+        return `<li class="m-0 p-0 border-b border-gray-100 last:border-none">
+            <a href="${link.url}" class="mobile-nav-link inline-flex w-fit font-medium text-base tracking-wide ${isContact ? "" : "py-4 px-6"} ${activeClasses}">
                 ${link.name}
             </a>
         </li>`;
     }).join('');
 
-    // 4. Construct Header HTML (RESTORED EXACTLY TO YOUR ORIGINAL)
+    // 4. Construct Header HTML 
     const headerHtml = `
-        <header class="w-full bg-brandBlue shadow-md fixed top-0 z-50">
-            <div class="w-full px-4 md:px-8 py-5 xl:py-8 flex justify-between items-center">
+        <style>
+            .site-info-bar { min-height: 34px; background: #136db6; color: #F9FAFB; }
+            #mobile-menu-backdrop { top: 124px; }
+            @media (max-width: 767px) {
+                .site-info-bar { min-height: 34px; }
+                #mobile-menu-backdrop { top: 124px; }
+                .site-info-bar > div { flex-wrap: nowrap; justify-content: center; }
+                .site-info-contact { flex-wrap: nowrap; min-width: 0; width: 100%; justify-content: center; }
+                .site-info-location, .site-info-location-separator, .site-info-links { display: none; }
+                .site-info-whatsapp, .site-info-email { white-space: nowrap; font-size: 9px; }
+                .site-info-email { overflow: hidden; text-overflow: ellipsis; }
+            }
+        </style>
+        <header class="w-full fixed top-0 left-0 z-50 flex flex-col pointer-events-none">
+            <div class="site-info-bar text-[10px] sm:text-xs pointer-events-auto">
+                <div class="w-full px-2 sm:px-4 lg:px-5 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+                    <div class="site-info-contact flex flex-wrap items-center justify-start gap-x-4 gap-y-1">
+                        <a href="https://wa.me/255672743065" target="_blank" rel="noopener noreferrer" class="site-info-whatsapp inline-flex items-center gap-1.5 hover:text-white/75" aria-label="WhatsApp +255 672 743 065">
+                            <svg class="w-3.5 h-3.5 flex-none" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.8 9.8 0 00-8.5 14.7L2 22l5.5-1.4A9.8 9.8 0 1012 2zm0 17.8a8 8 0 01-4.1-1.1l-.3-.2-3.3.8.9-3.2-.2-.3A8 8 0 1112 19.8zm4.4-5.9c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1a6.8 6.8 0 01-2-1.2 7.6 7.6 0 01-1.4-1.7c-.1-.2 0-.3.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.3-.2-.5-.3z"></path></svg>
+                            +255 672 743 065
+                        </a>
+                        <span class="site-info-location-separator hidden sm:inline text-white/30">|</span>
+                        <span class="site-info-location inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5" stroke-width="2"></circle></svg>Mwanza, Tanzania</span>
+                        <span class="site-info-location-separator hidden sm:inline text-white/30">|</span>
+                        <a href="mailto:hello@africana-tech.com" class="site-info-email inline-flex items-center gap-1.5 hover:text-white/75"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9 6 9-6M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>hello@africana-tech.com</a>
+                    </div>
+                    <nav class="site-info-links flex items-center gap-3 sm:gap-4 ml-auto" aria-label="Legal links">
+                        <a href="privacy.html" class="hover:text-white/75">Privacy</a>
+                        <a href="contact.html#faq" class="hover:text-white/75">FAQs</a>
+                        <a href="portfolio.html" class="hover:text-white/75">Partners</a>
+                        <a href="terms.html" class="hover:text-white/75">Terms</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <nav class="relative w-full h-[90px] bg-white shadow-[0_4px_30px_-10px_rgba(0,0,0,0.08)] flex items-center justify-between px-4 lg:px-8 xl:px-12 overflow-hidden pointer-events-auto">
                 
-                <div class="flex-shrink-0 z-50 overflow-hidden">
-                    <a href="#" class="text-xl md:text-2xl font-bold text-brandWhite tracking-wide whitespace-nowrap">
-                        AFRICANA TECH COMPANY
-                    </a>
+                <div class="absolute left-0 top-0 bottom-0 w-[550px] pointer-events-none z-0">
+                    <svg width="100%" height="100%" viewBox="0 0 550 90" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0 H 360 C 440 0 380 90 480 90 H 0 V 0 Z" fill="#136db6" />
+                        <path d="M0 0 H 300 C 390 0 330 90 420 90 H 0 V 0 Z" fill="#fcfcfd" opacity="100"/>
+                    </svg>
                 </div>
 
-                <nav class="hidden xl:block">
-                    <ul class="flex space-x-8 items-center m-0 p-0">
-                        ${desktopNavItemsHtml}
-                    </ul>
-                </nav>
+             <div class="relative z-10 flex items-center flex-none pl-1 sm:pl-2">
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-brandBlue font-extrabold text-sm sm:text-base md:text-lg lg:text-sm xl:text-sm leading-tight tracking-wide whitespace-nowrap" style="word-spacing: 0.25em;">
+                            AFRICANA TECH & BRANDING LTD
+                        </h1>
+                        <p class="text-brandBlack text-xs text-center sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium tracking-wide mt-1 whitespace-nowrap">
+                            Innovate. Build. Transform.
+                        </p>
+                    </div>
+                </div>
 
-                <div class="xl:hidden flex items-center z-50">
-                    <button id="mobile-menu-btn" class="text-brandWhite hover:text-gray-200 focus:outline-none p-2 mr-[-8px]">
-                        <svg id="icon-open" class="w-7 h-7 block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <div class="hidden xl:flex items-center gap-8 bg-white rounded-full px-10 py-4 border border-blue-600 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(243,244,246,0.8)] relative z-10">
+                    ${desktopNavItemsHtml}
+                </div>
+
+                <div class="relative z-10 flex items-center gap-4 md:gap-5 flex-shrink-0">
+                    <a href="${contactLink.url}" class="hidden sm:flex items-center gap-2 bg-brandBlue text-white px-7 py-3.5 rounded-full text-[14px] font-semibold hover:shadow-[0_8px_20px_-6px_rgba(99,102,241,0.5)] hover:bg-brandBlack">
+                        ${contactLink.name}
+                        <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
-                        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    </a>
+
+                    <button id="mobile-menu-btn" class="xl:hidden relative flex-none inline-flex w-10 h-10 items-center justify-center text-white hover:text-white bg-transparent hover:bg-transparent p-2 rounded-full focus:outline-none">
+                        <!-- Hamburger icon (three lines) -->
+                        <svg id="icon-open" class="absolute top-1/2 left-1/2 w-6 h-6 block pr-[2px] -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <!-- Close icon (X) -->
+                        <svg id="icon-close" class="absolute top-1/2 left-1/2 w-6 h-6 hidden pr-[2px] -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
-            </div>
-            
-            <div id="mobile-menu" class="hidden xl:hidden absolute top-full left-0 bg-brandWhite shadow-xl border-b border-r border-gray-300 h-fit w-max overflow-hidden">
-                <ul class="flex flex-col m-0 p-0 list-none">
+            </nav>
+
+            <div id="mobile-menu-backdrop" class="hidden xl:hidden fixed top-[90px] right-0 bottom-0 left-0 z-40 bg-black/10 backdrop-blur-md pointer-events-auto"></div>
+
+            <div id="mobile-menu" class="hidden xl:hidden fixed top-[124px] left-0 z-50 w-fit max-w-full bg-white shadow-xl border-t border-gray-100 rounded-b-[10px] pb-2 overflow-hidden pointer-events-auto origin-top">
+                <ul class="flex w-fit max-w-full flex-col m-0 p-0 list-none">
                     ${mobileNavItemsHtml}
                 </ul>
             </div>
+            
         </header>
     `;
 
@@ -110,25 +185,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // 6. Interactive Logic for Mobile Toggle
     const mobileBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
     const iconOpen = document.getElementById("icon-open");
     const iconClose = document.getElementById("icon-close");
 
     mobileBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        mobileMenuBackdrop.classList.toggle("hidden");
         iconOpen.classList.toggle("hidden");
         iconOpen.classList.toggle("block");
         iconClose.classList.toggle("hidden");
         iconClose.classList.toggle("block");
     });
 
-    // 7. Active State & Auto-Close Logic (Simplified since URL handles active state)
+    mobileMenuBackdrop.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenuBackdrop.classList.add("hidden");
+        iconOpen.classList.remove("hidden");
+        iconOpen.classList.add("block");
+        iconClose.classList.remove("block");
+        iconClose.classList.add("hidden");
+    });
+
+    // 7. Active State & Auto-Close Logic
     const allLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-    
+
     allLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Closes menu when a link is clicked
+        link.addEventListener('click', function () {
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBackdrop.classList.add("hidden");
                 iconOpen.classList.remove("hidden");
                 iconOpen.classList.add("block");
                 iconClose.classList.remove("block");
@@ -138,13 +224,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
 //HOME PAGE//
 
 // --- SERVICES SLIDER LOGIC ---//
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const track = document.getElementById('track');
     const cards = track.querySelectorAll('.solution-card');
     const prevBtn = document.getElementById('prevBtn');
@@ -295,121 +383,121 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-    // 3. TESTIMONIAL SLIDER LOGIC//
+// 3. TESTIMONIAL SLIDER LOGIC//
 
-    const testSlides = document.querySelectorAll('.test-slide');
-    const testDots = document.querySelectorAll('.test-dot');
-    
-    if (testSlides.length > 0) {
-        let currentTestSlide = 0;
+const testSlides = document.querySelectorAll('.test-slide');
+const testDots = document.querySelectorAll('.test-dot');
 
-        function goToTestSlide(index) {
-            // Hide all slides
-            testSlides.forEach((slide, i) => {
-                slide.classList.remove('opacity-100', 'translate-x-0');
-                slide.classList.add('opacity-0');
-                
-                // Directional slide logic
-                if (i < index) {
-                    slide.classList.add('-translate-x-full');
-                    slide.classList.remove('translate-x-full');
-                } else if (i > index) {
-                    slide.classList.add('translate-x-full');
-                    slide.classList.remove('-translate-x-full');
-                }
-            });
+if (testSlides.length > 0) {
+    let currentTestSlide = 0;
 
-            // Show active slide
-            testSlides[index].classList.remove('opacity-0', 'translate-x-full', '-translate-x-full');
-            testSlides[index].classList.add('opacity-100', 'translate-x-0');
+    function goToTestSlide(index) {
+        // Hide all slides
+        testSlides.forEach((slide, i) => {
+            slide.classList.remove('opacity-100', 'translate-x-0');
+            slide.classList.add('opacity-0');
 
-            // Update dots
-            testDots.forEach(dot => {
-                dot.classList.remove('bg-brandBlue', 'scale-125');
-                dot.classList.add('bg-gray-300');
-            });
-            testDots[index].classList.remove('bg-gray-300');
-            testDots[index].classList.add('bg-brandBlue', 'scale-125');
-            
-            currentTestSlide = index;
-        }
-
-        // Add click events to dots
-        testDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToTestSlide(index);
-            });
+            // Directional slide logic
+            if (i < index) {
+                slide.classList.add('-translate-x-full');
+                slide.classList.remove('translate-x-full');
+            } else if (i > index) {
+                slide.classList.add('translate-x-full');
+                slide.classList.remove('-translate-x-full');
+            }
         });
 
-        // Auto slide every 6 seconds
-        setInterval(() => {
-            let nextSlide = (currentTestSlide + 1) % testSlides.length;
-            goToTestSlide(nextSlide);
-        }, 6000);
+        // Show active slide
+        testSlides[index].classList.remove('opacity-0', 'translate-x-full', '-translate-x-full');
+        testSlides[index].classList.add('opacity-100', 'translate-x-0');
+
+        // Update dots
+        testDots.forEach(dot => {
+            dot.classList.remove('bg-brandBlue', 'scale-125');
+            dot.classList.add('bg-gray-300');
+        });
+        testDots[index].classList.remove('bg-gray-300');
+        testDots[index].classList.add('bg-brandBlue', 'scale-125');
+
+        currentTestSlide = index;
     }
 
-
-
-    //tech servies//
-document.addEventListener("DOMContentLoaded", () => {
-            const openModalBtn = document.getElementById('openModalBtn');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const modal = document.getElementById('projectInquiryModal');
-            const checkboxes = document.querySelectorAll('.service-checkbox');
-
-            // Open Modal
-            if(openModalBtn) {
-                openModalBtn.addEventListener('click', () => {
-                    modal.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden'; // Stop background scrolling
-                });
-            }
-
-            // Close Modal
-            if(closeModalBtn) {
-                closeModalBtn.addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = 'auto'; // Restore scrolling
-                });
-            }
-
-            // Toggle dynamic fields when checkboxes are clicked
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    const targetId = this.getAttribute('data-detail');
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        if (this.checked) {
-                            targetElement.classList.remove('hidden');
-                        } else {
-                            targetElement.classList.add('hidden');
-                            // Optional: Reset the select value when hidden
-                            targetElement.querySelector('select').value = "";
-                        }
-                    }
-                });
-            });
+    // Add click events to dots
+    testDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToTestSlide(index);
         });
+    });
+
+    // Auto slide every 6 seconds
+    setInterval(() => {
+        let nextSlide = (currentTestSlide + 1) % testSlides.length;
+        goToTestSlide(nextSlide);
+    }, 6000);
+}
+
+
+
+//tech servies//
+document.addEventListener("DOMContentLoaded", () => {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('projectInquiryModal');
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+
+    // Open Modal
+    if (openModalBtn) {
+        openModalBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        });
+    }
+
+    // Close Modal
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+    }
+
+    // Toggle dynamic fields when checkboxes are clicked
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            const targetId = this.getAttribute('data-detail');
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                if (this.checked) {
+                    targetElement.classList.remove('hidden');
+                } else {
+                    targetElement.classList.add('hidden');
+                    // Optional: Reset the select value when hidden
+                    targetElement.querySelector('select').value = "";
+                }
+            }
+        });
+    });
+});
 
 
 
 //creative and branding services////
 document.addEventListener("DOMContentLoaded", () => {
-            const openModalBtn = document.getElementById('openModalBtn');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const modal = document.getElementById('projectInquiryModal');
-            const checkboxes = document.querySelectorAll('.service-checkbox');
-            if(openModalBtn) { openModalBtn.addEventListener('click', () => { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }); }
-            if(closeModalBtn) { closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); document.body.style.overflow = 'auto'; }); }
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    const targetId = this.getAttribute('data-detail');
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) { if (this.checked) { targetElement.classList.remove('hidden'); } else { targetElement.classList.add('hidden'); targetElement.querySelector('select').value = ""; } }
-                });
-            });
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('projectInquiryModal');
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+    if (openModalBtn) { openModalBtn.addEventListener('click', () => { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }); }
+    if (closeModalBtn) { closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); document.body.style.overflow = 'auto'; }); }
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            const targetId = this.getAttribute('data-detail');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) { if (this.checked) { targetElement.classList.remove('hidden'); } else { targetElement.classList.add('hidden'); targetElement.querySelector('select').value = ""; } }
         });
+    });
+});
 
 
 
@@ -428,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 b.classList.remove('bg-brandBlack', 'text-white', 'shadow-lg');
                 b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
             });
-            
+
             // Add active state to clicked button
             btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
             btn.classList.add('bg-brandBlack', 'text-white', 'shadow-lg');
@@ -458,39 +546,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // contact form validation//
 
- document.addEventListener('DOMContentLoaded', function() {
-            const subjectSelect = document.getElementById('subject');
-            const techGroup = document.getElementById('tech-topics-group');
-            const brandingGroup = document.getElementById('branding-topics-group');
-            const techSelect = document.getElementById('tech_topic');
-            const brandingSelect = document.getElementById('branding_topic');
+document.addEventListener('DOMContentLoaded', function () {
+    const subjectSelect = document.getElementById('subject');
+    const techGroup = document.getElementById('tech-topics-group');
+    const brandingGroup = document.getElementById('branding-topics-group');
+    const techSelect = document.getElementById('tech_topic');
+    const brandingSelect = document.getElementById('branding_topic');
 
-            subjectSelect.addEventListener('change', function() {
-                const value = this.value;
-                
-                // 1. Hide both groups by default on change
-                techGroup.classList.add('hidden');
-                brandingGroup.classList.add('hidden');
-                
-                // 2. Remove the "required" attribute so the form doesn't get stuck if they are hidden
-                techSelect.removeAttribute('required');
-                brandingSelect.removeAttribute('required');
+    subjectSelect.addEventListener('change', function () {
+        const value = this.value;
 
-                // 3. Show specific groups and make them required based on the selection
-                if (value === 'tech') {
-                    techGroup.classList.remove('hidden');
-                    techSelect.setAttribute('required', 'required');
-                } else if (value === 'branding') {
-                    brandingGroup.classList.remove('hidden');
-                    brandingSelect.setAttribute('required', 'required');
-                } else if (value === 'both') {
-                    techGroup.classList.remove('hidden');
-                    brandingGroup.classList.remove('hidden');
-                    techSelect.setAttribute('required', 'required');
-                    brandingSelect.setAttribute('required', 'required');
-                }
-            });
-        });
+        // 1. Hide both groups by default on change
+        techGroup.classList.add('hidden');
+        brandingGroup.classList.add('hidden');
+
+        // 2. Remove the "required" attribute so the form doesn't get stuck if they are hidden
+        techSelect.removeAttribute('required');
+        brandingSelect.removeAttribute('required');
+
+        // 3. Show specific groups and make them required based on the selection
+        if (value === 'tech') {
+            techGroup.classList.remove('hidden');
+            techSelect.setAttribute('required', 'required');
+        } else if (value === 'branding') {
+            brandingGroup.classList.remove('hidden');
+            brandingSelect.setAttribute('required', 'required');
+        } else if (value === 'both') {
+            techGroup.classList.remove('hidden');
+            brandingGroup.classList.remove('hidden');
+            techSelect.setAttribute('required', 'required');
+            brandingSelect.setAttribute('required', 'required');
+        }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const reveals = document.querySelectorAll('.reveal');
@@ -501,7 +589,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         reveals.forEach((reveal) => {
             const elementTop = reveal.getBoundingClientRect().top;
-            
+
             if (elementTop < windowHeight - elementVisible) {
                 reveal.classList.add('active');
             }
@@ -510,9 +598,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Listen for scroll events
     window.addEventListener('scroll', revealOnScroll);
-    
+
     // Trigger once on page load to catch anything already at the top
-    revealOnScroll(); 
+    revealOnScroll();
 });
 
 
@@ -521,34 +609,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // AWARD LIGHTBOX FUNCTIONS
-window.openAwardLightbox = function(imageSrc, captionText) {
+window.openAwardLightbox = function (imageSrc, captionText) {
     const modal = document.getElementById('awardLightbox');
     const img = document.getElementById('lightboxImage');
     const caption = document.getElementById('lightboxCaption');
-    
+
     img.src = imageSrc;
     caption.textContent = captionText;
-    
+
     modal.classList.remove('hidden');
     modal.classList.add('flex');
-    
+
     setTimeout(() => {
         modal.classList.remove('opacity-0');
         img.classList.remove('scale-95');
         img.classList.add('scale-100');
     }, 10);
-    
+
     document.body.style.overflow = 'hidden';
 };
 
-window.closeAwardLightbox = function() {
+window.closeAwardLightbox = function () {
     const modal = document.getElementById('awardLightbox');
     const img = document.getElementById('lightboxImage');
-    
+
     modal.classList.add('opacity-0');
     img.classList.remove('scale-100');
     img.classList.add('scale-95');
-    
+
     setTimeout(() => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
@@ -557,9 +645,9 @@ window.closeAwardLightbox = function() {
 };
 
 
-   
-  
-  
+
+
+
 
 
 //footer//
@@ -576,7 +664,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             <!-- About Section (Spans 2 columns on desktop, full width on tablet/mobile) -->
             <div class="col-span-2 md:col-span-4 lg:col-span-2 space-y-4 pr-0 lg:pr-6">
-                <h3 class="text-xl font-semibold text-white">Africana Tech</h3>
+                <h3 class="text-xl font-semibold text-white">Africana Tech & Branding Ltd</h3>
                 <p class="text-sm text-gray-400 leading-relaxed text-justify sm:text-left">
                     Born from a passion for African innovation, Africana Tech is a unified digital powerhouse. We deliver cutting-edge technology solutions that drive operational growth, ensure uncompromising data security, and establish an unforgettable digital presence. Whether we are architecting complex enterprise systems or crafting resonant brand identities, our mission is to equip ambitious businesses across Africa and beyond with the ultimate competitive edge.
                 </p>
@@ -709,7 +797,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div> 
         
         <div class="pt-8 text-center text-sm text-gray-400 font-medium">
-            <p>© 2026 Africana Tech Company. All rights reserved.</p>
+            <p>© 2026 Africana Tech & Branding Ltd. All rights reserved.</p>
             <div class="mt-3 flex justify-center items-center space-x-4">
                 <a href="privacy.html" class="hover:text-blue-500 hover:underline transition-all duration-300">Privacy Policy</a>
                 <span class="text-gray-600">|</span>

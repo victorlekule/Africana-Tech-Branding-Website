@@ -1,523 +1,1020 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Africana Insights | Tech & Branding Authority</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Africana Tech & Branding - Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .blog-prose p { margin-bottom: 1.6rem; line-height: 1.8; color: #374151; font-size: 1.05rem; }
-        .blog-prose h2 { font-size: 2rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.2rem; color: #0b0c0e; }
-        .blog-prose h3 { font-size: 1.5rem; font-weight: 700; color: #0b0c0e; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
-        .blog-prose .drop-cap::first-letter { font-size: 3.8rem; font-weight: 800; color: #0D8ABC; float: left; margin-right: 0.75rem; line-height: 1; }
-        .blog-prose ul { list-style-type: none; padding-left: 0; margin-bottom: 1.8rem; }
-        .blog-prose li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 12px; }
-        .blog-prose li i, .blog-prose li ion-icon { color: #0D8ABC; font-size: 1.3rem; margin-top: 4px; min-width: 24px; }
-        .blog-prose strong { color: #0D8ABC; }
-        .modal-scroll { scrollbar-width: thin; scrollbar-color: #0D8ABC #e5e7eb; }
-        .modal-scroll::-webkit-scrollbar { width: 6px; }
-        .modal-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
-        .modal-scroll::-webkit-scrollbar-thumb { background: #0D8ABC; border-radius: 10px; }
-        .hover-lift { transition: transform 0.25s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.15); }
-        
-        /* Modal overlay below header */
-        .modal-overlay-below {
-            top: 80px; /* header height */
-            height: calc(100% - 80px);
+        .prose h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #136db6;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
-        @media (min-width: 768px) {
-            .modal-overlay-below { top: 84px; height: calc(100% - 84px); }
+
+        .prose p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #4b5563;
         }
-        
-        /* Hide scrollbar for carousels */
-        .hide-scroll::-webkit-scrollbar { display: none; }
-        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-</head>
-<body class="font-sans bg-white text-gray-900 antialiased overflow-x-hidden">
 
-
-
-   <div id="header-container"></div>
-
-<section class="relative w-full flex items-center justify-center overflow-hidden bg-[#0A0A0A] py-16 sm:py-24 lg:py-28 mt-16 ">
-    
-    <!-- Circuit Board Knowledge Pattern -->
-    <div class="absolute inset-0 z-0 opacity-[0.05]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 30%, #136db6 1px, transparent 1px), radial-gradient(circle at 75% 70%, yellow 1px, transparent 1px); background-size: 55px 55px;"></div>
-        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(19,109,182,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(234,179,8,0.3) 1px, transparent 1px); background-size: 75px 75px;"></div>
-    </div>
-
-    <!-- Ambient Glow Orbs -->
-    <div class="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#136db6]/12 rounded-full blur-[130px] z-0 pointer-events-none animate-pulse"></div>
-    <div class="absolute bottom-0 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-yellow-400/8 rounded-full blur-[110px] z-0 pointer-events-none"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#009444]/5 rounded-full blur-[120px] z-0 pointer-events-none"></div>
-
-    <!-- Floating Knowledge Particles -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-[#136db6]/40 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
-        <div class="absolute top-1/3 right-[12%] w-1.5 h-1.5 bg-yellow-400/50 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
-        <div class="absolute bottom-1/3 left-[18%] w-1 h-1 bg-[#009444]/50 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
-        <div class="absolute bottom-1/4 right-[15%] w-2 h-2 bg-[#136db6]/30 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
-        <div class="absolute top-1/2 left-[55%] w-1.5 h-1.5 bg-white/25 rounded-full animate-pulse" style="animation-duration: 5s;"></div>
-    </div>
-
-    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
-        
-        <!-- Live Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 mb-6 sm:mb-8 backdrop-blur-sm reveal">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span>
-            </span>
-            <span class="text-yellow-400 font-bold tracking-widest uppercase text-[10px] sm:text-xs">Knowledge That Drives Growth</span>
-        </div>
-        
-        <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-[1.1] tracking-tight text-[#F9FAFB] reveal">
-            The Africana <br class="sm:hidden"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#136db6] via-[#009444] to-yellow-400">Insights Hub</span>
-        </h1>
-        
-        <!-- Description -->
-        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-0 reveal px-4 sm:px-0">
-            Master the intersection of 
-            <span class="text-yellow-400 font-semibold">technology</span>, 
-            <span class="text-white font-semibold">branding</span>, and 
-            <span class="text-yellow-400 font-semibold">security</span> — 
-            in‑depth guides, blueprints, and creative frameworks built to help you partner confidently with Africana.
-        </p>
-        
-    </div>
-    
-    <!-- Bottom Gradient Line -->
-    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-    
-</section>
-
-    <section class="py-20 md:py-28 border-b border-gray-200 bg-gray-50/50">
-        <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
-            <div class="flex flex-col md:flex-row items-center justify-between mb-14 md:mb-20">
-                <div class="text-center md:text-left mb-6 md:mb-0">
-                    <span class="text-[#0D8ABC] font-bold tracking-widest uppercase text-xs md:text-sm block mb-2"><i class="fas fa-microchip mr-1"></i> Engineering & Digital Infrastructure</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Tech Solutions</h2>
-                </div>
-                <div class="h-1 w-full md:w-max flex-grow ml-0 md:ml-8 bg-gradient-to-r from-[#0D8ABC]/20 to-transparent rounded-full"></div>
-            </div>
-
-            <div class="mb-10 md:mb-14 cursor-pointer group" onclick="openBlogModal('tech-1')">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row">
-                    <div class="w-full lg:w-3/5 h-64 md:h-96 relative overflow-hidden bg-gray-900">
-                        <img src="pic/website.jpg" alt="Website value" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
-                        <div class="absolute top-6 left-6 px-4 py-1.5 bg-[#0D8ABC] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg"><i class="fas fa-star mr-1"></i> Essential Read</div>
-                    </div>
-                    <div class="w-full lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
-                        <div class="flex items-center text-sm text-gray-400 mb-4 font-medium"><ion-icon name="calendar-outline" class="mr-2"></ion-icon> Oct 12, 2025 <span class="mx-3">•</span> <ion-icon name="time-outline" class="mr-2"></ion-icon> 6 min read</div>
-                        <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6 group-hover:text-[#0D8ABC] transition-colors leading-tight">Why a Website is Your 24/7 Sales Engine (Not Optional)</h3>
-                        <p class="text-base text-gray-600 mb-8 leading-relaxed">Relying only on social media? You're leaving credibility and revenue on the table. Discover how Africana builds conversion‑focused web presences that work while you sleep.</p>
-                        <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-gray-900 group-hover:bg-[#0D8ABC] text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">Read full article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative">
-                <div id="tech-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scroll pb-4 md:pb-0">
-                    <div onclick="openBlogModal('tech-2')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop" alt="Preparation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="far fa-clipboard mr-1"></i> Planning</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">Pre‑Project Checklist: What to Prepare Before Development</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Avoid delays and cost overruns. Africana’s battle‑tested preparation guide for content, branding assets, and competitor insights.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                    <div onclick="openBlogModal('tech-3')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="pic/payment.webp" alt="Payments" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-credit-card mr-1"></i> FinTech</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">Payment Integration for NGOs & E‑Commerce</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">From mobile money to international cards — we help you accept donations and payments securely.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                    <div onclick="openBlogModal('tech-4')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="pic/hacker.webp" alt="Security" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-red-500 text-white text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-shield-alt mr-1"></i> Security</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#0D8ABC] transition-colors leading-snug">How to Prevent Getting Hacked — Before It Happens</h3><p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-3">Africana’s proactive security playbook: limit login attempts, CDN shields, and staff awareness.</p><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-[#0D8ABC] text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-[#0D8ABC]">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center items-center gap-2 mt-4 md:hidden" id="tech-dots">
-                    <button class="w-6 h-2 rounded-full bg-[#0D8ABC] transition-all duration-300"></button>
-                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 max-w-7xl">
-            <div class="flex flex-col md:flex-row items-center justify-between mb-14 md:mb-20">
-                <div class="text-center md:text-left mb-6 md:mb-0">
-                    <span class="text-yellow-500 font-bold tracking-widest uppercase text-xs md:text-sm block mb-2"><i class="fas fa-paint-brush mr-1"></i> Design & Digital Marketing</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Branding & Creative</h2>
-                </div>
-                <div class="h-1 w-full md:w-max flex-grow ml-0 md:ml-8 bg-gradient-to-r from-yellow-400/30 to-transparent rounded-full"></div>
-            </div>
-
-            <div class="mb-10 md:mb-14 cursor-pointer group" onclick="openBlogModal('brand-1')">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-brandBlue hover:shadow-2xl transition-all duration-500 flex flex-col lg:flex-row-reverse">
-                    <div class="w-full lg:w-3/5 h-64 md:h-96 relative overflow-hidden bg-gray-900">
-                        <img src="pic/social post.webp" alt="Social timing" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-90">
-                        <div class="absolute top-6 right-6 px-4 py-1.5 bg-yellow-400 text-gray-900 text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg"><i class="far fa-clock mr-1"></i> Strategy</div>
-                    </div>
-                    <div class="w-full lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
-                        <div class="flex items-center text-sm text-gray-400 mb-4 font-medium"><ion-icon name="calendar-outline" class="mr-2"></ion-icon> Nov 03, 2025 <span class="mx-3">•</span> <ion-icon name="time-outline" class="mr-2"></ion-icon> 5 min read</div>
-                        <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6 group-hover:text-yellow-600 transition-colors leading-tight">Best Times to Post on Social Media (2025 Data)</h3>
-                        <p class="text-base text-gray-600 mb-8 leading-relaxed">Stop guessing. We analyzed engagement across platforms. Use this schedule to amplify your reach — a cornerstone of Africana’s managed services.</p>
-                        <button class="w-fit inline-flex items-center justify-center px-6 py-3 bg-gray-900 group-hover:bg-yellow-500 text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 shadow-md">Read full article <ion-icon name="book-outline" class="ml-2 text-lg"></ion-icon></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative">
-                <div id="brand-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scroll pb-4 md:pb-0">
-                    <div onclick="openBlogModal('brand-2')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&auto=format&fit=crop" alt="Tools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-tools mr-1"></i> Management</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-chart-line text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">Top Social Media Management Tools for Teams</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Africana’s curated stack: Buffer, Hootsuite, Canva, and native analytics. We compare features, pricing, and best use cases so you can streamline your workflow.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Scheduling & automation</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Team collaboration</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> In-depth analytics</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                    <div onclick="openBlogModal('brand-3')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="pic/campain.webp" alt="Campaign objectives" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-bullseye mr-1"></i> Paid Media</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-ad text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">Campaign Objectives: Sales vs Traffic vs Awareness</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Choosing the wrong objective wastes budget. Learn how Africana structures ad funnels for maximum ROI — with real case studies and benchmarks.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Conversion optimization</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Retargeting strategies</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> A/B testing ad creatives</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                    <div onclick="openBlogModal('brand-4')" class="w-[85vw] sm:w-[350px] md:w-auto flex-shrink-0 snap-center group bg-white rounded-2xl shadow-md border border-gray-100 hover-lift flex flex-col h-full overflow-hidden cursor-pointer">
-                        <div class="h-56 overflow-hidden relative bg-gray-900"><img src="pic/social media .webp" alt="Image sizes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"><div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded shadow-sm"><i class="fas fa-image mr-1"></i> Design Specs</div></div>
-                        <div class="p-6 md:p-7 flex flex-col flex-grow"><div class="flex items-start gap-2 mb-2"><i class="fas fa-crop-alt text-yellow-500 text-xl mt-1"></i><h3 class="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors leading-snug">2025 Social Media Image & Video Size Cheat Sheet</h3></div><p class="text-sm text-gray-600 mb-4 flex-grow">Never post a cropped logo again. Your definitive guide to perfect dimensions for Instagram, LinkedIn, TikTok, and more — curated by Africana designers.</p><ul class="text-xs text-gray-500 space-y-1 mb-4"><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Feed, Stories, Reels specs</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Aspect ratios & file types</li><li class="flex items-center gap-1"><i class="fas fa-check-circle text-yellow-500 text-xs"></i> Downloadable PDF</li></ul><div class="mt-auto pt-4"><span class="inline-flex items-center justify-center px-5 py-2.5 bg-gray-50 group-hover:bg-yellow-500 text-gray-900 group-hover:text-white font-bold text-sm rounded-xl transition-all duration-300 w-full border border-gray-200 group-hover:border-yellow-500">Read article <ion-icon name="arrow-forward" class="ml-2"></ion-icon></span></div></div>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center items-center gap-2 mt-4 md:hidden" id="brand-dots">
-                    <button class="w-6 h-2 rounded-full bg-yellow-500 transition-all duration-300"></button>
-                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-                    <button class="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="relative py-16 sm:py-24 mb-16 text-center overflow-hidden mb-24" style="background: linear-gradient(135deg, #0A0A0A 0%, #136db6 40%, #009444 100%);">
-    
-    <!-- Animated Grid Pattern -->
-    <div class="absolute inset-0 z-0 opacity-[0.05]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 30% 40%, #ffffff 1px, transparent 1px), radial-gradient(circle at 70% 60%, #ffffff 1px, transparent 1px); background-size: 50px 50px;"></div>
-    </div>
-
-    <!-- Glow Orbs -->
-    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[350px] h-[350px] bg-white/5 rounded-full blur-[100px] z-0 pointer-events-none"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#136db6]/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
-
-    <!-- Floating Particles -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="absolute top-1/4 left-[10%] w-2 h-2 bg-yellow-400/30 rounded-full animate-pulse" style="animation-duration: 3s;"></div>
-        <div class="absolute top-1/3 right-[15%] w-1.5 h-1.5 bg-white/30 rounded-full animate-bounce" style="animation-duration: 4s; animation-delay: 0.5s;"></div>
-        <div class="absolute bottom-1/3 left-[20%] w-1.5 h-1.5 bg-[#009444]/40 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 1s;"></div>
-        <div class="absolute bottom-1/4 right-[12%] w-2 h-2 bg-yellow-400/20 rounded-full animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.8s;"></div>
-    </div>
-
-    <div class="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
-        
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-400 border border-yellow-400/30 mb-6 sm:mb-8 backdrop-blur-sm reveal">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span>
-            </span>
-            <span class="text-black font-bold tracking-widest uppercase text-[10px] sm:text-xs">Let's Build Together</span>
-        </div>
-        
-        <!-- Heading -->
-        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-5 tracking-tight leading-[1.15] reveal">
-            Ready to Build with <span class="text-yellow-400">Africana</span>?
-        </h2>
-        
-        <!-- Description -->
-        <p class="text-base sm:text-lg text-white mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed reveal px-4 sm:px-0">
-            Our blog is just the start. Let's turn <span class="text-yellow-400 font-semibold">insights into impact</span> — 
-            from <span class="text-white font-semibold">secure websites</span> to 
-            <span class="text-yellow-400 font-semibold">unforgettable brands</span>.
-        </p>
-        
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 reveal">
-            
-            <!-- Primary CTA -->
-            <a href="contact.html" class="w-full sm:w-auto group relative inline-flex items-center justify-center px-7 py-3.5 sm:px-10 sm:py-4 bg-yellow-400 text-[#0A0A0A] text-sm sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.5)]">
-                <span class="relative z-10 flex items-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    Start a Project
-                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                    </svg>
-                </span>
-            </a>
-            
-            <!-- Secondary CTA -->
-            <a href="contact.html" class="w-full sm:w-auto group inline-flex items-center justify-center px-7 py-3.5 sm:px-10 sm:py-4 bg-transparent border-2 border-white/25 text-white text-sm sm:text-lg font-bold rounded-xl hover:border-yellow-400 hover:bg-white/5 transition-all duration-300 hover:scale-105">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                Contact Our Team
-            </a>
-            
-        </div>
-        
-        <!-- Trust Indicators -->
-        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/8 reveal">
-            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
-                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Free Consultation
-            </div>
-            <div class="w-px h-4 bg-yellow-400 hidden sm:block"></div>
-            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
-                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                No Obligation
-            </div>
-            <div class="w-px h-4 bg-yellow-400 hidden sm:block"></div>
-            <div class="flex items-center gap-2 text-yellow-400 text-xs sm:text-sm">
-                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                24hr Response Time
-            </div>
-        </div>
-        
-    </div>
-    
-    <!-- Bottom Gradient Line -->
-    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-    
-</section>
-
-
-
-    <div id="blog-modal-overlay" class="fixed left-0 w-full bg-gray-900/90 backdrop-blur-md z-40 hidden flex-col items-center justify-start modal-overlay-below overflow-y-auto">
-        <div class="w-full max-w-4xl mx-auto py-6 sm:py-10 px-4 sm:px-6">
-            <div id="blog-modal-box" class="bg-gray-50 rounded-3xl shadow-2xl transform transition-all duration-500 opacity-0 translate-y-8 flex flex-col relative overflow-hidden border border-white/20 w-full">
-                <button onclick="closeBlogModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 bg-white/90 hover:bg-red-500 hover:text-white text-gray-900 backdrop-blur-md rounded-full flex items-center justify-center transition-all duration-300 z-50 shadow-lg"><ion-icon name="close" class="text-2xl"></ion-icon></button>
-                <div class="w-full h-64 sm:h-[400px] relative bg-gray-900"><img id="modal-hero-image" src="" alt="Blog Hero" class="w-full h-full object-cover opacity-90"></div>
-                <div class="relative max-w-3xl mx-auto w-full bg-white rounded-t-3xl sm:rounded-3xl -mt-12 sm:-mt-20 p-8 sm:p-14 shadow-xl border border-gray-100">
-                    <div class="flex flex-wrap items-center gap-4 mb-6"><span id="modal-category" class="px-4 py-1.5 rounded-full bg-[#0D8ABC]/10 text-[#0D8ABC] text-xs font-extrabold uppercase tracking-widest">Category</span><div class="flex items-center text-gray-400 text-sm font-medium"><ion-icon name="time-outline" class="mr-1.5 text-lg"></ion-icon> <span id="modal-readtime">5 min read</span></div></div>
-                    <h2 id="modal-title" class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-8">Article Title</h2>
-                    <div class="flex items-center border-t border-b border-gray-100 py-5 mb-10"><img src="https://ui-avatars.com/api/?name=Africana+Team&background=0D8ABC&color=fff&bold=true" alt="Author" class="w-12 h-12 rounded-full mr-4 border border-gray-200"><div><p class="font-bold text-gray-900 text-sm sm:text-base">Africana Editorial</p><p class="text-xs sm:text-sm text-gray-500">Tech & Branding Strategists</p></div></div>
-                    <div id="modal-content" class="blog-prose mb-12"></div>
-                    <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center pb-4 gap-4"><p class="text-sm text-gray-400 font-medium"><i class="far fa-lightbulb mr-1"></i> Knowledge from Africana</p><button onclick="closeBlogModal()" class="w-full sm:w-auto px-8 py-4 bg-gray-900 hover:bg-[#0D8ABC] text-white font-bold text-sm uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg"><ion-icon name="arrow-back-circle" class="mr-3 text-2xl"></ion-icon> Back to articles</button></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-     <div id="footer-container"></div>
-    <script src="script.js"></script>
-    
-    <script>
-               
-        const blogArticles = {
-            'tech-1': { hero: 'pic/website.jpg', category: 'Digital Presence', readtime: '6 min read', title: 'Why a Website is Your 24/7 Sales Engine (Not Optional)', content: `
-                <p class="drop-cap"><strong>Africana Tech & Branding Ltd</strong> has witnessed countless businesses underestimate the power of a dedicated website. Social media is a rented space — algorithms change, reach declines, but your website is an asset you control.</p>
-                <h3><i class="fas fa-shield-alt text-[#0D8ABC]"></i> Credibility & Trust</h3>
-                <p>Studies show 75% of consumers judge a company’s credibility based on website design. Africana builds fast, mobile‑first sites that convey authority from the first click. A professional site with SSL, clear branding, and testimonials instantly elevates your business above competitors who rely only on social pages.</p>
-                <h3><i class="fas fa-chart-line text-[#0D8ABC]"></i> 24/7 Lead Generation</h3>
-                <p>Unlike a physical store, your website never closes. With proper SEO and clear CTAs, it becomes a lead magnet. We integrate analytics so you see exactly where clients come from. Our clients average a 40% increase in qualified leads within 3 months of launch.</p>
-                <h3><i class="fas fa-palette text-[#0D8ABC]"></i> Showcase Your Brand Story</h3>
-                <p>Africana’s branding division ensures your site reflects your unique identity. From color psychology to user journey, we craft experiences that convert visitors into loyal customers. A website is your most powerful storytelling tool — use it to share your mission, values, and success stories.</p>
-                <p><strong>Partner with Africana:</strong> Let’s audit your current digital footprint and build a website that works as hard as you do. <i class="fas fa-arrow-right text-[#0D8ABC] ml-1"></i></p>
-            `},
-            'tech-2': { hero: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop', category: 'Project Prep', readtime: '5 min read', title: 'Pre‑Project Checklist: What to Prepare Before Development', content: `
-                <p>Before a single line of code is written, Africana’s project managers walk clients through this essential checklist to ensure timelines and budgets stay on track.</p>
-                <h3><i class="fas fa-folder-open text-[#0D8ABC]"></i> Brand Assets</h3>
-                <p>High-resolution logos, brand guidelines, and color codes. Missing these? Our design team can create a cohesive identity in under 2 weeks.</p>
-                <h3><i class="fas fa-file-alt text-[#0D8ABC]"></i> Content Outline</h3>
-                <p>At minimum, have a clear sitemap and draft copy. We offer copywriting services to fill gaps — 80% of clients use our content support to speed up launch.</p>
-                <h3><i class="fas fa-binoculars text-[#0D8ABC]"></i> Competitor & Inspiration</h3>
-                <p>Share 3-5 websites you admire. This helps our UI/UX experts align with your vision while avoiding common pitfalls.</p>
-                <h3><i class="fas fa-money-bill-wave text-[#0D8ABC]"></i> Budget & Timeline</h3>
-                <p>Define your must‑haves vs. nice‑to‑haves. Africana provides transparent cost breakdowns and phased delivery options.</p>
-                <p>With Africana, you’re never alone. We guide you through every step, turning ambiguity into a structured roadmap.</p>
-            `},
-            'tech-3': { hero: 'pic/payment.webp', category: 'FinTech', readtime: '5 min read', title: 'Payment Integration for NGOs & E‑Commerce', content: `
-                <p>Whether you're a non‑profit collecting donations or a retailer, secure payments are non‑negotiable. Africana Tech & Branding Ltd integrates with <strong>Flutterwave, Stripe, PayPal, and mobile money</strong> across Africa.</p>
-                <h3><i class="fas fa-hand-holding-heart text-[#0D8ABC]"></i> NGO Specifics</h3>
-                <p>We set up recurring donation options and transparent reporting dashboards. Donors appreciate seamless, trustworthy transactions — and we help you issue automated receipts.</p>
-                <h3><i class="fas fa-shopping-cart text-[#0D8ABC]"></i> E‑Commerce Excellence</h3>
-                <p>From inventory sync to abandoned cart recovery, we ensure your payment gateway converts. Plus, we handle PCI compliance and multi‑currency support.</p>
-                <h3><i class="fas fa-mobile-alt text-[#0D8ABC]"></i> Mobile Money & Local Methods</h3>
-                <p>In many African markets, mobile money is king. We integrate M‑Pesa, MTN Mobile Money, and more, boosting conversion by up to 60%.</p>
-                <p>Let’s discuss your payment needs — our team will recommend the most cost‑effective stack.</p>
-            `},
-            'tech-4': { hero: 'pic/hacker.webp', category: 'Cybersecurity', readtime: '6 min read', title: 'How to Prevent Getting Hacked — Before It Happens', content: `
-                <p>At Africana, security isn't an afterthought. We implement layered defenses to keep your data safe.</p>
-                <h3><i class="fas fa-lock text-[#0D8ABC]"></i> Limit Login Attempts & 2FA</h3>
-                <p>Brute force attacks are common. We configure rate limiting and enforce two‑factor authentication for all admin accounts.</p>
-                <h3><i class="fas fa-globe text-[#0D8ABC]"></i> CDN & Web Application Firewall</h3>
-                <p>Using Cloudflare or similar, we shield your site from DDoS attacks and filter malicious traffic. Our stack includes automatic patching and malware scanning.</p>
-                <h3><i class="fas fa-users text-[#0D8ABC]"></i> Staff Training</h3>
-                <p>Human error is the biggest vulnerability. We offer training modules on phishing, password hygiene, and safe browsing.</p>
-                <h3><i class="fas fa-history text-[#0D8ABC]"></i> Backup & Recovery</h3>
-                <p>Daily off‑site backups ensure you can restore within minutes. Peace of mind included.</p>
-                <p><strong>Protect your investment.</strong> Ask about our security maintenance packages.</p>
-            `},
-            'brand-1': { hero: 'pic/social post.webp', category: 'Social Strategy', readtime: '5 min read', title: 'Best Times to Post on Social Media (2025 Data)', content: `
-                <p class="drop-cap"><strong>Timing is a critical lever in social media success.</strong> Africana’s data team analyzed over 3 million interactions across African and global audiences. The findings? Posting during peak engagement windows can increase reach by up to 40%.</p>
-                <h3><i class="fab fa-instagram text-[#0D8ABC]"></i> Instagram</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Tuesday, Wednesday, Friday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 9–11 AM and 4–6 PM (local time)</li></ul>
-                <h3><i class="fab fa-linkedin text-[#0D8ABC]"></i> LinkedIn</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Wednesday and Thursday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 8–10 AM, 12–2 PM</li></ul>
-                <h3><i class="fab fa-tiktok text-[#0D8ABC]"></i> TikTok</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Best days:</strong> Thursday through Sunday</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Peak hours:</strong> 7–9 PM and weekends</li></ul>
-                <h3><i class="fas fa-calendar-alt text-[#0D8ABC]"></i> Consistency Over Perfection</h3>
-                <p>While timing matters, a consistent posting schedule (3‑5x per week) builds algorithmic trust. Africana’s managed service combines optimal scheduling with compelling content calendars.</p>
-                <p><strong>Let’s maximize your organic reach.</strong> Book a social audit today.</p>
-            `},
-            'brand-2': { hero: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&auto=format&fit=crop', category: 'Productivity & Tools', readtime: '6 min read', title: 'Top Social Media Management Tools for Teams', content: `
-                <p>Managing multiple platforms without the right tools leads to burnout and missed opportunities. Africana’s social media managers rely on a curated stack that balances automation, creativity, and analytics.</p>
-                <h3><i class="fas fa-calendar-alt text-[#0D8ABC]"></i> Scheduling & Publishing</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Buffer:</strong> Intuitive queue, ideal for small teams. Best for straightforward scheduling.</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Hootsuite:</strong> Advanced monitoring and team workflows. Great for agencies.</li></ul>
-                <h3><i class="fas fa-chart-pie text-[#0D8ABC]"></i> Analytics & Reporting</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Meta Business Suite:</strong> Native insights for Facebook/Instagram (free).</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Sprout Social:</strong> Enterprise-grade listening and reporting with ROI tracking.</li></ul>
-                <h3><i class="fas fa-pen-fancy text-[#0D8ABC]"></i> Design & Collaboration</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Canva Pro:</strong> On‑brand templates and real‑time collaboration. Africana provides custom brand kits.</li><li><i class="fas fa-check-circle text-yellow-500"></i> <strong>Figma:</strong> For custom graphics and social assets (our design team's favorite).</li></ul>
-                <p>Africana can set up and train your team on the best stack for your goals — saving hours each week.</p>
-            `},
-            'brand-3': { hero: 'pic/campain.webp', category: 'Advertising Strategy', readtime: '6 min read', title: 'Campaign Objectives: Sales vs Traffic vs Awareness', content: `
-                <p>Selecting the wrong objective in Ads Manager is the #1 budget killer. Africana’s media buyers break down exactly when to use each option to hit your KPIs.</p>
-                <h3><i class="fas fa-shopping-cart text-[#0D8ABC]"></i> Sales / Conversion</h3>
-                <p>Use when you have a clear purchase or lead event. We optimize for <strong>lowest cost per acquisition</strong> using pixel data and custom audiences. Typical ROAS we achieve: 3x–7x.</p>
-                <h3><i class="fas fa-mouse-pointer text-[#0D8ABC]"></i> Traffic</h3>
-                <p>Ideal for content distribution, blog promotion, or warming up cold audiences. Africana often layers traffic campaigns before retargeting to build remarketing pools.</p>
-                <h3><i class="fas fa-eye text-[#0D8ABC]"></i> Awareness / Reach</h3>
-                <p>Top‑of‑funnel: new product launches, brand storytelling. We combine with frequency caps to avoid ad fatigue and use video views to create engaged audiences.</p>
-                <h3><i class="fas fa-chart-bar text-[#0D8ABC]"></i> Pro Tip: Funnel Alignment</h3>
-                <p>Always align objective with your funnel stage. Africana builds custom media plans that connect awareness to revenue, with clear attribution models.</p>
-            `},
-            'brand-4': { hero: 'pic/social post.webp', category: 'Design Specifications', readtime: '3 min read', title: '2025 Social Media Image & Video Size Cheat Sheet', content: `
-                <p>Africana designers keep this guide pinned. Bookmark it to ensure your visuals always look professional.</p>
-                <h3><i class="fab fa-instagram text-[#0D8ABC]"></i> Instagram</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Feed post (square): 1080 x 1080 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Portrait: 1080 x 1350 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Stories/Reels: 1080 x 1920 px (9:16)</li></ul>
-                <h3><i class="fab fa-linkedin text-[#0D8ABC]"></i> LinkedIn</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Company Page cover: 1128 x 191 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Post image: 1200 x 627 px (1.91:1)</li></ul>
-                <h3><i class="fab fa-facebook text-[#0D8ABC]"></i> Facebook</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Feed image: 1200 x 630 px</li><li><i class="fas fa-check-circle text-yellow-500"></i> Event cover: 1920 x 1080 px</li></ul>
-                <h3><i class="fab fa-tiktok text-[#0D8ABC]"></i> TikTok & YouTube Shorts</h3>
-                <ul><li><i class="fas fa-check-circle text-yellow-500"></i> Vertical video: 1080 x 1920 px, 9:16, MP4/MOV</li></ul>
-                <p>Need custom templates? Africana’s branding team creates a library tailored to your identity — ensuring consistency across every channel.</p>
-            `}
-        };
-
-        const overlay = document.getElementById('blog-modal-overlay');
-        const modalBox = document.getElementById('blog-modal-box');
-        const modalHero = document.getElementById('modal-hero-image');
-        const modalCat = document.getElementById('modal-category');
-        const modalReadtime = document.getElementById('modal-readtime');
-        const modalTitle = document.getElementById('modal-title');
-        const modalContent = document.getElementById('modal-content');
-
-        function openBlogModal(articleId) {
-            const article = blogArticles[articleId];
-            if (!article) return;
-            modalHero.src = article.hero;
-            modalCat.textContent = article.category;
-            modalReadtime.textContent = article.readtime;
-            modalTitle.textContent = article.title;
-            modalContent.innerHTML = article.content;
-            overlay.classList.remove('hidden');
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            setTimeout(() => { modalBox.classList.remove('opacity-0', 'translate-y-8'); modalBox.classList.add('opacity-100', 'translate-y-0'); }, 10);
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
         }
-        function closeBlogModal() {
-            modalBox.classList.add('opacity-0', 'translate-y-8');
-            modalBox.classList.remove('opacity-100', 'translate-y-0');
-            setTimeout(() => { overlay.classList.add('hidden'); overlay.style.display = 'none'; document.body.style.overflow = ''; modalContent.innerHTML = ''; }, 300);
+
+        .prose li {
+            margin-bottom: 0.5rem;
         }
-        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeBlogModal(); });
-        window.openBlogModal = openBlogModal;
-        window.closeBlogModal = closeBlogModal;
-        
-        function setupMobileCarousel(carouselId, dotsId, activeColorClass) {
-            const carousel = document.getElementById(carouselId);
-            const dotsContainer = document.getElementById(dotsId);
-            if (!carousel || !dotsContainer) return;
 
-            const dots = dotsContainer.querySelectorAll('button');
-            let currentIndex = 0;
-            let interval;
+        .prose strong {
+            color: #111827;
+        }
 
-            // Sync dots when user manually swipes
-            carousel.addEventListener('scroll', () => {
-                if (window.innerWidth >= 768) return; // Desktop uses grid
-                const scrollPos = carousel.scrollLeft;
-                // Get width of card + gap
-                const cardWidth = carousel.firstElementChild.offsetWidth + 24; 
-                currentIndex = Math.round(scrollPos / cardWidth);
-                
-                dots.forEach((dot, i) => {
-                    if (i === currentIndex) {
-                        dot.className = `w-6 h-2 rounded-full ${activeColorClass} transition-all duration-300`;
-                    } else {
-                        dot.className = `w-2 h-2 rounded-full bg-gray-300 transition-all duration-300`;
-                    }
-                });
-            });
+        #blog-mobile-pagination {
+            display: none;
+        }
 
-            // Automatically animate right to left
-            function startAutoPlay() {
-                if (window.innerWidth >= 768) return;
-                interval = setInterval(() => {
-                    const cardWidth = carousel.firstElementChild.offsetWidth + 24;
-                    currentIndex++;
-                    
-                    if (currentIndex >= dots.length) {
-                        currentIndex = 0;
-                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
-                    } else {
-                        carousel.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
-                    }
-                }, 3500); // changes card every 3.5 seconds
+        @keyframes blogSlideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(32px);
             }
 
-            startAutoPlay();
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-            // Pause the animation if the user touches it so they can read/click
-            carousel.addEventListener('touchstart', () => clearInterval(interval), { passive: true });
-            carousel.addEventListener('touchend', () => {
-                clearInterval(interval);
-                setTimeout(startAutoPlay, 1000); // Resume 1 second after touch ends
+        @media (max-width: 767px) {
+            #blog-grid {
+                display: block;
+            }
+
+            #blog-grid .blog-mobile-slide {
+                animation: blogSlideInFromRight 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
+            }
+
+            #blog-grid {
+                touch-action: pan-y;
+            }
+
+            #blog-mobile-pagination {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+                min-height: 28px;
+                margin-top: 20px;
+            }
+
+            #blog-mobile-pagination .blog-mobile-dot {
+                width: 8px;
+                height: 8px;
+                padding: 0;
+                border: 0;
+                border-radius: 999px;
+                background: #cbd5e1;
+                cursor: pointer;
+                transition: width 180ms ease, background-color 180ms ease;
+            }
+
+            #blog-mobile-pagination .blog-mobile-dot.is-active {
+                width: 22px;
+                background: #136db6;
+            }
+
+            #blog-mobile-pagination .blog-mobile-dot:focus-visible {
+                outline: 2px solid #136db6;
+                outline-offset: 3px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #blog-grid .blog-mobile-slide {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <div id="header-container"></div>
+
+
+    <!-- MODERN HERO -->
+    <section class="relative overflow-hidden bg-brandBlack text-white">
+        <!-- Animated gradient background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,#136db6_0%,transparent_50%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,#009444_0%,transparent_50%)]">
+            </div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#0A0A0A_0%,transparent_70%)]"></div>
+        </div>
+
+        <!-- Floating orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brandBlue/30 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-brandGreen/20 rounded-full blur-3xl animate-pulse"
+            style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-40 h-40 bg-yellow-400/20 rounded-full blur-2xl animate-bounce"></div>
+
+        <!-- Subtle grid overlay -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 60px 60px;">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left content -->
+                <div class="text-center lg:text-left">
+                    <!-- Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
+                        <span class="h-2 w-2 rounded-full bg-yellow-400 animate-ping"></span>
+                        <span class="text-xs font-semibold tracking-widest uppercase text-yellow-400">Knowledge
+                            Hub</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-[1.1] mb-6">
+                        <span class="text-white">Grow Your</span><br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-brandBlue to-brandGreen">Business
+                            With</span><br>
+                        <span class="text-white">Expert Insights</span>
+                    </h1>
+
+                    <!-- Subtext -->
+                    <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Practical guides on technology, branding, digital marketing, and business growth for Tanzanian
+                        and East
+                        African businesses.
+                    </p>
+
+                    <!-- Search bar -->
+                    <div class="max-w-xl mx-auto lg:mx-0">
+                        <div
+                            class="flex items-center bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md focus-within:border-yellow-400 transition">
+                            <svg class="w-5 h-5 ml-4 text-gray-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <input type="text" id="searchInputHero" placeholder="Search articles..."
+                                class="w-full px-4 py-4 bg-transparent text-white placeholder-gray-400 focus:outline-none">
+                            <button id="searchButtonHero" type="button"
+                                class="mr-2 px-6 py-3 bg-yellow-400 text-brandBlack font-bold rounded-xl hover:bg-yellow-300 transition">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right featured card -->
+                <div class="hidden lg:block">
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-md shadow-2xl hover:bg-white/10 transition">
+                        <p class="text-sm text-gray-400 mb-2">Featured Article</p>
+                        <h3 class="text-xl font-bold text-white mb-3">Why Every Tanzanian Business Needs a Website in
+                            2026</h3>
+                        <p class="text-gray-300 text-sm mb-4">Still relying only on Facebook? Here's why a real website
+                            is now
+                            essential for Tanzanian businesses — and what it costs to get one right.</p>
+                        <a href="#" onclick="openArticle(1); return false;"
+                            class="inline-flex items-center gap-2 text-yellow-400 font-semibold hover:gap-3 transition-all">
+                            Read Article
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom gradient line -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent">
+        </div>
+    </section>
+
+    <main class="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-5 py-12">
+        <div id="view-index" class="block">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Insights & Strategy</h2>
+                <p class="text-lg text-slate-600">Actionable advice on branding, web technology, and digital marketing
+                    for
+                    businesses in Tanzania and East Africa.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
+                <button onclick="filterCategory('All')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-[#136db6] text-white shadow-md transition-all">All</button>
+                <button onclick="filterCategory('Technology')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Technology</button>
+                <button onclick="filterCategory('Branding')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Branding</button>
+                <button onclick="filterCategory('Digital Marketing')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Digital
+                    Marketing</button>
+                <button onclick="filterCategory('Design')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Design</button>
+                <button onclick="filterCategory('Business Growth')"
+                    class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Business
+                    Growth</button>
+            </div>
+
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+            <div id="blog-mobile-pagination" aria-label="Blog posts pagination"></div>
+        </div>
+
+        <div id="view-article"
+            class="hidden max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100">
+            <button onclick="showView('index')"
+                class="flex items-center text-sm font-semibold text-[#136db6] hover:text-[#136db6] mb-8 group transition-colors">
+                <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Articles
+            </button>
+
+            <div class="mb-8 border-b border-slate-100 pb-8">
+                <span id="article-category"
+                    class="inline-block px-3 py-1 bg-[#136db6]/10 text-[#136db6] rounded-full text-xs font-bold tracking-wide uppercase mb-4">Category</span>
+                <h1 id="article-title" class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
+                    Title</h1>
+                <p id="article-meta" class="text-lg text-slate-500 italic">Meta Description</p>
+            </div>
+
+            <div id="article-content" class="prose max-w-none"></div>
+
+            <div
+                class="mt-16 bg-gradient-to-br from-[#0A0A0A] to-[#136db6] rounded-2xl p-8 md:p-10 text-center shadow-lg border border-[#136db6] relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight">Ready to elevate your
+                        business?
+                    </h3>
+                    <p class="text-[#F9FAFB] text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Whether you need a high-performing website, a professional corporate identity, or a digital
+                        marketing
+                        strategy that actually drives sales, <strong>Africana Tech & Branding Ltd</strong> is here to
+                        help your
+                        business stand out in Tanzania and beyond.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html"
+                            class="inline-flex justify-center items-center px-8 py-3.5 text-sm md:text-base font-bold text-[#0A0A0A] bg-white hover:bg-gray-50 rounded-full shadow-md transition-transform hover:-translate-y-1 duration-200">Get
+                            a Free Consultation</a>
+                        <a href="portfolio.html"
+                            class="inline-flex justify-center items-center px-8 py-3.5 text-sm md:text-base font-bold text-white border-2 border-white/30 hover:border-white hover:bg-white/10 rounded-full transition-colors duration-200">View
+                            Our Portfolio</a>
+                    </div>
+                    <button type="button" onclick="showView('index')"
+                        class="inline-flex items-center justify-center mt-6 text-sm font-semibold text-white/80 hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Articles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const posts = [
+            // ================== TECHNOLOGY PILLAR (1-10) ==================
+            {
+                id: 1, category: "Technology",
+                title: "Why Every Tanzanian Business Needs a Website in 2026 (Not Just a Facebook Page)",
+                meta: "Still relying only on Facebook? Here's why a real website is now essential for Tanzanian businesses — and what it costs to get one right.",
+                content: `
+                    <h3>Introduction</h3>
+                    <p>Talk to almost any small business owner in Arusha, Mwanza, or Dar es Salaam, and you'll hear some version of the same thing: "I don't need a website, I have a Facebook page." A few years ago, that argument had some weight to it. Today, it doesn't hold up the way it used to — and the businesses that figure this out first are the ones quietly pulling ahead of their competitors.</p>
+                    <p>This isn't about chasing trends. It's about what actually happens when a potential customer tries to check you out before doing business with you.</p>
+                    <h3>The Facebook page isn't yours</h3>
+                    <p>Here's the uncomfortable truth: your Facebook page can disappear tomorrow. An algorithm change, a hacked account, a policy update you never read — and years of posts, reviews, and followers can vanish or become invisible overnight. You don't own that page. You're renting space on someone else's platform, on someone else's terms.</p>
+                    <h3>A website signals credibility</h3>
+                    <p>Fairly or not, people judge a business by its online presence. An international client, a bank considering a loan application, or a partner organization doing due diligence will look for a professional website before they take you seriously.</p>
+                `
+            },
+            {
+                id: 2, category: "Technology",
+                title: "The Real Cost of Ignoring Cybersecurity as a Small Business in Tanzania",
+                meta: "Cyberattacks aren't just a 'big company' problem. Here's what Tanzanian SMEs stand to lose — and simple steps to protect your business today.",
+                content: `
+                    <h3>Introduction</h3>
+                    <p>"Why would anyone hack us? We're a small business." We hear this a lot, and it's one of the most expensive assumptions a business owner can make.</p>
+                    <h3>Simple steps that actually make a difference</h3>
+                    <ul>
+                        <li><strong>Use strong, unique passwords — and a password manager.</strong></li>
+                        <li><strong>Turn on two-factor authentication everywhere it's offered.</strong></li>
+                        <li><strong>Back up your data regularly.</strong></li>
+                        <li><strong>Train your team to slow down before clicking.</strong></li>
+                    </ul>
+                `
+            },
+            {
+                id: 3, category: "Technology",
+                title: "Cloud Computing Explained: What Tanzanian SMEs Need to Know Before Switching",
+                meta: "Thinking of moving your business data to the cloud? Here's a plain-language guide for Tanzanian business owners, no tech jargon included.",
+                content: `
+                    <h3>What Is the Cloud?</h3>
+                    <p>Cloud computing refers to storing and accessing data and programs over the internet instead of on your computer's hard drive. For Tanzanian small and medium enterprises (SMEs), transitioning to cloud infrastructure means eliminating reliance on fragile physical servers and reducing costly hardware maintenance.</p>
+                    <h3>Key Benefits for Growing Businesses</h3>
+                    <ul>
+                        <li><strong>Remote Accessibility:</strong> Access your company financial records, customer database, and operational documents from anywhere in East Africa.</li>
+                        <li><strong>Scalability:</strong> Instantly upgrade storage or processing power as your enterprise expands without purchasing new machinery.</li>
+                        <li><strong>Cost Efficiency:</strong> Shift from heavy capital expenditures to predictable subscription-based operational expenses.</li>
+                    </ul>
+                    <h3>Overcoming Connectivity Challenges</h3>
+                    <p>While fiber optic networks continue to expand across Dar es Salaam, Arusha, and Mwanza, maintaining a reliable backup internet connection or secondary mobile broadband line ensures uninterrupted workflow when utilizing cloud services.</p>
+                `
+            },
+            {
+                id: 4, category: "Technology",
+                title: "How Mobile Money Integration Can Transform Your Business Website",
+                meta: "M-Pesa and Tigo Pesa on your website aren't optional anymore. Here's how mobile money integration boosts sales for Tanzanian businesses.",
+                content: `
+                    <h3>The Shift Toward Digital Payments</h3>
+                    <p>Tanzania is a global leader in mobile money innovation. When customers visit your e-commerce store or booking platform, forcing them to use international credit cards creates instant friction and abandoned checkouts. Integrating local mobile money solutions directly into your website checkout workflow removes these barriers entirely.</p>
+                    <h3>Maximizing Conversion Rates</h3>
+                    <p>By offering automated USSD push notifications and instant mobile payments, you streamline the buyer journey. Customers complete transactions securely within seconds using their preferred network providers, drastically increasing conversion rates and overall sales volume.</p>
+                `
+            },
+            {
+                id: 5, category: "Technology",
+                title: "Website Speed and Why It's Costing You Customers in Tanzania",
+                meta: "A slow website is quietly costing you sales. Here's why load speed matters so much on Tanzania's mobile networks, and how to fix it.",
+                content: `
+                    <h3>The Impact of Latency</h3>
+                    <p>Most internet users in East Africa browse via mobile data connections. If your website takes longer than three seconds to load, potential clients will bounce back to search results and buy from your competitor instead. Speed directly impacts both user experience and your Google search ranking.</p>
+                    <h3>Actionable Optimization Strategies</h3>
+                    <ul>
+                        <li><strong>Image Compression:</strong> Resize and compress large product photos before uploading them to your web server.</li>
+                        <li><strong>Minimalist Coding:</strong> Remove bloated plugins, unnecessary scripts, and heavy animations.</li>
+                        <li><strong>Reliable Hosting:</strong> Utilize high-performance local or regional web hosting servers with content delivery networks (CDNs).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 6, category: "Technology",
+                title: "A Beginner's Guide to Domain Names and Web Hosting for Tanzanian Entrepreneurs",
+                meta: "Confused by '.co.tz' vs '.com,' or what hosting actually means? This beginner's guide breaks it down for first-time business owners.",
+                content: `
+                    <h3>Choosing the Right Domain Extension</h3>
+                    <p>Deciding between a global '.com' and a local '.co.tz' domain name is an important strategic choice. While '.com' gives an international look, a '.co.tz' domain immediately signals to local consumers and regulatory bodies that your business is proudly rooted in Tanzania, often boosting local search relevance.</p>
+                    <h3>Understanding Web Hosting Fundamentals</h3>
+                    <p>A domain name is your digital street address, while web hosting is the physical or virtual land where your website's files live. Ensure you invest in secure, stable hosting plans with guaranteed uptime, daily automated backups, and integrated SSL certificates.</p>
+                `
+            },
+            {
+                id: 7, category: "Technology",
+                title: "E-Commerce in Tanzania: What It Takes to Sell Online Successfully",
+                meta: "Selling online in Tanzania isn't just 'put it on Instagram.' Here's what actually goes into building a real e-commerce operation.",
+                content: `
+                    <h3>Beyond Social Media Selling</h3>
+                    <p>While social media platforms are great for discovery, an independent e-commerce website provides centralized inventory tracking, professional checkout flows, and long-term customer data ownership. Building a successful online store requires syncing your product catalog with clear pricing, reliable shipping options, and secure payment gateways.</p>
+                    <h3>Logistics and Fulfillment</h3>
+                    <p>Smooth delivery operations are the backbone of e-commerce. Establish clear delivery partnerships covering major cities like Dar es Salaam, Dodoma, Arusha, and Mwanza to ensure goods reach buyers safely and on schedule.</p>
+                `
+            },
+            {
+                id: 8, category: "Technology",
+                title: "Why Your Business Needs a Custom Software Solution (Not Just Off-the-Shelf Apps)",
+                meta: "Generic apps only get you so far. Here's how to know when your business has outgrown off-the-shelf software.",
+                content: `
+                    <h3>When Generic Software Falls Short</h3>
+                    <p>Off-the-shelf software applications are designed for the masses, meaning they often force you to change your unique business workflows to fit rigid templates. As your Tanzanian enterprise scales, operational inefficiencies become apparent.</p>
+                    <h3>The Value of Custom Development</h3>
+                    <p>Custom software is built specifically around your operational processes, automating repetitive tasks, integrating legacy databases, and scaling seamlessly as your business grows.</p>
+                `
+            },
+            {
+                id: 9, category: "Technology",
+                title: "Data Backup and Disaster Recovery: A Survival Guide for Small Businesses",
+                meta: "One crashed laptop shouldn't be able to destroy your business. Here's a simple backup and recovery plan every small business needs.",
+                content: `
+                    <h3>Preparing for the Unexpected</h3>
+                    <p>Hardware failures, power surges, malware attacks, or accidental deletion can cripple a business overnight if critical operational records are lost. Implementing a comprehensive backup strategy protects your continuity.</p>
+                    <h3>The 3-2-1 Backup Rule</h3>
+                    <p>Maintain three total copies of your data across two different media formats, with at least one copy stored safely offsite or in secure cloud storage.</p>
+                `
+            },
+            {
+                id: 10, category: "Technology",
+                title: "How Artificial Intelligence Is Changing Small Business Operations in East Africa",
+                meta: "AI isn't just for tech giants. Here's how small and mid-sized East African businesses are already quietly using it to save time and money.",
+                content: `
+                    <h3>Practical AI Implementation</h3>
+                    <p>Artificial intelligence is no longer restricted to multi-national corporations. Tanzanian entrepreneurs are leveraging AI tools for customer service automation via WhatsApp chatbots, multilingual content creation, and predictive inventory management.</p>
+                    <h3>Driving Efficiency</h3>
+                    <p>By automating routine administrative tasks, business teams can focus their energy on high-level strategy, client relations, and creative problem-solving.</p>
+                `
+            },
+
+            // ================== BRANDING PILLAR (11-20) ==================
+            {
+                id: 11, category: "Branding",
+                title: "What Is Brand Identity and Why Your Tanzanian Business Can't Ignore It",
+                meta: "Your logo is not your brand. Here's what brand identity actually means, and why it directly affects how much people trust and pay you.",
+                content: `
+                    <h3>Introduction</h3>
+                    <p>Ask ten business owners what "branding" means, and most will point to their logo. It's an understandable mix-up — but it's also why so many businesses invest in a nice logo and then wonder why customers still don't recognize or trust them.</p>
+                    <h3>The building blocks of a real brand identity</h3>
+                    <ul>
+                        <li><strong>Visual identity</strong> — your logo, color palette, typography, and imagery style.</li>
+                        <li><strong>Verbal identity</strong> — your brand voice.</li>
+                        <li><strong>Experience</strong> — how it actually feels to interact with your business.</li>
+                        <li><strong>Positioning</strong> — where you sit in customers' minds relative to your competitors.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 12, category: "Branding",
+                title: "Logo Design Mistakes That Are Hurting Your Business Credibility",
+                meta: "These common logo mistakes make businesses look amateur without owners even realizing it. Here's what to check on yours today.",
+                content: `
+                    <h3>Introduction</h3>
+                    <p>A logo is often the very first thing a potential customer sees — sometimes before they've read a single word about what you actually do.</p>
+                    <h3>Mistake 1: Using a free template or auto-generated logo maker</h3>
+                    <p>Free logo generators are tempting, but the designs they produce are generic and rarely unique.</p>
+                    <h3>Mistake 2: Too many colors</h3>
+                    <p>A logo with five or six colors is hard to reproduce consistently across print, digital, and promotional merchandise.</p>
+                `
+            },
+            {
+                id: 13, category: "Branding",
+                title: "How to Build a Brand Tanzanians Trust: Lessons from Local Success Stories",
+                meta: "Trust is earned differently in different markets. Here's what makes Tanzanian customers trust — and stick with — a local brand.",
+                content: `
+                    <h3>Community Connection</h3>
+                    <p>In Tanzania, business relies heavily on relationships and word-of-mouth recommendations. Trusted brands demonstrate deep cultural awareness, consistency, and a clear commitment to delivering dependable quality.</p>
+                    <h3>Consistency Across All Touchpoints</h3>
+                    <p>Ensure that your physical store environment, digital channels, packaging, and customer service standards reflect a unified, professional identity.</p>
+                `
+            },
+            {
+                id: 14, category: "Branding",
+                title: "The Psychology of Color in Branding: What Your Brand Colors Say About You",
+                meta: "That blue or gold in your logo is doing more work than you think. Here's the psychology behind brand color choices.",
+                content: `
+                    <h3>Color Communication</h3>
+                    <p>Colors evoke specific emotional responses. Blue conveys trust, security, and professionalism, making it popular in finance and technology. Warm tones like gold or orange project luxury, energy, and creativity. Selecting the right color palette helps align your brand values with customer perceptions.</p>
+                `
+            },
+            {
+                id: 15, category: "Branding",
+                title: "Rebranding 101: When and How to Refresh Your Business Identity",
+                meta: "Outgrown your old logo or name? Here's how to know it's time to rebrand, and how to do it without losing loyal customers.",
+                content: `
+                    <h3>Recognizing the Need for Change</h3>
+                    <p>If your business has expanded its product offerings, targeted a new market segment, or looks outdated compared to rising competitors, a strategic rebrand helps modernize your position without alienating your core audience.</p>
+                `
+            },
+            {
+                id: 16, category: "Branding",
+                title: "Brand Voice: Why How You Say Things Matters as Much as What You Sell",
+                meta: "Two businesses can sell the exact same product and feel completely different online. That difference is brand voice — here's how to define yours.",
+                content: `
+                    <h3>Defining Your Tone</h3>
+                    <p>Your brand voice dictates how your business communicates via social media, emails, website copy, and advertisements. Whether authoritative and formal or warm and conversational, consistency builds strong brand personality.</p>
+                `
+            },
+            {
+                id: 17, category: "Branding",
+                title: "Building a Premium Brand on a Small Business Budget",
+                meta: "You don't need a corporate budget to look premium. Here are the design and branding choices that punch above their weight.",
+                content: `
+                    <h3>Strategic Elegance</h3>
+                    <p>Looking premium is about smart design choices—generous whitespace, clean typography, consistent color palettes, and professional imagery—rather than extravagant advertising spend.</p>
+                `
+            },
+            {
+                id: 18, category: "Branding",
+                title: "Company Profile vs Brochure: What Your Business Actually Needs",
+                meta: "Not sure whether you need a company profile or a brochure? Here's the real difference, and when each one earns you the deal.",
+                content: `
+                    <h3>Purpose-Driven Materials</h3>
+                    <p>A company profile is a comprehensive corporate document detailing your history, leadership, portfolio, and legal standing for B2B contracts. A brochure focuses on specific product or service promotions for prospective retail buyers.</p>
+                `
+            },
+            {
+                id: 19, category: "Branding",
+                title: "How Consistent Branding Across Platforms Builds Customer Trust",
+                meta: "If your Instagram, website, and business card all look different, you're losing trust before the first conversation even starts.",
+                content: `
+                    <h3>Omnichannel Cohesion</h3>
+                    <p>When your social media profiles, website, signage, and business cards maintain identical branding standards, customers perceive your business as stable, professional, and trustworthy.</p>
+                `
+            },
+            {
+                id: 20, category: "Branding",
+                title: "From Logo to Legacy: Building a Brand That Outlives Its Founder",
+                meta: "The best brands are built to run without their founder in every room. Here's how to build branding with that kind of staying power.",
+                content: `
+                    <h3>Creating Institutional Value</h3>
+                    <p>Scaling a business past day-to-day founder involvement requires documenting brand guidelines, core values, and operational systems that institutionalize trust and recognition.</p>
+                `
+            },
+
+            // ================== DIGITAL MARKETING PILLAR (21-30) ==================
+            {
+                id: 21, category: "Digital Marketing",
+                title: "SEO for Tanzanian Businesses: A Practical Beginner's Guide",
+                meta: "SEO doesn't have to be confusing. Here's a practical, no-fluff starting point for Tanzanian business owners who want to be found on Google.",
+                content: `
+                    <h3>What is SEO and Why Should You Care?</h3>
+                    <p>Search Engine Optimization (SEO) makes your website easy for Google to understand. When someone in Tanzania searches for local services, optimized websites appear at the top, capturing high-intent buyer traffic.</p>
+                    <h3>Practical Optimization Steps</h3>
+                    <ul>
+                        <li>Claim and verify your Google Business Profile.</li>
+                        <li>Incorporate local search phrases naturally into headings.</li>
+                        <li>Ensure fast mobile loading times.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 22, category: "Digital Marketing",
+                title: "How to Rank Your Business on Google Maps in Arusha, Moshi, or Mwanza",
+                meta: "Want to show up when someone searches 'near me'? Here's exactly how to optimize your Google Business Profile for local search.",
+                content: `
+                    <h3>Local Map Dominance</h3>
+                    <p>Optimizing your Google Business Profile with accurate geolocation data, operating hours, category tags, and consistent customer reviews ensures your business appears prominently in local map searches.</p>
+                `
+            },
+            {
+                id: 23, category: "Digital Marketing",
+                title: "Social Media Marketing Mistakes Tanzanian Businesses Keep Making",
+                meta: "Posting daily but seeing no results? These are the most common social media mistakes we see Tanzanian businesses make.",
+                content: `
+                    <h3>Avoiding Common Traps</h3>
+                    <p>Posting randomly without a strategy or failing to engage with user comments prevents social media channels from driving actual revenue. Focus on value-driven content and active community interaction.</p>
+                `
+            },
+            {
+                id: 24, category: "Digital Marketing",
+                title: "Instagram vs Facebook vs TikTok: Where Should Your Business Actually Be?",
+                meta: "You don't need to be everywhere. Here's how to choose the right platform for your specific business and customers.",
+                content: `
+                    <h3>Platform Selection Strategy</h3>
+                    <p>Match your marketing channel to your target audience. Instagram and TikTok excel for visual products and younger demographics, while Facebook remains powerful for community engagement and broad local reach.</p>
+                `
+            },
+            {
+                id: 25, category: "Digital Marketing",
+                title: "How to Write Captions That Actually Sell (Not Just Get Likes)",
+                meta: "Likes don't pay the bills. Here's how to write captions that move people from scrolling to actually buying.",
+                content: `
+                    <h3>Converting Attention to Action</h3>
+                    <p>Effective copywriting pairs engaging hooks with clear calls to action, guiding followers smoothly from social media interest to direct purchase inquiries.</p>
+                `
+            },
+            {
+                id: 26, category: "Digital Marketing",
+                title: "Content Calendars: The Secret Weapon Behind Consistent Social Media Growth",
+                meta: "Random posting leads to random results. Here's how a simple content calendar can transform your social media consistency.",
+                content: `
+                    <h3>Planning for Success</h3>
+                    <p>A structured content calendar eliminates last-minute guesswork, ensuring regular posting schedules and balanced promotional messaging across all channels.</p>
+                `
+            },
+            {
+                id: 27, category: "Digital Marketing",
+                title: "Paid Ads 101: How Small Tanzanian Businesses Can Advertise Smartly",
+                meta: "You don't need a huge budget to run effective ads. Here's how small businesses can advertise smartly on a modest budget.",
+                content: `
+                    <h3>Targeted Advertising</h3>
+                    <p>Paid social and search ads allow precise audience filtering by location, interests, and behavior, ensuring maximum return on investment even with modest budgets.</p>
+                `
+            },
+            {
+                id: 28, category: "Digital Marketing",
+                title: "WhatsApp Business: An Underrated Marketing Tool for Tanzanian SMEs",
+                meta: "Most customers are already messaging you on WhatsApp. Here's how to turn that into a real, organized sales channel.",
+                content: `
+                    <h3>Conversational Commerce</h3>
+                    <p>Utilize WhatsApp Business features like product catalogs, automated greeting messages, and broadcast lists to organize customer inquiries and close sales efficiently.</p>
+                `
+            },
+            {
+                id: 29, category: "Digital Marketing",
+                title: "How to Turn Social Media Followers Into Paying Customers",
+                meta: "Followers are not customers. Here's the bridge most businesses are missing between social media attention and actual sales.",
+                content: `
+                    <h3>Building Sales Funnels</h3>
+                    <p>Move followers off social media platforms and into direct sales channels like WhatsApp chats, email lists, or your e-commerce checkout page.</p>
+                `
+            },
+            {
+                id: 30, category: "Digital Marketing",
+                title: "Local SEO Keywords: How to Get Found by Customers Searching Near You",
+                meta: "'Best hotel in Mwanza' or 'leather bags Moshi' — here's how to find and use the exact phrases your local customers are searching.",
+                content: `
+                    <h3>Targeting Local Intent</h3>
+                    <p>Identify regional search keywords that combine your industry with specific Tanzanian cities or neighborhoods to capture high-intent local buyers.</p>
+                `
+            },
+
+            // ================== DESIGN PILLAR (31-40) ==================
+            {
+                id: 31, category: "Design",
+                title: "What Makes a Website Look 'Premium' vs 'Amateur'?",
+                meta: "The difference between a premium and amateur website often comes down to five specific design choices. Here's what to look for.",
+                content: `
+                    <h3>Design Principles</h3>
+                    <p>Generous whitespace, clean typography, cohesive color schemes, and high-resolution professional imagery separate high-converting professional websites from cluttered amateur designs.</p>
+                `
+            },
+            {
+                id: 32, category: "Design",
+                title: "Graphic Design Trends Tanzanian Businesses Should Watch in 2026",
+                meta: "From color palettes to layout styles, here are the design trends worth adopting — and the ones worth skipping — this year.",
+                content: `
+                    <h3>Modern Aesthetics</h3>
+                    <p>Stay relevant by adopting clean layouts, accessible typography, and authentic visual branding that resonates with modern East African consumers.</p>
+                `
+            },
+            {
+                id: 33, category: "Design",
+                title: "Why Mobile-Friendly Design Is No Longer Optional",
+                meta: "Most of your visitors are on a phone. Here's why a non-mobile-friendly website is quietly turning customers away.",
+                content: `
+                    <h3>Mobile-First Priority</h3>
+                    <p>Ensure responsive layouts, legible font sizing, and touch-friendly navigation buttons that perform seamlessly across all smartphone devices.</p>
+                `
+            },
+            {
+                id: 34, category: "Design",
+                title: "The Anatomy of a High-Converting Landing Page",
+                meta: "Some landing pages sell, others just sit there. Here's a breakdown of exactly what a high-converting page includes.",
+                content: `
+                    <h3>Conversion Architecture</h3>
+                    <p>A successful landing page features a compelling headline, clear value proposition, social proof, and a prominent call-to-action button.</p>
+                `
+            },
+            {
+                id: 35, category: "Design",
+                title: "Print vs Digital Design: What Still Matters for Local Businesses",
+                meta: "Business cards and banners aren't dead. Here's how print and digital design should work together, not compete.",
+                content: `
+                    <h3>Integrated Branding</h3>
+                    <p>Physical marketing materials like business cards, packaging, and corporate banners work hand-in-hand with digital assets to reinforce brand recognition.</p>
+                `
+            },
+            {
+                id: 36, category: "Design",
+                title: "Choosing Fonts That Match Your Brand Personality",
+                meta: "Fonts carry personality whether you plan it or not. Here's how to choose typography that actually fits your brand.",
+                content: `
+                    <h3>Typography Selection</h3>
+                    <p>Select clean, readable fonts that reflect your corporate character—whether modern and minimalist or established and traditional.</p>
+                `
+            },
+            {
+                id: 37, category: "Design",
+                title: "Packaging Design: How It Influences Buying Decisions in Tanzania",
+                meta: "Customers judge a product by its packaging before they ever try it. Here's how good packaging design drives sales.",
+                content: `
+                    <h3>Retail Impact</h3>
+                    <p>Exceptional packaging protects products while commanding attention on retail shelves, communicating quality and value instantly.</p>
+                `
+            },
+            {
+                id: 38, category: "Design",
+                title: "Before and After: What a Professional Redesign Can Do for Your Brand",
+                meta: "Sometimes the biggest business upgrade isn't a new product — it's a redesign. Here's what changes when you invest in one.",
+                content: `
+                    <h3>Transforming Perceptions</h3>
+                    <p>A professional visual overhaul signals growth, renewed energy, and elevated quality standards to existing and prospective clients.</p>
+                `
+            },
+            {
+                id: 39, category: "Design",
+                title: "UI/UX Basics Every Business Owner Should Understand",
+                meta: "You don't need to be a designer, but understanding UI/UX basics will change how you brief every website project going forward.",
+                content: `
+                    <h3>User Experience Fundamentals</h3>
+                    <p>Understanding user interface and user experience principles ensures your digital products are intuitive, accessible, and frictionless.</p>
+                `
+            },
+            {
+                id: 40, category: "Design",
+                title: "How to Brief a Designer So You Get What You Actually Want",
+                meta: "Vague briefs lead to disappointing designs. Here's how to communicate what you want so your designer can actually deliver it.",
+                content: `
+                    <h3>Effective Creative Briefs</h3>
+                    <p>Provide clear project goals, target audience details, brand guidelines, and inspirational examples to empower your designer to hit the mark on the first draft.</p>
+                `
+            },
+
+            // ================== BUSINESS GROWTH PILLAR (41-50) ==================
+            {
+                id: 41, category: "Business Growth",
+                title: "How Small Businesses in Arusha Can Compete With Bigger Brands",
+                meta: "Bigger budgets don't always win. Here's how small Arusha businesses can compete smartly against bigger, better-funded brands.",
+                content: `
+                    <h3>Agility and Personalization</h3>
+                    <p>Small businesses can outmaneuver large corporations by offering personalized customer care, rapid decision-making, and deep hyper-local community integration.</p>
+                `
+            },
+            {
+                id: 42, category: "Business Growth",
+                title: "Building a Marketing Budget When You're Just Starting Out",
+                meta: "Not sure how much to spend on marketing as a new business? Here's a realistic way to think about your first marketing budget.",
+                content: `
+                    <h3>Strategic Allocation</h3>
+                    <p>Allocate resources toward high-impact digital foundations like a professional website, local search optimization, and targeted social media engagement.</p>
+                `
+            },
+            {
+                id: 43, category: "Business Growth",
+                title: "Why Every Business Needs a Content Strategy, Not Just Content",
+                meta: "Posting content without a strategy is like driving without a destination. Here's the difference, and why it matters.",
+                content: `
+                    <h3>Purposeful Publishing</h3>
+                    <p>A strategic content roadmap ensures every article, post, and video serves a specific purpose in guiding prospects toward your products or services.</p>
+                `
+            },
+            {
+                id: 44, category: "Business Growth",
+                title: "Turning One-Time Customers Into Repeat Buyers Through Branding",
+                meta: "Acquiring a customer is expensive. Here's how strong branding turns one-time buyers into loyal, repeat customers.",
+                content: `
+                    <h3>Retention Through Identity</h3>
+                    <p>Consistent branding, exceptional post-purchase experiences, and reliable product quality foster deep loyalty and repeat business.</p>
+                `
+            },
+            {
+                id: 45, category: "Business Growth",
+                title: "How NGOs and Institutions in Tanzania Can Improve Public Communication",
+                meta: "Good work deserves good visibility. Here's how NGOs and public institutions can communicate more effectively with the public.",
+                content: `
+                    <h3>Amplifying Impact</h3>
+                    <p>Clear storytelling, professional web presence, and active digital communication help institutions build public trust and secure stakeholder support.</p>
+                `
+            },
+            {
+                id: 46, category: "Business Growth",
+                title: "The Hidden Cost of a Weak Online Presence for Tourism Businesses",
+                meta: "Tourists research everything online before they arrive. Here's what a weak digital presence is actually costing tourism businesses.",
+                content: `
+                    <h3>Capturing Global Travelers</h3>
+                    <p>International and domestic tourists research destinations and book experiences entirely online. A weak digital presence means missed bookings and lost revenue.</p>
+                `
+            },
+            {
+                id: 47, category: "Business Growth",
+                title: "How Hospitality Businesses in Mwanza Can Use Social Media to Fill Rooms",
+                meta: "Empty rooms are often a marketing problem, not a location problem. Here's how hotels can use social media to drive direct bookings.",
+                content: `
+                    <h3>Driving Direct Bookings</h3>
+                    <p>Showcase hotel amenities, local attractions, and guest testimonials through engaging visual content to attract travelers and drive direct bookings.</p>
+                `
+            },
+            {
+                id: 48, category: "Business Growth",
+                title: "Why Professional Proposals Win More Clients Than Casual Pitches",
+                meta: "The way you present an offer often matters as much as the offer itself. Here's why a professional proposal wins more deals.",
+                content: `
+                    <h3>Professional Presentation</h3>
+                    <p>Structured, branded proposals demonstrate professionalism, thorough planning, and reliability, giving you a competitive edge in closing high-value deals.</p>
+                `
+            },
+            {
+                id: 49, category: "Business Growth",
+                title: "Building Trust with International Clients as a Tanzanian Business",
+                meta: "Want to work with international clients or donors? Here's how to present your business in a way that earns their confidence.",
+                content: `
+                    <h3>Global Credibility</h3>
+                    <p>Professional web design, secure communication channels, transparent case studies, and compliance standards build instant confidence with international partners.</p>
+                `
+            },
+            {
+                id: 50, category: "Business Growth",
+                title: "Case Study Thinking: How to Turn Your Client Wins Into Marketing Gold",
+                meta: "Your best marketing material might already be sitting in your inbox. Here's how to turn past client wins into case studies that sell.",
+                content: `
+                    <h3>Proof-Driven Marketing</h3>
+                    <p>Documenting past client successes through detailed case studies provides powerful proof of your expertise and capability to prospective buyers.</p>
+                `
+            }
+        ];
+
+        let currentCategory = 'All';
+        let currentSearchQuery = '';
+        let mobilePostIndex = 0;
+        let mobileAutoPlayTimer;
+        let mobileTouchStartX = 0;
+        let mobileTouchStartY = 0;
+        let mobileSuppressClickUntil = 0;
+        const mobilePostLimit = 15;
+
+        function init() {
+            renderGrid();
+
+            const grid = document.getElementById('blog-grid');
+            grid.addEventListener('touchstart', event => {
+                if (!window.matchMedia('(max-width: 767px)').matches) return;
+                const touch = event.changedTouches[0];
+                mobileTouchStartX = touch.clientX;
+                mobileTouchStartY = touch.clientY;
+            }, { passive: true });
+            grid.addEventListener('touchend', event => {
+                if (!window.matchMedia('(max-width: 767px)').matches) return;
+                const touch = event.changedTouches[0];
+                const horizontalDistance = mobileTouchStartX - touch.clientX;
+                const verticalDistance = Math.abs(mobileTouchStartY - touch.clientY);
+
+                if (horizontalDistance > 45 && horizontalDistance > verticalDistance) {
+                    mobileSuppressClickUntil = Date.now() + 500;
+                    const nextIndex = mobilePostIndex + 1;
+                    if (nextIndex < getFilteredPosts().slice(0, mobilePostLimit).length) {
+                        showMobilePost(nextIndex);
+                    }
+                }
+            }, { passive: true });
+
+            window.addEventListener('resize', renderGrid);
+
+            const searchInput = document.getElementById('searchInputHero');
+            const searchButton = document.getElementById('searchButtonHero');
+
+            searchInput.addEventListener('input', event => {
+                currentSearchQuery = event.target.value.trim().toLowerCase();
+                mobilePostIndex = 0;
+                renderGrid();
             });
-            
-            // Re-check sizes if they rotate their phone
-            window.addEventListener('resize', () => {
-                clearInterval(interval);
-                if(window.innerWidth < 768) startAutoPlay();
+            searchButton.addEventListener('click', () => {
+                currentSearchQuery = searchInput.value.trim().toLowerCase();
+                mobilePostIndex = 0;
+                renderGrid();
+            });
+            searchInput.addEventListener('keydown', event => {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    searchButton.click();
+                }
             });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Setup Tech section carousel
-            setupMobileCarousel('tech-carousel', 'tech-dots', 'bg-[#0D8ABC]');
-            // Setup Branding section carousel
-            setupMobileCarousel('brand-carousel', 'brand-dots', 'bg-yellow-500');
-        });
+        function renderGrid() {
+            const grid = document.getElementById('blog-grid');
+            const pagination = document.getElementById('blog-mobile-pagination');
+            grid.innerHTML = '';
+            clearTimeout(mobileAutoPlayTimer);
+
+            const filteredPosts = currentSearchQuery
+                ? posts.filter(post =>
+                    post.title.toLowerCase().includes(currentSearchQuery) ||
+                    post.meta.toLowerCase().includes(currentSearchQuery) ||
+                    post.content.toLowerCase().includes(currentSearchQuery)
+                )
+                : currentCategory === 'All'
+                    ? posts
+                    : posts.filter(p => p.category === currentCategory);
+
+            if (filteredPosts.length === 0) {
+                pagination.innerHTML = '';
+                const safeQuery = currentSearchQuery.replace(/[&<>'"]/g, character => ({
+                    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+                }[character]));
+                grid.innerHTML = `
+          <div class="col-span-full text-center py-16">
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">No articles available</h3>
+            <p class="text-slate-500">No blog post matches "${safeQuery}".</p>
+          </div>`;
+                return;
+            }
+
+            const isMobile = window.matchMedia('(max-width: 767px)').matches;
+            const mobilePosts = filteredPosts.slice(0, mobilePostLimit);
+            mobilePostIndex = Math.min(mobilePostIndex, mobilePosts.length - 1);
+            const postsToRender = isMobile ? [mobilePosts[mobilePostIndex]] : filteredPosts;
+
+            postsToRender.forEach(post => {
+                const card = `
+                    <div class="blog-mobile-slide bg-white rounded-xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full cursor-pointer group" onclick="if (Date.now() >= mobileSuppressClickUntil) openArticle(${post.id})">
+                        <div class="p-6 flex flex-col h-full">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#136db6] mb-3">${post.category}</span>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-3 group-hover:text-[#136db6] transition-colors">${post.title}</h3>
+                            <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">${post.meta}</p>
+                            
+                            <div class="flex items-center text-sm font-semibold text-[#136db6] mt-auto">
+                                Read Article 
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+
+            if (isMobile && mobilePosts.length > 1) {
+                pagination.innerHTML = mobilePosts.map((post, index) => `
+                    <button type="button" class="blog-mobile-dot${index === mobilePostIndex ? ' is-active' : ''}" aria-label="Show blog post ${index + 1}" aria-current="${index === mobilePostIndex ? 'true' : 'false'}" onclick="showMobilePost(${index})"></button>
+                `).join('');
+                scheduleMobilePost();
+            } else {
+                pagination.innerHTML = '';
+            }
+        }
+
+        function showMobilePost(index) {
+            const mobilePosts = getFilteredPosts().slice(0, mobilePostLimit);
+            if (index < 0 || index >= mobilePosts.length) return;
+
+            mobilePostIndex = index;
+            renderGrid();
+        }
+
+        function scheduleMobilePost() {
+            clearTimeout(mobileAutoPlayTimer);
+            const mobilePosts = getFilteredPosts().slice(0, mobilePostLimit);
+            if (!window.matchMedia('(max-width: 767px)').matches || mobilePostIndex >= mobilePosts.length - 1) return;
+
+            mobileAutoPlayTimer = window.setTimeout(() => {
+                mobilePostIndex += 1;
+                renderGrid();
+            }, 4500);
+        }
+
+        function getFilteredPosts() {
+            return currentSearchQuery
+                ? posts.filter(post =>
+                    post.title.toLowerCase().includes(currentSearchQuery) ||
+                    post.meta.toLowerCase().includes(currentSearchQuery) ||
+                    post.content.toLowerCase().includes(currentSearchQuery)
+                )
+                : currentCategory === 'All'
+                    ? posts
+                    : posts.filter(p => p.category === currentCategory);
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            currentSearchQuery = '';
+            mobilePostIndex = 0;
+            document.getElementById('searchInputHero').value = '';
+            const buttons = document.getElementById('category-filters').children;
+            for (let btn of buttons) {
+                if (btn.innerText === category) {
+                    btn.className = "px-5 py-2 rounded-full text-sm font-medium bg-[#136db6] text-white shadow-md transition-all";
+                } else {
+                    btn.className = "px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all";
+                }
+            }
+            renderGrid();
+        }
+
+        function showView(viewType) {
+            const indexView = document.getElementById('view-index');
+            const articleView = document.getElementById('view-article');
+
+            if (viewType === 'index') {
+                indexView.classList.remove('hidden');
+                articleView.classList.add('hidden');
+                window.scrollTo(0, 0);
+            } else if (viewType === 'article') {
+                indexView.classList.add('hidden');
+                articleView.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function openArticle(id) {
+            const post = posts.find(p => p.id === id);
+            if (!post) return;
+
+            document.getElementById('article-category').innerText = post.category;
+            document.getElementById('article-title').innerText = post.title;
+            document.getElementById('article-meta').innerText = post.meta;
+            document.getElementById('article-content').innerHTML = post.content;
+
+            showView('article');
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
     </script>
-    
-    <style>#blog-modal-overlay { display: none; } #blog-modal-box { transition: opacity 0.3s ease, transform 0.3s ease; } .hover-lift { transition: all 0.2s; }</style>
+
+
+    <div id="footer-container"></div>
+    <script src="script.js"></script>
 </body>
+
 </html>

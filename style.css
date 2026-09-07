@@ -1,4 +1,10 @@
 /* --- SCROLL REVEAL ANIMATIONS --- */
+#header-container>header,
+#header-container>header * {
+  transition: none !important;
+  animation: none !important;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -6,10 +12,38 @@
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+@media (max-width: 1279px) {
+
+  #mobile-menu,
+  #mobile-menu>ul,
+  #mobile-menu .mobile-nav-link {
+    width: max-content;
+    max-width: 100%;
+  }
+
+  #mobile-menu>ul {
+    align-items: flex-start;
+  }
+
+  #mobile-menu>ul>li {
+    width: 100%;
+  }
+
+  #mobile-menu .mobile-nav-link {
+    display: inline-flex;
+  }
+
+  #mobile-menu .mobile-nav-link-active {
+    width: 100%;
+  }
+}
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
+
 .delay-200 {
   transition-delay: 200ms;
 }
@@ -19,7 +53,8 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  height: 280px; /* Mobile height */
+  height: 280px;
+  /* Mobile height */
 }
 
 @media (min-width: 640px) {
@@ -36,7 +71,8 @@
 
 @media (min-width: 1024px) {
   .solutions-mask {
-    height: 550px; /* Massive height for Desktop */
+    height: 550px;
+    /* Massive height for Desktop */
   }
 }
 
@@ -49,7 +85,8 @@
 
 
 .solution-card {
-  flex: 0 0 100%; /* Fixes the 4px gap entirely */
+  flex: 0 0 100%;
+  /* Fixes the 4px gap entirely */
   width: 100%;
   min-width: 100%;
   height: 100%;
@@ -72,13 +109,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(
-    to top,
-    rgba(10, 10, 10, 0.95) 0%,
-    rgba(10, 10, 10, 0.6) 60%,
-    transparent 100%
-  );
-  padding: 1.25rem; /* Mobile padding */
+  background: linear-gradient(to top,
+      rgba(10, 10, 10, 0.95) 0%,
+      rgba(10, 10, 10, 0.6) 60%,
+      transparent 100%);
+  padding: 1.25rem;
+  /* Mobile padding */
   height: 50%;
 }
 
@@ -135,6 +171,7 @@
 #prevBtn {
   left: 0px;
 }
+
 #nextBtn {
   right: 0px;
 }
@@ -155,11 +192,13 @@
   justify-content: center;
   transition: all 0.3s;
 }
+
 .num-btn:hover {
   background: #2563eb;
   border-color: #2563eb;
   color: #ffffff;
 }
+
 .num-btn.active {
   background: #2563eb;
   color: #ffffff;
@@ -170,7 +209,7 @@
 
 /* HIDE IMAGE CAROUSEL ON MOBILE TO SAVE VERTICAL SPACE */
 @media (max-width: 1023px) {
-  #hero-services > .container > div:last-child {
+  #hero-services>.container>div:last-child {
     display: none;
   }
 }
@@ -187,9 +226,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-15px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -199,9 +240,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -221,16 +264,19 @@
   white-space: nowrap;
   width: 100%;
 }
+
 .marquee-content {
   display: flex;
   animation: marquee 30s linear infinite;
   /* Adding width to ensure the loop is seamless */
   width: max-content;
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -247,15 +293,18 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: #f3f4f6; /* light gray */
-  color: #4b5563; /* dark gray text */
+  background-color: #f3f4f6;
+  /* light gray */
+  color: #4b5563;
+  /* dark gray text */
   font-size: 1.25rem;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .social-icon:hover {
-  background-color: #2563eb; /* Africana Blue */
+  background-color: #2563eb;
+  /* Africana Blue */
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -293,15 +342,25 @@ body {
 
 /* --- team --- */
 .team-dot {
-    width: 2rem; height: 2rem; border-radius: 9999px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.875rem; font-weight: 700;
-    transition: all 0.3s;
-    background-color: #e5e7eb; color: #6b7280;
-    border: none; cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.3s;
+  background-color: #e5e7eb;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
 }
+
 .team-dot.is-active {
-    background-color: #136db6; /* brandBlue */ 
-    color: white; transform: scale(1.1);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #136db6;
+  /* brandBlue */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
