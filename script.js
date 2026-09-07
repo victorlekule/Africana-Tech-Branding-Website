@@ -86,27 +86,43 @@ document.addEventListener("DOMContentLoaded", () => {
         </li>`;
     }).join('');
 
-    // 4. Construct Header HTML 
+    // 4. Construct Header HTML (with all responsive fixes)
     const headerHtml = `
         <style>
             .site-info-bar { min-height: 34px; background: #136db6; color: #F9FAFB; }
-            #mobile-menu-backdrop { top: 124px; }
+            #mobile-menu-backdrop, #mobile-menu { top: 124px; } /* default for tablet (nav height 90px) */
+
+            /* Mobile: reduce nav height and adjust menu positions */
             @media (max-width: 767px) {
                 .site-info-bar { min-height: 34px; }
-                #mobile-menu-backdrop { top: 124px; }
-                .site-info-bar > div { flex-wrap: nowrap; justify-content: center; }
-                .site-info-contact { flex-wrap: nowrap; min-width: 0; width: 100%; justify-content: center; }
+                #mobile-menu-backdrop, #mobile-menu { top: 104px; } /* 34px info + 70px nav */
+                .site-info-bar > div { justify-content: center; }
+                .site-info-contact { flex-wrap: wrap; justify-content: center; gap: 4px 12px; }
                 .site-info-location, .site-info-location-separator, .site-info-links { display: none; }
-                .site-info-whatsapp, .site-info-email { white-space: nowrap; font-size: 9px; }
-                .site-info-email { overflow: hidden; text-overflow: ellipsis; }
-                .site-main-nav { padding-left: 8px; padding-right: 8px; }
+                .site-info-whatsapp, .site-info-email { white-space: normal; font-size: 11px; }
+                .site-main-nav { height: 70px; padding-left: 8px; padding-right: 8px; }
                 .site-main-brand { min-width: 0; flex: 1 1 auto; overflow: hidden; }
-                .site-main-brand h1 { font-size: 10px; line-height: 1.15; word-spacing: normal !important; white-space: normal; }
-                .site-main-brand p { font-size: 9px; line-height: 1.15; white-space: normal; }
+                .site-main-brand h1 { font-size: 10px; line-height: 1.15; word-spacing: normal !important; }
+                .site-main-brand p { font-size: 9px; line-height: 1.15; }
                 .site-main-actions { flex: 0 0 40px; margin-left: 8px; }
+                /* Hide decorative SVG on very small screens */
+                .site-main-nav .absolute.left-0 { display: none; }
+            }
+
+            /* Mobile menu animation */
+            #mobile-menu {
+                transform: scaleY(0);
+                opacity: 0;
+                transform-origin: top;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+            #mobile-menu:not(.hidden) {
+                transform: scaleY(1);
+                opacity: 1;
             }
         </style>
         <header class="w-full fixed top-0 left-0 z-50 flex flex-col pointer-events-none">
+            <!-- Top info bar -->
             <div class="site-info-bar text-[10px] sm:text-xs pointer-events-auto">
                 <div class="w-full px-2 sm:px-4 lg:px-5 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
                     <div class="site-info-contact flex flex-wrap items-center justify-start gap-x-4 gap-y-1">
@@ -128,8 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
             
+            <!-- Main navigation -->
             <nav class="site-main-nav relative w-full h-[90px] bg-white shadow-[0_4px_30px_-10px_rgba(0,0,0,0.08)] flex items-center justify-between px-4 lg:px-8 xl:px-12 overflow-hidden pointer-events-auto">
                 
+                <!-- Decorative SVG background (hidden on very small screens) -->
                 <div class="absolute left-0 top-0 bottom-0 w-[550px] pointer-events-none z-0">
                     <svg width="100%" height="100%" viewBox="0 0 550 90" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0 H 360 C 440 0 380 90 480 90 H 0 V 0 Z" fill="#136db6" />
@@ -137,21 +155,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     </svg>
                 </div>
 
-             <div class="site-main-brand relative z-10 flex items-center flex-none pl-1 sm:pl-2">
+                <!-- Brand -->
+                <div class="site-main-brand relative z-10 flex items-center flex-none pl-1 sm:pl-2">
                     <div class="flex flex-col justify-center">
-                        <h1 class="text-brandBlue font-extrabold text-sm sm:text-base md:text-lg lg:text-sm xl:text-sm leading-tight tracking-wide whitespace-nowrap" style="word-spacing: 0.25em;">
+                        <h1 class="text-brandBlue font-extrabold text-sm sm:text-base md:text-lg lg:text-sm xl:text-sm leading-tight tracking-wide truncate" style="word-spacing: 0.25em;">
                             AFRICANA TECH & BRANDING LTD
                         </h1>
-                        <p class="text-brandBlack text-xs text-center sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium tracking-wide mt-1 whitespace-nowrap">
+                        <p class="text-brandBlack text-xs text-center sm:text-sm md:text-sm lg:text-sm xl:text-base font-medium tracking-wide mt-1 truncate">
                             Innovate. Build. Transform.
                         </p>
                     </div>
                 </div>
 
-                <div class="hidden xl:flex items-center gap-8 bg-white rounded-full px-10 py-4 border border-blue-600 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(243,244,246,0.8)] relative z-10">
+                <!-- Desktop navigation (now visible from lg breakpoint) -->
+                <div class="hidden lg:flex items-center gap-8 bg-white rounded-full px-10 py-4 border border-blue-600 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(243,244,246,0.8)] relative z-10">
                     ${desktopNavItemsHtml}
                 </div>
 
+                <!-- Right side actions -->
                 <div class="site-main-actions relative z-10 flex items-center gap-4 md:gap-5 flex-shrink-0">
                     <a href="${contactLink.url}" class="hidden sm:flex items-center gap-2 bg-brandBlue text-white px-7 py-3.5 rounded-full text-[14px] font-semibold hover:shadow-[0_8px_20px_-6px_rgba(99,102,241,0.5)] hover:bg-brandBlack">
                         ${contactLink.name}
@@ -160,12 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         </svg>
                     </a>
 
-                    <button id="mobile-menu-btn" class="xl:hidden relative flex-none inline-flex w-10 h-10 items-center justify-center text-white hover:text-white bg-transparent hover:bg-transparent p-2 rounded-full focus:outline-none">
-                        <!-- Hamburger icon (three lines) -->
+                    <!-- Hamburger / Close button (visible below lg) -->
+                    <button type="button" id="mobile-menu-btn" class="lg:hidden relative flex-none inline-flex w-10 h-10 items-center justify-center text-gray-700 hover:text-brandBlue bg-transparent hover:bg-transparent p-2 rounded-full focus:outline-none">
                         <svg id="icon-open" class="absolute top-1/2 left-1/2 w-6 h-6 block pr-[2px] -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
-                        <!-- Close icon (X) -->
                         <svg id="icon-close" class="absolute top-1/2 left-1/2 w-6 h-6 hidden pr-[2px] -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -173,10 +193,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </nav>
 
-            <div id="mobile-menu-backdrop" class="hidden xl:hidden fixed top-[90px] right-0 bottom-0 left-0 z-40 bg-black/10 backdrop-blur-md pointer-events-auto"></div>
+            <!-- Backdrop for mobile menu -->
+            <div id="mobile-menu-backdrop" class="hidden lg:hidden fixed top-[124px] right-0 bottom-0 left-0 z-40 bg-black/10 backdrop-blur-md pointer-events-auto"></div>
 
-            <div id="mobile-menu" class="hidden xl:hidden fixed top-[124px] left-0 z-50 w-fit max-w-full bg-white shadow-xl border-t border-gray-100 rounded-b-[10px] pb-2 overflow-hidden pointer-events-auto origin-top">
-                <ul class="flex w-fit max-w-full flex-col m-0 p-0 list-none">
+            <!-- Mobile dropdown menu -->
+            <div id="mobile-menu" class="hidden lg:hidden fixed top-[124px] left-3 right-3 z-50 bg-white shadow-xl border border-gray-200 rounded-xl overflow-hidden pointer-events-auto origin-top transition-all duration-300 ease-in-out">
+                <ul class="flex flex-col m-0 p-0 list-none">
                     ${mobileNavItemsHtml}
                 </ul>
             </div>
@@ -228,7 +250,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 
 
 //HOME PAGE//

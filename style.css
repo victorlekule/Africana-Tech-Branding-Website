@@ -1,3 +1,15 @@
+body {
+  padding-top: 124px;
+  /* Default for tablet and desktop */
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 104px;
+    /* For mobile (smaller header) */
+  }
+}
+
 /* --- SCROLL REVEAL ANIMATIONS --- */
 #header-container>header,
 #header-container>header * {
