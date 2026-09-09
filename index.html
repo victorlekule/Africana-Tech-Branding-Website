@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="font-poppins bg-[#0A0A0A] text-[#F9FAFB] m-0 p-0 overflow-x-hidden">
+<body class="font-poppins bg-white text-[#F9FAFB] m-0 p-0 overflow-x-hidden">
 
     <div id="header-container"></div>
 
@@ -39,11 +39,11 @@
                     </div>
 
                     <h1
-                        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-2 sm:mb-3 leading-tight uppercase tracking-tighter text-yellow-400 drop-shadow-sm">
-                        AFRICANA TECH
-                        <span class="text-white"> COMPANY</span>
+                        class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-2 sm:mb-3 leading-tight uppercase  text-white drop-shadow-sm whitespace-nowrap">
+                        AFRICANA <span class="underline text-yellow-400 decoration-2 underline-offset-4">TECH &
+                            Branding</span>
+                        <span class="text-white"> ltd</span>
                     </h1>
-
                     <p
                         class="text-xs sm:text-sm md:text-lg lg:text-xl text-center sm:text-left font-medium text-white mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto sm:mx-0">
                         We deliver cutting-edge technology and bold branding solutions that drive growth, enhance
@@ -471,141 +471,67 @@
     </script>
 
 
-    <section id="portfolio" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6">
-            <!-- Heading -->
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 lg:mb-16 reveal">
-                <div class="max-w-2xl">
-                    <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Portfolio</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight">Recent
-                        Success Stories</h2>
-                </div>
-                <div class="mt-6 md:mt-0 hidden md:block">
-                    <a href="#"
-                        class="group inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
-                        See All Portfolio
-                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
+    <section id="portfolio" class="py-16 relative overflow-hidden border-t border-white/10 bg-brandBlack">
+
+        <!-- Background image with 10% opacity (unchanged) -->
+        <div class="absolute inset-0 pointer-events-none" style="background-image: url('hero/hero2.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 10%;">
+        </div>
+
+        <!-- Gradient overlay above the image (unchanged) -->
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 50%),
+                       radial-gradient(circle at 70% 60%, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 60%);
+            background-size: cover, cover;
+            background-position: center, center;">
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <!-- Heading + Paragraph (centered) with reduced bottom margin -->
+            <div class="text-center mb-8 lg:mb-12 reveal">
+                <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm block mb-2">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Recent <span class="text-yellow-400">Success Stories</span>
+                </h2>
+                <p class="mt-4 text-gray-200 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                    Explore how we’ve transformed brands and businesses with innovative tech solutions and creative
+                    excellence. Each project reflects our commitment to delivering measurable results and
+                    unforgettable experiences.
+                </p>
             </div>
 
-            <!-- ========== MOBILE CAROUSEL ========== -->
-            <div class="block md:hidden relative">
-                <!-- Swipe hint -->
-                <div id="swipe-hint"
-                    class="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 text-gray-400 text-xs font-medium transition-opacity duration-500 opacity-100">
-                    <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                    </svg>
-                    <span>Swipe to explore</span>
-                </div>
-
-                <!-- Carousel track -->
-                <div id="mobile-carousel"
-                    class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar -mx-2">
-                    <!-- Card 1 -->
-                    <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
-                        <div
-                            class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="pic/m 1.png" alt="Morix Beyond Zanzibar" class="w-full h-full object-cover">
-                                <div
-                                    class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                                    Branding & Tech</div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-2xl font-bold text-brandBlue mb-3">Morix Beyond Zanzibar</h3>
-                                <p class="text-gray-600 mb-6 line-clamp-2">Complete brand identity, strategic content
-                                    rollout, and high-performance website for a premium tourism operator.</p>
-                                <a href="portfolio.html"
-                                    class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                                    View Project
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 5l7 7-7 7M5 12h14" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+            <!-- ========== PREMIUM 3D SPHERE CAROUSEL (Mobile & Desktop) ========== -->
+            <div class="relative">
+                <div id="premium-3d-carousel" class="relative w-full max-w-7xl mx-auto" style="perspective: 1800px;">
+                    <div class="flex items-center justify-center relative h-[500px] md:h-[680px]">
+                        <!-- Cards will be injected here -->
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
-                        <div
-                            class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal delay-100">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="pic/tree 1.png" alt="African Child Comforters"
-                                    class="w-full h-full object-cover">
-                                <div
-                                    class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                                    Tech Solution</div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-2xl font-bold text-brandBlue mb-3">Mr Tree Foundation</h3>
-                                <p class="text-gray-600 mb-6 line-clamp-2">An integrated digital platform and immersive
-                                    storytelling website engineered for a major NGO.</p>
-                                <a href="portfolio.html"
-                                    class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                                    View Project
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 5l7 7-7 7M5 12h14" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Navigation Arrows (hidden on mobile) -->
+                    <button id="carousel-prev"
+                        class="hidden md:flex absolute top-1/2 -translate-y-1/2 left-4 z-20 w-14 h-14 rounded-full bg-white/90 backdrop-blur shadow-xl border border-gray-200 items-center justify-center text-brandBlack hover:bg-yellow-400 hover:text-black hover:scale-105 transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="carousel-next"
+                        class="hidden md:flex absolute top-1/2 -translate-y-1/2 right-4 z-20 w-14 h-14 rounded-full bg-white/90 backdrop-blur shadow-xl border border-gray-200 items-center justify-center text-brandBlack hover:bg-yellow-400 hover:text-black hover:scale-105 transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
 
-                    <!-- Card 3 -->
-                    <div class="snap-center shrink-0 w-[85vw] max-w-sm px-2">
-                        <div
-                            class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-full flex flex-col reveal delay-200">
-                            <div class="h-64 overflow-hidden relative">
-                                <img src="pic/tech 1.png" alt="FPSSA Platform" class="w-full h-full object-cover">
-                                <div
-                                    class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                                    Tech Solution</div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Student Portal</h3>
-                                <p class="text-gray-600 mb-6 line-clamp-2">A comprehensive web portal and management
-                                    system built for the Federation of Procurement and Supplies Student Association.</p>
-                                <a href="portfolio.html"
-                                    class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                                    View Project
-                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 5l7 7-7 7M5 12h14" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                    <!-- Dots (visible on all screens) -->
+                    <div id="carousel-dots" class="flex justify-center gap-2 md:gap-3 mt-6 md:mt-10 flex-wrap">
                     </div>
                 </div>
 
-                <!-- Numbered dots – all start gray, active becomes black -->
-                <div id="carousel-dots" class="flex justify-center gap-3 mt-6">
-                    <button data-index="0"
-                        class="dot w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-200 text-gray-600 transition-all hover:scale-110">1</button>
-                    <button data-index="1"
-                        class="dot w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-200 text-gray-600 transition-all hover:scale-110">2</button>
-                    <button data-index="2"
-                        class="dot w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-200 text-gray-600 transition-all hover:scale-110">3</button>
-                </div>
-
-                <!-- Mobile See All link -->
-                <div class="mt-8 text-center reveal">
+                <!-- Single premium CTA button -->
+                <div class="mt-10 text-center reveal">
                     <a href="portfolio.html"
-                        class="inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
-                        See All Portfolio
+                        class="inline-flex items-center justify-center px-10 py-5 bg-yellow-400 text-black font-extrabold rounded-full shadow-2xl hover:bg-yellow-300 hover:scale-105 transition-all duration-300 text-lg tracking-wide">
+                        View Full Portfolio
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -613,101 +539,10 @@
                     </a>
                 </div>
             </div>
-
-            <!-- ========== DESKTOP GRID ========== -->
-            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Card 1 -->
-                <div
-                    class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="pic/m 1.png" alt="Morix Beyond Zanzibar"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                            Branding & Tech</div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="text-2xl font-bold text-brandBlue mb-3">Morix Beyond Zanzibar</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-2">Complete brand identity, strategic content rollout,
-                            and high-performance website for a premium tourism operator.</p>
-                        <a href="portfolio.html"
-                            class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                            View Project
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 12h14" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div
-                    class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-100">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="pic/tree 1.png" alt="African Child Comforters"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                            Tech Solution</div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="text-2xl font-bold text-brandBlue mb-3">Mr Tree Foundation</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-2">An integrated digital platform and immersive
-                            storytelling website engineered for a major NGO.</p>
-                        <a href="portfolio.html"
-                            class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                            View Project
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 12h14" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                    class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group hover:-translate-y-2 transition-all duration-500 reveal delay-200">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="pic/tech 1.png" alt="FPSSA Platform"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-yellow-400 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider">
-                            Tech Solution</div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="text-2xl font-bold text-brandBlue mb-3">FPSSA Student Portal</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-2">A comprehensive web portal and management system
-                            built for the Federation of Procurement and Supplies Student Association.</p>
-                        <a href="portfolio.html"
-                            class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors">
-                            View Project
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 5l7 7-7 7M5 12h14" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desktop See All link -->
-            <div class="mt-10 text-center hidden md:block reveal">
-                <a href="portfolio.html"
-                    class="inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
-                    See All Portfolio <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
-            </div>
         </div>
     </section>
+
+
 
     <!-- Styles -->
     <style>
@@ -720,204 +555,360 @@
             scrollbar-width: none;
         }
 
-        .dot.active {
-            background-color: #0A0A0A;
-            color: white;
+        /* ========== 3D Sphere Carousel – Premium Styles ========== */
+        #premium-3d-carousel .card-3d {
+            position: absolute;
+            width: 260px;
+            transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+            will-change: transform, opacity, filter;
+            cursor: pointer;
+            left: 50%;
+        }
+
+        /* Active card – increased size for focus */
+        #premium-3d-carousel .card-3d.active {
+            transform: translateX(-50%) translateZ(0px) rotateY(0deg) scale(1.2);
+            z-index: 10;
+            opacity: 1;
+            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
+        }
+
+        /* Adjacent cards */
+        #premium-3d-carousel .card-3d.prev {
+            transform: translateX(-50%) translateX(-180px) translateZ(-100px) rotateY(30deg) scale(0.8);
+            z-index: 9;
+            opacity: 0.4;
+            filter: blur(3px);
+        }
+
+        #premium-3d-carousel .card-3d.next {
+            transform: translateX(-50%) translateX(180px) translateZ(-100px) rotateY(-30deg) scale(0.8);
+            z-index: 9;
+            opacity: 0.4;
+            filter: blur(3px);
+        }
+
+        /* 2 away */
+        #premium-3d-carousel .card-3d.prev2 {
+            transform: translateX(-50%) translateX(-320px) translateZ(-250px) rotateY(45deg) scale(0.65);
+            z-index: 8;
+            opacity: 0.2;
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        #premium-3d-carousel .card-3d.next2 {
+            transform: translateX(-50%) translateX(320px) translateZ(-250px) rotateY(-45deg) scale(0.65);
+            z-index: 8;
+            opacity: 0.2;
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        /* 3 away */
+        #premium-3d-carousel .card-3d.prev3 {
+            transform: translateX(-50%) translateX(-420px) translateZ(-400px) rotateY(55deg) scale(0.5);
+            z-index: 7;
+            opacity: 0.08;
+            filter: blur(7px);
+            pointer-events: none;
+        }
+
+        #premium-3d-carousel .card-3d.next3 {
+            transform: translateX(-50%) translateX(420px) translateZ(-400px) rotateY(-55deg) scale(0.5);
+            z-index: 7;
+            opacity: 0.08;
+            filter: blur(7px);
+            pointer-events: none;
+        }
+
+        /* 4 away and beyond */
+        #premium-3d-carousel .card-3d.prev4,
+        #premium-3d-carousel .card-3d.next4 {
+            transform: translateX(-50%) translateX(0) translateZ(-500px) rotateY(0deg) scale(0.3);
+            z-index: 6;
+            opacity: 0;
+            filter: blur(10px);
+            pointer-events: none;
+        }
+
+        #premium-3d-carousel .card-3d.hidden-card {
+            transform: translateX(-50%) translateZ(-700px) scale(0.2);
+            z-index: 1;
+            opacity: 0;
+            filter: blur(10px);
+            pointer-events: none;
+        }
+
+        /* Premium card inner styling */
+        #premium-3d-carousel .card-3d .premium-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #premium-3d-carousel .card-3d.active .premium-card {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        #premium-3d-carousel .card-3d .premium-card img {
+            transition: transform 0.5s ease;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #premium-3d-carousel .card-3d.active .premium-card img {
+            transform: scale(1.1);
+        }
+
+        /* Dots */
+        #carousel-dots .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        #carousel-dots .dot.active {
+            background: #facc15;
+            /* yellow-400 */
+            width: 32px;
+            border-radius: 9999px;
+            box-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
+        }
+
+        /* Desktop overrides */
+        @media (min-width: 768px) {
+            #premium-3d-carousel .card-3d {
+                width: 380px;
+            }
+
+            #premium-3d-carousel .card-3d.active {
+                transform: translateX(-50%) translateZ(0px) rotateY(0deg) scale(1.25);
+            }
+
+            #premium-3d-carousel .card-3d.prev {
+                transform: translateX(-50%) translateX(-260px) translateZ(-120px) rotateY(35deg) scale(0.85);
+                filter: blur(3px);
+            }
+
+            #premium-3d-carousel .card-3d.next {
+                transform: translateX(-50%) translateX(260px) translateZ(-120px) rotateY(-35deg) scale(0.85);
+                filter: blur(3px);
+            }
+
+            #premium-3d-carousel .card-3d.prev2 {
+                transform: translateX(-50%) translateX(-460px) translateZ(-280px) rotateY(50deg) scale(0.68);
+                filter: blur(5px);
+            }
+
+            #premium-3d-carousel .card-3d.next2 {
+                transform: translateX(-50%) translateX(460px) translateZ(-280px) rotateY(-50deg) scale(0.68);
+                filter: blur(5px);
+            }
+
+            #premium-3d-carousel .card-3d.prev3 {
+                transform: translateX(-50%) translateX(-580px) translateZ(-420px) rotateY(60deg) scale(0.55);
+                filter: blur(7px);
+            }
+
+            #premium-3d-carousel .card-3d.next3 {
+                transform: translateX(-50%) translateX(580px) translateZ(-420px) rotateY(-60deg) scale(0.55);
+                filter: blur(7px);
+            }
+
+            #premium-3d-carousel .card-3d.prev4,
+            #premium-3d-carousel .card-3d.next4 {
+                transform: translateX(-50%) translateX(0) translateZ(-600px) rotateY(0deg) scale(0.35);
+                filter: blur(10px);
+            }
+
+            #premium-3d-carousel .card-3d .premium-card img {
+                height: 260px;
+            }
         }
     </style>
 
-    <!-- Carousel Script (no rewind) -->
     <script>
         (function () {
-            const carousel = document.getElementById('mobile-carousel');
-            const dots = document.querySelectorAll('#carousel-dots .dot');
-            const swipeHint = document.getElementById('swipe-hint');
+            const portfolioItems = [
+                { img: 'pic/m 1.png', alt: 'Morix Beyond Zanzibar', tag: 'Branding & Tech', title: 'Morix Beyond Zanzibar', desc: 'Complete brand identity, strategic content rollout, and high-performance website for a premium tourism operator.' },
+                { img: 'pic/tree 1.png', alt: 'African Child Comforters', tag: 'Tech Solution', title: 'Mr Tree Foundation', desc: 'An integrated digital platform and immersive storytelling website engineered for a major NGO.' },
+                { img: 'pic/tech 1.png', alt: 'FPSSA Platform', tag: 'Tech Solution', title: 'FPSSA Student Portal', desc: 'A comprehensive web portal and management system built for the Federation of Procurement and Supplies Student Association.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+4', alt: 'Project Four', tag: 'Branding', title: 'Project Four', desc: 'Short description for project four.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+5', alt: 'Project Five', tag: 'Tech', title: 'Project Five', desc: 'Short description for project five.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+6', alt: 'Project Six', tag: 'Branding & Tech', title: 'Project Six', desc: 'Short description for project six.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+7', alt: 'Project Seven', tag: 'Tech', title: 'Project Seven', desc: 'Short description for project seven.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+8', alt: 'Project Eight', tag: 'Branding', title: 'Project Eight', desc: 'Short description for project eight.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+9', alt: 'Project Nine', tag: 'Tech', title: 'Project Nine', desc: 'Short description for project nine.' },
+                { img: 'https://via.placeholder.com/600x400?text=Project+10', alt: 'Project Ten', tag: 'Branding & Tech', title: 'Project Ten', desc: 'Short description for project ten.' }
+            ];
 
-            if (!carousel || dots.length === 0) return;
-
-            // --- Create clones for infinite seamless loop ---
-            const originalCards = carousel.querySelectorAll('.snap-center');
-            if (originalCards.length === 0) return;
-
-            const firstCardClone = originalCards[0].cloneNode(true);
-            const lastCardClone = originalCards[originalCards.length - 1].cloneNode(true);
-
-            carousel.appendChild(firstCardClone);   // clone of first card at the end
-            carousel.insertBefore(lastCardClone, originalCards[0]); // clone of last card at the beginning
-
-            const allCards = carousel.querySelectorAll('.snap-center');
-            const totalCards = allCards.length;          // now includes 2 clones
-            const originalCount = originalCards.length;  // 3
-
-            // Map: original card index -> actual DOM index (after clones added)
-            // actual indices: 0 = clone of last, 1 = original[0], 2 = original[1], 3 = original[2], 4 = clone of first
-            function originalToActual(originalIndex) {
-                return originalIndex + 1;   // because clone at index 0
+            function createCardHTML(item) {
+                return `
+                <div class="premium-card">
+                    <div class="overflow-hidden relative">
+                        <img src="${item.img}" alt="${item.alt}" class="w-full">
+                        <div class="absolute top-4 left-4 bg-brandBlue text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                            ${item.tag}
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-8 flex flex-col flex-1">
+                        <h3 class="text-base md:text-lg font-bold text-brandBlue mb-2 md:mb-3">${item.title}</h3>
+                        <p class="text-gray-600 text-sm md:text-base line-clamp-2">${item.desc}</p>
+                    </div>
+                </div>
+            `;
             }
 
-            // Variables
-            let autoPlayTimer, userInteracted = false, resumeTimer;
-            let currentOriginalIndex = 0;      // tracks the currently displayed original card (0,1,2)
-            let isTransitioning = false;       // prevent overlapping scroll calls
+            const carouselContainer = document.querySelector('#premium-3d-carousel .flex.items-center');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dotsContainer = document.getElementById('carousel-dots');
 
-            // --- Update active dot (only for original cards) ---
-            function updateActiveDot(originalIndex) {
-                dots.forEach((dot, i) => dot.classList.toggle('active', i === originalIndex));
-            }
+            let currentIndex = 0;
+            let autoplayInterval;
 
-            // --- Scroll to a card by its actual DOM index (no smoothing if it's a jump) ---
-            function scrollToActualIndex(actualIndex, smooth = true) {
-                if (actualIndex < 0 || actualIndex >= totalCards) return;
-                const card = allCards[actualIndex];
-                carousel.scrollTo({
-                    left: card.offsetLeft - 8,
-                    behavior: smooth ? 'smooth' : 'auto'   // 'auto' gives instant jump
-                });
-            }
-
-            // --- Scroll to an original card (public API) ---
-            function scrollToOriginal(originalIndex) {
-                if (originalIndex < 0 || originalIndex >= originalCount) return;
-                currentOriginalIndex = originalIndex;
-                updateActiveDot(originalIndex);
-                const actual = originalToActual(originalIndex);
-                scrollToActualIndex(actual, true);
-            }
-
-            // --- Handle the seamless looping when reaching clones ---
-            function handleLoopBoundary() {
-                if (isTransitioning) return;
-
-                const scrollLeft = carousel.scrollLeft;
-                const firstClone = allCards[0];   // clone of last original
-                const lastClone = allCards[totalCards - 1]; // clone of first original
-
-                // If user scrolled (or auto) to the leftmost clone, we jumped to the real last card
-                if (Math.abs(scrollLeft - firstClone.offsetLeft + 8) < 20) {
-                    // near the clone of the last card → jump to the real last original card (actual index = originalCount)
-                    isTransitioning = true;
-                    const targetIndex = originalCount;   // which is originalToActual(originalCount-1) = originalCount
-                    scrollToActualIndex(targetIndex, false);   // instant jump
-                    currentOriginalIndex = originalCount - 1;
-                    updateActiveDot(currentOriginalIndex);
-                    isTransitioning = false;
-                }
-                // If scrolled to the rightmost clone (clone of first), jump to the real first card
-                else if (Math.abs(scrollLeft - lastClone.offsetLeft + 8) < 20) {
-                    isTransitioning = true;
-                    const targetIndex = 1;   // originalToActual(0)
-                    scrollToActualIndex(targetIndex, false);
-                    currentOriginalIndex = 0;
-                    updateActiveDot(0);
-                    isTransitioning = false;
-                }
-            }
-
-            // --- Auto‑play: advance to next original card (looping infinitely) ---
-            function startAutoPlay() {
-                stopAutoPlay();
-                autoPlayTimer = setInterval(() => {
-                    if (!userInteracted && !isTransitioning) {
-                        // Next original card, wrap around
-                        let nextOriginal = (currentOriginalIndex + 1) % originalCount;
-                        scrollToOriginal(nextOriginal);
-                    }
-                }, 3500);
-            }
-
-            function stopAutoPlay() {
-                if (autoPlayTimer) clearInterval(autoPlayTimer);
-            }
-
-            // --- Pause on user interaction ---
-            function onUserInteraction() {
-                userInteracted = true;
-                if (resumeTimer) clearTimeout(resumeTimer);
-                resumeTimer = setTimeout(() => {
-                    userInteracted = false;
-                }, 2000);
-            }
-
-            // --- Sync currentOriginalIndex from scroll position (used for manual swipes) ---
-            function updateOriginalFromScroll() {
-                const scrollLeft = carousel.scrollLeft;
-                const cardWidth = allCards[1].offsetWidth + 16;   // width of an original card + padding
-
-                // Calculate which original card is closest
-                let rawIndex = Math.round((scrollLeft - allCards[1].offsetLeft + 8) / cardWidth);
-                rawIndex = Math.min(originalCount - 1, Math.max(0, rawIndex));
-                if (rawIndex !== currentOriginalIndex) {
-                    currentOriginalIndex = rawIndex;
-                    updateActiveDot(currentOriginalIndex);
-                }
-            }
-
-            // --- Scroll event listener ---
-            let scrollTimeout;
-            carousel.addEventListener('scroll', () => {
-                if (scrollTimeout) clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    handleLoopBoundary();
-                    updateOriginalFromScroll();
-                    onUserInteraction();
-                }, 20);   // faster response
+            portfolioItems.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'card-3d';
+                card.dataset.index = index;
+                card.innerHTML = createCardHTML(item);
+                carouselContainer.appendChild(card);
             });
 
-            // --- Dot clicks ---
-            dots.forEach(dot => {
-                dot.addEventListener('click', () => {
-                    const index = parseInt(dot.dataset.index);
-                    scrollToOriginal(index);
-                    onUserInteraction();
-                });
+            portfolioItems.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'dot';
+                dot.dataset.index = index;
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
             });
 
-            // --- Touch / mouse events pause auto‑play ---
-            carousel.addEventListener('touchstart', onUserInteraction);
-            carousel.addEventListener('mousedown', onUserInteraction);
+            const cards = carouselContainer.querySelectorAll('.card-3d');
+            const totalCards = cards.length;
 
-            // --- Initialize position (start at original card 0) ---
-            updateActiveDot(0);
-            // Scroll to the real first card (actual index 1) instantly so we don't see the clone
-            scrollToActualIndex(originalToActual(0), false);
-            currentOriginalIndex = 0;
-            startAutoPlay();
+            function updateCarousel() {
+                cards.forEach((card, index) => {
+                    card.classList.remove('active', 'prev', 'next', 'prev2', 'next2', 'prev3', 'next3', 'prev4', 'next4', 'hidden-card');
+                    let diff = index - currentIndex;
+                    if (diff < 0) diff += totalCards;
+                    if (diff > totalCards / 2) diff -= totalCards;
+                    const absDiff = Math.abs(diff);
+                    if (absDiff === 0) card.classList.add('active');
+                    else if (absDiff === 1) card.classList.add(diff > 0 ? 'next' : 'prev');
+                    else if (absDiff === 2) card.classList.add(diff > 0 ? 'next2' : 'prev2');
+                    else if (absDiff === 3) card.classList.add(diff > 0 ? 'next3' : 'prev3');
+                    else if (absDiff === 4) card.classList.add(diff > 0 ? 'next4' : 'prev4');
+                    else card.classList.add('hidden-card');
+                });
 
-            // Hide swipe hint after 3 seconds
-            setTimeout(() => {
-                if (swipeHint) {
-                    swipeHint.style.opacity = '0';
-                    setTimeout(() => { swipeHint.style.display = 'none'; }, 500);
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalCards;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                autoplayInterval = setInterval(nextSlide, 5000);
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            });
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+            carouselContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carouselContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) nextSlide();
+                    else prevSlide();
                 }
-            }, 3000);
+            }, { passive: true });
+
+            updateCarousel();
+            resetAutoplay();
         })();
     </script>
 
-    <section class="py-16 md:py-24 bg-yellow-400 text-brandWhite relative overflow-hidden">
-        <div
-            class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20">
-        </div>
+
+
+
+
+    <section class="py-16 md:py-24 bg-brandBlue relative overflow-hidden mt-16 md:mt-24">
+        <!-- Subtle top accent -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brandYellow via-white to-brandYellow"></div>
 
         <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <!-- Heading -->
             <div class="text-center mb-12 md:mb-16 reveal">
-                <span class="text-brandBlack font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">Why
-                    Us</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlue">The Africana
-                    Advantage</h2>
+                <!-- "Why Us" pill badge with lines -->
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <span class="hidden sm:block h-px w-12 bg-gradient-to-r from-transparent to-brandYellow/60"></span>
+                    <span
+                        class="inline-block bg-yellow-400 text-brandBlack font-semibold tracking-widest uppercase text-xs md:text-sm px-5 py-2 rounded-full border border-brandYellow/30">
+                        Why Us
+                    </span>
+                    <span class="hidden sm:block h-px w-12 bg-gradient-to-l from-transparent to-brandYellow/60"></span>
+                </div>
+
+                <!-- Main heading with gradient on "Advantage" -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    The Africana <span class="text-yellow-400">Advantage</span>
+                </h2>
+
+                <!-- Decorative underline -->
+                <div class="mt-4 mx-auto w-24 h-1 bg-gradient-to-r from-brandYellow to-yellow-200 rounded-full"></div>
             </div>
 
             <!-- Desktop Grid + Mobile Carousel -->
             <div id="advantage-container"
-                class="flex overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:overflow-visible"
+                class="flex overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:overflow-visible"
                 style="-ms-overflow-style:none;scrollbar-width:none">
 
                 <!-- Card 1: Locally Rooted -->
-                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal"
+                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal"
                     data-advantage-index="0">
                     <div
-                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
+                        class="w-14 h-14 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5 mx-auto md:mx-0">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
                             </path>
@@ -925,68 +916,72 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
-                    <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Deep,
-                        unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
+                    <h3 class="font-bold text-lg sm:text-xl mb-3 text-gray-900 text-center md:text-left">Locally Rooted
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed text-center md:text-left">
+                        Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.
+                    </p>
                 </div>
 
                 <!-- Card 2: Globally Capable -->
-                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-100"
+                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal delay-100"
                     data-advantage-index="1">
                     <div
-                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
+                        class="w-14 h-14 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5 mx-auto md:mx-0">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Globally Capable</h3>
-                    <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Executing
-                        complex projects to the absolute highest international standards and tech practices.</p>
+                    <h3 class="font-bold text-lg sm:text-xl mb-3 text-gray-900 text-center md:text-left">Globally
+                        Capable</h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed text-center md:text-left">
+                        Executing complex projects to the absolute highest international standards and tech practices.
+                    </p>
                 </div>
 
                 <!-- Card 3: Full-Service -->
-                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-200"
+                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal delay-200"
                     data-advantage-index="2">
                     <div
-                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
+                        class="w-14 h-14 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5 mx-auto md:mx-0">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Full-Service</h3>
-                    <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">From
-                        heavy-duty backend code to striking visual creative, we handle your entire ecosystem.</p>
+                    <h3 class="font-bold text-lg sm:text-xl mb-3 text-gray-900 text-center md:text-left">Full-Service
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed text-center md:text-left">
+                        From heavy-duty backend code to striking visual creative, we handle your entire ecosystem.
+                    </p>
                 </div>
 
                 <!-- Card 4: Client-Centric -->
-                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left reveal delay-300"
+                <div class="advantage-card flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal delay-300"
                     data-advantage-index="3">
                     <div
-                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
+                        class="w-14 h-14 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5 mx-auto md:mx-0">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5">
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Client-Centric</h3>
-                    <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">We view
-                        ourselves as partners, not vendors. Your business growth is our only metric of success.</p>
+                    <h3 class="font-bold text-lg sm:text-xl mb-3 text-gray-900 text-center md:text-left">Client-Centric
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed text-center md:text-left">
+                        We view ourselves as partners, not vendors. Your business growth is our only metric of success.
+                    </p>
                 </div>
 
                 <!-- CLONE of Card 1 for seamless infinite loop (hidden on desktop) -->
-                <div class="advantage-card advantage-clone flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center text-center md:text-left md:hidden reveal"
+                <div class="advantage-card advantage-clone flex-shrink-0 w-[80vw] sm:w-[320px] md:w-auto snap-center bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 md:hidden reveal"
                     data-advantage-index="4" data-clone="true">
                     <div
-                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue rounded-xl flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 border border-white">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
+                        class="w-14 h-14 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center mb-5 mx-auto md:mx-0">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
                             </path>
@@ -994,11 +989,12 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-brandBlack">Locally Rooted</h3>
-                    <p class="text-sm sm:text-base text-justify md:text-left text-brandBlack leading-relaxed">Deep,
-                        unmatched understanding of the Tanzanian market dynamics and consumer behavior.</p>
+                    <h3 class="font-bold text-lg sm:text-xl mb-3 text-gray-900 text-center md:text-left">Locally Rooted
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed text-center md:text-left">
+                        Deep, unmatched understanding of the Tanzanian market dynamics and consumer behavior.
+                    </p>
                 </div>
-
             </div>
 
             <!-- Mobile Pagination Dots -->
@@ -1204,271 +1200,774 @@
     </script>
 
 
-    <section id="blog" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16 reveal">
-                <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Updates &
-                    News</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brandBlack">From Our Blog
+
+
+
+
+    <section class="relative py-16 sm:py-24 lg:py-28 bg-[#F9FAFB] overflow-hidden"
+        style="--brandBlue:#136db6; --brandBlack:#0A0A0A; --brandGreen:#009444;">
+        <!-- Subtle background grid -->
+        <div
+            class="absolute inset-0 bg-[linear-gradient(rgba(19,109,182,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(19,109,182,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-50">
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-14 sm:mb-20 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#136db6]/5 text-[#136db6] font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 border border-[#136db6]/10">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    Proven Results
+                </span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A0A0A] tracking-tight leading-tight">
+                    Real Impact, <span class="relative inline-block">
+                        <span class="text-brandBlue">Measurable
+                            Growth</span>
+                        <span class="absolute inset-x-0 bottom-1 h-2 bg-yellow-400/20 rounded-full -z-0 "></span>
+                    </span>
                 </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+                    From brand strategy to digital experiences, we help ambitious businesses build stronger identities,
+                    connect with their audiences and create measurable opportunities for growth.
+                </p>
             </div>
 
-            <!-- Desktop Grid + Mobile Carousel -->
-            <div id="blog-container"
-                class="flex overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 gap-8 sm:gap-10 md:overflow-visible"
-                style="-ms-overflow-style:none;scrollbar-width:none">
-
-                <!-- Blog Card 1 -->
-                <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-brandBlue p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal"
-                    data-blog-index="0">
-                    <p class="text-sm text-yellow-400 font-bold mb-3 uppercase tracking-wider">March 12, 2026</p>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-200 hover:text-yellow-400 transition-colors">The Future
-                        of African Tech Infrastructure</h3>
-                    <p class="text-gray-300 mb-6 line-clamp-3">A deep dive into how emerging cloud solutions are
-                        completely reshaping the capabilities of businesses operating within East Africa.</p>
-                    <a href="blog.html"
-                        class="font-bold bg-yellow-400 text-brandBlack px-6 py-2 rounded-full hover:bg-white hover:text-brandBlue transition-all duration-300 inline-flex items-center shadow-sm">Read
-                        Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg> </a>
+            <!-- Animated Stats Counter -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-20 reveal">
+                <div
+                    class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-[#136db6] counter" data-target="300"
+                        data-suffix="%">0%</div>
+                    <p class="mt-2 text-sm sm:text-base font-medium text-gray-600">Average ROI Increase</p>
                 </div>
-
-                <!-- Blog Card 2 -->
-                <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-100"
-                    data-blog-index="1">
-                    <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 28, 2026</p>
-                    <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Why UX
-                        Design Dictates Your Revenue</h3>
-                    <p class="text-gray-600 mb-6 line-clamp-3">If your users are frustrated, they leave. We explore the
-                        direct correlation between intuitive interfaces and massive increases in conversion rates.</p>
-                    <a href="blog.html"
-                        class="font-bold bg-brandBlue text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-brandBlack transition-all duration-300 inline-flex items-center shadow-sm">Read
-                        Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg> </a>
+                <div
+                    class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-[#136db6] counter" data-target="150"
+                        data-suffix="+">0+</div>
+                    <p class="mt-2 text-sm sm:text-base font-medium text-gray-600">Projects Delivered</p>
                 </div>
-
-                <!-- Blog Card 3 -->
-                <div class="blog-card flex-shrink-0 w-[80vw] sm:w-[350px] md:w-auto snap-center bg-yellow-400 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 reveal delay-200"
-                    data-blog-index="2">
-                    <p class="text-sm text-brandBlue font-bold mb-3 uppercase tracking-wider">Feb 15, 2026</p>
-                    <h3 class="text-2xl font-bold mb-4 text-brandBlack hover:text-brandBlue transition-colors">Securing
-                        Your Digital Footprint</h3>
-                    <p class="text-brandBlack mb-6 line-clamp-3">With cyber threats evolving daily, here are 5 critical
-                        steps every modern enterprise must take to protect their user data.</p>
-                    <a href="blog.html"
-                        class="font-bold bg-white text-brandBlack px-6 py-2 rounded-full hover:bg-brandBlue hover:text-yellow-400 transition-all duration-300 inline-flex items-center shadow-sm">Read
-                        Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
-                        </svg> </a>
+                <div
+                    class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-[#136db6] counter" data-target="4.9"
+                        data-suffix="/5" data-decimal="1">0/5</div>
+                    <p class="mt-2 text-sm sm:text-base font-medium text-gray-600">Client Satisfaction Score</p>
                 </div>
-
+                <div
+                    class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-[#136db6] counter" data-target="6"
+                        data-suffix="yrs">0yrs</div>
+                    <p class="mt-2 text-sm sm:text-base font-medium text-gray-600">Years of Experience</p>
+                </div>
             </div>
 
-            <!-- Mobile Arrow Navigation (visible only on mobile) -->
-            <div id="blog-nav" class="hidden md:hidden items-center justify-center gap-4 mt-6">
-                <button id="blog-prev"
-                    class="w-10 h-10 rounded-full bg-brandBlue text-white flex items-center justify-center shadow-lg hover:bg-brandBlack transition-colors duration-300"
-                    aria-label="Previous slide">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
-                        </path>
+            <!-- Combined: Approach & Before/After with mobile carousel -->
+            <div class="mb-16 sm:mb-20 reveal">
+                <!-- Mobile Carousel Wrapper (lg:hidden) - THREE separate cards -->
+                <div id="transformation-mobile-carousel" class="lg:hidden">
+                    <!-- Dynamic heading -->
+                    <div class="text-center mb-6">
+                        <h3 id="mobile-carousel-heading" class="text-2xl font-bold text-[#0A0A0A]">The Africana Approach
+                        </h3>
+                    </div>
+                    <!-- Slides Container -->
+                    <div class="relative overflow-hidden" id="carousel-viewport">
+                        <div class="flex transition-transform duration-700 ease-in-out" id="mobile-carousel-track">
+                            <!-- Slide 1: Approach (blue bg) -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-[#136db6]/10 p-6 sm:p-8 rounded-2xl h-full">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6]">
+                                            <span class="text-2xl font-extrabold text-[#136db6]">01</span>
+                                            <div>
+                                                <h4 class="font-bold text-[#0A0A0A]">Brand Transformation</h4>
+                                                <p class="text-sm text-gray-600 mt-1">We turn ideas into distinctive,
+                                                    strategic brands built for recognition, trust and long-term
+                                                    positioning.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6]">
+                                            <span class="text-2xl font-extrabold text-[#136db6]">02</span>
+                                            <div>
+                                                <h4 class="font-bold text-[#0A0A0A]">Digital Transformation</h4>
+                                                <p class="text-sm text-gray-600 mt-1">We build modern websites and
+                                                    digital platforms designed around real business objectives.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6]">
+                                            <span class="text-2xl font-extrabold text-[#136db6]">03</span>
+                                            <div>
+                                                <h4 class="font-bold text-[#0A0A0A]">Business Growth</h4>
+                                                <p class="text-sm text-gray-600 mt-1">We help businesses attract
+                                                    attention, generate opportunities and create better customer
+                                                    experiences.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6]">
+                                            <span class="text-2xl font-extrabold text-[#136db6]">04</span>
+                                            <div>
+                                                <h4 class="font-bold text-[#0A0A0A]">Operational Efficiency</h4>
+                                                <p class="text-sm text-gray-600 mt-1">We develop digital systems that
+                                                    reduce manual work and make businesses easier to manage.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Before Africana (red/negative) -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-red-50 p-6 sm:p-8 rounded-2xl h-full">
+                                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <span class="inline-block w-3 h-3 rounded-full bg-red-500"></span>
+                                            <h4 class="font-bold text-lg text-gray-800">Before Africana</h4>
+                                        </div>
+                                        <ul class="space-y-3 text-sm">
+                                            <li class="flex items-start gap-2 text-gray-600">
+                                                <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span><strong>Inconsistent brand identity:</strong> No clear visual
+                                                    language, confusing messaging.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-600">
+                                                <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span><strong>Low brand recognition:</strong> Struggled to stand out in
+                                                    a crowded market.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-600">
+                                                <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span><strong>Slow website performance:</strong> 6.8s load times, high
+                                                    bounce rates.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-600">
+                                                <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span><strong>Disconnected systems:</strong> Manual workflows, data
+                                                    silos, no integrations.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-600">
+                                                <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                                <span><strong>Low conversion rate:</strong> 1.2% average, losing
+                                                    potential customers.</span>
+                                            </li>
+                                        </ul>
+                                        <div class="mt-4 pt-3 border-t border-gray-100 text-sm text-gray-500">
+                                            <p><strong>Monthly revenue:</strong> $8,500</p>
+                                            <p><strong>Brand recall:</strong> 45%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: After Africana (green/positive) -->
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-[#009444]/10 p-6 sm:p-8 rounded-2xl h-full">
+                                    <div
+                                        class="bg-white rounded-2xl p-6 border-2 border-[#009444]/30 shadow-lg relative overflow-hidden">
+                                        <div
+                                            class="absolute top-0 right-0 bg-[#009444] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                            +220% Revenue Growth
+                                        </div>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <span class="inline-block w-3 h-3 rounded-full bg-[#009444]"></span>
+                                            <h4 class="font-bold text-lg text-[#0A0A0A]">After Africana</h4>
+                                        </div>
+                                        <ul class="space-y-3 text-sm">
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span><strong>Cohesive brand identity:</strong> Clear messaging,
+                                                    memorable visuals, consistent across all touchpoints.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span><strong>Strong brand recognition:</strong> +180% awareness,
+                                                    increased customer loyalty.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span><strong>Lightning-fast website:</strong> 1.8s load time, 73% lower
+                                                    bounce rate.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span><strong>Integrated systems:</strong> Automated workflows,
+                                                    real-time analytics, unified CRM.</span>
+                                            </li>
+                                            <li class="flex items-start gap-2 text-gray-700">
+                                                <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span><strong>Conversion rate:</strong> 3.4%, a 2.8x improvement.</span>
+                                            </li>
+                                        </ul>
+                                        <div class="mt-4 pt-3 border-t border-gray-100 text-sm text-gray-700">
+                                            <p><strong>Monthly revenue:</strong> $27,200</p>
+                                            <p><strong>Brand recall:</strong> 92%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dots for three slides -->
+                    <div class="flex justify-center gap-2 mt-4">
+                        <button
+                            class="mobile-dot w-3 h-3 rounded-full bg-[#136db6] scale-125 transition-all duration-300"
+                            data-index="0" aria-label="Go to slide 1"></button>
+                        <button
+                            class="mobile-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+                            data-index="1" aria-label="Go to slide 2"></button>
+                        <button
+                            class="mobile-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+                            data-index="2" aria-label="Go to slide 3"></button>
+                    </div>
+                </div>
+
+                <!-- Desktop Layout (lg:flex) - unchanged -->
+                <div class="hidden lg:flex flex-row gap-10">
+                    <!-- Left: The Africana Approach (blue background) -->
+                    <div class="lg:w-1/3 bg-[#136db6]/10 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#0A0A0A] mb-4">The Africana Approach</h3>
+                        <p class="text-gray-600 mb-6">We combine strategy, creativity, and technology to transform
+                            businesses beyond simply being online.
+                        </p>
+                        <div class="space-y-4">
+                            <div
+                                class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6] hover:shadow-md transition-shadow">
+                                <span class="text-2xl font-extrabold text-[#136db6]">01</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0A0A0A]">Brand Transformation</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We turn ideas into distinctive, strategic
+                                        brands built for recognition, trust and long-term positioning.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6] hover:shadow-md transition-shadow">
+                                <span class="text-2xl font-extrabold text-[#136db6]">02</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0A0A0A]">Digital Transformation</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We build modern websites and digital platforms
+                                        designed around real business objectives.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6] hover:shadow-md transition-shadow">
+                                <span class="text-2xl font-extrabold text-[#136db6]">03</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0A0A0A]">Business Growth</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We help businesses attract attention, generate
+                                        opportunities and create better customer experiences.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 border-[#136db6] hover:shadow-md transition-shadow">
+                                <span class="text-2xl font-extrabold text-[#136db6]">04</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0A0A0A]">Operational Efficiency</h4>
+                                    <p class="text-sm text-gray-600 mt-1">We develop digital systems that reduce manual
+                                        work and make businesses easier to manage.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Before / After Transformation (green background) -->
+                    <div class="lg:w-2/3 bg-[#009444]/10 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#0A0A0A] mb-4">The Africana Transformation</h3>
+                        <p class="text-gray-600 mb-6">From inconsistent brands and outdated digital experiences to bold
+                            identities and intelligent digital platforms.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Before card -->
+                            <div class="before-card-animate bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="inline-block w-3 h-3 rounded-full bg-red-500"></span>
+                                    <h4 class="font-bold text-lg text-gray-800">Before Africana</h4>
+                                </div>
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                        <span><strong>Inconsistent brand identity:</strong> No clear visual language,
+                                            confusing messaging.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                        <span><strong>Low brand recognition:</strong> Struggled to stand out in a
+                                            crowded market.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                        <span><strong>Slow website performance:</strong> 6.8s load times, high bounce
+                                            rates.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                        <span><strong>Disconnected systems:</strong> Manual workflows, data silos, no
+                                            integrations.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        <svg class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                        <span><strong>Low conversion rate:</strong> 1.2% average, losing potential
+                                            customers.</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-4 pt-3 border-t border-gray-100 text-sm text-gray-500">
+                                    <p><strong>Monthly revenue:</strong> $8,500</p>
+                                    <p><strong>Brand recall:</strong> 45%</p>
+                                </div>
+                            </div>
+
+                            <!-- After card -->
+                            <div
+                                class="after-card-animate bg-white rounded-2xl p-6 border-2 border-[#009444]/30 shadow-lg relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 bg-[#009444] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                    +220% Revenue Growth
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="inline-block w-3 h-3 rounded-full bg-[#009444]"></span>
+                                    <h4 class="font-bold text-lg text-[#0A0A0A]">After Africana</h4>
+                                </div>
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start gap-2 text-gray-700">
+                                        <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Cohesive brand identity:</strong> Clear messaging, memorable
+                                            visuals, consistent across all touchpoints.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-700">
+                                        <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Strong brand recognition:</strong> +180% awareness, increased
+                                            customer loyalty.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-700">
+                                        <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Lightning-fast website:</strong> 1.8s load time, 73% lower bounce
+                                            rate.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-700">
+                                        <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Integrated systems:</strong> Automated workflows, real-time
+                                            analytics, unified CRM.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-gray-700">
+                                        <svg class="w-4 h-4 text-[#009444] flex-shrink-0 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span><strong>Conversion rate:</strong> 3.4%, a 2.8x improvement.</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-4 pt-3 border-t border-gray-100 text-sm text-gray-700">
+                                    <p><strong>Monthly revenue:</strong> $27,200</p>
+                                    <p><strong>Brand recall:</strong> 92%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study / Impact Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+                <!-- Card 1: Tech / Website & Systems -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group reveal">
+                    <div class="h-2 bg-brandBlue"></div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-white bg-brandBlue px-3 py-1 rounded-full">Website
+                                & Systems</span>
+                            <span class="text-gray-400 text-sm">2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0A0A0A] mb-3">Business Platform Modernization</h3>
+                        <p class="text-gray-600 mb-4">Rebuilt legacy system with a modern stack, boosting performance,
+                            user experience, and backend efficiency.</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Revenue Growth</span>
+                                <span class="font-bold text-brandBlue">+220%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Load Time Reduction</span>
+                                <span class="font-bold text-brandBlue">-73%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Conversion Rate</span>
+                                <span class="font-bold text-brandBlue">+2.8x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Branding -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group reveal">
+                    <div class="h-2 bg-yellow-400"></div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-brandBlack bg-yellow-400 px-3 py-1 rounded-full">Branding</span>
+                            <span class="text-gray-400 text-sm">2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0A0A0A] mb-3">Full Brand Identity Redesign</h3>
+                        <p class="text-gray-600 mb-4">Created cohesive brand system, boosting recognition and customer
+                            loyalty.</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Brand Awareness</span>
+                                <span class="font-bold text-yellow-400">+180%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Social Engagement</span>
+                                <span class="font-bold text-yellow-400">+350%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Customer Retention</span>
+                                <span class="font-bold text-yellow-400">+45%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Digital Marketing -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group reveal md:col-span-2 lg:col-span-1">
+                    <div class="h-2 bg-brandGreen"></div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-white bg-brandGreen px-3 py-1 rounded-full">Digital
+                                Marketing</span>
+                            <span class="text-gray-400 text-sm">2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0A0A0A] mb-3">Integrated Campaign Strategy</h3>
+                        <p class="text-gray-600 mb-4">Launched multi-channel campaigns that drove qualified leads and
+                            sales.</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Lead Generation</span>
+                                <span class="font-bold text-brandGreen">+275%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Cost per Acquisition</span>
+                                <span class="font-bold text-brandGreen">-40%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">ROAS (Return on Ad Spend)</span>
+                                <span class="font-bold text-brandGreen">6.8x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- CTA Button -->
+            <div class="text-center mt-12 reveal">
+                <a href="contact.html"
+                    class="inline-flex items-center px-8 py-4 bg-[#136db6] text-white font-bold rounded-xl hover:bg-[#136db6]/90 transition-colors shadow-lg shadow-[#136db6]/20">
+                    Start Your Success Story
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
-                </button>
-                <button id="blog-next"
-                    class="w-10 h-10 rounded-full bg-brandBlue text-white flex items-center justify-center shadow-lg hover:bg-brandBlack transition-colors duration-300"
-                    aria-label="Next slide">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
+                </a>
             </div>
         </div>
-    </section>
 
-    <script>
-        (function () {
-            const container = document.getElementById('blog-container');
-            const navContainer = document.getElementById('blog-nav');
-            const prevBtn = document.getElementById('blog-prev');
-            const nextBtn = document.getElementById('blog-next');
-            const cards = Array.from(document.querySelectorAll('.blog-card'));
-            let observer;
-            let scrollTimer;
-
-            function isMobile() {
-                return window.innerWidth < 768; // md breakpoint
+        <!-- Styles for animations and custom colors -->
+        <style>
+            .reveal {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
             }
 
-            function showNav() {
-                if (!navContainer) return;
-                if (isMobile()) {
-                    navContainer.classList.add('flex');
-                    navContainer.classList.remove('hidden');
-                } else {
-                    navContainer.classList.add('hidden');
-                    navContainer.classList.remove('flex');
+            .reveal.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Before/After card animations (desktop) */
+            .before-card-animate,
+            .after-card-animate {
+                opacity: 0;
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+
+            .before-card-animate {
+                transform: translateX(-40px);
+            }
+
+            .after-card-animate {
+                transform: translateX(40px);
+            }
+
+            .before-card-animate.animate-visible,
+            .after-card-animate.animate-visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            /* Prevent vertical scrolling interference while swiping on mobile */
+            #carousel-viewport {
+                touch-action: pan-y;
+            }
+        </style>
+
+        <!-- Script with counters, mobile carousel (3 slides), swipe gestures, and card animations -->
+        <script>
+            (function () {
+                // --- Reveal animations and counters ---
+                const revealElements = document.querySelectorAll('.reveal');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const el = entry.target;
+                        if (entry.isIntersecting) {
+                            el.classList.add('visible');
+                            if (el.querySelector('.counter')) animateCounters(el);
+                        } else {
+                            const countersInside = el.querySelectorAll('.counter');
+                            countersInside.forEach(counter => {
+                                const suffix = counter.dataset.suffix || '';
+                                counter.textContent = '0' + suffix;
+                                delete counter.dataset.animated;
+                            });
+                        }
+                    });
+                }, { threshold: 0.3 });
+                revealElements.forEach(el => observer.observe(el));
+
+                function animateCounters(container) {
+                    const counters = container.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        if (counter.dataset.animated === 'true') return;
+                        counter.dataset.animated = 'true';
+                        const target = parseFloat(counter.dataset.target);
+                        const suffix = counter.dataset.suffix || '';
+                        const decimal = parseInt(counter.dataset.decimal) || 0;
+                        const duration = 2000;
+                        const startTime = performance.now();
+                        function updateCounter(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const currentValue = target * eased;
+                            const formatted = decimal > 0 ? currentValue.toFixed(decimal) : Math.floor(currentValue);
+                            counter.textContent = formatted + suffix;
+                            if (progress < 1) requestAnimationFrame(updateCounter);
+                        }
+                        requestAnimationFrame(updateCounter);
+                    });
                 }
-            }
 
-            function observeCards() {
-                if (observer) observer.disconnect();
-                if (!isMobile()) return;
-
-                observer = new IntersectionObserver((entries) => {
+                // --- Desktop Before/After card animations ---
+                const beforeCards = document.querySelectorAll('.before-card-animate');
+                const afterCards = document.querySelectorAll('.after-card-animate');
+                const cardObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            const idx = parseInt(entry.target.getAttribute('data-blog-index'));
-                            updateArrowStates(idx);
+                            entry.target.classList.add('animate-visible');
                         }
                     });
-                }, { root: container, threshold: 0.6 });
+                }, { threshold: 0.3 });
+                beforeCards.forEach(card => cardObserver.observe(card));
+                afterCards.forEach(card => cardObserver.observe(card));
 
-                cards.forEach(c => observer.observe(c));
-            }
+                // --- Mobile carousel (3 slides) ---
+                const carouselTrack = document.getElementById('mobile-carousel-track');
+                const carouselViewport = document.getElementById('carousel-viewport');
+                const dots = document.querySelectorAll('.mobile-dot');
+                const heading = document.getElementById('mobile-carousel-heading');
+                let currentSlide = 0;
+                const totalSlides = 3; // Updated to 3 slides
+                const autoplayDelay = 8000; // 8 seconds
+                let autoplayInterval = null;
 
-            function updateArrowStates(activeIndex) {
-                if (!prevBtn || !nextBtn) return;
+                // Define heading text for each slide
+                const headings = [
+                    'The Africana Approach',
+                    'Before Africana',
+                    'After Africana'
+                ];
 
-                // Prev button: dim if on first card
-                if (activeIndex === 0) {
-                    prevBtn.style.opacity = '0.4';
-                    prevBtn.style.pointerEvents = 'none';
-                } else {
-                    prevBtn.style.opacity = '1';
-                    prevBtn.style.pointerEvents = 'auto';
+                function goToSlide(index) {
+                    if (index < 0 || index >= totalSlides || index === currentSlide) return;
+                    currentSlide = index;
+                    carouselTrack.style.transform = `translateX(-${index * 100}%)`;
+                    heading.textContent = headings[index];
+                    // Update dots
+                    dots.forEach((dot, i) => {
+                        if (i === index) {
+                            dot.classList.add('bg-[#136db6]', 'scale-125');
+                            dot.classList.remove('bg-gray-300');
+                        } else {
+                            dot.classList.remove('bg-[#136db6]', 'scale-125');
+                            dot.classList.add('bg-gray-300');
+                        }
+                    });
                 }
 
-                // Next button: dim if on last card
-                if (activeIndex === cards.length - 1) {
-                    nextBtn.style.opacity = '0.4';
-                    nextBtn.style.pointerEvents = 'none';
-                } else {
-                    nextBtn.style.opacity = '1';
-                    nextBtn.style.pointerEvents = 'auto';
+                function startAutoplay() {
+                    if (autoplayInterval) clearInterval(autoplayInterval);
+                    autoplayInterval = setInterval(() => {
+                        goToSlide((currentSlide + 1) % totalSlides);
+                    }, autoplayDelay);
                 }
-            }
 
-            function scrollToCard(index) {
-                if (index < 0 || index >= cards.length) return;
-                container.scrollTo({
-                    left: cards[index].offsetLeft - container.offsetLeft - 16,
-                    behavior: 'smooth'
+                function stopAutoplay() {
+                    if (autoplayInterval) {
+                        clearInterval(autoplayInterval);
+                        autoplayInterval = null;
+                    }
+                }
+
+                // Touch / swipe handling
+                let touchStartX = 0;
+                let touchEndX = 0;
+                let isSwiping = false;
+
+                carouselViewport.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    isSwiping = true;
+                    stopAutoplay();
+                }, { passive: true });
+
+                carouselViewport.addEventListener('touchmove', (e) => {
+                    if (!isSwiping) return;
+                    touchEndX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                carouselViewport.addEventListener('touchend', (e) => {
+                    if (!isSwiping) return;
+                    isSwiping = false;
+                    const diffX = touchStartX - touchEndX;
+                    if (Math.abs(diffX) > 50) {
+                        if (diffX > 0) {
+                            goToSlide((currentSlide + 1) % totalSlides);
+                        } else {
+                            goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+                        }
+                    }
+                    startAutoplay();
+                }, { passive: true });
+
+                // Dot clicks
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        stopAutoplay();
+                        goToSlide(parseInt(dot.dataset.index));
+                        startAutoplay();
+                    });
                 });
-                resetAutoScroll();
-            }
 
-            function startAutoScroll() {
-                if (!isMobile()) return;
-                clearInterval(scrollTimer);
-                scrollTimer = setInterval(() => {
-                    // Find the most visible card
-                    const containerCenter = container.scrollLeft + container.clientWidth / 2;
-                    let currentIdx = 0;
-                    let minDistance = Infinity;
-
-                    cards.forEach((card, i) => {
-                        const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
-                        const distance = Math.abs(containerCenter - cardCenter);
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            currentIdx = i;
-                        }
-                    });
-
-                    let nextIdx = currentIdx + 1;
-                    if (nextIdx >= cards.length) {
-                        scrollToCard(0);
+                // Initialize based on viewport width
+                function initMobileCarousel() {
+                    if (window.innerWidth < 1024) {
+                        startAutoplay();
                     } else {
-                        scrollToCard(nextIdx);
+                        stopAutoplay();
+                        goToSlide(0);
                     }
-                }, 4000);
-            }
-
-            function resetAutoScroll() {
-                clearInterval(scrollTimer);
-                startAutoScroll();
-            }
-
-            // Arrow button events
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    const containerCenter = container.scrollLeft + container.clientWidth / 2;
-                    let currentIdx = 0;
-                    let minDistance = Infinity;
-
-                    cards.forEach((card, i) => {
-                        const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
-                        const distance = Math.abs(containerCenter - cardCenter);
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            currentIdx = i;
-                        }
-                    });
-
-                    scrollToCard(currentIdx - 1);
-                });
-            }
-
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    const containerCenter = container.scrollLeft + container.clientWidth / 2;
-                    let currentIdx = 0;
-                    let minDistance = Infinity;
-
-                    cards.forEach((card, i) => {
-                        const cardCenter = card.offsetLeft - container.offsetLeft + card.clientWidth / 2;
-                        const distance = Math.abs(containerCenter - cardCenter);
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            currentIdx = i;
-                        }
-                    });
-
-                    scrollToCard(currentIdx + 1);
-                });
-            }
-
-            if (container) {
-                container.addEventListener('touchstart', resetAutoScroll, { passive: true });
-                container.addEventListener('mousedown', resetAutoScroll);
-            }
-
-            function initCarousel() {
-                if (isMobile() && container) {
-                    container.scrollTo({ left: 0, behavior: 'instant' });
                 }
-                showNav();
-                observeCards();
-                startAutoScroll();
-                updateArrowStates(0);
-            }
+                initMobileCarousel();
+                window.addEventListener('resize', initMobileCarousel);
 
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initCarousel);
-            } else {
-                initCarousel();
-            }
-
-            let resizeDebounce;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeDebounce);
-                resizeDebounce = setTimeout(() => {
-                    if (observer) observer.disconnect();
-                    clearInterval(scrollTimer);
-
-                    if (isMobile() && container) {
-                        container.scrollTo({ left: 0, behavior: 'instant' });
+                // Initial check for elements already in viewport
+                revealElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                        if (el.querySelector('.counter')) animateCounters(el);
                     }
-
-                    initCarousel();
-                }, 250);
-            });
-        })();
-    </script>
+                });
+            })();
+        </script>
+    </section>
 
 
     <!-- ========== PARTNERS SECTION ========== -->
@@ -1676,216 +2175,249 @@
         </style>
     </section>
 
+    <section class="relative py-12 sm:py-16 bg-brandWhite overflow-hidden">
 
-    <section class="relative py-20 sm:py-28 bg-brandWhite overflow-hidden">
-
-        <!-- Subtle Background Pattern -->
-        <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(22,69,170,0.03)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(234,179,8,0.03)_0%,transparent_50%)] pointer-events-none">
+        <!-- Messaging App Background Pattern -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-brandBlue/8 to-cyan-400/5 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-yellow-400/6 to-brandBlue/5 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute inset-0 bg-[linear-gradient(rgba(22,69,170,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(22,69,170,0.02)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30">
+            </div>
         </div>
 
         <div class="container mx-auto px-4 sm:px-6 relative z-10">
 
-            <!-- Section Header -->
-            <div class="text-center mb-14 sm:mb-20 reveal">
+            <!-- Section Header with SMS icon (reduced margin) -->
+            <div class="text-center mb-8 sm:mb-12 reveal">
                 <span
-                    class="inline-block px-4 py-1.5 rounded-full bg-brandBlue/5 text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 border border-brandBlue/10">
-                    <i class="fas fa-quote-right mr-2 text-yellow-400"></i>Client Voices
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandBlue/5 text-brandBlue font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 border border-brandBlue/10">
+                    <svg class="w-4 h-4 text-brandBlue" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z" />
+                    </svg>
+                    Client Messages
                 </span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brandBlack tracking-tight">
-                    Trusted by <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-cyan-500">Industry
-                        Leaders</span>
+                <h2
+                    class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brandBlack tracking-tight leading-tight">
+                    Trusted by <span class="relative inline-block">
+                        <span
+                            class="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandBlue via-blue-600 to-cyan-400">Industry
+                            Leaders</span>
+                        <span
+                            class="absolute inset-x-0 bottom-1 h-2 bg-gradient-to-r from-brandBlue/20 via-cyan-400/20 to-transparent rounded-full -z-0"></span>
+                    </span>
                 </h2>
             </div>
 
-            <!-- Testimonial Carousel -->
-            <div class="max-w-3xl mx-auto relative reveal">
+            <!-- Testimonial Carousel with SMS Bubbles -->
+            <div class="max-w-2xl mx-auto relative reveal">
 
-                <!-- Quotation Mark Decoration -->
-                <div
-                    class="absolute -top-8 -left-4 sm:-top-12 sm:-left-8 text-7xl sm:text-9xl text-brandBlue/8 font-serif select-none pointer-events-none z-0">
-                    "</div>
-
-                <!-- Slides Container -->
-                <div id="testimonial-container" class="relative min-h-[380px] sm:min-h-[280px]">
+                <!-- Slides Container using CSS Grid for adaptive height -->
+                <div id="testimonial-container" class="relative grid">
 
                     <!-- Slide 1 -->
-                    <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    <div class="testimonial-slide col-start-1 row-start-1 w-full transition-all duration-500 ease-out opacity-100 translate-y-0 z-10 pointer-events-auto"
                         data-index="0">
-                        <div class="text-center px-4 sm:px-8">
-                            <p
-                                class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
-                                "Africana Tech didn't just build us a website; they architected a <span
-                                    class="text-brandBlue font-semibold">digital engine</span> that completely
-                                transformed how we interact with our customers globally. Our online revenue tripled
-                                within 4 months."
-                            </p>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="relative flex-shrink-0">
-                                    <img src="https://ui-avatars.com/api/?name=David+M&background=1645aa&color=fff&size=48"
-                                        alt="David M."
-                                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
-                                    <div
-                                        class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
-                                        <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
-                                    </div>
+                        <div class="flex flex-col justify-end h-full px-2 sm:px-4 pt-2">
+                            <!-- SMS Bubble with floating animation -->
+                            <div class="relative max-w-full mr-auto animate-float">
+                                <!-- Tail -->
+                                <div
+                                    class="absolute -left-2 bottom-0 w-5 h-5 bg-white/90 border-l border-b border-gray-200 rotate-45 rounded-bl-sm backdrop-blur">
                                 </div>
-                                <div class="text-left">
-                                    <h4 class="font-bold text-sm sm:text-base text-brandBlack">David M.</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">Director, Tech Forward Ltd</p>
-                                    <div class="flex gap-0.5 mt-1">
-                                        <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
+                                <!-- Glass bubble -->
+                                <div
+                                    class="relative bg-white/70 backdrop-blur-xl border border-white/60 rounded-[1.8rem] rounded-bl-md shadow-lg shadow-brandBlue/10 p-4 sm:p-6">
+                                    <!-- Message header with dynamic initials avatar -->
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <div class="relative flex-shrink-0">
+                                            <div class="avatar-initials w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-brandBlue to-cyan-400 text-white flex items-center justify-center font-bold text-sm sm:text-base shadow-md border border-brandBlue/10"
+                                                data-name="David M.">DM</div>
+                                            <span
+                                                class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
+                                        </div>
+                                        <div class="min-w-0 flex-1">
+                                            <h4 class="font-bold text-sm sm:text-base text-brandBlack truncate">David M.
+                                            </h4>
+                                            <p class="text-xs text-gray-500 truncate">Director, Tech Forward Ltd</p>
+                                            <div class="flex gap-0.5 mt-1">
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400 whitespace-nowrap self-start">2:45
+                                            PM</span>
                                     </div>
+                                    <p
+                                        class="text-sm sm:text-base md:text-lg text-gray-700 font-medium leading-relaxed">
+                                        "Africana Tech didn't just build us a website; they architected a
+                                        <span class="text-brandBlue font-semibold">digital engine</span>
+                                        that completely transformed how we interact with our customers globally.
+                                        <span class="text-brandBlack font-bold">Our online revenue tripled within 4
+                                            months.</span>"
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    <div class="testimonial-slide col-start-1 row-start-1 w-full transition-all duration-500 ease-out opacity-0 translate-y-6 z-0 pointer-events-none"
                         data-index="1">
-                        <div class="text-center px-4 sm:px-8">
-                            <p
-                                class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
-                                "Their branding team is <span class="text-brandBlue font-semibold">phenomenal</span>.
-                                They captured the exact essence of our vision and delivered a visual identity that is
-                                lightyears ahead of our competitors. Our brand recognition soared."
-                            </p>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="relative flex-shrink-0">
-                                    <img src="https://ui-avatars.com/api/?name=Sarah+K&background=0A0A0A&color=fff&size=48"
-                                        alt="Sarah K."
-                                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
-                                    <div
-                                        class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
-                                        <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
-                                    </div>
+                        <div class="flex flex-col justify-end h-full px-2 sm:px-4 pt-2">
+                            <div class="relative max-w-full mr-auto animate-float">
+                                <div
+                                    class="absolute -left-2 bottom-0 w-5 h-5 bg-white/90 border-l border-b border-gray-200 rotate-45 rounded-bl-sm backdrop-blur">
                                 </div>
-                                <div class="text-left">
-                                    <h4 class="font-bold text-sm sm:text-base text-brandBlack">Sarah K.</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">Founder, Elevated Brands</p>
-                                    <div class="flex gap-0.5 mt-1">
-                                        <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
+                                <div
+                                    class="relative bg-white/70 backdrop-blur-xl border border-white/60 rounded-[1.8rem] rounded-bl-md shadow-lg shadow-brandBlue/10 p-4 sm:p-6">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <div class="relative flex-shrink-0">
+                                            <div class="avatar-initials w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-brandBlue to-cyan-400 text-white flex items-center justify-center font-bold text-sm sm:text-base shadow-md border border-brandBlue/10"
+                                                data-name="Sarah K.">SK</div>
+                                            <span
+                                                class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
+                                        </div>
+                                        <div class="min-w-0 flex-1">
+                                            <h4 class="font-bold text-sm sm:text-base text-brandBlack truncate">Sarah K.
+                                            </h4>
+                                            <p class="text-xs text-gray-500 truncate">Founder, Elevated Brands</p>
+                                            <div class="flex gap-0.5 mt-1">
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400 whitespace-nowrap self-start">10:12
+                                            AM</span>
                                     </div>
+                                    <p
+                                        class="text-sm sm:text-base md:text-lg text-gray-700 font-medium leading-relaxed">
+                                        "Their branding team is
+                                        <span class="text-brandBlue font-semibold">phenomenal</span>.
+                                        They captured the exact essence of our vision and delivered a visual identity
+                                        that is
+                                        <span class="text-brandBlack font-bold">lightyears ahead of our
+                                            competitors.</span>
+                                        Our brand recognition soared."
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="testimonial-slide absolute inset-0 w-full transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    <div class="testimonial-slide col-start-1 row-start-1 w-full transition-all duration-500 ease-out opacity-0 translate-y-6 z-0 pointer-events-none"
                         data-index="2">
-                        <div class="text-center px-4 sm:px-8">
-                            <p
-                                class="text-sm sm:text-lg md:text-xl text-gray-700 font-medium italic mb-6 sm:mb-10 leading-relaxed text-justify sm:text-center">
-                                "From <span class="text-brandBlue font-semibold">software architecture to
-                                    branding</span>, Africana Tech handles it all with excellence. They've become our
-                                single partner for all things digital. Truly a game-changer."
-                            </p>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="relative flex-shrink-0">
-                                    <img src="https://ui-avatars.com/api/?name=James+O&background=2563EB&color=fff&size=48"
-                                        alt="James O."
-                                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg border-2 border-brandBlue/20">
-                                    <div
-                                        class="absolute -bottom-1 -right-1 w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
-                                        <svg class="w-3 h-3 text-brandBlack" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
-                                    </div>
+                        <div class="flex flex-col justify-end h-full px-2 sm:px-4 pt-2">
+                            <div class="relative max-w-full mr-auto animate-float">
+                                <div
+                                    class="absolute -left-2 bottom-0 w-5 h-5 bg-white/90 border-l border-b border-gray-200 rotate-45 rounded-bl-sm backdrop-blur">
                                 </div>
-                                <div class="text-left">
-                                    <h4 class="font-bold text-sm sm:text-base text-brandBlack">James O.</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">CEO, Innovate Tanzania</p>
-                                    <div class="flex gap-0.5 mt-1">
-                                        <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                            </path>
-                                        </svg>
+                                <div
+                                    class="relative bg-white/70 backdrop-blur-xl border border-white/60 rounded-[1.8rem] rounded-bl-md shadow-lg shadow-brandBlue/10 p-4 sm:p-6">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <div class="relative flex-shrink-0">
+                                            <div class="avatar-initials w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-brandBlue to-cyan-400 text-white flex items-center justify-center font-bold text-sm sm:text-base shadow-md border border-brandBlue/10"
+                                                data-name="James O.">JO</div>
+                                            <span
+                                                class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
+                                        </div>
+                                        <div class="min-w-0 flex-1">
+                                            <h4 class="font-bold text-sm sm:text-base text-brandBlack truncate">James O.
+                                            </h4>
+                                            <p class="text-xs text-gray-500 truncate">CEO, Innovate Tanzania</p>
+                                            <div class="flex gap-0.5 mt-1">
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg class="w-3 h-3 text-yellow-400" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="ml-auto text-xs text-gray-400 whitespace-nowrap self-start">4:20
+                                            PM</span>
                                     </div>
+                                    <p
+                                        class="text-sm sm:text-base md:text-lg text-gray-700 font-medium leading-relaxed">
+                                        "From
+                                        <span class="text-brandBlue font-semibold">software architecture to
+                                            branding</span>,
+                                        Africana Tech handles it all with excellence. They've become our
+                                        <span class="text-brandBlack font-bold">single partner for all things
+                                            digital.</span>
+                                        Truly a game-changer."
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1893,132 +2425,234 @@
                 </div>
 
                 <!-- Navigation Arrows + Dots -->
-                <div class="flex items-center justify-center gap-6 mt-10">
+                <div class="flex items-center justify-center gap-5 mt-6">
                     <button id="testimonial-prev"
-                        class="w-10 h-10 rounded-full bg-brandBlue/10 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Previous testimonial">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
-                            </path>
+                        class="w-10 h-10 rounded-full bg-white border border-brandBlue/15 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg active:scale-95"
+                        aria-label="Previous message">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
 
-                    <div id="testimonial-dots" class="flex gap-2.5">
+                    <div id="testimonial-dots" class="flex items-center gap-2.5">
                         <button
-                            class="testimonial-dot w-2.5 h-2.5 rounded-full bg-brandBlue scale-125 transition-all duration-300"
-                            data-index="0" aria-label="Go to slide 1"></button>
-                        <button
-                            class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
-                            data-index="1" aria-label="Go to slide 2"></button>
+                            class="testimonial-dot w-2.5 h-2.5 rounded-full bg-brandBlue scale-125 transition-all duration-300 shadow-sm shadow-brandBlue/30"
+                            data-index="0" aria-label="Message 1"></button>
                         <button
                             class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
-                            data-index="2" aria-label="Go to slide 3"></button>
+                            data-index="1" aria-label="Message 2"></button>
+                        <button
+                            class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+                            data-index="2" aria-label="Message 3"></button>
                     </div>
 
                     <button id="testimonial-next"
-                        class="w-10 h-10 rounded-full bg-brandBlue/10 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Next testimonial">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7">
-                            </path>
+                        class="w-10 h-10 rounded-full bg-white border border-brandBlue/15 hover:bg-brandBlue text-brandBlue hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg active:scale-95"
+                        aria-label="Next message">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
                 </div>
-
             </div>
-
         </div>
-    </section>
 
-    <script>
-        (function () {
-            const container = document.getElementById('testimonial-container');
-            const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
-            const dots = Array.from(document.querySelectorAll('.testimonial-dot'));
-            const prevBtn = document.getElementById('testimonial-prev');
-            const nextBtn = document.getElementById('testimonial-next');
-            const totalSlides = slides.length;
-            let currentSlide = 0;
-            let autoTimer;
+        <!-- Floating animation and modern enhancements -->
+        <style>
+            @keyframes float {
 
-            function goToSlide(index) {
-                if (index === currentSlide || index < 0 || index >= totalSlides) return;
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
 
-                // Fade out current
-                slides[currentSlide].classList.remove('opacity-100', 'z-10', 'pointer-events-auto');
-                slides[currentSlide].classList.add('opacity-0', 'z-0', 'pointer-events-none');
+                50% {
+                    transform: translateY(-4px);
+                }
+            }
 
-                // Fade in next
-                slides[index].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
-                slides[index].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+            .animate-float {
+                animation: float 4s ease-in-out infinite;
+            }
 
-                // Update dots
-                dots.forEach((dot, i) => {
-                    if (i === index) {
-                        dot.classList.add('bg-brandBlue', 'scale-125');
-                        dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+            @keyframes typing-pulse {
+
+                0%,
+                100% {
+                    opacity: 0.4;
+                    transform: scale(0.8);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+            }
+
+            .testimonial-dot.active {
+                animation: typing-pulse 2s ease-in-out infinite;
+            }
+
+            /* Smooth scroll lock for mobile */
+            @media (max-width: 640px) {
+                #testimonial-container {
+                    touch-action: pan-y;
+                }
+            }
+        </style>
+
+        <!-- Script with grid-based slides and automatic initials generation -->
+        <script>
+            (function () {
+                const container = document.getElementById('testimonial-container');
+                const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+                const dots = Array.from(document.querySelectorAll('.testimonial-dot'));
+                const prevBtn = document.getElementById('testimonial-prev');
+                const nextBtn = document.getElementById('testimonial-next');
+                const totalSlides = slides.length;
+                let currentSlide = 0;
+                let autoTimer;
+                const AUTOPLAY_DELAY = 5000;
+
+                // Function to generate initials from name
+                function generateInitials(name) {
+                    if (!name) return '';
+                    const parts = name.trim().split(/\s+/);
+                    if (parts.length === 1) return parts[0].charAt(0).toUpperCase();
+                    return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+                }
+
+                // Update all avatar initials on load
+                function updateAllInitials() {
+                    document.querySelectorAll('.avatar-initials').forEach(avatar => {
+                        const name = avatar.getAttribute('data-name') || '';
+                        avatar.textContent = generateInitials(name);
+                    });
+                }
+
+                function goToSlide(index) {
+                    if (index === currentSlide || index < 0 || index >= totalSlides) return;
+
+                    slides[currentSlide].classList.remove('opacity-100', 'translate-y-0', 'z-10', 'pointer-events-auto');
+                    slides[currentSlide].classList.add('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
+
+                    slides[index].classList.remove('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
+                    slides[index].classList.add('opacity-100', 'translate-y-0', 'z-10', 'pointer-events-auto');
+
+                    dots.forEach((dot, i) => {
+                        if (i === index) {
+                            dot.classList.add('bg-brandBlue', 'scale-125', 'shadow-sm', 'shadow-brandBlue/30', 'active');
+                            dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+                        } else {
+                            dot.classList.remove('bg-brandBlue', 'scale-125', 'shadow-sm', 'shadow-brandBlue/30', 'active');
+                            dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+                        }
+                    });
+
+                    currentSlide = index;
+                }
+
+                function startAutoPlay() {
+                    clearInterval(autoTimer);
+                    autoTimer = setInterval(() => {
+                        goToSlide((currentSlide + 1) % totalSlides);
+                    }, AUTOPLAY_DELAY);
+                }
+
+                function resetAutoPlay() {
+                    clearInterval(autoTimer);
+                    autoTimer = setInterval(() => {
+                        goToSlide((currentSlide + 1) % totalSlides);
+                    }, AUTOPLAY_DELAY);
+                }
+
+                // Touch / swipe handling
+                if (container) {
+                    let touchStartX = 0;
+                    let touchStartY = 0;
+                    let isSwiping = false;
+
+                    container.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                        touchStartY = e.changedTouches[0].screenY;
+                        isSwiping = false;
+                        clearInterval(autoTimer);
+                    }, { passive: true });
+
+                    container.addEventListener('touchmove', (e) => {
+                        const diffX = touchStartX - e.changedTouches[0].screenX;
+                        const diffY = touchStartY - e.changedTouches[0].screenY;
+                        if (Math.abs(diffX) > 15 && Math.abs(diffX) > Math.abs(diffY)) {
+                            isSwiping = true;
+                        }
+                    }, { passive: true });
+
+                    container.addEventListener('touchend', (e) => {
+                        const diffX = touchStartX - e.changedTouches[0].screenX;
+                        if (isSwiping && Math.abs(diffX) > 40) {
+                            if (diffX > 0) {
+                                goToSlide((currentSlide + 1) % totalSlides);
+                            } else {
+                                goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+                            }
+                        }
+                        resetAutoPlay();
+                    }, { passive: true });
+                }
+
+                if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide((currentSlide - 1 + totalSlides) % totalSlides); resetAutoPlay(); });
+                if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide((currentSlide + 1) % totalSlides); resetAutoPlay(); });
+
+                dots.forEach(dot => dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.index)); resetAutoPlay(); }));
+
+                if (container) {
+                    container.addEventListener('mouseenter', () => clearInterval(autoTimer));
+                    container.addEventListener('mouseleave', resetAutoPlay);
+                }
+
+                // Initialize slides
+                slides.forEach((s, i) => {
+                    if (i === 0) {
+                        s.classList.add('opacity-100', 'translate-y-0', 'z-10', 'pointer-events-auto');
+                        s.classList.remove('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
                     } else {
-                        dot.classList.remove('bg-brandBlue', 'scale-125');
-                        dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+                        s.classList.add('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
+                        s.classList.remove('opacity-100', 'translate-y-0', 'z-10', 'pointer-events-auto');
                     }
                 });
 
-                currentSlide = index;
-            }
-
-            function startAutoPlay() {
-                clearInterval(autoTimer);
-                autoTimer = setInterval(() => {
-                    goToSlide((currentSlide + 1) % totalSlides);
-                }, 5000);
-            }
-
-            // Swipe support
-            if (container) {
-                let touchStartX = 0;
-                container.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                    clearInterval(autoTimer);
-                }, { passive: true });
-
-                container.addEventListener('touchend', (e) => {
-                    const diff = touchStartX - e.changedTouches[0].screenX;
-                    if (Math.abs(diff) > 40) {
-                        goToSlide(diff > 0 ? (currentSlide + 1) % totalSlides : (currentSlide - 1 + totalSlides) % totalSlides);
+                // Initialize dots
+                dots.forEach((dot, i) => {
+                    if (i === 0) {
+                        dot.classList.add('bg-brandBlue', 'scale-125', 'shadow-sm', 'shadow-brandBlue/30', 'active');
+                        dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
                     }
-                    startAutoPlay();
-                }, { passive: true });
-            }
+                });
 
-            if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide((currentSlide - 1 + totalSlides) % totalSlides); startAutoPlay(); });
-            if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide((currentSlide + 1) % totalSlides); startAutoPlay(); });
+                // Generate initials automatically
+                updateAllInitials();
 
-            dots.forEach(dot => dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.index)); startAutoPlay(); }));
-
-            // Init
-            slides.forEach((s, i) => {
-                s.classList.add('opacity-0', 'z-0', 'pointer-events-none');
-                s.classList.remove('opacity-100', 'z-10');
-            });
-            slides[0].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
-            slides[0].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
-
-            startAutoPlay();
-        })();
-    </script>
+                // Start autoplay
+                startAutoPlay();
+            })();
+        </script>
+    </section>
 
     <div class="bg-white pb-6">
         <section class="relative py-16 sm:py-24 lg:py-28 bg-brandBlack overflow-hidden mb-6">
-
-            <!-- Subtle radial highlight (single, low opacity) -->
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(22,69,170,0.15),transparent_70%)]">
+            <!-- Subtle background: solid dark with a faint linear gradient and grid overlay for depth (not AI-generated look) -->
+            <div
+                class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.03)_0%,transparent_50%,rgba(0,0,0,0.15)_100%)]">
+            </div>
+            <div
+                class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30">
             </div>
 
             <!-- Content -->
             <div class="container mx-auto px-4 sm:px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center">
-
-                    <!-- Badge (static, no pulse) -->
+                    <!-- Badge -->
                     <div
                         class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
                         <span class="inline-block h-2.5 w-2.5 rounded-full bg-yellow-400"></span>
@@ -2038,42 +2672,40 @@
                         <span class="text-yellow-400 font-semibold">dominate your market</span> and accelerate growth.
                     </p>
 
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-row items-center justify-center gap-3 sm:gap-5 flex-wrap">
-
-                        <!-- Explore Tech Solutions -->
+                    <!-- CTA Buttons: nowrap on all screens, equal width on mobile, natural on desktop -->
+                    <div class="flex flex-row items-center justify-center gap-3 sm:gap-5 flex-nowrap">
+                        <!-- Tech Solutions -->
                         <a href="tech solution.html"
-                            class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-brandBlue text-white text-sm sm:text-base font-bold rounded-xl transition-colors duration-200 hover:bg-brandBlue/90 whitespace-nowrap">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            class="flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-3 sm:px-8 sm:py-4 bg-brandBlue text-white text-xs sm:text-base font-bold rounded-xl transition-colors duration-200 hover:bg-brandBlue/90 whitespace-nowrap min-w-0">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
-                            Tech Solutions
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            <span class="truncate">Tech Solutions</span>
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
                         </a>
 
-                        <!-- Explore Branding & Creative -->
+                        <!-- Branding & Creative -->
                         <a href="branding.html"
-                            class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-yellow-400 text-brandBlack text-sm sm:text-base font-bold rounded-xl transition-colors duration-200 hover:bg-yellow-300 whitespace-nowrap">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            class="flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-3 sm:px-8 sm:py-4 bg-yellow-400 text-brandBlack text-xs sm:text-base font-bold rounded-xl transition-colors duration-200 hover:bg-yellow-300 whitespace-nowrap min-w-0">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
                                 </path>
                             </svg>
-                            Branding & Creative
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            <span class="truncate">Branding & Creative</span>
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
                         </a>
-
                     </div>
 
                     <!-- Trust Indicators -->
@@ -2104,14 +2736,14 @@
                             24hr Response Time
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- Bottom accent line (optional, keep subtle) -->
-            <div class="absolute bottom-0 left-0 right-0 h-1 bg-yellow-400"></div>
-        </section>
     </div>
+
+
+
+
 
     <div id="footer-container"></div>
     <script src="animation.js"></script>

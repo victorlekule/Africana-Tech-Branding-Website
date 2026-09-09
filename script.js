@@ -131,14 +131,14 @@ document.addEventListener("DOMContentLoaded", () => {
                             +255 672 743 065
                         </a>
                         <span class="site-info-location-separator hidden sm:inline text-white/30">|</span>
-                        <span class="site-info-location inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5" stroke-width="2"></circle></svg>Mwanza, Tanzania</span>
+                        <span class="site-info-location inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5" stroke-width="2"></circle></svg>Arusha, Tanzania</span>
                         <span class="site-info-location-separator hidden sm:inline text-white/30">|</span>
-                        <a href="mailto:hello@africana-tech.com" class="site-info-email inline-flex items-center gap-1.5 hover:text-white/75"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9 6 9-6M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>hello@africana-tech.com</a>
+                        <a href="mailto:info@africana.co.tz" class="site-info-email inline-flex items-center gap-1.5 hover:text-white/75"><svg class="w-3.5 h-3.5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9 6 9-6M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>info@africana.co.tz</a>
                     </div>
                     <nav class="site-info-links flex items-center gap-3 sm:gap-4 ml-auto" aria-label="Legal links">
                         <a href="privacy.html" class="hover:text-white/75">Privacy</a>
-                        <a href="contact.html#faq" class="hover:text-white/75">FAQs</a>
-                        <a href="portfolio.html" class="hover:text-white/75">Partners</a>
+                        <a href="faqs.html" class="hover:text-white/75">FAQs</a>
+                        <a href="partners.html" class="hover:text-white/75">Partners</a>
                         <a href="terms.html" class="hover:text-white/75">Terms</a>
                     </nav>
                 </div>
@@ -758,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fab fa-tiktok text-xl w-6"></i> 
                         <span>TikTok</span>
                     </a>
-                     <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                     <a href="https://www.linkedin.com/in/africana-branding-b57a7542b?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
                         <i class="fab fa-linkedin-in text-xl w-6"></i> 
                         <span>LinkedIn</span>
                     </a>
@@ -797,13 +797,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </a>
 
-                    <a href="mailto:hello@africana-tech.com" class="flex items-center group transition-all duration-300">
+                    <a href="mailto:info@africana.co.tz" class="flex items-center group transition-all duration-300">
                         <div class="w-12 h-12 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
                             <i class="fas fa-envelope text-xl md:text-lg"></i>
                         </div>
                         <div class="hidden md:flex flex-col ml-3">
                             <span class="text-[10px] font-bold uppercase text-gray-500">Email Us</span>
-                            <span class="text-xs font-medium text-gray-300 group-hover:text-indigo-400">hello@africana-tech.com</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-indigo-400">info@africana.co.tz</span>
                         </div>
                     </a>
 
@@ -813,7 +813,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="hidden md:flex flex-col ml-3">
                             <span class="text-[10px] font-bold uppercase text-gray-500">Location</span>
-                            <span class="text-xs font-medium text-gray-300 group-hover:text-emerald-400">Mwanza, Tanzania</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-emerald-400">Arusha, Tanzania</span>
                         </div>
                     </a>
 

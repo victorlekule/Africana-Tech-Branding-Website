@@ -853,7 +853,7 @@
 
 
     <div class="bg-white">
-        <section class="relative py-24 sm:py-32 lg:py-40 text-center overflow-hidden">
+        <section class="relative py-16 sm:py-20 lg:py-24 text-center overflow-hidden">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
                 <img src="pic/BG HOME.webp" alt="Technology background" class="w-full h-full object-cover" />
@@ -870,7 +870,7 @@
 
                 <!-- Badge -->
                 <div
-                    class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-yellow-400 border border-white/20 backdrop-blur-md mb-8 sm:mb-10">
+                    class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-yellow-400 border border-white/20 backdrop-blur-md mb-6 sm:mb-8">
                     <svg class="w-4 h-4 text-brandBlack" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
@@ -881,30 +881,30 @@
                     </span>
                 </div>
 
-                <!-- Heading -->
+                <!-- Heading (now one line on all screens, adjusted sizing) -->
                 <h2
-                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
-                    Need a <span class="text-yellow-400">Tech
-                        Solution</span>?
+                    class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-4 sm:mb-6 whitespace-nowrap">
+                    Need a <span class="text-yellow-400">Tech Solution</span>?
                 </h2>
 
                 <!-- Description -->
-                <p class="text-white text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+                <p class="text-white text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10">
                     From <span class="text-yellow-400 font-semibold">software architecture</span> to
                     <span class="text-yellow-400 font-semibold">infrastructure deployment</span> —
                     let's engineer the exact systems you need to dominate your market.
                 </p>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-14">
+                <!-- CTA Buttons (horizontal on mobile, WhatsApp icon hidden on mobile) -->
+                <div class="flex flex-row items-center justify-center gap-3 sm:gap-6 mb-10 sm:mb-12">
 
                     <!-- WhatsApp CTA -->
                     <a href="https://wa.me/255672743065" target="_blank" rel="noopener noreferrer"
-                        class="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 bg-brandGreen text-white text-base sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/40">
+                        class="group relative inline-flex items-center justify-center flex-1 sm:flex-none px-4 py-3 sm:px-10 sm:py-5 bg-brandGreen text-white text-sm sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/40 whitespace-nowrap">
                         <span class="relative z-10 flex items-center">
-                            <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>
+                            <i
+                                class="fa-brands fa-whatsapp hidden sm:inline-block text-xl sm:text-2xl mr-2 sm:mr-3"></i>
                             Chat on WhatsApp
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
                                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6">
                                 </path>
@@ -914,9 +914,9 @@
 
                     <!-- Contact Us CTA -->
                     <a href="contact.html"
-                        class="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 bg-white backdrop-blur-md border border-white/20 text-brandBlack text-base sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-brandBlue hover:border-yellow-400 hover:text-white hover:shadow-2xl hover:shadow-blue-500/40">
+                        class="group relative inline-flex items-center justify-center flex-1 sm:flex-none px-4 py-3 sm:px-10 sm:py-5 bg-white backdrop-blur-md border border-white/20 text-brandBlack text-sm sm:text-lg font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-brandBlue hover:border-yellow-400 hover:text-white hover:shadow-2xl hover:shadow-blue-500/40 whitespace-nowrap">
                         <span class="relative z-10 flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -927,7 +927,7 @@
                     </a>
                 </div>
 
-                <!-- Tech Capability Badges -->
+                <!-- Tech Capability Badges (AI & Cloud grouped on one line) -->
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                     <span
                         class="px-4 py-2 bg-white border border-white/10 rounded-full text-sm text-brandBlack backdrop-blur-sm flex items-center gap-2">
@@ -953,28 +953,30 @@
                         </svg>
                         Cyber Security
                     </span>
-                    <span
-                        class="px-4 py-2 bg-white border border-white/10 rounded-full text-sm text-brandBlack backdrop-blur-sm flex items-center gap-2">
-                        <svg class="w-4 h-4 text-brandBlack" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        AI & Machine Learning
-                    </span>
-                    <span
-                        class="px-4 py-2 bg-white border border-white/10 rounded-full text-sm text-brandBlack backdrop-blur-sm flex items-center gap-2">
-                        <svg class="w-4 h-4 text-brandBlack" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Cloud Infrastructure
+
+                    <span class="inline-flex items-center gap-3 sm:gap-4">
+                        <span
+                            class="px-4 py-2 bg-white border border-white/10 rounded-full text-sm text-brandBlack backdrop-blur-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brandBlack" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            AI & Machine Learning
+                        </span>
+                        <span
+                            class="px-4 py-2 bg-white border border-white/10 rounded-full text-sm text-brandBlack backdrop-blur-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brandBlack" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Cloud Infrastructure
+                        </span>
                     </span>
                 </div>
-
             </div>
         </section>
 
-        <div class="h-16 sm:h-24 w-full"></div>
+        <div class="h-12 sm:h-16 w-full"></div>
     </div>
 
 

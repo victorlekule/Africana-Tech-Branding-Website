@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners | Africana Tech & Branding Ltd</title>
+    <meta name="description"
+        content="Discover the partners and collaborations that help Africana Tech & Branding Ltd deliver world‑class technology and branding solutions across Africa and beyond.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Africana Tech & Branding Ltd",
+      "url": "https://www.africanatech.com",
+      "logo": "https://www.africanatech.com/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/africanatech",
+        "https://twitter.com/africanatech",
+        "https://www.instagram.com/africanatech"
+      ]
+    }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .form-section-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #136db6;
+        }
+
+        .step-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .step-dot {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #e5e7eb;
+            font-size: 12px;
+            font-weight: 600;
+            color: #374151;
+            white-space: nowrap;
+        }
+
+        .step-dot.active {
+            background: #136db6;
+            color: white;
+        }
+
+        .step-dot.completed {
+            background: #009444;
+            color: white;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .btn-next,
+        .btn-prev,
+        .btn-submit {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-next {
+            background: #136db6;
+            color: white;
+        }
+
+        .btn-next:hover {
+            background: #0f5a9e;
+        }
+
+        .btn-prev {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .btn-prev:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-submit {
+            background: #009444;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background: #007a38;
+        }
+
+        .conditional-field {
+            display: none;
+        }
+
+        .conditional-field.active {
+            display: block;
+        }
+
+        .edit-link {
+            color: #136db6;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-left: 8px;
+        }
+
+        .review-section {
+            border-left: 3px solid #136db6;
+            padding-left: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-brandWhite text-brandBlack antialiased premium-bg">
+
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section
+        class="relative py-20 sm:py-28 lg:py-32 text-center overflow-hidden bg-gradient-to-br from-[#0B1F3A] via-[#136db6] to-[#0B1F3A]">
+        <div class="absolute -top-20 -left-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-16 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-40 h-40 bg-cyan-400/10 rounded-full blur-2xl"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full bg-yellow-400 text-brandBlack font-bold tracking-widest uppercase text-xs sm:text-sm mb-6">
+                Our Partners
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                Powering <span class="text-yellow-400">Together</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
+                We collaborate with industry leaders, technology providers, and creative minds to deliver integrated
+                solutions that drive real business growth across Africa and beyond.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#partner-categories"
+                    class="inline-flex items-center px-6 py-3 bg-white text-brandBlue font-semibold rounded-lg hover:bg-gray-100 transition-all">
+                    Explore Partners
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <a href="#partner-form"
+                    class="inline-flex items-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
+                    Become a Partner
+                </a>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent">
+        </div>
+    </section>
+
+    <!-- Partner Categories Section -->
+    <section id="partner-categories" class="py-16 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14 reveal">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brandBlack tracking-tight">Partner Categories</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We work with a diverse ecosystem of partners to bring the
+                best to our clients.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="w-14 h-14 rounded-2xl bg-brandBlue/10 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlack mb-3">Technology Partners</h3>
+                <p class="text-gray-600 leading-relaxed">Hosting, cloud, software, and infrastructure providers that
+                    ensure our solutions are robust, scalable, and secure.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="w-14 h-14 rounded-2xl bg-yellow-400/10 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlack mb-3">Creative & Branding Partners</h3>
+                <p class="text-gray-600 leading-relaxed">Photographers, videographers, printers, and creative studios
+                    that extend our branding capabilities.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="w-14 h-14 rounded-2xl bg-brandGreen/10 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brandBlack mb-3">Strategic Alliances</h3>
+                <p class="text-gray-600 leading-relaxed">Industry associations, business networks, and consultants who
+                    refer and collaborate on larger projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner With Us -->
+    <section class="py-16 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14 reveal">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brandBlack tracking-tight">Why Partner With Us?</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We believe in mutually beneficial partnerships that create
+                lasting value.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-brandWhite rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-brandBlue/10 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brandBlack">Revenue Sharing</h3>
+                </div>
+                <p class="text-gray-600">Collaborate on projects and share success with transparent commission
+                    structures.</p>
+            </div>
+            <div class="bg-brandWhite rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-400/10 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brandBlack">Growth Opportunities</h3>
+                </div>
+                <p class="text-gray-600">Access new markets and combine expertise to serve bigger clients and projects.
+                </p>
+            </div>
+            <div class="bg-brandWhite rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brandBlack">Trust & Reliability</h3>
+                </div>
+                <p class="text-gray-600">Work with a partner who values clear communication, quality, and long‑term
+                    relationships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Application Form Section (Multi-Step, Wider) -->
+    <section id="partner-form" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brandBlack tracking-tight">Apply to Become a Partner
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Please fill out the form below to tell us about you and
+                    your organization. Our partnerships team will review and get back to you within 48 hours.</p>
+            </div>
+
+            <!-- Success Popup -->
+            <div id="success-overlay"
+                class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center transform transition-all duration-300 scale-95 opacity-0"
+                    id="success-card">
+                    <div class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Application Submitted!</h3>
+                    <p class="text-gray-600 mb-6">Thank you for your interest. Our team will review your application and
+                        contact you shortly.</p>
+                    <button id="close-success-btn"
+                        class="px-6 py-2 bg-brandBlue text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">Done</button>
+                </div>
+            </div>
+
+            <!-- Multi-step Form -->
+            <form action="https://api.web3forms.com/submit" method="POST" id="partnerForm" enctype="multipart/form-data"
+                class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 reveal">
+                <input type="hidden" name="access_key" value="4f48f56b-34c6-4ef6-aead-f213f34d2746">
+                <input type="hidden" name="subject" value="New Partner Application from Africana Website">
+                <input type="hidden" name="from_name" value="Africana Partner Form">
+
+                <!-- Step Titles Indicator -->
+                <div class="step-indicator mb-8">
+                    <span class="step-dot active" data-step="1">Personal Details</span>
+                    <span class="step-dot" data-step="2">Company Information</span>
+                    <span class="step-dot" data-step="3">Partnership Details</span>
+                    <span class="step-dot" data-step="4">Logistics & Consent</span>
+                    <span class="step-dot" data-step="5">Review & Submit</span>
+                </div>
+
+                <!-- Step 1: Personal Details -->
+                <div class="form-step active" id="step-1">
+                    <h3 class="form-section-title">Personal Details</h3>
+                    <div class="form-grid">
+                        <div>
+                            <label for="full_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name <span
+                                    class="text-red-500 font-bold">*</span></label>
+                            <input type="text" id="full_name" name="full_name" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="job_title" class="block text-sm font-medium text-gray-700 mb-1">Job Title / Role
+                                <span class="text-red-500 font-bold">*</span></label>
+                            <input type="text" id="job_title" name="job_title" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span
+                                    class="text-red-500 font-bold">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp
+                                Number <span class="text-red-500 font-bold">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+255 712 345 678"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="country_city" class="block text-sm font-medium text-gray-700 mb-1">Country /
+                                City <span class="text-red-500 font-bold">*</span></label>
+                            <select id="country_city" name="country_city" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer">
+                                <option value="">-- Select Country --</option>
+                                <option value="Tanzania">Tanzania</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Burundi">Burundi</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mt-6">
+                        <button type="button" class="btn-next" onclick="nextStep(1)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Company Information -->
+                <div class="form-step" id="step-2">
+                    <h3 class="form-section-title">Company Information</h3>
+                    <div class="form-grid">
+                        <div>
+                            <label for="company_name" class="block text-sm font-medium text-gray-700 mb-1">Company /
+                                Business Name <span class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                            <input type="text" id="company_name" name="company_name"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="website" class="block text-sm font-medium text-gray-700 mb-1">Website URL <span
+                                    class="text-red-500 font-bold">*</span></label>
+                            <input type="url" id="website" name="website" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="https://">
+                        </div>
+                        <div>
+                            <label for="social_media" class="block text-sm font-medium text-gray-700 mb-1">Social Media
+                                Links <span class="text-red-500 font-bold">*</span></label>
+                            <input type="text" id="social_media" name="social_media" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="e.g., Instagram, LinkedIn">
+                        </div>
+                        <div>
+                            <label for="business_reg" class="block text-sm font-medium text-gray-700 mb-1">Business
+                                Registration Number <span
+                                    class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                            <input type="text" id="business_reg" name="business_reg"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">Industry / Niche
+                                <span class="text-red-500 font-bold">*</span></label>
+                            <input type="text" id="industry" name="industry" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="e.g., tourism, retail, hospitality">
+                        </div>
+                        <div>
+                            <label for="years_operation" class="block text-sm font-medium text-gray-700 mb-1">Years in
+                                Operation <span class="text-red-500 font-bold">*</span></label>
+                            <input type="number" id="years_operation" name="years_operation" min="0" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="team_size" class="block text-sm font-medium text-gray-700 mb-1">Team Size <span
+                                    class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                            <input type="number" id="team_size" name="team_size" min="0"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="business_description" class="block text-sm font-medium text-gray-700 mb-1">Brief
+                                Description of Business <span class="text-red-500 font-bold">*</span></label>
+                            <textarea id="business_description" name="business_description" rows="2" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Partnership Details -->
+                <div class="form-step" id="step-3">
+                    <h3 class="form-section-title">Partnership Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="partnership_type"
+                                class="block text-sm font-medium text-gray-700 mb-1">Partnership Type <span
+                                    class="text-red-500 font-bold">*</span></label>
+                            <select id="partnership_type" name="partnership_type" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer">
+                                <option value="">-- Select Type --</option>
+                                <option value="referral">Referral Partner</option>
+                                <option value="reseller">Reseller / Agency Partner</option>
+                                <option value="cobranding">Strategic / Co-branding Partner</option>
+                                <option value="freelancer">Freelancer or Contractor Collaboration</option>
+                                <option value="vendor">Vendor / Supplier</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="service_area" class="block text-sm font-medium text-gray-700 mb-1">Service Area
+                                <span class="text-red-500 font-bold">*</span></label>
+                            <select id="service_area" name="service_area" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer">
+                                <option value="">-- Select Area --</option>
+                                <option value="tech">Tech Solutions</option>
+                                <option value="branding">Branding & Creative Solutions</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Have you worked with Africana Tech &
+                            Branding before? <span class="text-red-500 font-bold">*</span></label>
+                        <div class="flex gap-6">
+                            <label class="inline-flex items-center"><input type="radio" name="worked_before" value="yes"
+                                    required class="form-radio h-4 w-4 text-brandBlue"
+                                    onchange="toggleWorkedBeforeFields()"><span class="ml-2">Yes</span></label>
+                            <label class="inline-flex items-center"><input type="radio" name="worked_before" value="no"
+                                    required class="form-radio h-4 w-4 text-brandBlue"
+                                    onchange="toggleWorkedBeforeFields()"><span class="ml-2">No</span></label>
+                        </div>
+                    </div>
+                    <div id="worked-before-fields" class="conditional-field mb-4">
+                        <label for="previous_work_area" class="block text-sm font-medium text-gray-700 mb-1">What
+                            service area did we work on? <span class="text-red-500 font-bold">*</span></label>
+                        <select id="previous_work_area" name="previous_work_area"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer">
+                            <option value="">-- Select --</option>
+                            <option value="tech">Tech Solutions</option>
+                            <option value="branding">Branding & Creative</option>
+                            <option value="both">Both</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="previous_work_description"
+                            class="block text-sm font-medium text-gray-700 mt-3 mb-1">Brief description of the
+                            work</label>
+                        <textarea id="previous_work_description" name="previous_work_description" rows="2"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="why_partner" class="block text-sm font-medium text-gray-700 mb-1">Why do you want to
+                            partner with us specifically? <span class="text-red-500 font-bold">*</span></label>
+                        <textarea id="why_partner" name="why_partner" rows="3" required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                            placeholder="Example: We have a strong client base in the tourism sector and believe Africana's branding expertise will help us provide complete solutions."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="what_you_bring" class="block text-sm font-medium text-gray-700 mb-1">What do you
+                            bring to the partnership? <span class="text-red-500 font-bold">*</span></label>
+                        <textarea id="what_you_bring" name="what_you_bring" rows="3" required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                            placeholder="Example: Existing client base, distribution channel, complementary skills, geographic reach."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="goals" class="block text-sm font-medium text-gray-700 mb-1">What do you hope to get
+                            out of it? <span class="text-red-500 font-bold">*</span></label>
+                        <textarea id="goals" name="goals" rows="3" required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                            placeholder="Example: Access to new markets, increased revenue, joint project opportunities."></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="estimated_volume" class="block text-sm font-medium text-gray-700 mb-1">Estimated
+                                Volume of Referrals/Joint Projects <span
+                                    class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                            <input type="text" id="estimated_volume" name="estimated_volume"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="e.g., 5-10 per quarter">
+                        </div>
+                        <div>
+                            <label for="commission_expectation"
+                                class="block text-sm font-medium text-gray-700 mb-1">Expected Commission / Revenue Share
+                                <span class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                            <input type="text" id="commission_expectation" name="commission_expectation"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="e.g., 10% or fixed fee">
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" class="btn-prev" onclick="prevStep(3)">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Logistics & Consent -->
+                <div class="form-step" id="step-4">
+                    <h3 class="form-section-title">Logistics & Consent</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="communication_channel"
+                                class="block text-sm font-medium text-gray-700 mb-1">Preferred Communication Channel
+                                <span class="text-red-500 font-bold">*</span></label>
+                            <select id="communication_channel" name="communication_channel" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer"
+                                onchange="toggleCommunicationField()">
+                                <option value="">-- Select --</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="email">Email</option>
+                            </select>
+                        </div>
+                        <div id="whatsapp-field" class="conditional-field">
+                            <label for="whatsapp_number" class="block text-sm font-medium text-gray-700 mb-1">WhatsApp
+                                Number <span class="text-red-500 font-bold">*</span></label>
+                            <input type="tel" id="whatsapp_number" name="whatsapp_number"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="+255 123 456 789">
+                        </div>
+                        <div id="phone-field" class="conditional-field">
+                            <label for="phone_number" class="block text-sm font-medium text-gray-700 mb-1">Phone Number
+                                <span class="text-red-500 font-bold">*</span></label>
+                            <input type="tel" id="phone_number" name="phone_number"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"
+                                placeholder="+255 123 456 789">
+                        </div>
+                        <div id="email-field" class="conditional-field">
+                            <label for="contact_email" class="block text-sm font-medium text-gray-700 mb-1">Email
+                                Address <span class="text-red-500 font-bold">*</span></label>
+                            <input type="email" id="contact_email" name="contact_email"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="time_zone" class="block text-sm font-medium text-gray-700 mb-1">Time Zone <span
+                                    class="text-red-500 font-bold">*</span></label>
+                            <select id="time_zone" name="time_zone" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer"
+                                onchange="toggleTimeField()">
+                                <option value="">-- Select Time Zone --</option>
+                                <option value="EAT">East Africa Time (EAT, GMT+3)</option>
+                                <option value="WAT">West Africa Time (WAT, GMT+1)</option>
+                                <option value="GMT">Greenwich Mean Time (GMT)</option>
+                                <option value="CET">Central European Time (CET, GMT+1)</option>
+                                <option value="EST">Eastern Standard Time (EST, GMT-5)</option>
+                                <option value="PST">Pacific Standard Time (PST, GMT-8)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div id="time-field" class="conditional-field">
+                            <label for="preferred_time" class="block text-sm font-medium text-gray-700 mb-1">Preferred
+                                Time (based on time zone)</label>
+                            <input type="time" id="preferred_time" name="preferred_time"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="how_hear" class="block text-sm font-medium text-gray-700 mb-1">How did you hear
+                            about us? <span class="text-red-500 font-bold">*</span></label>
+                        <select id="how_hear" name="how_hear" required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all bg-white cursor-pointer">
+                            <option value="">-- Select --</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="website">Website</option>
+                            <option value="friend">Friend / Colleague</option>
+                            <option value="referral">Referral</option>
+                            <option value="online_search">Online Search</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-flex items-start">
+                            <input type="checkbox" name="agreement_terms" required
+                                class="form-checkbox h-5 w-5 text-brandBlue rounded mt-1">
+                            <span class="ml-2 text-sm text-gray-700">I agree to the partnership terms and conditions,
+                                including any non‑disclosure agreements. <span
+                                    class="text-red-500 font-bold">*</span></span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-flex items-start">
+                            <input type="checkbox" name="data_consent" required
+                                class="form-checkbox h-5 w-5 text-brandBlue rounded mt-1">
+                            <span class="ml-2 text-sm text-gray-700">I consent to the collection and processing of my
+                                personal data in accordance with the Personal Data Protection Act (2022). <span
+                                    class="text-red-500 font-bold">*</span></span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <label for="additional_comments" class="block text-sm font-medium text-gray-700 mb-1">Additional
+                            Comments or Questions <span
+                                class="text-gray-400 text-xs font-normal">(optional)</span></label>
+                        <textarea id="additional_comments" name="additional_comments" rows="3"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brandBlue focus:border-brandBlue outline-none transition-all"></textarea>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" class="btn-prev" onclick="prevStep(4)">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextStep(4)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Review & Submit -->
+                <div class="form-step" id="step-5">
+                    <h3 class="form-section-title">Review & Submit</h3>
+                    <div id="review-content" class="space-y-6"></div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" class="btn-prev" onclick="prevStep(5)">Previous</button>
+                        <button type="submit" class="btn-submit">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-brandBlue to-brandGreen text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Partner with Us?</h2>
+            <p class="text-lg text-white/90 mb-8">Join our network of collaborators and let's build something amazing
+                together.</p>
+            <a href="contact.html"
+                class="inline-flex items-center px-8 py-4 bg-white text-brandBlue font-bold rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
+                Contact Our Team
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
+
+        // Multi-step navigation
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function showStep(step) {
+            document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+            document.querySelectorAll('.step-dot').forEach(dot => {
+                const dotStep = parseInt(dot.dataset.step);
+                dot.classList.remove('active', 'completed');
+                if (dotStep === step) dot.classList.add('active');
+                else if (dotStep < step) dot.classList.add('completed');
+            });
+            currentStep = step;
+            if (step === totalSteps) {
+                generateReview();
+            }
+            window.scrollTo({ top: document.getElementById('partner-form').offsetTop - 50, behavior: 'smooth' });
+        }
+
+        function nextStep(current) {
+            const currentStepElement = document.getElementById('step-' + current);
+            const requiredFields = currentStepElement.querySelectorAll('[required]');
+            let valid = true;
+            requiredFields.forEach(field => {
+                if (!field.checkValidity()) {
+                    valid = false;
+                    field.reportValidity();
+                    return;
+                }
+            });
+            if (valid) {
+                showStep(current + 1);
+            }
+        }
+
+        function prevStep(current) {
+            showStep(current - 1);
+        }
+
+        function toggleWorkedBeforeFields() {
+            const workedBefore = document.querySelector('input[name="worked_before"]:checked');
+            const fields = document.getElementById('worked-before-fields');
+            if (workedBefore && workedBefore.value === 'yes') {
+                fields.classList.add('active');
+            } else {
+                fields.classList.remove('active');
+            }
+        }
+
+        function toggleCommunicationField() {
+            const channel = document.getElementById('communication_channel').value;
+            document.querySelectorAll('.conditional-field').forEach(f => f.classList.remove('active'));
+            if (channel === 'whatsapp') {
+                document.getElementById('whatsapp-field').classList.add('active');
+            } else if (channel === 'phone') {
+                document.getElementById('phone-field').classList.add('active');
+            } else if (channel === 'email') {
+                document.getElementById('email-field').classList.add('active');
+            }
+        }
+
+        function toggleTimeField() {
+            const timeZone = document.getElementById('time_zone').value;
+            const timeField = document.getElementById('time-field');
+            if (timeZone) {
+                timeField.classList.add('active');
+            } else {
+                timeField.classList.remove('active');
+            }
+        }
+
+        // Helper to safely get value
+        function getValue(id) {
+            const el = document.getElementById(id);
+            return el ? (el.value || 'N/A') : 'N/A';
+        }
+
+        function generateReview() {
+            const reviewContainer = document.getElementById('review-content');
+            reviewContainer.innerHTML = '';
+
+            const sections = [
+                {
+                    title: 'Personal Details',
+                    fields: [
+                        ['Full Name', getValue('full_name')],
+                        ['Job Title', getValue('job_title')],
+                        ['Email', getValue('email')],
+                        ['Phone / WhatsApp', getValue('phone')],
+                        ['Country / City', getValue('country_city')]
+                    ]
+                },
+                {
+                    title: 'Company Information',
+                    fields: [
+                        ['Company Name', getValue('company_name') || 'N/A'],
+                        ['Website', getValue('website') || 'N/A'],
+                        ['Social Media', getValue('social_media') || 'N/A'],
+                        ['Business Reg. Number', getValue('business_reg') || 'N/A'],
+                        ['Industry', getValue('industry')],
+                        ['Years in Operation', getValue('years_operation')],
+                        ['Team Size', getValue('team_size') || 'N/A'],
+                        ['Business Description', getValue('business_description')]
+                    ]
+                },
+                {
+                    title: 'Partnership Details',
+                    fields: [
+                        ['Partnership Type', getValue('partnership_type')],
+                        ['Service Area', getValue('service_area')],
+                        ['Worked with us before?', document.querySelector('input[name="worked_before"]:checked')?.value || 'N/A'],
+                        ['Previous Work Area', getValue('previous_work_area') || 'N/A'],
+                        ['Previous Work Description', getValue('previous_work_description') || 'N/A'],
+                        ['Why Partner?', getValue('why_partner')],
+                        ['What you bring', getValue('what_you_bring')],
+                        ['Goals', getValue('goals')],
+                        ['Estimated Volume', getValue('estimated_volume') || 'N/A'],
+                        ['Commission Expectation', getValue('commission_expectation') || 'N/A']
+                    ]
+                },
+                {
+                    title: 'Logistics & Consent',
+                    fields: [
+                        ['Preferred Communication', getValue('communication_channel')],
+                        ['WhatsApp Number', getValue('whatsapp_number') || 'N/A'],
+                        ['Phone Number', getValue('phone_number') || 'N/A'],
+                        ['Contact Email', getValue('contact_email') || 'N/A'],
+                        ['Time Zone', getValue('time_zone')],
+                        ['Preferred Time', getValue('preferred_time') || 'N/A'],
+                        ['How did you hear?', getValue('how_hear')],
+                        ['Agreement to Terms', document.getElementById('agreement_terms').checked ? 'Yes' : 'No'],
+                        ['Data Consent', document.getElementById('data_consent').checked ? 'Yes' : 'No'],
+                        ['Additional Comments', getValue('additional_comments') || 'N/A']
+                    ]
+                }
+            ];
+
+            sections.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'review-section';
+                sectionDiv.innerHTML = `<h4 class="font-bold text-brandBlack mb-2">${section.title} <span class="edit-link" onclick="goToStep('${section.title}')">Edit</span></h4>`;
+                section.fields.forEach(field => {
+                    const p = document.createElement('p');
+                    p.className = 'text-sm text-gray-700 mb-1';
+                    p.innerHTML = `<strong>${field[0]}:</strong> ${field[1]}`;
+                    sectionDiv.appendChild(p);
+                });
+                reviewContainer.appendChild(sectionDiv);
+            });
+        }
+
+        function goToStep(title) {
+            const stepMap = {
+                'Personal Details': 1,
+                'Company Information': 2,
+                'Partnership Details': 3,
+                'Logistics & Consent': 4,
+                'Review & Submit': 5
+            };
+            showStep(stepMap[title]);
+        }
+
+        // Form submission
+        const successOverlay = document.getElementById('success-overlay');
+        const successCard = document.getElementById('success-card');
+        const closeSuccessBtn = document.getElementById('close-success-btn');
+
+        function showSuccessPopup() {
+            successOverlay.classList.remove('hidden');
+            void successOverlay.offsetWidth;
+            successCard.classList.remove('opacity-0', 'scale-95');
+            setTimeout(hideSuccessPopup, 5000);
+        }
+
+        function hideSuccessPopup() {
+            successCard.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                successOverlay.classList.add('hidden');
+            }, 300);
+        }
+        closeSuccessBtn.addEventListener('click', hideSuccessPopup);
+
+        document.getElementById('partnerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('.btn-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                if (result.success) {
+                    showSuccessPopup();
+                    form.reset();
+                    showStep(1);
+                    document.querySelectorAll('.conditional-field').forEach(f => f.classList.remove('active'));
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                alert('Network error. Please try again later.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+        });
+
+        // Initialize first step
+        showStep(1);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

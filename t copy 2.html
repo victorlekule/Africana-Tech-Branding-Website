@@ -4,846 +4,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Africana Tech & Branding - Blog</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .prose h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #136db6;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .prose p {
-      margin-bottom: 1.25rem;
-      line-height: 1.8;
-      color: #4b5563;
-    }
-
-    .prose ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      margin-bottom: 1.25rem;
-      color: #4b5563;
-    }
-
-    .prose li {
-      margin-bottom: 0.5rem;
-    }
-
-    .prose strong {
-      color: #111827;
-    }
-  </style>
+  <title>Document</title>
 </head>
 
-<body class="bg-slate-50 font-sans text-slate-800">
-
-  <div id="header-container"></div>
-
-
-  <!-- MODERN HERO -->
-  <section class="relative overflow-hidden bg-brandBlack text-white">
-    <!-- Animated gradient background -->
-    <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,#136db6_0%,transparent_50%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,#009444_0%,transparent_50%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#0A0A0A_0%,transparent_70%)]"></div>
+<body>
+  <section id="portfolio"
+    class="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 border-t border-gray-200">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-brandYellow/5 rounded-full blur-3xl"></div>
     </div>
 
-    <!-- Floating orbs -->
-    <div class="absolute top-20 left-10 w-72 h-72 bg-brandBlue/30 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-96 h-96 bg-brandGreen/20 rounded-full blur-3xl animate-pulse"
-      style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/3 right-1/4 w-40 h-40 bg-yellow-400/20 rounded-full blur-2xl animate-bounce"></div>
-
-    <!-- Subtle grid overlay -->
-    <div class="absolute inset-0 opacity-5"
-      style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 60px 60px;">
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Left content -->
-        <div class="text-center lg:text-left">
-          <!-- Badge -->
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-            <span class="h-2 w-2 rounded-full bg-yellow-400 animate-ping"></span>
-            <span class="text-xs font-semibold tracking-widest uppercase text-yellow-400">Knowledge Hub</span>
-          </div>
-
-          <!-- Headline -->
-          <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-[1.1] mb-6">
-            <span class="text-white">Grow Your</span><br>
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-brandBlue to-brandGreen">Business
-              With</span><br>
-            <span class="text-white">Expert Insights</span>
-          </h1>
-
-          <!-- Subtext -->
-          <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-            Practical guides on technology, branding, digital marketing, and business growth for Tanzanian and East
-            African businesses.
-          </p>
-
-          <!-- Search bar -->
-          <div class="max-w-xl mx-auto lg:mx-0">
-            <div
-              class="flex items-center bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md focus-within:border-yellow-400 transition">
-              <svg class="w-5 h-5 ml-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-              <input type="text" id="searchInputHero" placeholder="Search articles..."
-                class="w-full px-4 py-4 bg-transparent text-white placeholder-gray-400 focus:outline-none">
-              <button id="searchButtonHero" type="button"
-                class="mr-2 px-6 py-3 bg-yellow-400 text-brandBlack font-bold rounded-xl hover:bg-yellow-300 transition">Search</button>
-            </div>
-          </div>
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+      <!-- Heading -->
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 lg:mb-16 reveal">
+        <div class="max-w-2xl">
+          <span class="text-brandBlue font-bold tracking-widest uppercase text-sm block mb-2">Portfolio</span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brandBlack tracking-tight leading-tight">
+            Recent <span class="bg-gradient-to-r from-brandBlue to-brandYellow bg-clip-text text-transparent">Success
+              Stories</span>
+          </h2>
         </div>
-
-        <!-- Right featured card -->
-        <div class="hidden lg:block">
-          <div
-            class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-md shadow-2xl hover:bg-white/10 transition">
-            <p class="text-sm text-gray-400 mb-2">Featured Article</p>
-            <h3 class="text-xl font-bold text-white mb-3">Why Every Tanzanian Business Needs a Website in 2026</h3>
-            <p class="text-gray-300 text-sm mb-4">Still relying only on Facebook? Here's why a real website is now
-              essential for Tanzanian businesses — and what it costs to get one right.</p>
-            <a href="#" onclick="openArticle(1); return false;"
-              class="inline-flex items-center gap-2 text-yellow-400 font-semibold hover:gap-3 transition-all">
-              Read Article
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
-                </path>
-              </svg>
-            </a>
-          </div>
+        <div class="mt-6 md:mt-0 hidden md:block">
+          <a href="#"
+            class="group inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
+            See All Portfolio
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
 
-    <!-- Bottom gradient line -->
-    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent">
+      <!-- ========== FUTURISTIC 3D CAROUSEL (Only Active Card Visible) ========== -->
+      <div class="relative">
+        <div id="premium-3d-carousel" class="relative w-full max-w-5xl mx-auto" style="perspective: 2000px;">
+          <div class="flex items-center justify-center relative h-[500px] md:h-[600px]">
+            <!-- Cards will be injected here -->
+          </div>
+
+          <!-- Navigation Arrows (hidden on mobile) -->
+          <button id="carousel-prev"
+            class="hidden md:flex absolute top-1/2 -translate-y-1/2 left-4 z-20 w-14 h-14 rounded-full bg-white/10 backdrop-blur-lg shadow-xl border border-white/30 items-center justify-center text-white hover:bg-white/20 hover:scale-105 transition-all duration-300">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="carousel-next"
+            class="hidden md:flex absolute top-1/2 -translate-y-1/2 right-4 z-20 w-14 h-14 rounded-full bg-white/10 backdrop-blur-lg shadow-xl border border-white/30 items-center justify-center text-white hover:bg-white/20 hover:scale-105 transition-all duration-300">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Dots -->
+          <div id="carousel-dots" class="flex justify-center gap-2 md:gap-3 mt-6 md:mt-10 flex-wrap"></div>
+        </div>
+
+        <!-- See All link -->
+        <div class="mt-10 text-center reveal">
+          <a href="portfolio.html"
+            class="inline-flex items-center font-bold text-brandBlack hover:text-brandBlue transition-colors text-lg">
+            See All Portfolio <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main class="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-5 py-12">
-    <div id="view-index" class="block">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-4xl font-bold text-slate-900 mb-4">Insights & Strategy</h2>
-        <p class="text-lg text-slate-600">Actionable advice on branding, web technology, and digital marketing for
-          businesses in Tanzania and East Africa.</p>
-      </div>
+  <!-- Styles -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-      <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
-        <button onclick="filterCategory('All')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-[#136db6] text-white shadow-md transition-all">All</button>
-        <button onclick="filterCategory('Technology')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Technology</button>
-        <button onclick="filterCategory('Branding')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Branding</button>
-        <button onclick="filterCategory('Digital Marketing')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Digital
-          Marketing</button>
-        <button onclick="filterCategory('Design')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Design</button>
-        <button onclick="filterCategory('Business Growth')"
-          class="px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all">Business
-          Growth</button>
-      </div>
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
 
-      <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-    </div>
+    /* ========== Futuristic 3D Carousel – Only Active Card Visible ========== */
+    #premium-3d-carousel .card-3d {
+      position: absolute;
+      width: 280px;
+      /* Mobile default */
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      transform-style: preserve-3d;
+      will-change: transform, opacity, filter;
+      cursor: pointer;
+      left: 50%;
+      pointer-events: none;
+      /* Disable interaction on non-active cards */
+    }
 
-    <div id="view-article"
-      class="hidden max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100">
-      <button onclick="showView('index')"
-        class="flex items-center text-sm font-semibold text-[#136db6] hover:text-[#136db6] mb-8 group transition-colors">
-        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
-          stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-        </svg>
-        Back to Articles
-      </button>
+    /* Active card – fully visible, elevated, glowing */
+    #premium-3d-carousel .card-3d.active {
+      transform: translateX(-50%) translateZ(0px) rotateY(0deg) scale(1);
+      z-index: 10;
+      opacity: 1;
+      filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.3));
+      pointer-events: auto;
+      /* Enable interaction only on active card */
+    }
 
-      <div class="mb-8 border-b border-slate-100 pb-8">
-        <span id="article-category"
-          class="inline-block px-3 py-1 bg-[#136db6]/10 text-[#136db6] rounded-full text-xs font-bold tracking-wide uppercase mb-4">Category</span>
-        <h1 id="article-title" class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-4">Title</h1>
-        <p id="article-meta" class="text-lg text-slate-500 italic">Meta Description</p>
-      </div>
+    /* All non-active cards – hidden but present for transition */
+    #premium-3d-carousel .card-3d.prev,
+    #premium-3d-carousel .card-3d.next,
+    #premium-3d-carousel .card-3d.prev2,
+    #premium-3d-carousel .card-3d.next2,
+    #premium-3d-carousel .card-3d.prev3,
+    #premium-3d-carousel .card-3d.next3,
+    #premium-3d-carousel .card-3d.prev4,
+    #premium-3d-carousel .card-3d.next4,
+    #premium-3d-carousel .card-3d.hidden-card {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateX(-50%) translateZ(-600px) rotateY(0deg) scale(0.5);
+      z-index: 1;
+      pointer-events: none;
+    }
 
-      <div id="article-content" class="prose max-w-none"></div>
+    /* Premium card inner styling – glass morphism, futuristic */
+    #premium-3d-carousel .card-3d .premium-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: box-shadow 0.4s, transform 0.4s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
 
-      <div
-        class="mt-16 bg-gradient-to-br from-[#0A0A0A] to-[#136db6] rounded-2xl p-8 md:p-10 text-center shadow-lg border border-[#136db6] relative overflow-hidden">
-        <div class="relative z-10">
-          <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight">Ready to elevate your business?
-          </h3>
-          <p class="text-[#F9FAFB] text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-            Whether you need a high-performing website, a professional corporate identity, or a digital marketing
-            strategy that actually drives sales, <strong>Africana Tech & Branding Ltd</strong> is here to help your
-            business stand out in Tanzania and beyond.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="contact.html"
-              class="inline-flex justify-center items-center px-8 py-3.5 text-sm md:text-base font-bold text-[#0A0A0A] bg-white hover:bg-gray-50 rounded-full shadow-md transition-transform hover:-translate-y-1 duration-200">Get
-              a Free Consultation</a>
-            <a href="portfolio.html"
-              class="inline-flex justify-center items-center px-8 py-3.5 text-sm md:text-base font-bold text-white border-2 border-white/30 hover:border-white hover:bg-white/10 rounded-full transition-colors duration-200">View
-              Our Portfolio</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    /* Glowing gradient border on active card */
+    #premium-3d-carousel .card-3d.active .premium-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 2rem;
+      padding: 2px;
+      background: linear-gradient(135deg, #1e3a8a, #f59e0b, #1e3a8a);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    #premium-3d-carousel .card-3d .premium-card img {
+      transition: transform 0.5s ease;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    #premium-3d-carousel .card-3d.active .premium-card img {
+      transform: scale(1.05);
+    }
+
+    /* Dots */
+    #carousel-dots .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+
+    #carousel-dots .dot.active {
+      background: linear-gradient(135deg, #1e3a8a, #f59e0b);
+      width: 36px;
+      border-radius: 9999px;
+      box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
+    }
+
+    /* Desktop overrides */
+    @media (min-width: 768px) {
+      #premium-3d-carousel .card-3d {
+        width: 420px;
+      }
+
+      #premium-3d-carousel .card-3d .premium-card img {
+        height: 280px;
+      }
+    }
+  </style>
 
   <script>
-    const posts = [
-      // ================== TECHNOLOGY PILLAR (1-10) ==================
-      {
-        id: 1, category: "Technology",
-        title: "Why Every Tanzanian Business Needs a Website in 2026 (Not Just a Facebook Page)",
-        meta: "Still relying only on Facebook? Here's why a real website is now essential for Tanzanian businesses — and what it costs to get one right.",
-        content: `
-                    <h3>Introduction</h3>
-                    <p>Talk to almost any small business owner in Arusha, Mwanza, or Dar es Salaam, and you'll hear some version of the same thing: "I don't need a website, I have a Facebook page." A few years ago, that argument had some weight to it. Today, it doesn't hold up the way it used to — and the businesses that figure this out first are the ones quietly pulling ahead of their competitors.</p>
-                    <p>This isn't about chasing trends. It's about what actually happens when a potential customer tries to check you out before doing business with you.</p>
-                    <h3>The Facebook page isn't yours</h3>
-                    <p>Here's the uncomfortable truth: your Facebook page can disappear tomorrow. An algorithm change, a hacked account, a policy update you never read — and years of posts, reviews, and followers can vanish or become invisible overnight. You don't own that page. You're renting space on someone else's platform, on someone else's terms.</p>
-                    <h3>A website signals credibility</h3>
-                    <p>Fairly or not, people judge a business by its online presence. An international client, a bank considering a loan application, or a partner organization doing due diligence will look for a professional website before they take you seriously.</p>
-                `
-      },
-      {
-        id: 2, category: "Technology",
-        title: "The Real Cost of Ignoring Cybersecurity as a Small Business in Tanzania",
-        meta: "Cyberattacks aren't just a 'big company' problem. Here's what Tanzanian SMEs stand to lose — and simple steps to protect your business today.",
-        content: `
-                    <h3>Introduction</h3>
-                    <p>"Why would anyone hack us? We're a small business." We hear this a lot, and it's one of the most expensive assumptions a business owner can make.</p>
-                    <h3>Simple steps that actually make a difference</h3>
-                    <ul>
-                        <li><strong>Use strong, unique passwords — and a password manager.</strong></li>
-                        <li><strong>Turn on two-factor authentication everywhere it's offered.</strong></li>
-                        <li><strong>Back up your data regularly.</strong></li>
-                        <li><strong>Train your team to slow down before clicking.</strong></li>
-                    </ul>
-                `
-      },
-      {
-        id: 3, category: "Technology",
-        title: "Cloud Computing Explained: What Tanzanian SMEs Need to Know Before Switching",
-        meta: "Thinking of moving your business data to the cloud? Here's a plain-language guide for Tanzanian business owners, no tech jargon included.",
-        content: `
-                    <h3>What Is the Cloud?</h3>
-                    <p>Cloud computing refers to storing and accessing data and programs over the internet instead of on your computer's hard drive. For Tanzanian small and medium enterprises (SMEs), transitioning to cloud infrastructure means eliminating reliance on fragile physical servers and reducing costly hardware maintenance.</p>
-                    <h3>Key Benefits for Growing Businesses</h3>
-                    <ul>
-                        <li><strong>Remote Accessibility:</strong> Access your company financial records, customer database, and operational documents from anywhere in East Africa.</li>
-                        <li><strong>Scalability:</strong> Instantly upgrade storage or processing power as your enterprise expands without purchasing new machinery.</li>
-                        <li><strong>Cost Efficiency:</strong> Shift from heavy capital expenditures to predictable subscription-based operational expenses.</li>
-                    </ul>
-                    <h3>Overcoming Connectivity Challenges</h3>
-                    <p>While fiber optic networks continue to expand across Dar es Salaam, Arusha, and Mwanza, maintaining a reliable backup internet connection or secondary mobile broadband line ensures uninterrupted workflow when utilizing cloud services.</p>
-                `
-      },
-      {
-        id: 4, category: "Technology",
-        title: "How Mobile Money Integration Can Transform Your Business Website",
-        meta: "M-Pesa and Tigo Pesa on your website aren't optional anymore. Here's how mobile money integration boosts sales for Tanzanian businesses.",
-        content: `
-                    <h3>The Shift Toward Digital Payments</h3>
-                    <p>Tanzania is a global leader in mobile money innovation. When customers visit your e-commerce store or booking platform, forcing them to use international credit cards creates instant friction and abandoned checkouts. Integrating local mobile money solutions directly into your website checkout workflow removes these barriers entirely.</p>
-                    <h3>Maximizing Conversion Rates</h3>
-                    <p>By offering automated USSD push notifications and instant mobile payments, you streamline the buyer journey. Customers complete transactions securely within seconds using their preferred network providers, drastically increasing conversion rates and overall sales volume.</p>
-                `
-      },
-      {
-        id: 5, category: "Technology",
-        title: "Website Speed and Why It's Costing You Customers in Tanzania",
-        meta: "A slow website is quietly costing you sales. Here's why load speed matters so much on Tanzania's mobile networks, and how to fix it.",
-        content: `
-                    <h3>The Impact of Latency</h3>
-                    <p>Most internet users in East Africa browse via mobile data connections. If your website takes longer than three seconds to load, potential clients will bounce back to search results and buy from your competitor instead. Speed directly impacts both user experience and your Google search ranking.</p>
-                    <h3>Actionable Optimization Strategies</h3>
-                    <ul>
-                        <li><strong>Image Compression:</strong> Resize and compress large product photos before uploading them to your web server.</li>
-                        <li><strong>Minimalist Coding:</strong> Remove bloated plugins, unnecessary scripts, and heavy animations.</li>
-                        <li><strong>Reliable Hosting:</strong> Utilize high-performance local or regional web hosting servers with content delivery networks (CDNs).</li>
-                    </ul>
-                `
-      },
-      {
-        id: 6, category: "Technology",
-        title: "A Beginner's Guide to Domain Names and Web Hosting for Tanzanian Entrepreneurs",
-        meta: "Confused by '.co.tz' vs '.com,' or what hosting actually means? This beginner's guide breaks it down for first-time business owners.",
-        content: `
-                    <h3>Choosing the Right Domain Extension</h3>
-                    <p>Deciding between a global '.com' and a local '.co.tz' domain name is an important strategic choice. While '.com' gives an international look, a '.co.tz' domain immediately signals to local consumers and regulatory bodies that your business is proudly rooted in Tanzania, often boosting local search relevance.</p>
-                    <h3>Understanding Web Hosting Fundamentals</h3>
-                    <p>A domain name is your digital street address, while web hosting is the physical or virtual land where your website's files live. Ensure you invest in secure, stable hosting plans with guaranteed uptime, daily automated backups, and integrated SSL certificates.</p>
-                `
-      },
-      {
-        id: 7, category: "Technology",
-        title: "E-Commerce in Tanzania: What It Takes to Sell Online Successfully",
-        meta: "Selling online in Tanzania isn't just 'put it on Instagram.' Here's what actually goes into building a real e-commerce operation.",
-        content: `
-                    <h3>Beyond Social Media Selling</h3>
-                    <p>While social media platforms are great for discovery, an independent e-commerce website provides centralized inventory tracking, professional checkout flows, and long-term customer data ownership. Building a successful online store requires syncing your product catalog with clear pricing, reliable shipping options, and secure payment gateways.</p>
-                    <h3>Logistics and Fulfillment</h3>
-                    <p>Smooth delivery operations are the backbone of e-commerce. Establish clear delivery partnerships covering major cities like Dar es Salaam, Dodoma, Arusha, and Mwanza to ensure goods reach buyers safely and on schedule.</p>
-                `
-      },
-      {
-        id: 8, category: "Technology",
-        title: "Why Your Business Needs a Custom Software Solution (Not Just Off-the-Shelf Apps)",
-        meta: "Generic apps only get you so far. Here's how to know when your business has outgrown off-the-shelf software.",
-        content: `
-                    <h3>When Generic Software Falls Short</h3>
-                    <p>Off-the-shelf software applications are designed for the masses, meaning they often force you to change your unique business workflows to fit rigid templates. As your Tanzanian enterprise scales, operational inefficiencies become apparent.</p>
-                    <h3>The Value of Custom Development</h3>
-                    <p>Custom software is built specifically around your operational processes, automating repetitive tasks, integrating legacy databases, and scaling seamlessly as your business grows.</p>
-                `
-      },
-      {
-        id: 9, category: "Technology",
-        title: "Data Backup and Disaster Recovery: A Survival Guide for Small Businesses",
-        meta: "One crashed laptop shouldn't be able to destroy your business. Here's a simple backup and recovery plan every small business needs.",
-        content: `
-                    <h3>Preparing for the Unexpected</h3>
-                    <p>Hardware failures, power surges, malware attacks, or accidental deletion can cripple a business overnight if critical operational records are lost. Implementing a comprehensive backup strategy protects your continuity.</p>
-                    <h3>The 3-2-1 Backup Rule</h3>
-                    <p>Maintain three total copies of your data across two different media formats, with at least one copy stored safely offsite or in secure cloud storage.</p>
-                `
-      },
-      {
-        id: 10, category: "Technology",
-        title: "How Artificial Intelligence Is Changing Small Business Operations in East Africa",
-        meta: "AI isn't just for tech giants. Here's how small and mid-sized East African businesses are already quietly using it to save time and money.",
-        content: `
-                    <h3>Practical AI Implementation</h3>
-                    <p>Artificial intelligence is no longer restricted to multi-national corporations. Tanzanian entrepreneurs are leveraging AI tools for customer service automation via WhatsApp chatbots, multilingual content creation, and predictive inventory management.</p>
-                    <h3>Driving Efficiency</h3>
-                    <p>By automating routine administrative tasks, business teams can focus their energy on high-level strategy, client relations, and creative problem-solving.</p>
-                `
-      },
+    (function () {
+      // ---------- Portfolio Data (10 items) ----------
+      const portfolioItems = [
+        { img: 'pic/m 1.png', alt: 'Morix Beyond Zanzibar', tag: 'Branding & Tech', title: 'Morix Beyond Zanzibar', desc: 'Complete brand identity, strategic content rollout, and high-performance website for a premium tourism operator.' },
+        { img: 'pic/tree 1.png', alt: 'African Child Comforters', tag: 'Tech Solution', title: 'Mr Tree Foundation', desc: 'An integrated digital platform and immersive storytelling website engineered for a major NGO.' },
+        { img: 'pic/tech 1.png', alt: 'FPSSA Platform', tag: 'Tech Solution', title: 'FPSSA Student Portal', desc: 'A comprehensive web portal and management system built for the Federation of Procurement and Supplies Student Association.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+4', alt: 'Project Four', tag: 'Branding', title: 'Project Four', desc: 'Short description for project four.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+5', alt: 'Project Five', tag: 'Tech', title: 'Project Five', desc: 'Short description for project five.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+6', alt: 'Project Six', tag: 'Branding & Tech', title: 'Project Six', desc: 'Short description for project six.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+7', alt: 'Project Seven', tag: 'Tech', title: 'Project Seven', desc: 'Short description for project seven.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+8', alt: 'Project Eight', tag: 'Branding', title: 'Project Eight', desc: 'Short description for project eight.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+9', alt: 'Project Nine', tag: 'Tech', title: 'Project Nine', desc: 'Short description for project nine.' },
+        { img: 'https://via.placeholder.com/600x400?text=Project+10', alt: 'Project Ten', tag: 'Branding & Tech', title: 'Project Ten', desc: 'Short description for project ten.' }
+      ];
 
-      // ================== BRANDING PILLAR (11-20) ==================
-      {
-        id: 11, category: "Branding",
-        title: "What Is Brand Identity and Why Your Tanzanian Business Can't Ignore It",
-        meta: "Your logo is not your brand. Here's what brand identity actually means, and why it directly affects how much people trust and pay you.",
-        content: `
-                    <h3>Introduction</h3>
-                    <p>Ask ten business owners what "branding" means, and most will point to their logo. It's an understandable mix-up — but it's also why so many businesses invest in a nice logo and then wonder why customers still don't recognize or trust them.</p>
-                    <h3>The building blocks of a real brand identity</h3>
-                    <ul>
-                        <li><strong>Visual identity</strong> — your logo, color palette, typography, and imagery style.</li>
-                        <li><strong>Verbal identity</strong> — your brand voice.</li>
-                        <li><strong>Experience</strong> — how it actually feels to interact with your business.</li>
-                        <li><strong>Positioning</strong> — where you sit in customers' minds relative to your competitors.</li>
-                    </ul>
-                `
-      },
-      {
-        id: 12, category: "Branding",
-        title: "Logo Design Mistakes That Are Hurting Your Business Credibility",
-        meta: "These common logo mistakes make businesses look amateur without owners even realizing it. Here's what to check on yours today.",
-        content: `
-                    <h3>Introduction</h3>
-                    <p>A logo is often the very first thing a potential customer sees — sometimes before they've read a single word about what you actually do.</p>
-                    <h3>Mistake 1: Using a free template or auto-generated logo maker</h3>
-                    <p>Free logo generators are tempting, but the designs they produce are generic and rarely unique.</p>
-                    <h3>Mistake 2: Too many colors</h3>
-                    <p>A logo with five or six colors is hard to reproduce consistently across print, digital, and promotional merchandise.</p>
-                `
-      },
-      {
-        id: 13, category: "Branding",
-        title: "How to Build a Brand Tanzanians Trust: Lessons from Local Success Stories",
-        meta: "Trust is earned differently in different markets. Here's what makes Tanzanian customers trust — and stick with — a local brand.",
-        content: `
-                    <h3>Community Connection</h3>
-                    <p>In Tanzania, business relies heavily on relationships and word-of-mouth recommendations. Trusted brands demonstrate deep cultural awareness, consistency, and a clear commitment to delivering dependable quality.</p>
-                    <h3>Consistency Across All Touchpoints</h3>
-                    <p>Ensure that your physical store environment, digital channels, packaging, and customer service standards reflect a unified, professional identity.</p>
-                `
-      },
-      {
-        id: 14, category: "Branding",
-        title: "The Psychology of Color in Branding: What Your Brand Colors Say About You",
-        meta: "That blue or gold in your logo is doing more work than you think. Here's the psychology behind brand color choices.",
-        content: `
-                    <h3>Color Communication</h3>
-                    <p>Colors evoke specific emotional responses. Blue conveys trust, security, and professionalism, making it popular in finance and technology. Warm tones like gold or orange project luxury, energy, and creativity. Selecting the right color palette helps align your brand values with customer perceptions.</p>
-                `
-      },
-      {
-        id: 15, category: "Branding",
-        title: "Rebranding 101: When and How to Refresh Your Business Identity",
-        meta: "Outgrown your old logo or name? Here's how to know it's time to rebrand, and how to do it without losing loyal customers.",
-        content: `
-                    <h3>Recognizing the Need for Change</h3>
-                    <p>If your business has expanded its product offerings, targeted a new market segment, or looks outdated compared to rising competitors, a strategic rebrand helps modernize your position without alienating your core audience.</p>
-                `
-      },
-      {
-        id: 16, category: "Branding",
-        title: "Brand Voice: Why How You Say Things Matters as Much as What You Sell",
-        meta: "Two businesses can sell the exact same product and feel completely different online. That difference is brand voice — here's how to define yours.",
-        content: `
-                    <h3>Defining Your Tone</h3>
-                    <p>Your brand voice dictates how your business communicates via social media, emails, website copy, and advertisements. Whether authoritative and formal or warm and conversational, consistency builds strong brand personality.</p>
-                `
-      },
-      {
-        id: 17, category: "Branding",
-        title: "Building a Premium Brand on a Small Business Budget",
-        meta: "You don't need a corporate budget to look premium. Here are the design and branding choices that punch above their weight.",
-        content: `
-                    <h3>Strategic Elegance</h3>
-                    <p>Looking premium is about smart design choices—generous whitespace, clean typography, consistent color palettes, and professional imagery—rather than extravagant advertising spend.</p>
-                `
-      },
-      {
-        id: 18, category: "Branding",
-        title: "Company Profile vs Brochure: What Your Business Actually Needs",
-        meta: "Not sure whether you need a company profile or a brochure? Here's the real difference, and when each one earns you the deal.",
-        content: `
-                    <h3>Purpose-Driven Materials</h3>
-                    <p>A company profile is a comprehensive corporate document detailing your history, leadership, portfolio, and legal standing for B2B contracts. A brochure focuses on specific product or service promotions for prospective retail buyers.</p>
-                `
-      },
-      {
-        id: 19, category: "Branding",
-        title: "How Consistent Branding Across Platforms Builds Customer Trust",
-        meta: "If your Instagram, website, and business card all look different, you're losing trust before the first conversation even starts.",
-        content: `
-                    <h3>Omnichannel Cohesion</h3>
-                    <p>When your social media profiles, website, signage, and business cards maintain identical branding standards, customers perceive your business as stable, professional, and trustworthy.</p>
-                `
-      },
-      {
-        id: 20, category: "Branding",
-        title: "From Logo to Legacy: Building a Brand That Outlives Its Founder",
-        meta: "The best brands are built to run without their founder in every room. Here's how to build branding with that kind of staying power.",
-        content: `
-                    <h3>Creating Institutional Value</h3>
-                    <p>Scaling a business past day-to-day founder involvement requires documenting brand guidelines, core values, and operational systems that institutionalize trust and recognition.</p>
-                `
-      },
-
-      // ================== DIGITAL MARKETING PILLAR (21-30) ==================
-      {
-        id: 21, category: "Digital Marketing",
-        title: "SEO for Tanzanian Businesses: A Practical Beginner's Guide",
-        meta: "SEO doesn't have to be confusing. Here's a practical, no-fluff starting point for Tanzanian business owners who want to be found on Google.",
-        content: `
-                    <h3>What is SEO and Why Should You Care?</h3>
-                    <p>Search Engine Optimization (SEO) makes your website easy for Google to understand. When someone in Tanzania searches for local services, optimized websites appear at the top, capturing high-intent buyer traffic.</p>
-                    <h3>Practical Optimization Steps</h3>
-                    <ul>
-                        <li>Claim and verify your Google Business Profile.</li>
-                        <li>Incorporate local search phrases naturally into headings.</li>
-                        <li>Ensure fast mobile loading times.</li>
-                    </ul>
-                `
-      },
-      {
-        id: 22, category: "Digital Marketing",
-        title: "How to Rank Your Business on Google Maps in Arusha, Moshi, or Mwanza",
-        meta: "Want to show up when someone searches 'near me'? Here's exactly how to optimize your Google Business Profile for local search.",
-        content: `
-                    <h3>Local Map Dominance</h3>
-                    <p>Optimizing your Google Business Profile with accurate geolocation data, operating hours, category tags, and consistent customer reviews ensures your business appears prominently in local map searches.</p>
-                `
-      },
-      {
-        id: 23, category: "Digital Marketing",
-        title: "Social Media Marketing Mistakes Tanzanian Businesses Keep Making",
-        meta: "Posting daily but seeing no results? These are the most common social media mistakes we see Tanzanian businesses make.",
-        content: `
-                    <h3>Avoiding Common Traps</h3>
-                    <p>Posting randomly without a strategy or failing to engage with user comments prevents social media channels from driving actual revenue. Focus on value-driven content and active community interaction.</p>
-                `
-      },
-      {
-        id: 24, category: "Digital Marketing",
-        title: "Instagram vs Facebook vs TikTok: Where Should Your Business Actually Be?",
-        meta: "You don't need to be everywhere. Here's how to choose the right platform for your specific business and customers.",
-        content: `
-                    <h3>Platform Selection Strategy</h3>
-                    <p>Match your marketing channel to your target audience. Instagram and TikTok excel for visual products and younger demographics, while Facebook remains powerful for community engagement and broad local reach.</p>
-                `
-      },
-      {
-        id: 25, category: "Digital Marketing",
-        title: "How to Write Captions That Actually Sell (Not Just Get Likes)",
-        meta: "Likes don't pay the bills. Here's how to write captions that move people from scrolling to actually buying.",
-        content: `
-                    <h3>Converting Attention to Action</h3>
-                    <p>Effective copywriting pairs engaging hooks with clear calls to action, guiding followers smoothly from social media interest to direct purchase inquiries.</p>
-                `
-      },
-      {
-        id: 26, category: "Digital Marketing",
-        title: "Content Calendars: The Secret Weapon Behind Consistent Social Media Growth",
-        meta: "Random posting leads to random results. Here's how a simple content calendar can transform your social media consistency.",
-        content: `
-                    <h3>Planning for Success</h3>
-                    <p>A structured content calendar eliminates last-minute guesswork, ensuring regular posting schedules and balanced promotional messaging across all channels.</p>
-                `
-      },
-      {
-        id: 27, category: "Digital Marketing",
-        title: "Paid Ads 101: How Small Tanzanian Businesses Can Advertise Smartly",
-        meta: "You don't need a huge budget to run effective ads. Here's how small businesses can advertise smartly on a modest budget.",
-        content: `
-                    <h3>Targeted Advertising</h3>
-                    <p>Paid social and search ads allow precise audience filtering by location, interests, and behavior, ensuring maximum return on investment even with modest budgets.</p>
-                `
-      },
-      {
-        id: 28, category: "Digital Marketing",
-        title: "WhatsApp Business: An Underrated Marketing Tool for Tanzanian SMEs",
-        meta: "Most customers are already messaging you on WhatsApp. Here's how to turn that into a real, organized sales channel.",
-        content: `
-                    <h3>Conversational Commerce</h3>
-                    <p>Utilize WhatsApp Business features like product catalogs, automated greeting messages, and broadcast lists to organize customer inquiries and close sales efficiently.</p>
-                `
-      },
-      {
-        id: 29, category: "Digital Marketing",
-        title: "How to Turn Social Media Followers Into Paying Customers",
-        meta: "Followers are not customers. Here's the bridge most businesses are missing between social media attention and actual sales.",
-        content: `
-                    <h3>Building Sales Funnels</h3>
-                    <p>Move followers off social media platforms and into direct sales channels like WhatsApp chats, email lists, or your e-commerce checkout page.</p>
-                `
-      },
-      {
-        id: 30, category: "Digital Marketing",
-        title: "Local SEO Keywords: How to Get Found by Customers Searching Near You",
-        meta: "'Best hotel in Mwanza' or 'leather bags Moshi' — here's how to find and use the exact phrases your local customers are searching.",
-        content: `
-                    <h3>Targeting Local Intent</h3>
-                    <p>Identify regional search keywords that combine your industry with specific Tanzanian cities or neighborhoods to capture high-intent local buyers.</p>
-                `
-      },
-
-      // ================== DESIGN PILLAR (31-40) ==================
-      {
-        id: 31, category: "Design",
-        title: "What Makes a Website Look 'Premium' vs 'Amateur'?",
-        meta: "The difference between a premium and amateur website often comes down to five specific design choices. Here's what to look for.",
-        content: `
-                    <h3>Design Principles</h3>
-                    <p>Generous whitespace, clean typography, cohesive color schemes, and high-resolution professional imagery separate high-converting professional websites from cluttered amateur designs.</p>
-                `
-      },
-      {
-        id: 32, category: "Design",
-        title: "Graphic Design Trends Tanzanian Businesses Should Watch in 2026",
-        meta: "From color palettes to layout styles, here are the design trends worth adopting — and the ones worth skipping — this year.",
-        content: `
-                    <h3>Modern Aesthetics</h3>
-                    <p>Stay relevant by adopting clean layouts, accessible typography, and authentic visual branding that resonates with modern East African consumers.</p>
-                `
-      },
-      {
-        id: 33, category: "Design",
-        title: "Why Mobile-Friendly Design Is No Longer Optional",
-        meta: "Most of your visitors are on a phone. Here's why a non-mobile-friendly website is quietly turning customers away.",
-        content: `
-                    <h3>Mobile-First Priority</h3>
-                    <p>Ensure responsive layouts, legible font sizing, and touch-friendly navigation buttons that perform seamlessly across all smartphone devices.</p>
-                `
-      },
-      {
-        id: 34, category: "Design",
-        title: "The Anatomy of a High-Converting Landing Page",
-        meta: "Some landing pages sell, others just sit there. Here's a breakdown of exactly what a high-converting page includes.",
-        content: `
-                    <h3>Conversion Architecture</h3>
-                    <p>A successful landing page features a compelling headline, clear value proposition, social proof, and a prominent call-to-action button.</p>
-                `
-      },
-      {
-        id: 35, category: "Design",
-        title: "Print vs Digital Design: What Still Matters for Local Businesses",
-        meta: "Business cards and banners aren't dead. Here's how print and digital design should work together, not compete.",
-        content: `
-                    <h3>Integrated Branding</h3>
-                    <p>Physical marketing materials like business cards, packaging, and corporate banners work hand-in-hand with digital assets to reinforce brand recognition.</p>
-                `
-      },
-      {
-        id: 36, category: "Design",
-        title: "Choosing Fonts That Match Your Brand Personality",
-        meta: "Fonts carry personality whether you plan it or not. Here's how to choose typography that actually fits your brand.",
-        content: `
-                    <h3>Typography Selection</h3>
-                    <p>Select clean, readable fonts that reflect your corporate character—whether modern and minimalist or established and traditional.</p>
-                `
-      },
-      {
-        id: 37, category: "Design",
-        title: "Packaging Design: How It Influences Buying Decisions in Tanzania",
-        meta: "Customers judge a product by its packaging before they ever try it. Here's how good packaging design drives sales.",
-        content: `
-                    <h3>Retail Impact</h3>
-                    <p>Exceptional packaging protects products while commanding attention on retail shelves, communicating quality and value instantly.</p>
-                `
-      },
-      {
-        id: 38, category: "Design",
-        title: "Before and After: What a Professional Redesign Can Do for Your Brand",
-        meta: "Sometimes the biggest business upgrade isn't a new product — it's a redesign. Here's what changes when you invest in one.",
-        content: `
-                    <h3>Transforming Perceptions</h3>
-                    <p>A professional visual overhaul signals growth, renewed energy, and elevated quality standards to existing and prospective clients.</p>
-                `
-      },
-      {
-        id: 39, category: "Design",
-        title: "UI/UX Basics Every Business Owner Should Understand",
-        meta: "You don't need to be a designer, but understanding UI/UX basics will change how you brief every website project going forward.",
-        content: `
-                    <h3>User Experience Fundamentals</h3>
-                    <p>Understanding user interface and user experience principles ensures your digital products are intuitive, accessible, and frictionless.</p>
-                `
-      },
-      {
-        id: 40, category: "Design",
-        title: "How to Brief a Designer So You Get What You Actually Want",
-        meta: "Vague briefs lead to disappointing designs. Here's how to communicate what you want so your designer can actually deliver it.",
-        content: `
-                    <h3>Effective Creative Briefs</h3>
-                    <p>Provide clear project goals, target audience details, brand guidelines, and inspirational examples to empower your designer to hit the mark on the first draft.</p>
-                `
-      },
-
-      // ================== BUSINESS GROWTH PILLAR (41-50) ==================
-      {
-        id: 41, category: "Business Growth",
-        title: "How Small Businesses in Arusha Can Compete With Bigger Brands",
-        meta: "Bigger budgets don't always win. Here's how small Arusha businesses can compete smartly against bigger, better-funded brands.",
-        content: `
-                    <h3>Agility and Personalization</h3>
-                    <p>Small businesses can outmaneuver large corporations by offering personalized customer care, rapid decision-making, and deep hyper-local community integration.</p>
-                `
-      },
-      {
-        id: 42, category: "Business Growth",
-        title: "Building a Marketing Budget When You're Just Starting Out",
-        meta: "Not sure how much to spend on marketing as a new business? Here's a realistic way to think about your first marketing budget.",
-        content: `
-                    <h3>Strategic Allocation</h3>
-                    <p>Allocate resources toward high-impact digital foundations like a professional website, local search optimization, and targeted social media engagement.</p>
-                `
-      },
-      {
-        id: 43, category: "Business Growth",
-        title: "Why Every Business Needs a Content Strategy, Not Just Content",
-        meta: "Posting content without a strategy is like driving without a destination. Here's the difference, and why it matters.",
-        content: `
-                    <h3>Purposeful Publishing</h3>
-                    <p>A strategic content roadmap ensures every article, post, and video serves a specific purpose in guiding prospects toward your products or services.</p>
-                `
-      },
-      {
-        id: 44, category: "Business Growth",
-        title: "Turning One-Time Customers Into Repeat Buyers Through Branding",
-        meta: "Acquiring a customer is expensive. Here's how strong branding turns one-time buyers into loyal, repeat customers.",
-        content: `
-                    <h3>Retention Through Identity</h3>
-                    <p>Consistent branding, exceptional post-purchase experiences, and reliable product quality foster deep loyalty and repeat business.</p>
-                `
-      },
-      {
-        id: 45, category: "Business Growth",
-        title: "How NGOs and Institutions in Tanzania Can Improve Public Communication",
-        meta: "Good work deserves good visibility. Here's how NGOs and public institutions can communicate more effectively with the public.",
-        content: `
-                    <h3>Amplifying Impact</h3>
-                    <p>Clear storytelling, professional web presence, and active digital communication help institutions build public trust and secure stakeholder support.</p>
-                `
-      },
-      {
-        id: 46, category: "Business Growth",
-        title: "The Hidden Cost of a Weak Online Presence for Tourism Businesses",
-        meta: "Tourists research everything online before they arrive. Here's what a weak digital presence is actually costing tourism businesses.",
-        content: `
-                    <h3>Capturing Global Travelers</h3>
-                    <p>International and domestic tourists research destinations and book experiences entirely online. A weak digital presence means missed bookings and lost revenue.</p>
-                `
-      },
-      {
-        id: 47, category: "Business Growth",
-        title: "How Hospitality Businesses in Mwanza Can Use Social Media to Fill Rooms",
-        meta: "Empty rooms are often a marketing problem, not a location problem. Here's how hotels can use social media to drive direct bookings.",
-        content: `
-                    <h3>Driving Direct Bookings</h3>
-                    <p>Showcase hotel amenities, local attractions, and guest testimonials through engaging visual content to attract travelers and drive direct bookings.</p>
-                `
-      },
-      {
-        id: 48, category: "Business Growth",
-        title: "Why Professional Proposals Win More Clients Than Casual Pitches",
-        meta: "The way you present an offer often matters as much as the offer itself. Here's why a professional proposal wins more deals.",
-        content: `
-                    <h3>Professional Presentation</h3>
-                    <p>Structured, branded proposals demonstrate professionalism, thorough planning, and reliability, giving you a competitive edge in closing high-value deals.</p>
-                `
-      },
-      {
-        id: 49, category: "Business Growth",
-        title: "Building Trust with International Clients as a Tanzanian Business",
-        meta: "Want to work with international clients or donors? Here's how to present your business in a way that earns their confidence.",
-        content: `
-                    <h3>Global Credibility</h3>
-                    <p>Professional web design, secure communication channels, transparent case studies, and compliance standards build instant confidence with international partners.</p>
-                `
-      },
-      {
-        id: 50, category: "Business Growth",
-        title: "Case Study Thinking: How to Turn Your Client Wins Into Marketing Gold",
-        meta: "Your best marketing material might already be sitting in your inbox. Here's how to turn past client wins into case studies that sell.",
-        content: `
-                    <h3>Proof-Driven Marketing</h3>
-                    <p>Documenting past client successes through detailed case studies provides powerful proof of your expertise and capability to prospective buyers.</p>
-                `
-      }
-    ];
-
-    let currentCategory = 'All';
-    let currentSearchQuery = '';
-
-    function init() {
-      renderGrid();
-
-      const searchInput = document.getElementById('searchInputHero');
-      const searchButton = document.getElementById('searchButtonHero');
-
-      searchInput.addEventListener('input', event => {
-        currentSearchQuery = event.target.value.trim().toLowerCase();
-        renderGrid();
-      });
-      searchButton.addEventListener('click', () => {
-        currentSearchQuery = searchInput.value.trim().toLowerCase();
-        renderGrid();
-      });
-      searchInput.addEventListener('keydown', event => {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          searchButton.click();
-        }
-      });
-    }
-
-    function renderGrid() {
-      const grid = document.getElementById('blog-grid');
-      grid.innerHTML = '';
-
-      const filteredPosts = currentSearchQuery
-        ? posts.filter(post =>
-          post.title.toLowerCase().includes(currentSearchQuery) ||
-          post.meta.toLowerCase().includes(currentSearchQuery) ||
-          post.content.toLowerCase().includes(currentSearchQuery)
-        )
-        : currentCategory === 'All'
-          ? posts
-          : posts.filter(p => p.category === currentCategory);
-
-      if (filteredPosts.length === 0) {
-        const safeQuery = currentSearchQuery.replace(/[&<>'"]/g, character => ({
-          '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
-        }[character]));
-        grid.innerHTML = `
-          <div class="col-span-full text-center py-16">
-            <h3 class="text-2xl font-bold text-slate-900 mb-2">No articles available</h3>
-            <p class="text-slate-500">No blog post matches "${safeQuery}".</p>
-          </div>`;
-        return;
-      }
-
-      filteredPosts.forEach(post => {
-        const card = `
-                    <div class="bg-white rounded-xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full cursor-pointer group" onclick="openArticle(${post.id})">
-                        <div class="p-6 flex flex-col h-full">
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#136db6] mb-3">${post.category}</span>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-3 group-hover:text-[#136db6] transition-colors">${post.title}</h3>
-                            <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">${post.meta}</p>
-                            
-                            <div class="flex items-center text-sm font-semibold text-[#136db6] mt-auto">
-                                Read Article 
-                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </div>
+      // Helper to create card HTML (premium version)
+      function createCardHTML(item) {
+        return `
+                <div class="premium-card">
+                    <div class="overflow-hidden relative">
+                        <img src="${item.img}" alt="${item.alt}" class="w-full">
+                        <div class="absolute top-4 left-4 bg-gradient-to-r from-brandYellow to-yellow-400 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold text-brandBlack uppercase tracking-wider shadow-md">
+                            ${item.tag}
                         </div>
                     </div>
-                `;
-        grid.innerHTML += card;
+                    <div class="p-5 md:p-8 flex flex-col flex-1">
+                        <h3 class="text-lg md:text-2xl font-bold text-brandBlue mb-2 md:mb-3">${item.title}</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4 md:mb-6 line-clamp-2">${item.desc}</p>
+                        <a href="portfolio.html"
+                            class="group mt-auto inline-flex items-center gap-2 text-brandBlack font-bold hover:text-brandBlue transition-colors text-sm md:text-base">
+                            View Project
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5l7 7-7 7M5 12h14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            `;
+      }
+
+      // ---------- Initialize 3D Carousel ----------
+      const carouselContainer = document.querySelector('#premium-3d-carousel .flex.items-center');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const dotsContainer = document.getElementById('carousel-dots');
+
+      let currentIndex = 0;
+      let autoplayInterval;
+
+      // Inject cards
+      portfolioItems.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'card-3d';
+        card.dataset.index = index;
+        card.innerHTML = createCardHTML(item);
+        carouselContainer.appendChild(card);
       });
-    }
 
-    function filterCategory(category) {
-      currentCategory = category;
-      currentSearchQuery = '';
-      document.getElementById('searchInputHero').value = '';
-      const buttons = document.getElementById('category-filters').children;
-      for (let btn of buttons) {
-        if (btn.innerText === category) {
-          btn.className = "px-5 py-2 rounded-full text-sm font-medium bg-[#136db6] text-white shadow-md transition-all";
-        } else {
-          btn.className = "px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-[#136db6] hover:text-[#136db6] transition-all";
+      // Create dots
+      portfolioItems.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'dot';
+        dot.dataset.index = index;
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      const cards = carouselContainer.querySelectorAll('.card-3d');
+      const totalCards = cards.length;
+
+      function updateCarousel() {
+        cards.forEach((card, index) => {
+          // Reset classes
+          card.classList.remove('active', 'prev', 'next', 'prev2', 'next2', 'prev3', 'next3', 'prev4', 'next4', 'hidden-card');
+
+          if (index === currentIndex) {
+            card.classList.add('active');
+          } else {
+            // Assign a generic non-active state class for transition
+            // We can reuse any class like 'hidden-card' or create a dedicated 'inactive'
+            // For simplicity, we'll add 'hidden-card' (or any non-active class) to all others
+            card.classList.add('hidden-card');
+          }
+        });
+
+        // Update dots
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoplay();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateCarousel();
+        resetAutoplay();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+        updateCarousel();
+        resetAutoplay();
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(nextSlide, 5000);
+      }
+
+      // Event listeners
+      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+      });
+
+      // Touch/swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+      carouselContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carouselContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) nextSlide();
+          else prevSlide();
         }
-      }
-      renderGrid();
-    }
+      }, { passive: true });
 
-    function showView(viewType) {
-      const indexView = document.getElementById('view-index');
-      const articleView = document.getElementById('view-article');
-
-      if (viewType === 'index') {
-        indexView.classList.remove('hidden');
-        articleView.classList.add('hidden');
-        window.scrollTo(0, 0);
-      } else if (viewType === 'article') {
-        indexView.classList.add('hidden');
-        articleView.classList.remove('hidden');
-        window.scrollTo(0, 0);
-      }
-    }
-
-    function openArticle(id) {
-      const post = posts.find(p => p.id === id);
-      if (!post) return;
-
-      document.getElementById('article-category').innerText = post.category;
-      document.getElementById('article-title').innerText = post.title;
-      document.getElementById('article-meta').innerText = post.meta;
-      document.getElementById('article-content').innerHTML = post.content;
-
-      showView('article');
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
+      // Initialize
+      updateCarousel();
+      resetAutoplay();
+    })();
   </script>
-
-
-  <div id="footer-container"></div>
-  <script src="script.js"></script>
 </body>
 
 </html>
